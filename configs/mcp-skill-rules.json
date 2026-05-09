@@ -1,0 +1,89 @@
+{
+  "Higgsfield": {
+    "include_skill_prefixes": ["higgsfield-"],
+    "include_skills": ["brandkit", "imagegen-frontend-mobile", "imagegen-frontend-web"],
+    "keywords": ["higgsfield"]
+  },
+  "MedusaDocs": {
+    "include_skill_prefixes": ["building-", "db-"],
+    "include_skills": [
+      "creating-internal-agents",
+      "medusa-reference",
+      "new-user",
+      "storefront-best-practices",
+      "woocommerce-to-medusa-import"
+    ],
+    "keywords": ["medusa"]
+  },
+  "colony": {
+    "include_skills": [
+      "gitguardex",
+      "guardex-merge-skills-to-dev",
+      "team",
+      "trace",
+      "worker"
+    ],
+    "keywords": ["colony", "guardex", "multi-agent", "multiagent"]
+  },
+  "coolify": {
+    "include_skills": ["coolify"],
+    "keywords": ["coolify"]
+  },
+  "gitea": {
+    "include_skills": ["github", "gh-submodule-publish"],
+    "keywords": ["gitea", "git"]
+  },
+  "hostinger-api": {
+    "include_skills": [],
+    "keywords": ["hostinger"]
+  },
+  "letsfg": {
+    "include_skills": ["flight-search"],
+    "keywords": ["letsfg", "flight"]
+  },
+  "omx_code_intel": {
+    "include_skills": [
+      "ai-slop-cleaner",
+      "analyze",
+      "code-review",
+      "gh-fix-ci",
+      "security-review"
+    ],
+    "keywords": ["codebase", "analysis", "review"]
+  },
+  "omx_memory": {
+    "include_skills": ["note", "wiki"],
+    "keywords": ["memory", "notepad", "wiki"]
+  },
+  "omx_state": {
+    "include_skills": [
+      "autopilot",
+      "cancel",
+      "hud",
+      "pipeline",
+      "ralph",
+      "team",
+      "ultraqa",
+      "ultrawork"
+    ],
+    "keywords": ["state", "runtime", "workflow"]
+  },
+  "omx_trace": {
+    "include_skills": ["hud", "team", "trace"],
+    "keywords": ["trace", "timeline", "flow"]
+  },
+  "omx_wiki": {
+    "include_skills": ["wiki"],
+    "keywords": ["wiki"]
+  },
+  "react-grab-mcp": {
+    "include_skills": [
+      "design-taste-frontend",
+      "image-to-code",
+      "redesign-existing-projects",
+      "visual-ralph",
+      "visual-verdict"
+    ],
+    "keywords": ["react", "frontend", "visual"]
+  }
+}

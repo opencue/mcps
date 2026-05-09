@@ -35,4 +35,20 @@ configs/vscode.sanitized.json
 docs/inventory.md
 ```
 
+## Track related skills
+
+Generate MCP to skill maps from the sibling `recodeee/skills` checkout:
+
+```sh
+./scripts/snapshot-mcp-skills.py
+```
+
+Generated files:
+
+```text
+configs/mcp-skill-map.json
+docs/mcp-skill-map.md
+mcps/<mcp-name>/skills.md
+```
+
 Review diffs before pushing. If a secret appears, remove it before commit.
