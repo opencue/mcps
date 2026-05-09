@@ -123,6 +123,13 @@
         },
         {
           "category": "medusa",
+          "description": "Create missing GitHub repos and push a parent repo that tracks app repos as Git submodules. Use when user asks to publish locally-initialized repos, push parent + backend/storefront submodules, create org-scoped repos, recover from broken `gh auth` / SSH publickey errors, or fix missing workflow token scope.",
+          "name": "gh-submodule-publish",
+          "reason": "category",
+          "slug": "gh-submodule-publish"
+        },
+        {
+          "category": "medusa",
           "description": "Medusa implementation guidance for backend and storefront work. Use when building or modifying Medusa workflows, subscribers, API routes, auth, data models, query logic, jobs, or storefront integrations.",
           "name": "medusa-reference",
           "reason": "explicit",
@@ -266,7 +273,7 @@
       "page": "mcps/gitea/skills.md",
       "skills": [
         {
-          "category": "github",
+          "category": "medusa",
           "description": "Create missing GitHub repos and push a parent repo that tracks app repos as Git submodules. Use when user asks to publish locally-initialized repos, push parent + backend/storefront submodules, create org-scoped repos, recover from broken `gh auth` / SSH publickey errors, or fix missing workflow token scope.",
           "name": "gh-submodule-publish",
           "reason": "explicit",
