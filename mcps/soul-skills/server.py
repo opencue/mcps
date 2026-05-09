@@ -19,7 +19,7 @@ Tools:
     soul_mcp_create         — write a new MCP catalog README.md
     soul_lint               — run the SKILL.md linter and return findings
 
-Run: uv run /home/deadpool/Documents/soul/mcps/mcps/soul-skills/server.py
+Run: uv run ~/Documents/soul/mcps/mcps/soul-skills/server.py
 Register in ~/.claude.json mcpServers as `soul-skills`.
 """
 from __future__ import annotations
