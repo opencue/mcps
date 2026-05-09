@@ -1,6 +1,6 @@
 # letsfg skills
 
-Related skills from the `recodeee/skills` registry.
+Related skills from the `soul/skills` registry.
 
 MCP source: [https://github.com/LetsFG/LetsFG](https://github.com/LetsFG/LetsFG)
 

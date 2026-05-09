@@ -1,6 +1,6 @@
 # Higgsfield skills
 
-Related skills from the `recodeee/skills` registry.
+Related skills from the `soul/skills` registry.
 
 MCP source: [https://mcp.higgsfield.ai/mcp](https://mcp.higgsfield.ai/mcp)
 

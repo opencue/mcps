@@ -6,8 +6,8 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
 TEMPLATE = ROOT / "templates" / "codex.mcp.toml"
-START = "# >>> recodeee-mcps managed block >>>"
-END = "# <<< recodeee-mcps managed block <<<"
+START = "# >>> soul-mcps managed block >>>"
+END = "# <<< soul-mcps managed block <<<"
 
 
 def replace_block(existing: str, block: str) -> str:

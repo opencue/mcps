@@ -1,6 +1,6 @@
 # gbrain skills
 
-Related skills from the `recodeee/skills` registry.
+Related skills from the `soul/skills` registry.
 
 No related skills are mapped yet.
 

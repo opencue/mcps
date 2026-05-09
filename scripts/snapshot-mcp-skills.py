@@ -146,7 +146,7 @@ def write_mcp_skill_page(mcp_name: str, matches: list[dict[str, str]], rule: dic
     lines = [
         f"# {mcp_name} skills",
         "",
-        "Related skills from the `recodeee/skills` registry.",
+        "Related skills from the `soul/skills` registry.",
         "",
     ]
     if source_url:

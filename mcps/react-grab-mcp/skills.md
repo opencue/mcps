@@ -1,6 +1,6 @@
 # react-grab-mcp skills
 
-Related skills from the `recodeee/skills` registry.
+Related skills from the `soul/skills` registry.
 
 MCP source: [https://www.npmjs.com/package/@react-grab/mcp](https://www.npmjs.com/package/@react-grab/mcp)
 
