@@ -1,5 +1,5 @@
 {
-  "mcp_count": 13,
+  "mcp_count": 14,
   "mcps": {
     "Higgsfield": {
       "agent_surfaces": [
@@ -226,6 +226,17 @@
         }
       ],
       "source_url": "https://github.com/StuMason/coolify-mcp"
+    },
+    "gbrain": {
+      "agent_surfaces": [],
+      "health_command": "",
+      "homepage": "",
+      "install": "",
+      "owners": [],
+      "package": "",
+      "page": "mcps/gbrain/skills.md",
+      "skills": [],
+      "source_url": ""
     },
     "gitea": {
       "agent_surfaces": [

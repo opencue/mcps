@@ -13,6 +13,7 @@ Server key: `mcp_servers`
 | `MedusaDocs` | `https://docs.medusajs.com/mcp` | 0 | - |
 | `colony` | `~/.nvm/versions/node/v22.22.0/bin/colony` | 1 | `COLONY_HOME` |
 | `coolify` | `bash` | 2 | - |
+| `gbrain` | `~/.bun/bin/gbrain` | 1 | - |
 | `hostinger-api` | `bash` | 2 | - |
 | `letsfg` | `~/.nvm/versions/node/v22.22.0/bin/letsfg-mcp` | 0 | `LETSFG_PYTHON` |
 | `omx_code_intel` | `node` | 1 | - |
@@ -20,7 +21,6 @@ Server key: `mcp_servers`
 | `omx_state` | `node` | 1 | - |
 | `omx_trace` | `node` | 1 | - |
 | `omx_wiki` | `node` | 1 | - |
-| `react-grab-mcp` | `npx` | 3 | - |
 
 ## claude
 

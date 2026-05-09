@@ -32,6 +32,13 @@
       ],
       "command": "bash"
     },
+    "gbrain": {
+      "args": [
+        "serve"
+      ],
+      "command": "~/.bun/bin/gbrain",
+      "startup_timeout_sec": 20.0
+    },
     "hostinger-api": {
       "args": [
         "-lc",
@@ -86,15 +93,6 @@
       "command": "node",
       "enabled": true,
       "startup_timeout_sec": 5
-    },
-    "react-grab-mcp": {
-      "args": [
-        "-y",
-        "@react-grab/mcp",
-        "--stdio"
-      ],
-      "command": "npx",
-      "startup_timeout_sec": 15.0
     }
   },
   "source": "codex",
