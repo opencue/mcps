@@ -22,6 +22,9 @@ SOURCES = [
 ]
 
 CLAUDE_RUNTIME_PROJECTS_PATH = Path.home() / ".claude.json"
+CLAUDE_SETTINGS_PATH = Path.home() / ".claude" / "settings.json"
+PLUGINS_CACHE = Path.home() / ".claude" / "plugins" / "cache"
+PLUGINS_DIR = ROOT / "plugins"
 
 SECRET_KEY_RE = re.compile(r"(secret|token|password|passwd|api[_-]?key|access[_-]?key|private[_-]?key|client[_-]?secret|consumer[_-]?secret|authorization|bearer)", re.I)
 SECRET_VALUE_RE = re.compile(r"^(sk-|pk_|ghp_|github_pat_|xox[baprs]-|ck_|cs_|eyJ|AKIA|ASIA)")
@@ -161,8 +164,111 @@ def main() -> None:
                 lines.append(f"| `{item['name']}` | `{item['command_or_type']}` | {item['arg_count']} | {env_keys} |")
             lines.append("")
 
+    plugin_inventory = snapshot_plugins()
+    if plugin_inventory:
+        marketplaces, plugins_data = plugin_inventory
+        PLUGINS_DIR.mkdir(parents=True, exist_ok=True)
+        (PLUGINS_DIR / "plugins.sanitized.json").write_text(
+            json.dumps({
+                "source": "claude_plugins",
+                "source_paths": [
+                    display_path(CLAUDE_SETTINGS_PATH) + "#enabledPlugins",
+                    display_path(CLAUDE_SETTINGS_PATH) + "#extraKnownMarketplaces",
+                    display_path(PLUGINS_CACHE) + "/<marketplace>/<plugin>/<version>/",
+                ],
+                "marketplaces": marketplaces,
+                "plugins": plugins_data,
+            }, indent=2, sort_keys=True) + "\n",
+            encoding="utf-8",
+        )
+        lines.extend(["## plugins", "", f"Sources: `{display_path(CLAUDE_SETTINGS_PATH)}` (enabled set + marketplaces) + `{display_path(PLUGINS_CACHE)}` (latest cached version's manifest)", "",
+                     "| Plugin | Marketplace | Version | Enabled | MCP servers |",
+                     "| --- | --- | --- | :---: | --- |"])
+        for plugin_id, info in sorted(plugins_data.items()):
+            servers = info.get("mcpServers") or {}
+            server_str = ", ".join(f"`{s}`" for s in sorted(servers.keys())) or "-"
+            enabled_mark = "✓" if info.get("enabled") else "·"
+            lines.append(f"| `{info['name']}` | `{info['marketplace']}` | `{info.get('version', '?')}` | {enabled_mark} | {server_str} |")
+        lines.append("")
+
     (DOCS / "inventory.md").write_text("\n".join(lines), encoding="utf-8")
     print("wrote configs and docs/inventory.md")
+
+
+def snapshot_plugins() -> tuple[dict[str, Any], dict[str, Any]] | None:
+    """Snapshot enabled plugins + their declared MCP servers from cached manifests.
+
+    Returns (marketplaces, plugins) where plugins is keyed by `<plugin>@<marketplace>`.
+    Reads the LATEST cached version of each plugin so updates flow through naturally.
+    """
+    if not CLAUDE_SETTINGS_PATH.exists():
+        return None
+    settings = load_config(CLAUDE_SETTINGS_PATH)
+    if not isinstance(settings, dict):
+        return None
+
+    enabled = settings.get("enabledPlugins") or {}
+    marketplaces_raw = settings.get("extraKnownMarketplaces") or {}
+    marketplaces = sanitize(marketplaces_raw) if isinstance(marketplaces_raw, dict) else {}
+
+    plugins: dict[str, Any] = {}
+    if isinstance(enabled, dict):
+        for plugin_id, is_enabled in sorted(enabled.items()):
+            if "@" in plugin_id:
+                plugin_name, marketplace = plugin_id.rsplit("@", 1)
+            else:
+                plugin_name, marketplace = plugin_id, "builtin"
+            entry: dict[str, Any] = {
+                "name": plugin_name,
+                "marketplace": marketplace,
+                "enabled": bool(is_enabled),
+            }
+            version_dir, manifest_servers = _read_plugin_manifest(marketplace, plugin_name)
+            if version_dir is not None:
+                entry["version"] = version_dir
+            if manifest_servers is not None:
+                entry["mcpServers"] = sanitize(manifest_servers)
+            plugins[plugin_id] = entry
+
+    return marketplaces, plugins
+
+
+def _read_plugin_manifest(marketplace: str, plugin: str) -> tuple[str | None, dict[str, Any] | None]:
+    plugin_root = PLUGINS_CACHE / marketplace / plugin
+    if not plugin_root.is_dir():
+        return None, None
+    version_dirs = sorted(
+        (p for p in plugin_root.iterdir() if p.is_dir()),
+        key=lambda p: p.stat().st_mtime,
+        reverse=True,
+    )
+    if not version_dirs:
+        return None, None
+    latest = version_dirs[0]
+    version = latest.name
+
+    mcp_inline = latest / ".mcp.json"
+    if mcp_inline.exists():
+        data = load_config(mcp_inline)
+        servers = data.get("mcpServers") if isinstance(data, dict) else None
+        return version, servers if isinstance(servers, dict) else {}
+
+    plugin_manifest = latest / ".claude-plugin" / "plugin.json"
+    if plugin_manifest.exists():
+        data = load_config(plugin_manifest)
+        if isinstance(data, dict):
+            ref = data.get("mcpServers")
+            if isinstance(ref, str):
+                ref_path = (latest / ref).resolve()
+                if ref_path.exists():
+                    inline = load_config(ref_path)
+                    servers = inline.get("mcpServers") if isinstance(inline, dict) else None
+                    return version, servers if isinstance(servers, dict) else {}
+            elif isinstance(ref, dict):
+                return version, ref
+        return version, {}
+
+    return version, None
 
 
 if __name__ == "__main__":
