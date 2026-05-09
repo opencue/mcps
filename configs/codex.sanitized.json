@@ -52,6 +52,29 @@
         "LETSFG_PYTHON": "<redacted>"
       },
       "startup_timeout_sec": 20.0
+    },
+    "obsidian-vault": {
+      "args": [
+        "-y",
+        "@bitbonsai/mcpvault@latest",
+        "~/Documents/claude-obsidian"
+      ],
+      "command": "npx"
+    },
+    "recodee": {
+      "command": "~/Documents/recodee/.venv/bin/recodee-mcp",
+      "env": {
+        "RECODEE_BASE_URL": "<redacted>"
+      }
+    },
+    "soul-skills": {
+      "args": [
+        "run",
+        "--quiet",
+        "--script",
+        "~/Documents/soul/mcps/mcps/soul-skills/server.py"
+      ],
+      "command": "~/.local/bin/uv"
     }
   },
   "source": "codex",
