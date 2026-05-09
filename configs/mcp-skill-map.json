@@ -137,6 +137,13 @@
         },
         {
           "category": "medusa",
+          "description": "Create a Medusa v2 admin user against a running backend over HTTP, no CLI/SSH required. Two flows: (a) invite-accept for ADDITIONAL admins (needs an existing admin's session to mint the invite), (b) CLI fallback for the FIRST admin (no admin exists yet \u2014 Medusa v2 has no public POST /admin/users). Use when user says \"create admin via API\", \"invite admin\", \"new admin on the live site\", or supplies a backend URL + email + password and login is at /app/login. Medusa v2-only.",
+          "name": "new-admin-via-api",
+          "reason": "category",
+          "slug": "new-admin-via-api"
+        },
+        {
+          "category": "medusa",
           "description": "Create a new Medusa admin user via `npx medusa user -e <email> -p <password>`. Use when user says create admin, new admin user, /medusa-dev:user, or supplies an email + password pair for a Medusa backend. Medusa-only \u2014 NOT for general user creation.",
           "name": "new-user",
           "reason": "explicit",
@@ -648,6 +655,6 @@
       "source_url": ""
     }
   },
-  "skill_count": 95,
+  "skill_count": 96,
   "skills_root": "~/Documents/soul/skills/skills"
 }
