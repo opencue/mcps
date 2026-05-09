@@ -1,331 +1,370 @@
 {
   "mcp_count": 13,
   "mcps": {
-    "Higgsfield": [
-      {
-        "description": "Premium brand-kit image generation skill for creating high-end brand-guidelines boards, logo systems, identity decks, and visual-world presentations. Trained for minimalist, cinematic, editorial, dark-tech, luxury, cultural, security, gaming, developer-tool, and consumer-app brand systems. Optimized for intentional logo concepting, refined composition, sparse typography, strong symbolic meaning, premium mockups, art-directed imagery, and flexible grid layouts.",
-        "name": "brandkit",
-        "reason": "explicit",
-        "slug": "brandkit"
-      },
-      {
-        "description": "Generate images/videos via Higgsfield AI. Models: GPT Image 2, Nano Banana 2/Pro, Soul V2/Cinema/Cast/Location, Seedance 2.0, Veo 3.1, Kling 3.0, Flux 2, Z Image, Hailuo; plus Marketing Studio ads with avatars/products/hooks/settings. Use when: \"generate an image\", \"make a picture\", \"make a video\", \"animate this photo\", \"image-to-video\", \"edit/stylize/remix this image\", \"produce a clip\", \"create an ad\", \"make a UGC video\", \"product demo\", \"unboxing\", \"TV spot\", \"brand video\", \"presenter video\", \"import product from URL\", \"create avatar for ad\". Supports text-to-image, image-to-image, image-to-video, reference-based generation, and Marketing Studio. Auto-detects upload IDs vs previous job IDs. Chain with higgsfield-soul-id when the user wants face/identity consistency. NOT for: training Soul Character (use higgsfield-soul-id), product photoshoots (use higgsfield-product-photoshoot), marketplace listing cards (use higgsfield-marketplace-cards), text/chat/TTS tasks.",
-        "name": "higgsfield-generate",
-        "reason": "prefix",
-        "slug": "higgsfield-generate"
-      },
-      {
-        "description": "Generate marketplace product image cards through Higgsfield: compliant main image, secondary product images, and A+ style content modules. Use when the user asks for marketplace listing images, product detail cards, secondary product images, product infographics, lifestyle listing shots, A+ style content, marketplace image sets, or sales-ready product visuals. Backend owns marketplace compliance references and prompt templates; this skill only routes user intent to the CLI. NOT for generic brand product photography without marketplace/listing context (use higgsfield-product-photoshoot), video generation or UGC ads (use higgsfield-generate), or Soul Character training (use higgsfield-soul-id).",
-        "name": "higgsfield-marketplace-cards",
-        "reason": "prefix",
-        "slug": "higgsfield-marketplace-cards"
-      },
-      {
-        "description": "Generate brand-quality product images through Higgsfield product-photoshoot prompt enhancement on GPT Image 2 / gpt_image_2. Entry point for professional brand/product visuals. Use when: \"product photo\", \"studio shot\", \"lifestyle image\", \"Pinterest pin\", \"hero/banner\", \"carousel\", \"ad creative\", \"Meta ads\", \"virtual try-on\", \"model wearing\", \"person holding product\", \"closeup with hands\", \"levitating/floating/splash product\", \"CGI/surreal product\", \"restyle\", \"seasonal/aesthetic variation\", or any product, brand, or paid-social creative. Modes: product_shot, lifestyle_scene, closeup_product_with_person, moodboard_pin, hero_banner, social_carousel, ad_creative_pack, virtual_model_tryout, conceptual_product, restyle. Backend assembles the final prompt; never freehand it. NOT for: no-product text-to-image (use higgsfield-generate), branded avatar video (use higgsfield-generate Marketing Studio), marketplace listing cards (use higgsfield-marketplace-cards), Soul Character training (use higgsfield-soul-id).",
-        "name": "higgsfield-product-photoshoot",
-        "reason": "prefix",
-        "slug": "higgsfield-product-photoshoot"
-      },
-      {
-        "description": "Train a Soul Character \u2014 a personalized model on a person's face that Higgsfield uses for identity-faithful image and video generation. Use when: \"create my Soul\", \"train my face\", \"make my digital twin\", \"build me an avatar\", \"learn my appearance\", \"create a character of me\", \"set up identity for video\", \"I want my face in generated images\". Chain: train Soul (one-time, returns reference_id) \u2192 use in higgsfield-generate via `--soul-id <id>` with models like `text2image_soul_v2` or `soul_cinema_studio`. NOT for: one-shot face swaps (use higgsfield-generate with --image), named-character / non-photo avatars (use higgsfield-generate with prompt).",
-        "name": "higgsfield-soul-id",
-        "reason": "prefix",
-        "slug": "higgsfield-soul-id"
-      },
-      {
-        "description": "Elite mobile app image-generation skill for creating premium, app-native screen concepts and flows. Designed for iOS, Android, and cross-platform mobile products. Prioritizes clean hierarchy, comfortably readable text, strong multi-screen consistency, controlled color palettes, non-generic creative direction, textured surfaces, image-led composition, tasteful custom iconography, and clean phone mockup framing. By default, screens should be shown inside a subtle premium iPhone or similar phone mockup with a visible frame, while the main focus stays on the app content itself. This skill generates images only. It does not write code.",
-        "name": "imagegen-frontend-mobile",
-        "reason": "explicit",
-        "slug": "imagegen-frontend-mobile"
-      },
-      {
-        "description": "Elite frontend image-direction skill for generating premium, conversion-aware website design references. CRITICAL OUTPUT RULE \u2014 generate ONE separate horizontal image FOR EVERY section. A landing page with 8 sections produces 8 images. Never compress multiple sections into one image. Enforces composition variety (not always left-text / right-image), background-image freedom, varied CTAs, varied hero scales (giant / mid / mini minimalist), narrative concept spine, second-read moments, and a single consistent palette across all images. Optimized for landing pages, marketing sites, and product comps that developers or coding models can accurately recreate.",
-        "name": "imagegen-frontend-web",
-        "reason": "explicit",
-        "slug": "imagegen-frontend-web"
-      }
-    ],
-    "MedusaDocs": [
-      {
-        "description": "Load automatically when planning, researching, or implementing Medusa Admin dashboard UI (widgets, custom pages, forms, tables, data loading, navigation). REQUIRED for all admin UI work in ALL modes (planning, implementation, exploration). Contains design patterns, component usage, and data loading patterns that MCP servers don't provide.",
-        "name": "building-admin-dashboard-customizations",
-        "reason": "prefix",
-        "slug": "building-admin-dashboard-customizations"
-      },
-      {
-        "description": "Load automatically when planning, researching, or implementing Medusa storefront features (calling custom API routes, SDK integration, React Query patterns, data fetching). REQUIRED for all storefront development in ALL modes (planning, implementation, exploration). Contains SDK usage patterns, frontend integration, and critical rules for calling Medusa APIs.",
-        "name": "building-storefronts",
-        "reason": "prefix",
-        "slug": "building-storefronts"
-      },
-      {
-        "description": "Load automatically when planning, researching, or implementing ANY Medusa backend features (custom modules, API routes, workflows, data models, module links, business logic). REQUIRED for all Medusa backend work in ALL modes (planning, implementation, exploration). Contains architectural patterns, best practices, and critical rules that MCP servers don't provide.",
-        "name": "building-with-medusa",
-        "reason": "prefix",
-        "slug": "building-with-medusa"
-      },
-      {
-        "description": "Use when building an internal admin-facing AI agent in a Medusa project. These agents are operated by merchants and store operators \u2014 not customers. Covers data models, module service, agent runtime (tools, system prompt, streamText), streaming API routes (NDJSON), and admin UI chat extensions. Load for any internal agent type: store operations assistant, product audit, cohort analysis, customer service tooling for support staff, etc. Do NOT use for customer-facing agents (storefront chatbots, buyer-side assistants).",
-        "name": "creating-agents-in-medusa",
-        "reason": "explicit",
-        "slug": "creating-internal-agents"
-      },
-      {
-        "description": "Generate database migrations for a Medusa module",
-        "name": "db-generate",
-        "reason": "prefix",
-        "slug": "db-generate"
-      },
-      {
-        "description": "Run database migrations in Medusa",
-        "name": "db-migrate",
-        "reason": "prefix",
-        "slug": "db-migrate"
-      },
-      {
-        "description": "Medusa implementation guidance for backend and storefront work. Use when building or modifying Medusa workflows, subscribers, API routes, auth, data models, query logic, jobs, or storefront integrations.",
-        "name": "medusa-reference",
-        "reason": "explicit",
-        "slug": "medusa-reference"
-      },
-      {
-        "description": "Create an admin user in Medusa",
-        "name": "new-user",
-        "reason": "explicit",
-        "slug": "new-user"
-      },
-      {
-        "description": "ALWAYS use this skill when working on ecommerce storefronts, online stores, shopping sites. Use for ANY storefront component including checkout pages, cart, payment flows, product pages, product listings, navigation, homepage, or ANY page/component in a storefront. CRITICAL for adding checkout, implementing cart, integrating Medusa backend, or building any ecommerce functionality. Framework-agnostic (Next.js, SvelteKit, TanStack Start, React, Vue). Provides patterns, decision frameworks, backend integration guidance.",
-        "name": "storefront-best-practices",
-        "reason": "explicit",
-        "slug": "storefront-best-practices"
-      },
-      {
-        "description": "Build or run WooCommerce product importers into Medusa v2 backends. Use when importing WooCommerce products, variations, categories, images, prices, inventory, or metadata into Medusa, especially repos with apps/backend. Includes safe secret handling, dry-run/idempotent import rules, Medusa workflow usage, and verification steps.",
-        "name": "woocommerce-to-medusa-import",
-        "reason": "explicit",
-        "slug": "woocommerce-to-medusa-import"
-      }
-    ],
-    "colony": [
-      {
-        "description": "Repo guardrail check and repair.",
-        "name": "gitguardex",
-        "reason": "explicit",
-        "slug": "gitguardex"
-      },
-      {
-        "description": "Use when you need to merge SKILL.md updates from agent branches/worktrees into the local base branch (default: dev) with the multiagent-safety flow.",
-        "name": "guardex-merge-skills-to-dev",
-        "reason": "explicit",
-        "slug": "guardex-merge-skills-to-dev"
-      },
-      {
-        "description": "[OMX] N coordinated agents on shared task list using tmux-based orchestration",
-        "name": "team",
-        "reason": "explicit",
-        "slug": "team"
-      },
-      {
-        "description": "[OMX] Show agent flow trace timeline and summary",
-        "name": "trace",
-        "reason": "explicit",
-        "slug": "trace"
-      },
-      {
-        "description": "[OMX] Team worker protocol (ACK, mailbox, task lifecycle) for tmux-based OMX teams",
-        "name": "worker",
-        "reason": "explicit",
-        "slug": "worker"
-      }
-    ],
-    "coolify": [
-      {
-        "description": "Use when the user wants to manage Coolify resources through the Coolify API CLI (contexts, servers, apps, deployments, databases, services, env vars, and GitHub app integrations).",
-        "name": "coolify",
-        "reason": "explicit",
-        "slug": "coolify"
-      }
-    ],
-    "gitea": [
-      {
-        "description": "Create missing GitHub repositories and push a parent repository that tracks app repositories as Git submodules. Use when the user asks to finish publishing locally initialized repos, push a parent repo plus backend/storefront submodules, create repos under an org, recover from invalid `gh auth status` when `gh api user` works, fall back from SSH `Permission denied (publickey)` to `gh` HTTPS auth, handle missing `workflow` token scope for `.github/workflows/*`, or verify remote `main` refs after push.",
-        "name": "gh-submodule-publish",
-        "reason": "explicit",
-        "slug": "gh-submodule-publish"
-      },
-      {
-        "description": "GitHub operations via `gh` CLI: issues, PRs, CI runs, code review, API queries. Use when: (1) checking PR status or CI, (2) creating/commenting on issues, (3) listing/filtering PRs or issues, (4) viewing run logs. NOT for: complex web UI interactions requiring manual browser flows (use browser tooling when available), bulk operations across many repos (script with gh api), or when gh auth is not configured.",
-        "name": "github",
-        "reason": "explicit",
-        "slug": "github"
-      }
-    ],
-    "hostinger-api": [],
-    "letsfg": [
-      {
-        "description": "Search and book flights across 180+ airlines with zero markup \u2014 $20\u201350 cheaper than OTAs. Returns raw airline prices via local connectors (Ryanair, EasyJet, Wizz Air, Southwest, AirAsia, and 175+ more). Use when user asks to \"find flights\", \"search flights\", \"book a flight\", \"compare airline prices\", \"find cheap flights\", \"fly from X to Y\", \"find connections\", \"find layover options\", or any flight-related travel query. Do NOT use for hotel-only searches, car rentals, or non-flight travel bookings.",
-        "name": "flight-search",
-        "reason": "explicit",
-        "slug": "flight-search"
-      }
-    ],
-    "omx_code_intel": [
-      {
-        "description": "[OMX] Run an anti-slop cleanup/refactor/deslop workflow",
-        "name": "ai-slop-cleaner",
-        "reason": "explicit",
-        "slug": "ai-slop-cleaner"
-      },
-      {
-        "description": "[OMX] Run read-only deep repository analysis and return a ranked synthesis with explicit confidence, concrete file references, and clear evidence-vs-inference boundaries. Use when a user says 'analyze', 'investigate', 'why does', 'what's causing', or needs grounded cross-file explanation before any changes are proposed.",
-        "name": "analyze",
-        "reason": "explicit",
-        "slug": "analyze"
-      },
-      {
-        "description": "[OMX] Run a comprehensive code review",
-        "name": "code-review",
-        "reason": "explicit",
-        "slug": "code-review"
-      },
-      {
-        "description": "Use when a user asks to debug or fix failing GitHub PR checks that run in GitHub Actions; use `gh` to inspect checks and logs, summarize failure context, draft a fix plan, and implement only after explicit approval. Treat external providers (for example Buildkite) as out of scope and report only the details URL.",
-        "name": "gh-fix-ci",
-        "reason": "explicit",
-        "slug": "gh-fix-ci"
-      },
-      {
-        "description": "[OMX] Run a comprehensive security review on code",
-        "name": "security-review",
-        "reason": "explicit",
-        "slug": "security-review"
-      }
-    ],
-    "omx_memory": [
-      {
-        "description": "[OMX] Save notes to notepad.md for compaction resilience",
-        "name": "note",
-        "reason": "explicit",
-        "slug": "note"
-      },
-      {
-        "description": "[OMX] Persistent markdown project wiki stored under .omx/wiki with keyword search and lifecycle capture",
-        "name": "wiki",
-        "reason": "explicit",
-        "slug": "wiki"
-      }
-    ],
-    "omx_state": [
-      {
-        "description": "[OMX] Strict autonomous loop: $ralplan -> $ralph -> $code-review",
-        "name": "autopilot",
-        "reason": "explicit",
-        "slug": "autopilot"
-      },
-      {
-        "description": "[OMX] Cancel any active OMX mode (autopilot, ralph, ultrawork, ecomode, ultraqa, swarm, ultrapilot, pipeline, team)",
-        "name": "cancel",
-        "reason": "explicit",
-        "slug": "cancel"
-      },
-      {
-        "description": "[OMX] Show or configure the OMX HUD (two-layer statusline)",
-        "name": "hud",
-        "reason": "explicit",
-        "slug": "hud"
-      },
-      {
-        "description": "[OMX] Configurable pipeline orchestrator for sequencing stages",
-        "name": "pipeline",
-        "reason": "explicit",
-        "slug": "pipeline"
-      },
-      {
-        "description": "[OMX] Self-referential loop until task completion with architect verification",
-        "name": "ralph",
-        "reason": "explicit",
-        "slug": "ralph"
-      },
-      {
-        "description": "[OMX] N coordinated agents on shared task list using tmux-based orchestration",
-        "name": "team",
-        "reason": "explicit",
-        "slug": "team"
-      },
-      {
-        "description": "[OMX] QA cycling workflow - test, verify, fix, repeat until goal met",
-        "name": "ultraqa",
-        "reason": "explicit",
-        "slug": "ultraqa"
-      },
-      {
-        "description": "[OMX] Parallel execution engine for high-throughput task completion",
-        "name": "ultrawork",
-        "reason": "explicit",
-        "slug": "ultrawork"
-      }
-    ],
-    "omx_trace": [
-      {
-        "description": "[OMX] Show or configure the OMX HUD (two-layer statusline)",
-        "name": "hud",
-        "reason": "explicit",
-        "slug": "hud"
-      },
-      {
-        "description": "[OMX] N coordinated agents on shared task list using tmux-based orchestration",
-        "name": "team",
-        "reason": "explicit",
-        "slug": "team"
-      },
-      {
-        "description": "[OMX] Show agent flow trace timeline and summary",
-        "name": "trace",
-        "reason": "explicit",
-        "slug": "trace"
-      }
-    ],
-    "omx_wiki": [
-      {
-        "description": "[OMX] Persistent markdown project wiki stored under .omx/wiki with keyword search and lifecycle capture",
-        "name": "wiki",
-        "reason": "explicit",
-        "slug": "wiki"
-      }
-    ],
-    "react-grab-mcp": [
-      {
-        "description": "Senior UI/UX Engineer. Architect digital interfaces overriding default LLM biases. Enforces metric-based rules, strict component architecture, CSS hardware acceleration, and balanced design engineering.",
-        "name": "design-taste-frontend",
-        "reason": "explicit",
-        "slug": "design-taste-frontend"
-      },
-      {
-        "description": "Elite website image-to-code skill for Codex. For visually important web tasks, it must first generate the design image(s) itself, deeply analyze them, then implement the website to match them as closely as possible. In Codex, it must prefer large, readable, section-specific images instead of tiny compressed boards, generate fresh standalone images for sections or detail views instead of cropping old ones, avoid lazy under-generation, avoid cards-inside-cards-inside-cards UI, and keep the hero clean, spacious, readable, and visible on a small laptop.",
-        "name": "image-to-code",
-        "reason": "explicit",
-        "slug": "image-to-code"
-      },
-      {
-        "description": "Upgrades existing websites and apps to premium quality. Audits current design, identifies generic AI patterns, and applies high-end design standards without breaking functionality. Works with any CSS framework or vanilla CSS.",
-        "name": "redesign-existing-projects",
-        "reason": "explicit",
-        "slug": "redesign-existing-projects"
-      },
-      {
-        "description": "[OMX] Visual Ralph orchestration for frontend UI from generated references, static references, or live URL targets, using $ralph with $visual-verdict and pixel-diff evidence until the implementation matches and leaves a reproducible design system.",
-        "name": "visual-ralph",
-        "reason": "explicit",
-        "slug": "visual-ralph"
-      },
-      {
-        "description": "[OMX] Structured visual QA verdict for screenshot-to-reference comparisons",
-        "name": "visual-verdict",
-        "reason": "explicit",
-        "slug": "visual-verdict"
-      }
-    ]
+    "Higgsfield": {
+      "page": "mcps/higgsfield/skills.md",
+      "skills": [
+        {
+          "description": "Premium brand-kit image generation skill for creating high-end brand-guidelines boards, logo systems, identity decks, and visual-world presentations. Trained for minimalist, cinematic, editorial, dark-tech, luxury, cultural, security, gaming, developer-tool, and consumer-app brand systems. Optimized for intentional logo concepting, refined composition, sparse typography, strong symbolic meaning, premium mockups, art-directed imagery, and flexible grid layouts.",
+          "name": "brandkit",
+          "reason": "explicit",
+          "slug": "brandkit"
+        },
+        {
+          "description": "Generate images/videos via Higgsfield AI. Models: GPT Image 2, Nano Banana 2/Pro, Soul V2/Cinema/Cast/Location, Seedance 2.0, Veo 3.1, Kling 3.0, Flux 2, Z Image, Hailuo; plus Marketing Studio ads with avatars/products/hooks/settings. Use when: \"generate an image\", \"make a picture\", \"make a video\", \"animate this photo\", \"image-to-video\", \"edit/stylize/remix this image\", \"produce a clip\", \"create an ad\", \"make a UGC video\", \"product demo\", \"unboxing\", \"TV spot\", \"brand video\", \"presenter video\", \"import product from URL\", \"create avatar for ad\". Supports text-to-image, image-to-image, image-to-video, reference-based generation, and Marketing Studio. Auto-detects upload IDs vs previous job IDs. Chain with higgsfield-soul-id when the user wants face/identity consistency. NOT for: training Soul Character (use higgsfield-soul-id), product photoshoots (use higgsfield-product-photoshoot), marketplace listing cards (use higgsfield-marketplace-cards), text/chat/TTS tasks.",
+          "name": "higgsfield-generate",
+          "reason": "prefix",
+          "slug": "higgsfield-generate"
+        },
+        {
+          "description": "Generate marketplace product image cards through Higgsfield: compliant main image, secondary product images, and A+ style content modules. Use when the user asks for marketplace listing images, product detail cards, secondary product images, product infographics, lifestyle listing shots, A+ style content, marketplace image sets, or sales-ready product visuals. Backend owns marketplace compliance references and prompt templates; this skill only routes user intent to the CLI. NOT for generic brand product photography without marketplace/listing context (use higgsfield-product-photoshoot), video generation or UGC ads (use higgsfield-generate), or Soul Character training (use higgsfield-soul-id).",
+          "name": "higgsfield-marketplace-cards",
+          "reason": "prefix",
+          "slug": "higgsfield-marketplace-cards"
+        },
+        {
+          "description": "Generate brand-quality product images through Higgsfield product-photoshoot prompt enhancement on GPT Image 2 / gpt_image_2. Entry point for professional brand/product visuals. Use when: \"product photo\", \"studio shot\", \"lifestyle image\", \"Pinterest pin\", \"hero/banner\", \"carousel\", \"ad creative\", \"Meta ads\", \"virtual try-on\", \"model wearing\", \"person holding product\", \"closeup with hands\", \"levitating/floating/splash product\", \"CGI/surreal product\", \"restyle\", \"seasonal/aesthetic variation\", or any product, brand, or paid-social creative. Modes: product_shot, lifestyle_scene, closeup_product_with_person, moodboard_pin, hero_banner, social_carousel, ad_creative_pack, virtual_model_tryout, conceptual_product, restyle. Backend assembles the final prompt; never freehand it. NOT for: no-product text-to-image (use higgsfield-generate), branded avatar video (use higgsfield-generate Marketing Studio), marketplace listing cards (use higgsfield-marketplace-cards), Soul Character training (use higgsfield-soul-id).",
+          "name": "higgsfield-product-photoshoot",
+          "reason": "prefix",
+          "slug": "higgsfield-product-photoshoot"
+        },
+        {
+          "description": "Train a Soul Character \u2014 a personalized model on a person's face that Higgsfield uses for identity-faithful image and video generation. Use when: \"create my Soul\", \"train my face\", \"make my digital twin\", \"build me an avatar\", \"learn my appearance\", \"create a character of me\", \"set up identity for video\", \"I want my face in generated images\". Chain: train Soul (one-time, returns reference_id) \u2192 use in higgsfield-generate via `--soul-id <id>` with models like `text2image_soul_v2` or `soul_cinema_studio`. NOT for: one-shot face swaps (use higgsfield-generate with --image), named-character / non-photo avatars (use higgsfield-generate with prompt).",
+          "name": "higgsfield-soul-id",
+          "reason": "prefix",
+          "slug": "higgsfield-soul-id"
+        },
+        {
+          "description": "Elite mobile app image-generation skill for creating premium, app-native screen concepts and flows. Designed for iOS, Android, and cross-platform mobile products. Prioritizes clean hierarchy, comfortably readable text, strong multi-screen consistency, controlled color palettes, non-generic creative direction, textured surfaces, image-led composition, tasteful custom iconography, and clean phone mockup framing. By default, screens should be shown inside a subtle premium iPhone or similar phone mockup with a visible frame, while the main focus stays on the app content itself. This skill generates images only. It does not write code.",
+          "name": "imagegen-frontend-mobile",
+          "reason": "explicit",
+          "slug": "imagegen-frontend-mobile"
+        },
+        {
+          "description": "Elite frontend image-direction skill for generating premium, conversion-aware website design references. CRITICAL OUTPUT RULE \u2014 generate ONE separate horizontal image FOR EVERY section. A landing page with 8 sections produces 8 images. Never compress multiple sections into one image. Enforces composition variety (not always left-text / right-image), background-image freedom, varied CTAs, varied hero scales (giant / mid / mini minimalist), narrative concept spine, second-read moments, and a single consistent palette across all images. Optimized for landing pages, marketing sites, and product comps that developers or coding models can accurately recreate.",
+          "name": "imagegen-frontend-web",
+          "reason": "explicit",
+          "slug": "imagegen-frontend-web"
+        }
+      ]
+    },
+    "MedusaDocs": {
+      "page": "mcps/medusadocs/skills.md",
+      "skills": [
+        {
+          "description": "Load automatically when planning, researching, or implementing Medusa Admin dashboard UI (widgets, custom pages, forms, tables, data loading, navigation). REQUIRED for all admin UI work in ALL modes (planning, implementation, exploration). Contains design patterns, component usage, and data loading patterns that MCP servers don't provide.",
+          "name": "building-admin-dashboard-customizations",
+          "reason": "prefix",
+          "slug": "building-admin-dashboard-customizations"
+        },
+        {
+          "description": "Load automatically when planning, researching, or implementing Medusa storefront features (calling custom API routes, SDK integration, React Query patterns, data fetching). REQUIRED for all storefront development in ALL modes (planning, implementation, exploration). Contains SDK usage patterns, frontend integration, and critical rules for calling Medusa APIs.",
+          "name": "building-storefronts",
+          "reason": "prefix",
+          "slug": "building-storefronts"
+        },
+        {
+          "description": "Load automatically when planning, researching, or implementing ANY Medusa backend features (custom modules, API routes, workflows, data models, module links, business logic). REQUIRED for all Medusa backend work in ALL modes (planning, implementation, exploration). Contains architectural patterns, best practices, and critical rules that MCP servers don't provide.",
+          "name": "building-with-medusa",
+          "reason": "prefix",
+          "slug": "building-with-medusa"
+        },
+        {
+          "description": "Use when building an internal admin-facing AI agent in a Medusa project. These agents are operated by merchants and store operators \u2014 not customers. Covers data models, module service, agent runtime (tools, system prompt, streamText), streaming API routes (NDJSON), and admin UI chat extensions. Load for any internal agent type: store operations assistant, product audit, cohort analysis, customer service tooling for support staff, etc. Do NOT use for customer-facing agents (storefront chatbots, buyer-side assistants).",
+          "name": "creating-agents-in-medusa",
+          "reason": "explicit",
+          "slug": "creating-internal-agents"
+        },
+        {
+          "description": "Generate database migrations for a Medusa module",
+          "name": "db-generate",
+          "reason": "prefix",
+          "slug": "db-generate"
+        },
+        {
+          "description": "Run database migrations in Medusa",
+          "name": "db-migrate",
+          "reason": "prefix",
+          "slug": "db-migrate"
+        },
+        {
+          "description": "Medusa implementation guidance for backend and storefront work. Use when building or modifying Medusa workflows, subscribers, API routes, auth, data models, query logic, jobs, or storefront integrations.",
+          "name": "medusa-reference",
+          "reason": "explicit",
+          "slug": "medusa-reference"
+        },
+        {
+          "description": "Create an admin user in Medusa",
+          "name": "new-user",
+          "reason": "explicit",
+          "slug": "new-user"
+        },
+        {
+          "description": "ALWAYS use this skill when working on ecommerce storefronts, online stores, shopping sites. Use for ANY storefront component including checkout pages, cart, payment flows, product pages, product listings, navigation, homepage, or ANY page/component in a storefront. CRITICAL for adding checkout, implementing cart, integrating Medusa backend, or building any ecommerce functionality. Framework-agnostic (Next.js, SvelteKit, TanStack Start, React, Vue). Provides patterns, decision frameworks, backend integration guidance.",
+          "name": "storefront-best-practices",
+          "reason": "explicit",
+          "slug": "storefront-best-practices"
+        },
+        {
+          "description": "Build or run WooCommerce product importers into Medusa v2 backends. Use when importing WooCommerce products, variations, categories, images, prices, inventory, or metadata into Medusa, especially repos with apps/backend. Includes safe secret handling, dry-run/idempotent import rules, Medusa workflow usage, and verification steps.",
+          "name": "woocommerce-to-medusa-import",
+          "reason": "explicit",
+          "slug": "woocommerce-to-medusa-import"
+        }
+      ]
+    },
+    "colony": {
+      "page": "mcps/colony/skills.md",
+      "skills": [
+        {
+          "description": "Repo guardrail check and repair.",
+          "name": "gitguardex",
+          "reason": "explicit",
+          "slug": "gitguardex"
+        },
+        {
+          "description": "Use when you need to merge SKILL.md updates from agent branches/worktrees into the local base branch (default: dev) with the multiagent-safety flow.",
+          "name": "guardex-merge-skills-to-dev",
+          "reason": "explicit",
+          "slug": "guardex-merge-skills-to-dev"
+        },
+        {
+          "description": "[OMX] N coordinated agents on shared task list using tmux-based orchestration",
+          "name": "team",
+          "reason": "explicit",
+          "slug": "team"
+        },
+        {
+          "description": "[OMX] Show agent flow trace timeline and summary",
+          "name": "trace",
+          "reason": "explicit",
+          "slug": "trace"
+        },
+        {
+          "description": "[OMX] Team worker protocol (ACK, mailbox, task lifecycle) for tmux-based OMX teams",
+          "name": "worker",
+          "reason": "explicit",
+          "slug": "worker"
+        }
+      ]
+    },
+    "coolify": {
+      "page": "mcps/coolify/skills.md",
+      "skills": [
+        {
+          "description": "Use when the user wants to manage Coolify resources through the Coolify API CLI (contexts, servers, apps, deployments, databases, services, env vars, and GitHub app integrations).",
+          "name": "coolify",
+          "reason": "explicit",
+          "slug": "coolify"
+        }
+      ]
+    },
+    "gitea": {
+      "page": "mcps/gitea/skills.md",
+      "skills": [
+        {
+          "description": "Create missing GitHub repositories and push a parent repository that tracks app repositories as Git submodules. Use when the user asks to finish publishing locally initialized repos, push a parent repo plus backend/storefront submodules, create repos under an org, recover from invalid `gh auth status` when `gh api user` works, fall back from SSH `Permission denied (publickey)` to `gh` HTTPS auth, handle missing `workflow` token scope for `.github/workflows/*`, or verify remote `main` refs after push.",
+          "name": "gh-submodule-publish",
+          "reason": "explicit",
+          "slug": "gh-submodule-publish"
+        },
+        {
+          "description": "GitHub operations via `gh` CLI: issues, PRs, CI runs, code review, API queries. Use when: (1) checking PR status or CI, (2) creating/commenting on issues, (3) listing/filtering PRs or issues, (4) viewing run logs. NOT for: complex web UI interactions requiring manual browser flows (use browser tooling when available), bulk operations across many repos (script with gh api), or when gh auth is not configured.",
+          "name": "github",
+          "reason": "explicit",
+          "slug": "github"
+        }
+      ]
+    },
+    "hostinger-api": {
+      "page": "mcps/hostinger-api/skills.md",
+      "skills": []
+    },
+    "letsfg": {
+      "page": "mcps/letsfg/skills.md",
+      "skills": [
+        {
+          "description": "Search and book flights across 180+ airlines with zero markup \u2014 $20\u201350 cheaper than OTAs. Returns raw airline prices via local connectors (Ryanair, EasyJet, Wizz Air, Southwest, AirAsia, and 175+ more). Use when user asks to \"find flights\", \"search flights\", \"book a flight\", \"compare airline prices\", \"find cheap flights\", \"fly from X to Y\", \"find connections\", \"find layover options\", or any flight-related travel query. Do NOT use for hotel-only searches, car rentals, or non-flight travel bookings.",
+          "name": "flight-search",
+          "reason": "explicit",
+          "slug": "flight-search"
+        }
+      ]
+    },
+    "omx_code_intel": {
+      "page": "mcps/omx/code-intel/skills.md",
+      "skills": [
+        {
+          "description": "[OMX] Run an anti-slop cleanup/refactor/deslop workflow",
+          "name": "ai-slop-cleaner",
+          "reason": "explicit",
+          "slug": "ai-slop-cleaner"
+        },
+        {
+          "description": "[OMX] Run read-only deep repository analysis and return a ranked synthesis with explicit confidence, concrete file references, and clear evidence-vs-inference boundaries. Use when a user says 'analyze', 'investigate', 'why does', 'what's causing', or needs grounded cross-file explanation before any changes are proposed.",
+          "name": "analyze",
+          "reason": "explicit",
+          "slug": "analyze"
+        },
+        {
+          "description": "[OMX] Run a comprehensive code review",
+          "name": "code-review",
+          "reason": "explicit",
+          "slug": "code-review"
+        },
+        {
+          "description": "Use when a user asks to debug or fix failing GitHub PR checks that run in GitHub Actions; use `gh` to inspect checks and logs, summarize failure context, draft a fix plan, and implement only after explicit approval. Treat external providers (for example Buildkite) as out of scope and report only the details URL.",
+          "name": "gh-fix-ci",
+          "reason": "explicit",
+          "slug": "gh-fix-ci"
+        },
+        {
+          "description": "[OMX] Run a comprehensive security review on code",
+          "name": "security-review",
+          "reason": "explicit",
+          "slug": "security-review"
+        }
+      ]
+    },
+    "omx_memory": {
+      "page": "mcps/omx/memory/skills.md",
+      "skills": [
+        {
+          "description": "[OMX] Save notes to notepad.md for compaction resilience",
+          "name": "note",
+          "reason": "explicit",
+          "slug": "note"
+        },
+        {
+          "description": "[OMX] Persistent markdown project wiki stored under .omx/wiki with keyword search and lifecycle capture",
+          "name": "wiki",
+          "reason": "explicit",
+          "slug": "wiki"
+        }
+      ]
+    },
+    "omx_state": {
+      "page": "mcps/omx/state/skills.md",
+      "skills": [
+        {
+          "description": "[OMX] Strict autonomous loop: $ralplan -> $ralph -> $code-review",
+          "name": "autopilot",
+          "reason": "explicit",
+          "slug": "autopilot"
+        },
+        {
+          "description": "[OMX] Cancel any active OMX mode (autopilot, ralph, ultrawork, ecomode, ultraqa, swarm, ultrapilot, pipeline, team)",
+          "name": "cancel",
+          "reason": "explicit",
+          "slug": "cancel"
+        },
+        {
+          "description": "[OMX] Show or configure the OMX HUD (two-layer statusline)",
+          "name": "hud",
+          "reason": "explicit",
+          "slug": "hud"
+        },
+        {
+          "description": "[OMX] Configurable pipeline orchestrator for sequencing stages",
+          "name": "pipeline",
+          "reason": "explicit",
+          "slug": "pipeline"
+        },
+        {
+          "description": "[OMX] Self-referential loop until task completion with architect verification",
+          "name": "ralph",
+          "reason": "explicit",
+          "slug": "ralph"
+        },
+        {
+          "description": "[OMX] N coordinated agents on shared task list using tmux-based orchestration",
+          "name": "team",
+          "reason": "explicit",
+          "slug": "team"
+        },
+        {
+          "description": "[OMX] QA cycling workflow - test, verify, fix, repeat until goal met",
+          "name": "ultraqa",
+          "reason": "explicit",
+          "slug": "ultraqa"
+        },
+        {
+          "description": "[OMX] Parallel execution engine for high-throughput task completion",
+          "name": "ultrawork",
+          "reason": "explicit",
+          "slug": "ultrawork"
+        }
+      ]
+    },
+    "omx_trace": {
+      "page": "mcps/omx/trace/skills.md",
+      "skills": [
+        {
+          "description": "[OMX] Show or configure the OMX HUD (two-layer statusline)",
+          "name": "hud",
+          "reason": "explicit",
+          "slug": "hud"
+        },
+        {
+          "description": "[OMX] N coordinated agents on shared task list using tmux-based orchestration",
+          "name": "team",
+          "reason": "explicit",
+          "slug": "team"
+        },
+        {
+          "description": "[OMX] Show agent flow trace timeline and summary",
+          "name": "trace",
+          "reason": "explicit",
+          "slug": "trace"
+        }
+      ]
+    },
+    "omx_wiki": {
+      "page": "mcps/omx/wiki/skills.md",
+      "skills": [
+        {
+          "description": "[OMX] Persistent markdown project wiki stored under .omx/wiki with keyword search and lifecycle capture",
+          "name": "wiki",
+          "reason": "explicit",
+          "slug": "wiki"
+        }
+      ]
+    },
+    "react-grab-mcp": {
+      "page": "mcps/react-grab-mcp/skills.md",
+      "skills": [
+        {
+          "description": "Senior UI/UX Engineer. Architect digital interfaces overriding default LLM biases. Enforces metric-based rules, strict component architecture, CSS hardware acceleration, and balanced design engineering.",
+          "name": "design-taste-frontend",
+          "reason": "explicit",
+          "slug": "design-taste-frontend"
+        },
+        {
+          "description": "Elite website image-to-code skill for Codex. For visually important web tasks, it must first generate the design image(s) itself, deeply analyze them, then implement the website to match them as closely as possible. In Codex, it must prefer large, readable, section-specific images instead of tiny compressed boards, generate fresh standalone images for sections or detail views instead of cropping old ones, avoid lazy under-generation, avoid cards-inside-cards-inside-cards UI, and keep the hero clean, spacious, readable, and visible on a small laptop.",
+          "name": "image-to-code",
+          "reason": "explicit",
+          "slug": "image-to-code"
+        },
+        {
+          "description": "Upgrades existing websites and apps to premium quality. Audits current design, identifies generic AI patterns, and applies high-end design standards without breaking functionality. Works with any CSS framework or vanilla CSS.",
+          "name": "redesign-existing-projects",
+          "reason": "explicit",
+          "slug": "redesign-existing-projects"
+        },
+        {
+          "description": "[OMX] Visual Ralph orchestration for frontend UI from generated references, static references, or live URL targets, using $ralph with $visual-verdict and pixel-diff evidence until the implementation matches and leaves a reproducible design system.",
+          "name": "visual-ralph",
+          "reason": "explicit",
+          "slug": "visual-ralph"
+        },
+        {
+          "description": "[OMX] Structured visual QA verdict for screenshot-to-reference comparisons",
+          "name": "visual-verdict",
+          "reason": "explicit",
+          "slug": "visual-verdict"
+        }
+      ]
+    }
   },
   "skill_count": 85,
   "skills_root": "~/Documents/recodeee/skills/skills"

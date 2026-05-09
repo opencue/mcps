@@ -1,6 +1,6 @@
 # react-grab-mcp skills
 
-Related skills from `../skills` registry.
+Related skills from the `recodeee/skills` registry.
 
 | Skill | Reason | Description |
 | --- | --- | --- |

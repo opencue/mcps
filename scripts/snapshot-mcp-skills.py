@@ -18,6 +18,12 @@ def slugify(value: str) -> str:
     return re.sub(r"[^a-z0-9]+", "-", value.lower()).strip("-")
 
 
+def mcp_page_path(mcp_name: str) -> Path:
+    if mcp_name.startswith("omx_"):
+        return Path("mcps") / "omx" / slugify(mcp_name.removeprefix("omx_")) / "skills.md"
+    return Path("mcps") / slugify(mcp_name) / "skills.md"
+
+
 def display_path(value: Path | str) -> str:
     text = str(value)
     home = str(Path.home())
@@ -122,12 +128,12 @@ def match_skills(mcp_name: str, skills: dict[str, dict[str, str]], rules: dict[s
 
 
 def write_mcp_skill_page(mcp_name: str, matches: list[dict[str, str]]) -> None:
-    mcp_dir = MCPS_DIR / slugify(mcp_name)
-    mcp_dir.mkdir(parents=True, exist_ok=True)
+    page_path = ROOT / mcp_page_path(mcp_name)
+    page_path.parent.mkdir(parents=True, exist_ok=True)
     lines = [
         f"# {mcp_name} skills",
         "",
-        "Related skills from `../skills` registry.",
+        "Related skills from the `recodeee/skills` registry.",
         "",
     ]
 
@@ -146,7 +152,29 @@ def write_mcp_skill_page(mcp_name: str, matches: list[dict[str, str]]) -> None:
             lines.append(f"| `{item['slug']}` | {item['reason']} | {desc} |")
         lines.append("")
 
-    (mcp_dir / "skills.md").write_text("\n".join(lines), encoding="utf-8")
+    page_path.write_text("\n".join(lines), encoding="utf-8")
+
+
+def write_omx_index(mcp_names: list[str], mapping: dict[str, Any]) -> None:
+    omx_names = [name for name in mcp_names if name.startswith("omx_")]
+    if not omx_names:
+        return
+
+    lines = [
+        "# OMX MCPs",
+        "",
+        "Top-level folder for OMX-related MCP servers.",
+        "",
+        "| MCP | Related skills | Page |",
+        "| --- | ---: | --- |",
+    ]
+    for name in omx_names:
+        skills = mapping["mcps"].get(name, {}).get("skills", [])
+        lines.append(f"| `{name}` | {len(skills)} | `{mcp_page_path(name).relative_to('mcps/omx')}` |")
+
+    omx_dir = MCPS_DIR / "omx"
+    omx_dir.mkdir(parents=True, exist_ok=True)
+    (omx_dir / "README.md").write_text("\n".join(lines) + "\n", encoding="utf-8")
 
 
 def main() -> None:
@@ -179,9 +207,13 @@ def main() -> None:
     for mcp_name in mcp_names:
         matches = match_skills(mcp_name, skills, rules)
         write_mcp_skill_page(mcp_name, matches)
-        slug = slugify(mcp_name)
-        mapping["mcps"][mcp_name] = matches
-        lines.append(f"| `{mcp_name}` | {len(matches)} | `mcps/{slug}/skills.md` |")
+        mapping["mcps"][mcp_name] = {
+            "page": str(mcp_page_path(mcp_name)),
+            "skills": matches,
+        }
+        lines.append(f"| `{mcp_name}` | {len(matches)} | `{mcp_page_path(mcp_name)}` |")
+
+    write_omx_index(mcp_names, mapping)
 
     (CONFIGS_DIR / "mcp-skill-map.json").write_text(
         json.dumps(mapping, indent=2, sort_keys=True) + "\n",
