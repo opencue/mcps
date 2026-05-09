@@ -129,7 +129,7 @@
           "slug": "medusa-reference"
         },
         {
-          "category": "content",
+          "category": "medusa",
           "description": "Create a new Medusa admin user via `npx medusa user -e <email> -p <password>`. Use when user says create admin, new admin user, /medusa-dev:user, or supplies an email + password pair for a Medusa backend. Medusa-only \u2014 NOT for general user creation.",
           "name": "new-user",
           "reason": "explicit",
@@ -392,14 +392,14 @@
       "page": "mcps/omx/memory/skills.md",
       "skills": [
         {
-          "category": "content",
+          "category": "meta",
           "description": "[OMX] Save context to .omx/notepad.md so it survives compaction. Use when user says /note, save this note, remember this for later, /note --priority, or /note --show. Three sections: Priority Context (always loaded), Working Memory (timestamped, auto-pruned), MANUAL (never pruned).",
           "name": "note",
           "reason": "explicit",
           "slug": "note"
         },
         {
-          "category": "content",
+          "category": "meta",
           "description": "[OMX] Persistent project wiki under .omx/wiki with keyword search and lifecycle capture. Use when user says wiki add, wiki query, wiki lint, wiki read, wiki delete, or asks to save architectural decisions / ingest project knowledge into a searchable markdown KB.",
           "name": "wiki",
           "reason": "explicit",
@@ -555,7 +555,7 @@
       "page": "mcps/omx/wiki/skills.md",
       "skills": [
         {
-          "category": "content",
+          "category": "meta",
           "description": "[OMX] Persistent project wiki under .omx/wiki with keyword search and lifecycle capture. Use when user says wiki add, wiki query, wiki lint, wiki read, wiki delete, or asks to save architectural decisions / ingest project knowledge into a searchable markdown KB.",
           "name": "wiki",
           "reason": "explicit",
