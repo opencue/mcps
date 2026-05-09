@@ -26,7 +26,7 @@ if [[ -d .git/rebase-merge ]] || [[ -d .git/rebase-apply ]] || [[ -f .git/MERGE_
 fi
 
 paths_to_stage=()
-for p in mcps configs templates docs README.md .gitignore scripts; do
+for p in mcps configs templates docs plugins README.md .gitignore scripts; do
   [[ -e "$p" ]] && paths_to_stage+=("$p")
 done
 
