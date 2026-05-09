@@ -22,3 +22,4 @@ Skills root: `~/Documents/soul/skills/skills`
 | `omx_wiki` | [link](https://github.com/NagyVikt/oh-my-codex) | 1 | `mcps/omx/wiki/skills.md` |
 | `react-grab-mcp` | [link](https://www.npmjs.com/package/@react-grab/mcp) | 5 | `mcps/react-grab-mcp/skills.md` |
 | `recodee` | - | 0 | `mcps/recodee/skills.md` |
+| `soul-skills` | - | 0 | `mcps/soul-skills/skills.md` |

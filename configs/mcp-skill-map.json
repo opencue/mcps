@@ -1,5 +1,5 @@
 {
-  "mcp_count": 16,
+  "mcp_count": 17,
   "mcps": {
     "Higgsfield": {
       "agent_surfaces": [
@@ -651,6 +651,17 @@
       "owners": [],
       "package": "",
       "page": "mcps/recodee/skills.md",
+      "skills": [],
+      "source_url": ""
+    },
+    "soul-skills": {
+      "agent_surfaces": [],
+      "health_command": "",
+      "homepage": "",
+      "install": "",
+      "owners": [],
+      "package": "",
+      "page": "mcps/soul-skills/skills.md",
       "skills": [],
       "source_url": ""
     }

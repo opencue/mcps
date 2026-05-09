@@ -50,6 +50,7 @@ Server key: `mcpServers`
 | `hostinger-api` | `bash` | 2 | - |
 | `obsidian-vault` | `npx` | 3 | - |
 | `recodee` | `~/Documents/recodee/.venv/bin/recodee-mcp` | 0 | `RECODEE_BASE_URL` |
+| `soul-skills` | `~/.local/bin/uv` | 4 | - |
 
 ## vscode
 

@@ -46,6 +46,15 @@
       "env": {
         "RECODEE_BASE_URL": "<redacted>"
       }
+    },
+    "soul-skills": {
+      "args": [
+        "run",
+        "--quiet",
+        "--script",
+        "~/Documents/soul/mcps/mcps/soul-skills/server.py"
+      ],
+      "command": "~/.local/bin/uv"
     }
   },
   "source": "claude_runtime",
