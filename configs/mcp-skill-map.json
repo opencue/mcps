@@ -102,21 +102,21 @@
         },
         {
           "category": "medusa",
-          "description": "Use when building an internal admin-facing AI agent in a Medusa project. These agents are operated by merchants and store operators \u2014 not customers. Covers data models, module service, agent runtime (tools, system prompt, streamText), streaming API routes (NDJSON), and admin UI chat extensions. Load for any internal agent type: store operations assistant, product audit, cohort analysis, customer service tooling for support staff, etc. Do NOT use for customer-facing agents (storefront chatbots, buyer-side assistants).",
+          "description": "Use when building an internal admin-facing AI agent in a Medusa project \u2014 operated by merchants/operators, NOT customers. Covers data models, module service, agent runtime (tools, system prompt, streamText), streaming NDJSON API routes, and admin UI chat extensions. NOT for storefront / buyer-side chatbots.",
           "name": "creating-agents-in-medusa",
           "reason": "explicit",
           "slug": "creating-internal-agents"
         },
         {
           "category": "medusa",
-          "description": "Generate database migrations for a Medusa module",
+          "description": "Generate database migrations for a Medusa module via `npx medusa db:generate <module-name>`. Use when user says /medusa-dev:db-generate, generate migrations for module X, or modifies a Medusa module data model and needs migration files. Pair with /db-migrate to apply.",
           "name": "db-generate",
           "reason": "prefix",
           "slug": "db-generate"
         },
         {
           "category": "medusa",
-          "description": "Run database migrations in Medusa",
+          "description": "Apply pending Medusa database migrations via `npx medusa db:migrate`. Use when user says /medusa-dev:db-migrate, run migrations, apply pending migrations, or after running /db-generate to bring the database up to date. Reports applied count plus any errors.",
           "name": "db-migrate",
           "reason": "prefix",
           "slug": "db-migrate"
@@ -130,14 +130,14 @@
         },
         {
           "category": "content",
-          "description": "Create an admin user in Medusa",
+          "description": "Create a new Medusa admin user via `npx medusa user -e <email> -p <password>`. Use when user says create admin, new admin user, /medusa-dev:user, or supplies an email + password pair for a Medusa backend. Medusa-only \u2014 NOT for general user creation.",
           "name": "new-user",
           "reason": "explicit",
           "slug": "new-user"
         },
         {
           "category": "medusa",
-          "description": "ALWAYS use this skill when working on ecommerce storefronts, online stores, shopping sites. Use for ANY storefront component including checkout pages, cart, payment flows, product pages, product listings, navigation, homepage, or ANY page/component in a storefront. CRITICAL for adding checkout, implementing cart, integrating Medusa backend, or building any ecommerce functionality. Framework-agnostic (Next.js, SvelteKit, TanStack Start, React, Vue). Provides patterns, decision frameworks, backend integration guidance.",
+          "description": "Use when working on ecommerce storefronts (Next.js, SvelteKit, React, Vue) \u2014 checkout, cart, payment flows, product pages, navigation, homepage, or ANY storefront component. Critical for adding checkout, implementing cart, integrating a Medusa backend, or building ecommerce functionality.",
           "name": "storefront-best-practices",
           "reason": "explicit",
           "slug": "storefront-best-practices"
@@ -168,7 +168,7 @@
       "skills": [
         {
           "category": "github",
-          "description": "Repo guardrail check and repair.",
+          "description": "Use when repo safety might be broken (failing CI, dirty working tree, dropped submodules, weird branch state). Runs the gx (gitguardex) guardrail flow \u2014 gx status to assess, gx doctor to repair, gx status --strict to verify. Bootstrap via gx setup. NOT for code-quality review \u2014 use code-review.",
           "name": "gitguardex",
           "reason": "explicit",
           "slug": "gitguardex"
@@ -196,7 +196,7 @@
         },
         {
           "category": "orchestration",
-          "description": "[OMX] Team worker protocol (ACK, mailbox, task lifecycle) for tmux-based OMX teams",
+          "description": "[OMX] Auto-loaded by Codex sessions started as an OMX Team worker (a tmux pane spawned by $team). Defines the worker startup ACK, mailbox poll loop, and task lifecycle. Use when OMX_TEAM_WORKER is set or the worker inbox tells you to load it. NOT user-invocable \u2014 leader-spawned only.",
           "name": "worker",
           "reason": "explicit",
           "slug": "worker"
@@ -242,14 +242,14 @@
       "skills": [
         {
           "category": "github",
-          "description": "Create missing GitHub repositories and push a parent repository that tracks app repositories as Git submodules. Use when the user asks to finish publishing locally initialized repos, push a parent repo plus backend/storefront submodules, create repos under an org, recover from invalid `gh auth status` when `gh api user` works, fall back from SSH `Permission denied (publickey)` to `gh` HTTPS auth, handle missing `workflow` token scope for `.github/workflows/*`, or verify remote `main` refs after push.",
+          "description": "Create missing GitHub repos and push a parent repo that tracks app repos as Git submodules. Use when user asks to publish locally-initialized repos, push parent + backend/storefront submodules, create org-scoped repos, recover from broken `gh auth` / SSH publickey errors, or fix missing workflow token scope.",
           "name": "gh-submodule-publish",
           "reason": "explicit",
           "slug": "gh-submodule-publish"
         },
         {
           "category": "github",
-          "description": "GitHub operations via `gh` CLI: issues, PRs, CI runs, code review, API queries. Use when: (1) checking PR status or CI, (2) creating/commenting on issues, (3) listing/filtering PRs or issues, (4) viewing run logs. NOT for: complex web UI interactions requiring manual browser flows (use browser tooling when available), bulk operations across many repos (script with gh api), or when gh auth is not configured.",
+          "description": "GitHub operations via the `gh` CLI \u2014 issues, PRs, CI runs, code review, API queries. Use when checking PR status or CI, creating/commenting on issues, listing/filtering PRs or issues, or viewing run logs. NOT for bulk cross-repo work (script with `gh api`) or unconfigured `gh auth`.",
           "name": "github",
           "reason": "explicit",
           "slug": "github"
@@ -288,7 +288,7 @@
       "skills": [
         {
           "category": "research",
-          "description": "Search and book flights across 180+ airlines with zero markup \u2014 $20\u201350 cheaper than OTAs. Returns raw airline prices via local connectors (Ryanair, EasyJet, Wizz Air, Southwest, AirAsia, and 175+ more). Use when user asks to \"find flights\", \"search flights\", \"book a flight\", \"compare airline prices\", \"find cheap flights\", \"fly from X to Y\", \"find connections\", \"find layover options\", or any flight-related travel query. Do NOT use for hotel-only searches, car rentals, or non-flight travel bookings.",
+          "description": "Search and book flights across 180+ airlines with zero markup ($20\u201350 cheaper than OTAs). Use when user says find flights, search flights, book a flight, find cheap flights, fly from X to Y, find connections/layovers, or any flight query. NOT for hotels, cars, or non-flight bookings.",
           "name": "flight-search",
           "reason": "explicit",
           "slug": "flight-search"
@@ -371,14 +371,14 @@
       "skills": [
         {
           "category": "content",
-          "description": "[OMX] Save notes to notepad.md for compaction resilience",
+          "description": "[OMX] Save context to .omx/notepad.md so it survives compaction. Use when user says /note, save this note, remember this for later, /note --priority, or /note --show. Three sections: Priority Context (always loaded), Working Memory (timestamped, auto-pruned), MANUAL (never pruned).",
           "name": "note",
           "reason": "explicit",
           "slug": "note"
         },
         {
           "category": "content",
-          "description": "[OMX] Persistent markdown project wiki stored under .omx/wiki with keyword search and lifecycle capture",
+          "description": "[OMX] Persistent project wiki under .omx/wiki with keyword search and lifecycle capture. Use when user says wiki add, wiki query, wiki lint, wiki read, wiki delete, or asks to save architectural decisions / ingest project knowledge into a searchable markdown KB.",
           "name": "wiki",
           "reason": "explicit",
           "slug": "wiki"
@@ -415,6 +415,20 @@
           "slug": "cancel"
         },
         {
+          "category": "orchestration",
+          "description": "Use when user says handoff, claim this file, who owns this, check the inbox, what's blocking me, /colony, /task, /handoff, or anything multi-agent or quota-safe. Loads the Colony contract \u2014 hivemind_context, attention_inbox, task_ready_for_agent, claim files before edits, task_note_working updates, quota-safe handoff/relay before stopping. NOT for solo single-file edits.",
+          "name": "colony",
+          "reason": "category",
+          "slug": "colony"
+        },
+        {
+          "category": "orchestration",
+          "description": "Use when user says \"colony:prompts\", \"generate colony planner prompts\", \"add N agent prompts to planner\", \"wave plan for colony\", \"split this into parallel agent prompts\", \"/colony-prompts\", or asks to scaffold N parallel-safe agent prompt files for the colony hivemind planner. Produces prompt files at apps/frontend/public/colony-planner/prompts/agent-NN.md in the canonical Goal/Read/Implement/Constraints/Proof format with file-ownership invariants per wave. NOT for solo single-file tasks \u2014 use this only when the user wants a multi-agent wave plan.",
+          "name": "colony-prompts",
+          "reason": "category",
+          "slug": "colony-prompts"
+        },
+        {
           "category": "meta",
           "description": "[OMX] Use when user says 'show hud', 'omx hud', 'configure statusline', 'change hud preset', 'live hud', or wants ralph/ultrawork/autopilot/team/pipeline mode state. Runs `omx hud [--watch|--json|--preset=minimal|focused|full]`, reads .omx/state/*.json, configures `[tui] status_line` in ~/.codex/config.toml.",
           "name": "hud",
@@ -430,7 +444,7 @@
         },
         {
           "category": "orchestration",
-          "description": "[OMX] Use when user says 'ralph', '$ralph', 'don't stop', 'must complete', 'finish this', or 'keep going until done' on a single concrete task. Runs a persistence loop with parallel delegation, architect verification, mandatory deslop pass, and regression re-verification before exit. NOT for: full idea-to-PR autonomy (use $autopilot), planning (use $ralplan), or fanning out N tmux workers (use $team).",
+          "description": "[OMX] Use when user says ralph, $ralph, do not stop, must complete, finish this, or keep going until done on a single concrete task. Persistence loop with parallel delegation, architect verification, deslop pass, regression re-verify. NOT for idea\u2192PR autonomy (use $autopilot) or planning (use $ralplan).",
           "name": "ralph",
           "reason": "explicit",
           "slug": "ralph"
@@ -458,7 +472,7 @@
         },
         {
           "category": "orchestration",
-          "description": "[OMX] Parallel execution engine for high-throughput task completion",
+          "description": "[OMX] Use when user says ulw, ultrawork, or wants parallel execution of multiple independent tasks. Provides parallelism, context discipline, and smart delegation guidance \u2014 but no persistence. NOT for guaranteed completion (use $ralph), full idea\u2192PR pipeline (use $autopilot), or a single sequential task (just execute).",
           "name": "ultrawork",
           "reason": "explicit",
           "slug": "ultrawork"
@@ -472,7 +486,7 @@
         },
         {
           "category": "orchestration",
-          "description": "[OMX] Team worker protocol (ACK, mailbox, task lifecycle) for tmux-based OMX teams",
+          "description": "[OMX] Auto-loaded by Codex sessions started as an OMX Team worker (a tmux pane spawned by $team). Defines the worker startup ACK, mailbox poll loop, and task lifecycle. Use when OMX_TEAM_WORKER is set or the worker inbox tells you to load it. NOT user-invocable \u2014 leader-spawned only.",
           "name": "worker",
           "reason": "category",
           "slug": "worker"
@@ -534,7 +548,7 @@
       "skills": [
         {
           "category": "content",
-          "description": "[OMX] Persistent markdown project wiki stored under .omx/wiki with keyword search and lifecycle capture",
+          "description": "[OMX] Persistent project wiki under .omx/wiki with keyword search and lifecycle capture. Use when user says wiki add, wiki query, wiki lint, wiki read, wiki delete, or asks to save architectural decisions / ingest project knowledge into a searchable markdown KB.",
           "name": "wiki",
           "reason": "explicit",
           "slug": "wiki"
@@ -594,6 +608,6 @@
       "source_url": "https://www.npmjs.com/package/@react-grab/mcp"
     }
   },
-  "skill_count": 85,
+  "skill_count": 97,
   "skills_root": "~/Documents/recodeee/skills/skills"
 }

@@ -15,7 +15,7 @@ Skills root: `~/Documents/recodeee/skills/skills`
 | `MedusaDocs` | [link](https://docs.medusajs.com/mcp) | 10 | `mcps/medusadocs/skills.md` |
 | `omx_code_intel` | [link](https://github.com/NagyVikt/oh-my-codex) | 6 | `mcps/omx/code-intel/skills.md` |
 | `omx_memory` | [link](https://github.com/NagyVikt/oh-my-codex) | 2 | `mcps/omx/memory/skills.md` |
-| `omx_state` | [link](https://github.com/NagyVikt/oh-my-codex) | 11 | `mcps/omx/state/skills.md` |
+| `omx_state` | [link](https://github.com/NagyVikt/oh-my-codex) | 13 | `mcps/omx/state/skills.md` |
 | `omx_trace` | [link](https://github.com/NagyVikt/oh-my-codex) | 3 | `mcps/omx/trace/skills.md` |
 | `omx_wiki` | [link](https://github.com/NagyVikt/oh-my-codex) | 1 | `mcps/omx/wiki/skills.md` |
 | `react-grab-mcp` | [link](https://www.npmjs.com/package/@react-grab/mcp) | 5 | `mcps/react-grab-mcp/skills.md` |
