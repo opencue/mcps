@@ -6,7 +6,7 @@ Install command:
 
 ```sh
 # uv handles deps via PEP 723 inline metadata in server.py — no install step needed
-test -f /home/deadpool/Documents/soul/mcps/mcps/soul-skills/server.py
+test -f ~/Documents/soul/mcps/mcps/soul-skills/server.py
 ```
 
 Expected command/type:
@@ -17,7 +17,7 @@ args:
   - run
   - --quiet
   - --script
-  - /home/deadpool/Documents/soul/mcps/mcps/soul-skills/server.py
+  - ~/Documents/soul/mcps/mcps/soul-skills/server.py
 type: stdio
 ```
 
@@ -39,7 +39,7 @@ doctor
 Quick health check:
 
 ```sh
-timeout 3 ~/.local/bin/uv run --quiet --with "mcp>=1.0.0" python3 -c "import sys; sys.path.insert(0, '/home/deadpool/Documents/soul/mcps/mcps/soul-skills'); from server import mcp; print('ok')"
+timeout 3 ~/.local/bin/uv run --quiet --with "mcp>=1.0.0" python3 -c "import sys; sys.path.insert(0, '~/Documents/soul/mcps/mcps/soul-skills'); from server import mcp; print('ok')"
 ```
 
 ## Tools exposed
@@ -73,7 +73,7 @@ Lives in `~/.claude.json` `mcpServers.soul-skills`:
 ```json
 {
   "command": "~/.local/bin/uv",
-  "args": ["run", "--quiet", "--script", "/home/deadpool/Documents/soul/mcps/mcps/soul-skills/server.py"]
+  "args": ["run", "--quiet", "--script", "~/Documents/soul/mcps/mcps/soul-skills/server.py"]
 }
 ```
 
