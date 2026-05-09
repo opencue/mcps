@@ -8,3 +8,23 @@
 raw/
 __pycache__/
 *.pyc
+
+# Runtime / agent state
+.omc/
+.omx/
+.claude/state/
+.claude/sessions/
+.claude/local/
+.claude/settings.local.json
+
+# Build / cache
+.venv/
+node_modules/
+dist/
+build/
+.cache/
+
+# Editor scratch
+*.swp
+*.swo
+.DS_Store
