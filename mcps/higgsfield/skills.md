@@ -2,6 +2,8 @@
 
 Related skills from the `recodeee/skills` registry.
 
+MCP source: [https://mcp.higgsfield.ai/mcp](https://mcp.higgsfield.ai/mcp)
+
 | Skill | Reason | Description |
 | --- | --- | --- |
 | `brandkit` | explicit | Premium brand-kit image generation skill for creating high-end brand-guidelines boards, logo systems, identity decks, and visual-world presentations. Trained for minimalist, cinematic, editorial, dark-tech, luxury, cultural, security, gaming, developer-tool, and consumer-app brand systems. Optimized for intentional logo concepting, refined composition, sparse typography, strong symbolic meaning, premium mockups, art-directed imagery, and flexible grid layouts. |

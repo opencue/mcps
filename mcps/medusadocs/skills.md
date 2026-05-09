@@ -2,6 +2,8 @@
 
 Related skills from the `recodeee/skills` registry.
 
+MCP source: [https://docs.medusajs.com/mcp](https://docs.medusajs.com/mcp)
+
 | Skill | Reason | Description |
 | --- | --- | --- |
 | `building-admin-dashboard-customizations` | prefix | Load automatically when planning, researching, or implementing Medusa Admin dashboard UI (widgets, custom pages, forms, tables, data loading, navigation). REQUIRED for all admin UI work in ALL modes (planning, implementation, exploration). Contains design patterns, component usage, and data loading patterns that MCP servers don't provide. |

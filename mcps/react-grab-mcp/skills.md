@@ -2,6 +2,8 @@
 
 Related skills from the `recodeee/skills` registry.
 
+MCP source: [https://www.npmjs.com/package/@react-grab/mcp](https://www.npmjs.com/package/@react-grab/mcp)
+
 | Skill | Reason | Description |
 | --- | --- | --- |
 | `design-taste-frontend` | explicit | Senior UI/UX Engineer. Architect digital interfaces overriding default LLM biases. Enforces metric-based rules, strict component architecture, CSS hardware acceleration, and balanced design engineering. |

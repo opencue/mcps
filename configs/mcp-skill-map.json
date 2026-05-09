@@ -46,7 +46,8 @@
           "reason": "explicit",
           "slug": "imagegen-frontend-web"
         }
-      ]
+      ],
+      "source_url": "https://mcp.higgsfield.ai/mcp"
     },
     "MedusaDocs": {
       "page": "mcps/medusadocs/skills.md",
@@ -111,7 +112,8 @@
           "reason": "explicit",
           "slug": "woocommerce-to-medusa-import"
         }
-      ]
+      ],
+      "source_url": "https://docs.medusajs.com/mcp"
     },
     "colony": {
       "page": "mcps/colony/skills.md",
@@ -146,7 +148,8 @@
           "reason": "explicit",
           "slug": "worker"
         }
-      ]
+      ],
+      "source_url": "https://github.com/recodeee/colony"
     },
     "coolify": {
       "page": "mcps/coolify/skills.md",
@@ -157,7 +160,8 @@
           "reason": "explicit",
           "slug": "coolify"
         }
-      ]
+      ],
+      "source_url": "https://github.com/StuMason/coolify-mcp"
     },
     "gitea": {
       "page": "mcps/gitea/skills.md",
@@ -174,11 +178,13 @@
           "reason": "explicit",
           "slug": "github"
         }
-      ]
+      ],
+      "source_url": "https://github.com/seepine/gitea-mcp"
     },
     "hostinger-api": {
       "page": "mcps/hostinger-api/skills.md",
-      "skills": []
+      "skills": [],
+      "source_url": "https://github.com/hostinger/api-mcp-server"
     },
     "letsfg": {
       "page": "mcps/letsfg/skills.md",
@@ -189,7 +195,8 @@
           "reason": "explicit",
           "slug": "flight-search"
         }
-      ]
+      ],
+      "source_url": "https://github.com/LetsFG/LetsFG"
     },
     "omx_code_intel": {
       "page": "mcps/omx/code-intel/skills.md",
@@ -224,7 +231,8 @@
           "reason": "explicit",
           "slug": "security-review"
         }
-      ]
+      ],
+      "source_url": "https://github.com/NagyVikt/oh-my-codex"
     },
     "omx_memory": {
       "page": "mcps/omx/memory/skills.md",
@@ -241,7 +249,8 @@
           "reason": "explicit",
           "slug": "wiki"
         }
-      ]
+      ],
+      "source_url": "https://github.com/NagyVikt/oh-my-codex"
     },
     "omx_state": {
       "page": "mcps/omx/state/skills.md",
@@ -294,7 +303,8 @@
           "reason": "explicit",
           "slug": "ultrawork"
         }
-      ]
+      ],
+      "source_url": "https://github.com/NagyVikt/oh-my-codex"
     },
     "omx_trace": {
       "page": "mcps/omx/trace/skills.md",
@@ -317,7 +327,8 @@
           "reason": "explicit",
           "slug": "trace"
         }
-      ]
+      ],
+      "source_url": "https://github.com/NagyVikt/oh-my-codex"
     },
     "omx_wiki": {
       "page": "mcps/omx/wiki/skills.md",
@@ -328,7 +339,8 @@
           "reason": "explicit",
           "slug": "wiki"
         }
-      ]
+      ],
+      "source_url": "https://github.com/NagyVikt/oh-my-codex"
     },
     "react-grab-mcp": {
       "page": "mcps/react-grab-mcp/skills.md",
@@ -363,7 +375,8 @@
           "reason": "explicit",
           "slug": "visual-verdict"
         }
-      ]
+      ],
+      "source_url": "https://www.npmjs.com/package/@react-grab/mcp"
     }
   },
   "skill_count": 85,

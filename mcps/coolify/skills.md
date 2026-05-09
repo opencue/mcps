@@ -2,6 +2,8 @@
 
 Related skills from the `recodeee/skills` registry.
 
+MCP source: [https://github.com/StuMason/coolify-mcp](https://github.com/StuMason/coolify-mcp)
+
 | Skill | Reason | Description |
 | --- | --- | --- |
 | `coolify` | explicit | Use when the user wants to manage Coolify resources through the Coolify API CLI (contexts, servers, apps, deployments, databases, services, env vars, and GitHub app integrations). |

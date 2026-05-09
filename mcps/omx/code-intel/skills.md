@@ -2,6 +2,8 @@
 
 Related skills from the `recodeee/skills` registry.
 
+MCP source: [https://github.com/NagyVikt/oh-my-codex](https://github.com/NagyVikt/oh-my-codex)
+
 | Skill | Reason | Description |
 | --- | --- | --- |
 | `ai-slop-cleaner` | explicit | [OMX] Run an anti-slop cleanup/refactor/deslop workflow |

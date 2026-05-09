@@ -127,15 +127,18 @@ def match_skills(mcp_name: str, skills: dict[str, dict[str, str]], rules: dict[s
     ]
 
 
-def write_mcp_skill_page(mcp_name: str, matches: list[dict[str, str]]) -> None:
+def write_mcp_skill_page(mcp_name: str, matches: list[dict[str, str]], rule: dict[str, Any]) -> None:
     page_path = ROOT / mcp_page_path(mcp_name)
     page_path.parent.mkdir(parents=True, exist_ok=True)
+    source_url = str(rule.get("source_url", "")).strip()
     lines = [
         f"# {mcp_name} skills",
         "",
         "Related skills from the `recodeee/skills` registry.",
         "",
     ]
+    if source_url:
+        lines.extend([f"MCP source: [{source_url}]({source_url})", ""])
 
     if not matches:
         lines.extend([
@@ -165,12 +168,14 @@ def write_omx_index(mcp_names: list[str], mapping: dict[str, Any]) -> None:
         "",
         "Top-level folder for OMX-related MCP servers.",
         "",
-        "| MCP | Related skills | Page |",
-        "| --- | ---: | --- |",
+        "| MCP | Source | Related skills | Page |",
+        "| --- | --- | ---: | --- |",
     ]
     for name in omx_names:
         skills = mapping["mcps"].get(name, {}).get("skills", [])
-        lines.append(f"| `{name}` | {len(skills)} | `{mcp_page_path(name).relative_to('mcps/omx')}` |")
+        source_url = mapping["mcps"].get(name, {}).get("source_url", "")
+        source = f"[link]({source_url})" if source_url else "-"
+        lines.append(f"| `{name}` | {source} | {len(skills)} | `{mcp_page_path(name).relative_to('mcps/omx')}` |")
 
     omx_dir = MCPS_DIR / "omx"
     omx_dir.mkdir(parents=True, exist_ok=True)
@@ -200,18 +205,22 @@ def main() -> None:
         "",
         f"Skills root: `{display_path(skills_root)}`",
         "",
-        "| MCP | Related skills | Page |",
-        "| --- | ---: | --- |",
+        "| MCP | Source | Related skills | Page |",
+        "| --- | --- | ---: | --- |",
     ]
 
     for mcp_name in mcp_names:
         matches = match_skills(mcp_name, skills, rules)
-        write_mcp_skill_page(mcp_name, matches)
+        rule = rules.get(mcp_name, {})
+        write_mcp_skill_page(mcp_name, matches, rule)
         mapping["mcps"][mcp_name] = {
             "page": str(mcp_page_path(mcp_name)),
+            "source_url": str(rule.get("source_url", "")).strip(),
             "skills": matches,
         }
-        lines.append(f"| `{mcp_name}` | {len(matches)} | `{mcp_page_path(mcp_name)}` |")
+        source_url = str(rule.get("source_url", "")).strip()
+        source = f"[link]({source_url})" if source_url else "-"
+        lines.append(f"| `{mcp_name}` | {source} | {len(matches)} | `{mcp_page_path(mcp_name)}` |")
 
     write_omx_index(mcp_names, mapping)
 

@@ -1,11 +1,23 @@
 {
   "Higgsfield": {
-    "include_skill_prefixes": ["higgsfield-"],
-    "include_skills": ["brandkit", "imagegen-frontend-mobile", "imagegen-frontend-web"],
-    "keywords": ["higgsfield"]
+    "include_skill_prefixes": [
+      "higgsfield-"
+    ],
+    "include_skills": [
+      "brandkit",
+      "imagegen-frontend-mobile",
+      "imagegen-frontend-web"
+    ],
+    "keywords": [
+      "higgsfield"
+    ],
+    "source_url": "https://mcp.higgsfield.ai/mcp"
   },
   "MedusaDocs": {
-    "include_skill_prefixes": ["building-", "db-"],
+    "include_skill_prefixes": [
+      "building-",
+      "db-"
+    ],
     "include_skills": [
       "creating-internal-agents",
       "medusa-reference",
@@ -13,7 +25,10 @@
       "storefront-best-practices",
       "woocommerce-to-medusa-import"
     ],
-    "keywords": ["medusa"]
+    "keywords": [
+      "medusa"
+    ],
+    "source_url": "https://docs.medusajs.com/mcp"
   },
   "colony": {
     "include_skills": [
@@ -23,23 +38,50 @@
       "trace",
       "worker"
     ],
-    "keywords": ["colony", "guardex", "multi-agent", "multiagent"]
+    "keywords": [
+      "colony",
+      "guardex",
+      "multi-agent",
+      "multiagent"
+    ],
+    "source_url": "https://github.com/recodeee/colony"
   },
   "coolify": {
-    "include_skills": ["coolify"],
-    "keywords": ["coolify"]
+    "include_skills": [
+      "coolify"
+    ],
+    "keywords": [
+      "coolify"
+    ],
+    "source_url": "https://github.com/StuMason/coolify-mcp"
   },
   "gitea": {
-    "include_skills": ["github", "gh-submodule-publish"],
-    "keywords": ["gitea", "git"]
+    "include_skills": [
+      "github",
+      "gh-submodule-publish"
+    ],
+    "keywords": [
+      "gitea",
+      "git"
+    ],
+    "source_url": "https://github.com/seepine/gitea-mcp"
   },
   "hostinger-api": {
     "include_skills": [],
-    "keywords": ["hostinger"]
+    "keywords": [
+      "hostinger"
+    ],
+    "source_url": "https://github.com/hostinger/api-mcp-server"
   },
   "letsfg": {
-    "include_skills": ["flight-search"],
-    "keywords": ["letsfg", "flight"]
+    "include_skills": [
+      "flight-search"
+    ],
+    "keywords": [
+      "letsfg",
+      "flight"
+    ],
+    "source_url": "https://github.com/LetsFG/LetsFG"
   },
   "omx_code_intel": {
     "include_skills": [
@@ -49,11 +91,24 @@
       "gh-fix-ci",
       "security-review"
     ],
-    "keywords": ["codebase", "analysis", "review"]
+    "keywords": [
+      "codebase",
+      "analysis",
+      "review"
+    ],
+    "source_url": "https://github.com/NagyVikt/oh-my-codex"
   },
   "omx_memory": {
-    "include_skills": ["note", "wiki"],
-    "keywords": ["memory", "notepad", "wiki"]
+    "include_skills": [
+      "note",
+      "wiki"
+    ],
+    "keywords": [
+      "memory",
+      "notepad",
+      "wiki"
+    ],
+    "source_url": "https://github.com/NagyVikt/oh-my-codex"
   },
   "omx_state": {
     "include_skills": [
@@ -66,15 +121,34 @@
       "ultraqa",
       "ultrawork"
     ],
-    "keywords": ["state", "runtime", "workflow"]
+    "keywords": [
+      "state",
+      "runtime",
+      "workflow"
+    ],
+    "source_url": "https://github.com/NagyVikt/oh-my-codex"
   },
   "omx_trace": {
-    "include_skills": ["hud", "team", "trace"],
-    "keywords": ["trace", "timeline", "flow"]
+    "include_skills": [
+      "hud",
+      "team",
+      "trace"
+    ],
+    "keywords": [
+      "trace",
+      "timeline",
+      "flow"
+    ],
+    "source_url": "https://github.com/NagyVikt/oh-my-codex"
   },
   "omx_wiki": {
-    "include_skills": ["wiki"],
-    "keywords": ["wiki"]
+    "include_skills": [
+      "wiki"
+    ],
+    "keywords": [
+      "wiki"
+    ],
+    "source_url": "https://github.com/NagyVikt/oh-my-codex"
   },
   "react-grab-mcp": {
     "include_skills": [
@@ -84,6 +158,11 @@
       "visual-ralph",
       "visual-verdict"
     ],
-    "keywords": ["react", "frontend", "visual"]
+    "keywords": [
+      "react",
+      "frontend",
+      "visual"
+    ],
+    "source_url": "https://www.npmjs.com/package/@react-grab/mcp"
   }
 }

@@ -2,6 +2,8 @@
 
 Related skills from the `recodeee/skills` registry.
 
+MCP source: [https://github.com/NagyVikt/oh-my-codex](https://github.com/NagyVikt/oh-my-codex)
+
 | Skill | Reason | Description |
 | --- | --- | --- |
 | `hud` | explicit | [OMX] Show or configure the OMX HUD (two-layer statusline) |

@@ -2,6 +2,8 @@
 
 Related skills from the `recodeee/skills` registry.
 
+MCP source: [https://github.com/recodeee/colony](https://github.com/recodeee/colony)
+
 | Skill | Reason | Description |
 | --- | --- | --- |
 | `gitguardex` | explicit | Repo guardrail check and repair. |

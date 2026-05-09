@@ -2,6 +2,8 @@
 
 Related skills from the `recodeee/skills` registry.
 
+MCP source: [https://github.com/seepine/gitea-mcp](https://github.com/seepine/gitea-mcp)
+
 | Skill | Reason | Description |
 | --- | --- | --- |
 | `gh-submodule-publish` | explicit | Create missing GitHub repositories and push a parent repository that tracks app repositories as Git submodules. Use when the user asks to finish publishing locally initialized repos, push a parent repo plus backend/storefront submodules, create repos under an org, recover from invalid `gh auth status` when `gh api user` works, fall back from SSH `Permission denied (publickey)` to `gh` HTTPS auth, handle missing `workflow` token scope for `.github/workflows/*`, or verify remote `main` refs after push. |

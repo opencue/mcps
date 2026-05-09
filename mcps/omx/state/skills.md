@@ -2,6 +2,8 @@
 
 Related skills from the `recodeee/skills` registry.
 
+MCP source: [https://github.com/NagyVikt/oh-my-codex](https://github.com/NagyVikt/oh-my-codex)
+
 | Skill | Reason | Description |
 | --- | --- | --- |
 | `autopilot` | explicit | [OMX] Strict autonomous loop: $ralplan -> $ralph -> $code-review |
