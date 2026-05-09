@@ -50,6 +50,13 @@
           "slug": "higgsfield-soul-id"
         },
         {
+          "category": "medusa",
+          "description": "End-to-end product imagery pipeline for Medusa v2 shops. Generates product shots via Higgsfield (`higgsfield product-photoshoot create`), uploads them to the shop's S3 bucket on a public-read prefix, then patches the matching Medusa products via `POST /admin/products/{id}` to set thumbnail + images. Use when user says \"generate product images\", \"refresh product photos\", \"shop k\u00e9peket gener\u00e1lni\", \"Higgsfield images to Medusa\", or supplies a list of product slugs/IDs and prompts. Reads backend URL + secret + AWS creds from a per-shop config file (or a future recodee bouncer MCP), never hardcodes them. Idempotent \u2014 re-running overwrites the same S3 keys + product fields.",
+          "name": "higgsfield-to-medusa-products",
+          "reason": "prefix",
+          "slug": "higgsfield-to-medusa-products"
+        },
+        {
           "category": "design",
           "description": "Use when user asks for mobile app screen mockups, iOS/Android UI concepts, onboarding/auth/dashboard/chat/fintech/health screens, or multi-screen app flows. Generates images only (no code) of app screens framed inside subtle phone mockups with consistent palettes and readable hierarchy. NOT for websites or landing pages \u2014 use imagegen-frontend-web.",
           "name": "imagegen-frontend-mobile",
@@ -127,6 +134,13 @@
           "name": "gh-submodule-publish",
           "reason": "category",
           "slug": "gh-submodule-publish"
+        },
+        {
+          "category": "medusa",
+          "description": "End-to-end product imagery pipeline for Medusa v2 shops. Generates product shots via Higgsfield (`higgsfield product-photoshoot create`), uploads them to the shop's S3 bucket on a public-read prefix, then patches the matching Medusa products via `POST /admin/products/{id}` to set thumbnail + images. Use when user says \"generate product images\", \"refresh product photos\", \"shop k\u00e9peket gener\u00e1lni\", \"Higgsfield images to Medusa\", or supplies a list of product slugs/IDs and prompts. Reads backend URL + secret + AWS creds from a per-shop config file (or a future recodee bouncer MCP), never hardcodes them. Idempotent \u2014 re-running overwrites the same S3 keys + product fields.",
+          "name": "higgsfield-to-medusa-products",
+          "reason": "category",
+          "slug": "higgsfield-to-medusa-products"
         },
         {
           "category": "medusa",
@@ -673,6 +687,6 @@
       "source_url": ""
     }
   },
-  "skill_count": 102,
+  "skill_count": 103,
   "skills_root": "~/Documents/soul/skills/skills"
 }
