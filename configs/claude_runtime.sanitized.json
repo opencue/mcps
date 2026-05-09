@@ -1,0 +1,53 @@
+{
+  "server_key": "mcpServers",
+  "servers": {
+    "Higgsfield": {
+      "type": "http",
+      "url": "https://mcp.higgsfield.ai/mcp"
+    },
+    "colony": {
+      "args": [
+        "~/Documents/recodee/colony/apps/cli/dist/index.js",
+        "mcp"
+      ],
+      "command": "~/.nvm/versions/node/v22.22.0/bin/node",
+      "env": {},
+      "type": "stdio"
+    },
+    "coolify": {
+      "args": [
+        "-lc",
+        "<redacted secret-loading argument>"
+      ],
+      "command": "bash",
+      "env": {},
+      "type": "stdio"
+    },
+    "hostinger-api": {
+      "args": [
+        "-lc",
+        "<redacted secret-loading argument>"
+      ],
+      "command": "bash",
+      "env": {},
+      "type": "stdio"
+    },
+    "obsidian-vault": {
+      "args": [
+        "-y",
+        "@bitbonsai/mcpvault@latest",
+        "~/Documents/claude-obsidian"
+      ],
+      "command": "npx",
+      "type": "stdio"
+    },
+    "recodee": {
+      "command": "~/Documents/recodee/.venv/bin/recodee-mcp",
+      "env": {
+        "RECODEE_BASE_URL": "<redacted>"
+      }
+    }
+  },
+  "source": "claude_runtime",
+  "source_path": "~/.claude.json"
+}

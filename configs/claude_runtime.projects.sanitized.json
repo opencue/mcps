@@ -1,0 +1,50 @@
+{
+  "projects": {
+    "~/Documents/recodee": {
+      "n8n-mcp": {
+        "args": [
+          "n8n-mcp"
+        ],
+        "command": "npx",
+        "env": {
+          "DISABLE_CONSOLE_OUTPUT": "<redacted>",
+          "LOG_LEVEL": "<redacted>",
+          "MCP_MODE": "<redacted>"
+        },
+        "type": "stdio"
+      },
+      "ruflo": {
+        "args": [
+          "-y",
+          "@claude-flow/cli@latest"
+        ],
+        "command": "npx",
+        "env": {},
+        "type": "stdio"
+      }
+    },
+    "~/Documents/recodee/agents-hivemind": {
+      "colony": {
+        "args": [
+          "mcp"
+        ],
+        "command": "~/.nvm/versions/node/v22.22.0/bin/colony",
+        "env": {},
+        "type": "stdio"
+      }
+    },
+    "~/brain": {
+      "gbrain": {
+        "args": [
+          "serve"
+        ],
+        "command": "gbrain",
+        "env": {},
+        "type": "stdio"
+      }
+    }
+  },
+  "server_key": "projects[*].mcpServers",
+  "source": "claude_runtime_projects",
+  "source_path": "~/.claude.json"
+}

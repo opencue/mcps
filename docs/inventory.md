@@ -37,6 +37,20 @@ Server key: `mcpServers`
 | `omx_trace` | `node` | 1 | - |
 | `omx_wiki` | `node` | 1 | - |
 
+## claude_runtime
+
+Source: `~/.claude.json`
+Server key: `mcpServers`
+
+| Server | Command/type | Args | Env keys |
+| --- | --- | ---: | --- |
+| `Higgsfield` | `http` | 0 | - |
+| `colony` | `~/.nvm/versions/node/v22.22.0/bin/node` | 2 | - |
+| `coolify` | `bash` | 2 | - |
+| `hostinger-api` | `bash` | 2 | - |
+| `obsidian-vault` | `npx` | 3 | - |
+| `recodee` | `~/Documents/recodee/.venv/bin/recodee-mcp` | 0 | `RECODEE_BASE_URL` |
+
 ## vscode
 
 Source: `~/.config/Code/User/mcp.json`
@@ -46,3 +60,26 @@ Server key: `servers`
 | --- | --- | ---: | --- |
 | `gitea` | `~/.local/bin/gitea-mcp` | 4 | `GITEA_ACCESS_TOKEN` |
 | `react-grab-mcp` | `npx` | 3 | - |
+
+## claude_runtime per-project
+
+Source: `~/.claude.json` (`projects[*].mcpServers`)
+
+### `~/Documents/recodee`
+
+| Server | Command/type | Args | Env keys |
+| --- | --- | ---: | --- |
+| `n8n-mcp` | `npx` | 1 | `DISABLE_CONSOLE_OUTPUT`, `LOG_LEVEL`, `MCP_MODE` |
+| `ruflo` | `npx` | 2 | - |
+
+### `~/Documents/recodee/agents-hivemind`
+
+| Server | Command/type | Args | Env keys |
+| --- | --- | ---: | --- |
+| `colony` | `~/.nvm/versions/node/v22.22.0/bin/colony` | 1 | - |
+
+### `~/brain`
+
+| Server | Command/type | Args | Env keys |
+| --- | --- | ---: | --- |
+| `gbrain` | `gbrain` | 1 | - |

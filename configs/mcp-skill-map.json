@@ -1,5 +1,5 @@
 {
-  "mcp_count": 14,
+  "mcp_count": 16,
   "mcps": {
     "Higgsfield": {
       "agent_surfaces": [
@@ -306,6 +306,17 @@
         }
       ],
       "source_url": "https://github.com/LetsFG/LetsFG"
+    },
+    "obsidian-vault": {
+      "agent_surfaces": [],
+      "health_command": "",
+      "homepage": "",
+      "install": "",
+      "owners": [],
+      "package": "",
+      "page": "mcps/obsidian-vault/skills.md",
+      "skills": [],
+      "source_url": ""
     },
     "omx_code_intel": {
       "agent_surfaces": [
@@ -617,6 +628,17 @@
         }
       ],
       "source_url": "https://www.npmjs.com/package/@react-grab/mcp"
+    },
+    "recodee": {
+      "agent_surfaces": [],
+      "health_command": "",
+      "homepage": "",
+      "install": "",
+      "owners": [],
+      "package": "",
+      "page": "mcps/recodee/skills.md",
+      "skills": [],
+      "source_url": ""
     }
   },
   "skill_count": 97,
