@@ -1,0 +1,29 @@
+{
+  "server_key": "servers",
+  "servers": {
+    "gitea": {
+      "args": [
+        "-t",
+        "stdio",
+        "--host",
+        "https://gitea.com"
+      ],
+      "command": "/home/deadpool/.local/bin/gitea-mcp",
+      "env": {
+        "GITEA_ACCESS_TOKEN": "<redacted>"
+      },
+      "type": "stdio"
+    },
+    "react-grab-mcp": {
+      "args": [
+        "-y",
+        "@react-grab/mcp",
+        "--stdio"
+      ],
+      "command": "npx",
+      "type": "stdio"
+    }
+  },
+  "source": "vscode",
+  "source_path": "/home/deadpool/.config/Code/User/mcp.json"
+}

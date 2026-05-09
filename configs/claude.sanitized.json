@@ -1,0 +1,51 @@
+{
+  "server_key": "mcpServers",
+  "servers": {
+    "colony": {
+      "args": [
+        "/home/deadpool/Documents/recodee/colony/apps/cli/dist/index.js",
+        "mcp"
+      ],
+      "command": "/nix/store/cyx69kzikha3hb33sz97mapcjlnqs8c7-nodejs-slim-22.22.0/bin/node"
+    },
+    "letsfg": {
+      "args": [],
+      "command": "/home/deadpool/.nvm/versions/node/v22.22.0/bin/letsfg-mcp",
+      "env": {
+        "LETSFG_PYTHON": "<redacted>"
+      }
+    },
+    "omx_code_intel": {
+      "args": [
+        "/home/deadpool/Documents/recodee/oh-my-codex/dist/mcp/code-intel-server.js"
+      ],
+      "command": "node"
+    },
+    "omx_memory": {
+      "args": [
+        "/home/deadpool/Documents/recodee/oh-my-codex/dist/mcp/memory-server.js"
+      ],
+      "command": "node"
+    },
+    "omx_state": {
+      "args": [
+        "/home/deadpool/Documents/recodee/oh-my-codex/dist/mcp/state-server.js"
+      ],
+      "command": "node"
+    },
+    "omx_trace": {
+      "args": [
+        "/home/deadpool/Documents/recodee/oh-my-codex/dist/mcp/trace-server.js"
+      ],
+      "command": "node"
+    },
+    "omx_wiki": {
+      "args": [
+        "/home/deadpool/Documents/recodee/oh-my-codex/dist/mcp/wiki-server.js"
+      ],
+      "command": "node"
+    }
+  },
+  "source": "claude",
+  "source_path": "/home/deadpool/.claude/settings.json"
+}

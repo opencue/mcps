@@ -1,0 +1,102 @@
+{
+  "server_key": "mcp_servers",
+  "servers": {
+    "Higgsfield": {
+      "url": "https://mcp.higgsfield.ai/mcp"
+    },
+    "MedusaDocs": {
+      "enabled": false,
+      "url": "https://docs.medusajs.com/mcp"
+    },
+    "colony": {
+      "args": [
+        "mcp"
+      ],
+      "command": "/home/deadpool/.nvm/versions/node/v22.22.0/bin/colony",
+      "env": {
+        "COLONY_HOME": "<redacted>"
+      },
+      "tools": {
+        "attention_inbox": {
+          "approval_mode": "approve"
+        },
+        "hivemind_context": {
+          "approval_mode": "approve"
+        }
+      }
+    },
+    "coolify": {
+      "args": [
+        "-lc",
+        "<redacted secret-loading argument>"
+      ],
+      "command": "bash"
+    },
+    "hostinger-api": {
+      "args": [
+        "-lc",
+        "<redacted secret-loading argument>"
+      ],
+      "command": "bash"
+    },
+    "letsfg": {
+      "args": [],
+      "command": "/home/deadpool/.nvm/versions/node/v22.22.0/bin/letsfg-mcp",
+      "env": {
+        "LETSFG_PYTHON": "<redacted>"
+      },
+      "startup_timeout_sec": 20.0
+    },
+    "omx_code_intel": {
+      "args": [
+        "/home/deadpool/Documents/recodee/oh-my-codex/dist/mcp/code-intel-server.js"
+      ],
+      "command": "node",
+      "enabled": true,
+      "startup_timeout_sec": 10
+    },
+    "omx_memory": {
+      "args": [
+        "/home/deadpool/Documents/recodee/oh-my-codex/dist/mcp/memory-server.js"
+      ],
+      "command": "node",
+      "enabled": true,
+      "startup_timeout_sec": 5
+    },
+    "omx_state": {
+      "args": [
+        "/home/deadpool/Documents/recodee/oh-my-codex/dist/mcp/state-server.js"
+      ],
+      "command": "node",
+      "enabled": true,
+      "startup_timeout_sec": 5
+    },
+    "omx_trace": {
+      "args": [
+        "/home/deadpool/Documents/recodee/oh-my-codex/dist/mcp/trace-server.js"
+      ],
+      "command": "node",
+      "enabled": true,
+      "startup_timeout_sec": 5
+    },
+    "omx_wiki": {
+      "args": [
+        "/home/deadpool/Documents/recodee/oh-my-codex/dist/mcp/wiki-server.js"
+      ],
+      "command": "node",
+      "enabled": true,
+      "startup_timeout_sec": 5
+    },
+    "react-grab-mcp": {
+      "args": [
+        "-y",
+        "@react-grab/mcp",
+        "--stdio"
+      ],
+      "command": "npx",
+      "startup_timeout_sec": 15.0
+    }
+  },
+  "source": "codex",
+  "source_path": "/home/deadpool/.codex/config.toml"
+}
