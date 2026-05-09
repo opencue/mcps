@@ -16,11 +16,6 @@ Server key: `mcp_servers`
 | `gbrain` | `~/.bun/bin/gbrain` | 1 | - |
 | `hostinger-api` | `bash` | 2 | - |
 | `letsfg` | `~/.nvm/versions/node/v22.22.0/bin/letsfg-mcp` | 0 | `LETSFG_PYTHON` |
-| `omx_code_intel` | `node` | 1 | - |
-| `omx_memory` | `node` | 1 | - |
-| `omx_state` | `node` | 1 | - |
-| `omx_trace` | `node` | 1 | - |
-| `omx_wiki` | `node` | 1 | - |
 
 ## claude
 
