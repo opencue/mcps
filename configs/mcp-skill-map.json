@@ -151,6 +151,13 @@
         },
         {
           "category": "medusa",
+          "description": "Create and configure an AWS S3 bucket for a Medusa v2 backend in one shot. Sets up: bucket creation in a region, public-read bucket policy scoped to a product-images prefix, CORS for admin uploads, versioning, server-side encryption (SSE-S3), and lifecycle to clean up incomplete multipart uploads. Outputs the env var block ready to paste into `~/.config/woocommerce-medusa-import/env` AND the env vars to set in Coolify so the running Medusa file provider switches off local-storage to S3. Use when user says \"create medusa bucket\", \"provision s3 for medusa\", \"new shop bucket\", or supplies a shop name + AWS region. Requires `aws` CLI configured (or `AWS_ACCESS_KEY_ID`+`AWS_SECRET_ACCESS_KEY` in env).",
+          "name": "provision-medusa-s3-bucket",
+          "reason": "category",
+          "slug": "provision-medusa-s3-bucket"
+        },
+        {
+          "category": "medusa",
           "description": "Use when working on ecommerce storefronts (Next.js, SvelteKit, React, Vue) \u2014 checkout, cart, payment flows, product pages, navigation, homepage, or ANY storefront component. Critical for adding checkout, implementing cart, integrating a Medusa backend, or building ecommerce functionality.",
           "name": "storefront-best-practices",
           "reason": "explicit",
@@ -666,6 +673,6 @@
       "source_url": ""
     }
   },
-  "skill_count": 101,
+  "skill_count": 102,
   "skills_root": "~/Documents/soul/skills/skills"
 }
