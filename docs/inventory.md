@@ -94,8 +94,4 @@ Sources: `~/.claude/settings.json` (enabled set + marketplaces) + `~/.claude/plu
 | `claude-mem` | `thedotmack` | `13.0.0` | ✓ | `mcp-search` |
 | `claude-obsidian` | `claude-obsidian-marketplace` | `1.6.0` | ✓ | - |
 | `oh-my-claudecode` | `omc` | `4.12.1` | ✓ | `t` |
-| `ruflo-autopilot` | `ruflo` | `0.1.0` | · | - |
-| `ruflo-core` | `ruflo` | `0.1.0` | · | - |
-| `ruflo-federation` | `ruflo` | `0.2.0` | · | - |
-| `ruflo-swarm` | `ruflo` | `0.1.0` | · | - |
 | `rust-analyzer-lsp` | `claude-plugins-official` | `1.0.0` | ✓ | - |

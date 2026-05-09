@@ -30,12 +30,6 @@
         "url": "https://github.com/Yeachan-Heo/oh-my-claudecode.git"
       }
     },
-    "ruflo": {
-      "source": {
-        "repo": "ruvnet/ruflo",
-        "source": "github"
-      }
-    },
     "thedotmack": {
       "source": {
         "repo": "thedotmack/claude-mem",
@@ -87,34 +81,6 @@
       },
       "name": "oh-my-claudecode",
       "version": "4.12.1"
-    },
-    "ruflo-autopilot@ruflo": {
-      "enabled": false,
-      "marketplace": "ruflo",
-      "mcpServers": {},
-      "name": "ruflo-autopilot",
-      "version": "0.1.0"
-    },
-    "ruflo-core@ruflo": {
-      "enabled": false,
-      "marketplace": "ruflo",
-      "mcpServers": {},
-      "name": "ruflo-core",
-      "version": "0.1.0"
-    },
-    "ruflo-federation@ruflo": {
-      "enabled": false,
-      "marketplace": "ruflo",
-      "mcpServers": {},
-      "name": "ruflo-federation",
-      "version": "0.2.0"
-    },
-    "ruflo-swarm@ruflo": {
-      "enabled": false,
-      "marketplace": "ruflo",
-      "mcpServers": {},
-      "name": "ruflo-swarm",
-      "version": "0.1.0"
     },
     "rust-analyzer-lsp@claude-plugins-official": {
       "enabled": true,
