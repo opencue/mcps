@@ -8,7 +8,7 @@
         "--host",
         "https://gitea.com"
       ],
-      "command": "/home/deadpool/.local/bin/gitea-mcp",
+      "command": "~/.local/bin/gitea-mcp",
       "env": {
         "GITEA_ACCESS_TOKEN": "<redacted>"
       },
@@ -25,5 +25,5 @@
     }
   },
   "source": "vscode",
-  "source_path": "/home/deadpool/.config/Code/User/mcp.json"
+  "source_path": "~/.config/Code/User/mcp.json"
 }

@@ -12,7 +12,7 @@
       "args": [
         "mcp"
       ],
-      "command": "/home/deadpool/.nvm/versions/node/v22.22.0/bin/colony",
+      "command": "~/.nvm/versions/node/v22.22.0/bin/colony",
       "env": {
         "COLONY_HOME": "<redacted>"
       },
@@ -41,7 +41,7 @@
     },
     "letsfg": {
       "args": [],
-      "command": "/home/deadpool/.nvm/versions/node/v22.22.0/bin/letsfg-mcp",
+      "command": "~/.nvm/versions/node/v22.22.0/bin/letsfg-mcp",
       "env": {
         "LETSFG_PYTHON": "<redacted>"
       },
@@ -49,7 +49,7 @@
     },
     "omx_code_intel": {
       "args": [
-        "/home/deadpool/Documents/recodee/oh-my-codex/dist/mcp/code-intel-server.js"
+        "~/Documents/recodee/oh-my-codex/dist/mcp/code-intel-server.js"
       ],
       "command": "node",
       "enabled": true,
@@ -57,7 +57,7 @@
     },
     "omx_memory": {
       "args": [
-        "/home/deadpool/Documents/recodee/oh-my-codex/dist/mcp/memory-server.js"
+        "~/Documents/recodee/oh-my-codex/dist/mcp/memory-server.js"
       ],
       "command": "node",
       "enabled": true,
@@ -65,7 +65,7 @@
     },
     "omx_state": {
       "args": [
-        "/home/deadpool/Documents/recodee/oh-my-codex/dist/mcp/state-server.js"
+        "~/Documents/recodee/oh-my-codex/dist/mcp/state-server.js"
       ],
       "command": "node",
       "enabled": true,
@@ -73,7 +73,7 @@
     },
     "omx_trace": {
       "args": [
-        "/home/deadpool/Documents/recodee/oh-my-codex/dist/mcp/trace-server.js"
+        "~/Documents/recodee/oh-my-codex/dist/mcp/trace-server.js"
       ],
       "command": "node",
       "enabled": true,
@@ -81,7 +81,7 @@
     },
     "omx_wiki": {
       "args": [
-        "/home/deadpool/Documents/recodee/oh-my-codex/dist/mcp/wiki-server.js"
+        "~/Documents/recodee/oh-my-codex/dist/mcp/wiki-server.js"
       ],
       "command": "node",
       "enabled": true,
@@ -98,5 +98,5 @@
     }
   },
   "source": "codex",
-  "source_path": "/home/deadpool/.codex/config.toml"
+  "source_path": "~/.codex/config.toml"
 }
