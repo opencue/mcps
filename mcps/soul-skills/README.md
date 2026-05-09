@@ -12,7 +12,7 @@ test -f /home/deadpool/Documents/soul/mcps/mcps/soul-skills/server.py
 Expected command/type:
 
 ```text
-command: /home/deadpool/.local/bin/uv
+command: ~/.local/bin/uv
 args:
   - run
   - --quiet
@@ -39,7 +39,7 @@ doctor
 Quick health check:
 
 ```sh
-timeout 3 /home/deadpool/.local/bin/uv run --quiet --with "mcp>=1.0.0" python3 -c "import sys; sys.path.insert(0, '/home/deadpool/Documents/soul/mcps/mcps/soul-skills'); from server import mcp; print('ok')"
+timeout 3 ~/.local/bin/uv run --quiet --with "mcp>=1.0.0" python3 -c "import sys; sys.path.insert(0, '/home/deadpool/Documents/soul/mcps/mcps/soul-skills'); from server import mcp; print('ok')"
 ```
 
 ## Tools exposed
@@ -72,7 +72,7 @@ Lives in `~/.claude.json` `mcpServers.soul-skills`:
 
 ```json
 {
-  "command": "/home/deadpool/.local/bin/uv",
+  "command": "~/.local/bin/uv",
   "args": ["run", "--quiet", "--script", "/home/deadpool/Documents/soul/mcps/mcps/soul-skills/server.py"]
 }
 ```
