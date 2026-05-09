@@ -223,6 +223,20 @@
           "name": "coolify",
           "reason": "explicit",
           "slug": "coolify"
+        },
+        {
+          "category": "deployment",
+          "description": "Node.js package manager with strict dependency resolution. Use when running pnpm specific commands, configuring workspaces, or managing dependencies with catalogs, patches, or overrides.",
+          "name": "pnpm",
+          "reason": "category",
+          "slug": "pnpm"
+        },
+        {
+          "category": "deployment",
+          "description": "Use when doing ANY task involving Supabase. Triggers: Supabase products (Database, Auth, Edge Functions, Realtime, Storage, Vectors, Cron, Queues); client libraries and SSR integrations (supabase-js, @supabase/ssr) in Next.js, React, SvelteKit, Astro, Remix; auth issues (login, logout, sessions, JWT, cookies, getSession, getUser, getClaims, RLS); Supabase CLI or MCP server; schema changes, migrations, security audits, Postgres extensions (pg_graphql, pg_cron, pg_vector).",
+          "name": "supabase",
+          "reason": "category",
+          "slug": "supabase"
         }
       ],
       "source_url": "https://github.com/StuMason/coolify-mcp"
@@ -627,6 +641,6 @@
       "source_url": ""
     }
   },
-  "skill_count": 97,
+  "skill_count": 95,
   "skills_root": "~/Documents/recodeee/skills/skills"
 }

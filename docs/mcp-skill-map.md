@@ -7,7 +7,7 @@ Skills root: `~/Documents/recodeee/skills/skills`
 | MCP | Source | Related skills | Page |
 | --- | --- | ---: | --- |
 | `colony` | [link](https://github.com/recodeee/colony) | 5 | `mcps/colony/skills.md` |
-| `coolify` | [link](https://github.com/StuMason/coolify-mcp) | 1 | `mcps/coolify/skills.md` |
+| `coolify` | [link](https://github.com/StuMason/coolify-mcp) | 3 | `mcps/coolify/skills.md` |
 | `gbrain` | - | 0 | `mcps/gbrain/skills.md` |
 | `gitea` | [link](https://github.com/seepine/gitea-mcp) | 2 | `mcps/gitea/skills.md` |
 | `Higgsfield` | [link](https://mcp.higgsfield.ai/mcp) | 7 | `mcps/higgsfield/skills.md` |
