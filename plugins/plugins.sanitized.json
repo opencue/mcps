@@ -6,22 +6,10 @@
         "source": "github"
       }
     },
-    "caveman": {
-      "source": {
-        "path": "~/Documents/recodee/caveman",
-        "source": "directory"
-      }
-    },
     "claude-obsidian-marketplace": {
       "source": {
         "repo": "AgriciDaniel/claude-obsidian",
         "source": "github"
-      }
-    },
-    "everything-claude-code": {
-      "source": {
-        "source": "git",
-        "url": "https://github.com/affaan-m/everything-claude-code.git"
       }
     },
     "omc": {
