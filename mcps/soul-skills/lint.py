@@ -42,6 +42,12 @@ def parse_frontmatter(text: str) -> dict[str, str]:
     current_lines: list[str] = []
     multiline = False
 
+    def _unquote(s: str) -> str:
+        s = s.strip()
+        if len(s) >= 2 and ((s[0] == s[-1] == '"') or (s[0] == s[-1] == "'")):
+            return s[1:-1]
+        return s
+
     def flush() -> None:
         nonlocal current_key, current_lines, multiline
         if current_key is None:
@@ -49,7 +55,7 @@ def parse_frontmatter(text: str) -> dict[str, str]:
         if multiline:
             out[current_key] = " ".join(s.strip() for s in current_lines if s.strip())
         elif current_lines:
-            out[current_key] = current_lines[0]
+            out[current_key] = _unquote(current_lines[0])
         else:
             out[current_key] = ""
         current_key = None
