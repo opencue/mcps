@@ -43,14 +43,24 @@ configs/
   mcp-skill-rules.json      # explicit source links and skill matching rules
   mcp-skill-map.json        # generated machine-readable MCP -> skills map
 docs/
+  health.md                 # generated local health summary
   inventory.md              # generated human inventory
   mcp-skill-map.md          # generated human MCP -> skills map
 mcps/
+  <mcp-name>/README.md      # per-MCP install and health notes
   <mcp-name>/skills.md      # per-MCP related skills and source link
   omx/                      # OMX MCP family grouped under one tree
 scripts/
+  check-no-secrets.sh       # fail if tracked docs/configs leak secret-shaped data
+  check-mcp-health.py       # generate docs/health.md without network checks
+  refresh-all.sh            # snapshot configs, map skills, health, scan, diff
+  install-codex-mcps.py     # install placeholder MCP blocks into Codex config
+  install-claude-mcps.py    # install placeholder MCP blocks into Claude settings
   snapshot-mcps.py          # refresh sanitized MCP config inventory
   snapshot-mcp-skills.py    # refresh MCP -> skills pages from recodeee/skills
+templates/
+  codex.mcp.toml            # placeholder-only Codex MCP config block
+  claude.mcp.json           # placeholder-only Claude MCP config block
 ```
 
 ---
@@ -99,13 +109,21 @@ Refresh MCP-to-skill mapping from the sibling `recodeee/skills` checkout:
 Common full refresh:
 
 ```sh
-./scripts/snapshot-mcps.py
-./scripts/snapshot-mcp-skills.py
-git diff
+./scripts/refresh-all.sh
 ```
 
 Review diffs before pushing. If a secret appears, remove it before commit and
 tighten the redaction script.
+
+Install placeholder MCP blocks only after reviewing the templates:
+
+```sh
+./scripts/install-codex-mcps.py --dry-run
+./scripts/install-claude-mcps.py --dry-run
+```
+
+The install scripts write placeholders, not secrets. Replace local paths and
+load credentials through environment variables or external secret stores.
 
 ---
 
@@ -123,8 +141,11 @@ mcps/omx/state/skills.md
 The rules live in `configs/mcp-skill-rules.json`:
 
 - `source_url` records the upstream repo or hosted endpoint.
+- `homepage`, `package`, `install`, and `health_command` record restore notes.
+- `owners` and `agent_surfaces` record who owns the MCP and where it appears.
 - `include_skills` maps exact skill names.
 - `include_skill_prefixes` maps skill families like `higgsfield-*`.
+- `include_skill_categories` maps whole `recodeee/skills` categories.
 - keyword matching is off by default to avoid noisy false matches.
 
 ---
@@ -147,11 +168,11 @@ local home paths to `~` and redact env values plus secret-loading shell args.
 Before pushing, run:
 
 ```sh
-grep -R -n "$HOME" docs mcps README.md configs scripts || true
-find . -type f \( -name '.env' -o -name '*credentials*' -o -name '*secret*' -o -name '*.pem' -o -name '*.key' -o -name '*.pyc' \) -print
+./scripts/check-no-secrets.sh
 ```
 
-Both should return nothing.
+It fails nonzero on local home paths, forbidden secret-like files, and common
+token prefixes.
 
 ---
 

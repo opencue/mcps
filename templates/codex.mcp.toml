@@ -1,0 +1,59 @@
+# Placeholder-only MCP config for Codex. Replace paths with local installs.
+# Keep tokens and passwords out of this file; use environment variables.
+
+[mcp_servers.Higgsfield]
+url = "https://mcp.higgsfield.ai/mcp"
+
+[mcp_servers.MedusaDocs]
+url = "https://docs.medusajs.com/mcp"
+enabled = false
+
+[mcp_servers.colony]
+command = "/path/to/colony"
+args = ["mcp"]
+
+[mcp_servers.colony.env]
+COLONY_HOME = "/path/to/colony-home"
+
+[mcp_servers.letsfg]
+command = "/path/to/letsfg-mcp"
+args = []
+startup_timeout_sec = 20
+
+[mcp_servers.letsfg.env]
+LETSFG_PYTHON = "/path/to/python"
+
+[mcp_servers.omx_state]
+command = "node"
+args = ["/path/to/oh-my-codex/dist/mcp/state-server.js"]
+enabled = true
+startup_timeout_sec = 5
+
+[mcp_servers.omx_code_intel]
+command = "node"
+args = ["/path/to/oh-my-codex/dist/mcp/code-intel-server.js"]
+enabled = true
+startup_timeout_sec = 10
+
+[mcp_servers.omx_memory]
+command = "node"
+args = ["/path/to/oh-my-codex/dist/mcp/memory-server.js"]
+enabled = true
+startup_timeout_sec = 5
+
+[mcp_servers.omx_trace]
+command = "node"
+args = ["/path/to/oh-my-codex/dist/mcp/trace-server.js"]
+enabled = true
+startup_timeout_sec = 5
+
+[mcp_servers.omx_wiki]
+command = "node"
+args = ["/path/to/oh-my-codex/dist/mcp/wiki-server.js"]
+enabled = true
+startup_timeout_sec = 5
+
+[mcp_servers.react-grab-mcp]
+command = "npx"
+args = ["-y", "@react-grab/mcp", "--stdio"]
+startup_timeout_sec = 15

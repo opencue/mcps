@@ -1,5 +1,14 @@
 {
   "Higgsfield": {
+    "agent_surfaces": [
+      "codex"
+    ],
+    "expected_type": "hosted",
+    "health_command": "url:https://mcp.higgsfield.ai/mcp",
+    "homepage": "https://higgsfield.ai",
+    "include_skill_categories": [
+      "higgsfield"
+    ],
     "include_skill_prefixes": [
       "higgsfield-"
     ],
@@ -8,12 +17,26 @@
       "imagegen-frontend-mobile",
       "imagegen-frontend-web"
     ],
+    "install": "hosted endpoint; no local install",
     "keywords": [
       "higgsfield"
     ],
+    "owners": [
+      "recodeee"
+    ],
+    "package": "",
     "source_url": "https://mcp.higgsfield.ai/mcp"
   },
   "MedusaDocs": {
+    "agent_surfaces": [
+      "codex"
+    ],
+    "expected_type": "hosted",
+    "health_command": "url:https://docs.medusajs.com/mcp",
+    "homepage": "https://docs.medusajs.com",
+    "include_skill_categories": [
+      "medusa"
+    ],
     "include_skill_prefixes": [
       "building-",
       "db-"
@@ -25,12 +48,25 @@
       "storefront-best-practices",
       "woocommerce-to-medusa-import"
     ],
+    "install": "hosted endpoint; no local install",
     "keywords": [
       "medusa"
     ],
+    "owners": [
+      "Medusa"
+    ],
+    "package": "",
     "source_url": "https://docs.medusajs.com/mcp"
   },
   "colony": {
+    "agent_surfaces": [
+      "codex",
+      "claude"
+    ],
+    "expected_type": "stdio",
+    "health_command": "colony --help",
+    "homepage": "https://github.com/recodeee/colony",
+    "include_skill_categories": [],
     "include_skills": [
       "gitguardex",
       "guardex-merge-skills-to-dev",
@@ -38,52 +74,118 @@
       "trace",
       "worker"
     ],
+    "install": "npm install -g colony",
     "keywords": [
       "colony",
       "guardex",
       "multi-agent",
       "multiagent"
     ],
+    "owners": [
+      "recodeee"
+    ],
+    "package": "colony",
     "source_url": "https://github.com/recodeee/colony"
   },
   "coolify": {
+    "agent_surfaces": [
+      "codex"
+    ],
+    "expected_type": "stdio",
+    "health_command": "npx -y coolify-mcp --help",
+    "homepage": "https://github.com/StuMason/coolify-mcp",
+    "include_skill_categories": [
+      "deployment"
+    ],
     "include_skills": [
       "coolify"
     ],
+    "install": "npx -y coolify-mcp",
     "keywords": [
       "coolify"
     ],
+    "owners": [
+      "StuMason"
+    ],
+    "package": "coolify-mcp",
     "source_url": "https://github.com/StuMason/coolify-mcp"
   },
   "gitea": {
+    "agent_surfaces": [
+      "vscode"
+    ],
+    "expected_type": "stdio",
+    "health_command": "gitea-mcp --help",
+    "homepage": "https://github.com/seepine/gitea-mcp",
+    "include_skill_categories": [],
     "include_skills": [
       "github",
       "gh-submodule-publish"
     ],
+    "install": "see upstream release instructions",
     "keywords": [
       "gitea",
       "git"
     ],
+    "owners": [
+      "seepine"
+    ],
+    "package": "gitea-mcp",
     "source_url": "https://github.com/seepine/gitea-mcp"
   },
   "hostinger-api": {
+    "agent_surfaces": [
+      "codex"
+    ],
+    "expected_type": "stdio",
+    "health_command": "npx -y @hostinger/api-mcp-server --help",
+    "homepage": "https://github.com/hostinger/api-mcp-server",
+    "include_skill_categories": [],
     "include_skills": [],
+    "install": "npx -y @hostinger/api-mcp-server",
     "keywords": [
       "hostinger"
     ],
+    "owners": [
+      "hostinger"
+    ],
+    "package": "@hostinger/api-mcp-server",
     "source_url": "https://github.com/hostinger/api-mcp-server"
   },
   "letsfg": {
+    "agent_surfaces": [
+      "codex",
+      "claude"
+    ],
+    "expected_type": "stdio",
+    "health_command": "letsfg-mcp --help",
+    "homepage": "https://github.com/LetsFG/LetsFG",
+    "include_skill_categories": [],
     "include_skills": [
       "flight-search"
     ],
+    "install": "see LetsFG upstream install instructions",
     "keywords": [
       "letsfg",
       "flight"
     ],
+    "owners": [
+      "LetsFG"
+    ],
+    "package": "letsfg-mcp",
     "source_url": "https://github.com/LetsFG/LetsFG"
   },
   "omx_code_intel": {
+    "agent_surfaces": [
+      "codex",
+      "claude"
+    ],
+    "expected_type": "stdio",
+    "health_command": "node /path/to/oh-my-codex/dist/mcp/code-intel-server.js --help",
+    "homepage": "https://github.com/NagyVikt/oh-my-codex",
+    "include_skill_categories": [
+      "review"
+    ],
     "include_skills": [
       "ai-slop-cleaner",
       "analyze",
@@ -91,26 +193,54 @@
       "gh-fix-ci",
       "security-review"
     ],
+    "install": "npm install && npm run build",
     "keywords": [
       "codebase",
       "analysis",
       "review"
     ],
+    "owners": [
+      "NagyVikt"
+    ],
+    "package": "oh-my-codex",
     "source_url": "https://github.com/NagyVikt/oh-my-codex"
   },
   "omx_memory": {
+    "agent_surfaces": [
+      "codex",
+      "claude"
+    ],
+    "expected_type": "stdio",
+    "health_command": "node /path/to/oh-my-codex/dist/mcp/memory-server.js --help",
+    "homepage": "https://github.com/NagyVikt/oh-my-codex",
+    "include_skill_categories": [],
     "include_skills": [
       "note",
       "wiki"
     ],
+    "install": "npm install && npm run build",
     "keywords": [
       "memory",
       "notepad",
       "wiki"
     ],
+    "owners": [
+      "NagyVikt"
+    ],
+    "package": "oh-my-codex",
     "source_url": "https://github.com/NagyVikt/oh-my-codex"
   },
   "omx_state": {
+    "agent_surfaces": [
+      "codex",
+      "claude"
+    ],
+    "expected_type": "stdio",
+    "health_command": "node /path/to/oh-my-codex/dist/mcp/state-server.js --help",
+    "homepage": "https://github.com/NagyVikt/oh-my-codex",
+    "include_skill_categories": [
+      "orchestration"
+    ],
     "include_skills": [
       "autopilot",
       "cancel",
@@ -121,36 +251,74 @@
       "ultraqa",
       "ultrawork"
     ],
+    "install": "npm install && npm run build",
     "keywords": [
       "state",
       "runtime",
       "workflow"
     ],
+    "owners": [
+      "NagyVikt"
+    ],
+    "package": "oh-my-codex",
     "source_url": "https://github.com/NagyVikt/oh-my-codex"
   },
   "omx_trace": {
+    "agent_surfaces": [
+      "codex",
+      "claude"
+    ],
+    "expected_type": "stdio",
+    "health_command": "node /path/to/oh-my-codex/dist/mcp/trace-server.js --help",
+    "homepage": "https://github.com/NagyVikt/oh-my-codex",
+    "include_skill_categories": [],
     "include_skills": [
       "hud",
       "team",
       "trace"
     ],
+    "install": "npm install && npm run build",
     "keywords": [
       "trace",
       "timeline",
       "flow"
     ],
+    "owners": [
+      "NagyVikt"
+    ],
+    "package": "oh-my-codex",
     "source_url": "https://github.com/NagyVikt/oh-my-codex"
   },
   "omx_wiki": {
+    "agent_surfaces": [
+      "codex",
+      "claude"
+    ],
+    "expected_type": "stdio",
+    "health_command": "node /path/to/oh-my-codex/dist/mcp/wiki-server.js --help",
+    "homepage": "https://github.com/NagyVikt/oh-my-codex",
+    "include_skill_categories": [],
     "include_skills": [
       "wiki"
     ],
+    "install": "npm install && npm run build",
     "keywords": [
       "wiki"
     ],
+    "owners": [
+      "NagyVikt"
+    ],
+    "package": "oh-my-codex",
     "source_url": "https://github.com/NagyVikt/oh-my-codex"
   },
   "react-grab-mcp": {
+    "agent_surfaces": [
+      "codex"
+    ],
+    "expected_type": "stdio",
+    "health_command": "npx -y @react-grab/mcp --help",
+    "homepage": "https://www.npmjs.com/package/@react-grab/mcp",
+    "include_skill_categories": [],
     "include_skills": [
       "design-taste-frontend",
       "image-to-code",
@@ -158,11 +326,16 @@
       "visual-ralph",
       "visual-verdict"
     ],
+    "install": "npx -y @react-grab/mcp --stdio",
     "keywords": [
       "react",
       "frontend",
       "visual"
     ],
+    "owners": [
+      "react-grab"
+    ],
+    "package": "@react-grab/mcp",
     "source_url": "https://www.npmjs.com/package/@react-grab/mcp"
   }
 }

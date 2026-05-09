@@ -68,6 +68,7 @@ def parse_skill(skill_dir: Path) -> dict[str, str]:
     return {
         "name": name or skill_dir.name,
         "slug": skill_dir.name,
+        "category": skill_dir.parent.name,
         "description": description,
         "path": str(skill_dir),
         "search_text": f"{skill_dir.name}\n{description}".lower(),
@@ -100,6 +101,7 @@ def match_skills(mcp_name: str, skills: dict[str, dict[str, str]], rules: dict[s
     rule = rules.get(mcp_name, {})
     include_skills = set(rule.get("include_skills", []))
     include_prefixes = tuple(rule.get("include_skill_prefixes", []))
+    include_categories = set(rule.get("include_skill_categories", []))
     keywords = [str(k).lower() for k in rule.get("keywords", [])]
     keyword_match = bool(rule.get("keyword_match", False))
 
@@ -110,6 +112,8 @@ def match_skills(mcp_name: str, skills: dict[str, dict[str, str]], rules: dict[s
             reason = "explicit"
         elif include_prefixes and slug.startswith(include_prefixes):
             reason = "prefix"
+        elif skill["category"] in include_categories:
+            reason = "category"
         elif keyword_match and any(keyword and keyword in skill["search_text"] for keyword in keywords):
             reason = "keyword"
 
@@ -120,6 +124,7 @@ def match_skills(mcp_name: str, skills: dict[str, dict[str, str]], rules: dict[s
         {
             "slug": slug,
             "name": skills[slug]["name"],
+            "category": skills[slug]["category"],
             "description": skills[slug]["description"],
             "reason": matches[slug],
         }
@@ -131,6 +136,13 @@ def write_mcp_skill_page(mcp_name: str, matches: list[dict[str, str]], rule: dic
     page_path = ROOT / mcp_page_path(mcp_name)
     page_path.parent.mkdir(parents=True, exist_ok=True)
     source_url = str(rule.get("source_url", "")).strip()
+    homepage = str(rule.get("homepage", "")).strip()
+    package = str(rule.get("package", "")).strip()
+    install = str(rule.get("install", "")).strip()
+    health_command = str(rule.get("health_command", "")).strip()
+    expected_type = str(rule.get("expected_type", "")).strip()
+    owners = rule.get("owners", [])
+    agent_surfaces = rule.get("agent_surfaces", [])
     lines = [
         f"# {mcp_name} skills",
         "",
@@ -139,6 +151,20 @@ def write_mcp_skill_page(mcp_name: str, matches: list[dict[str, str]], rule: dic
     ]
     if source_url:
         lines.extend([f"MCP source: [{source_url}]({source_url})", ""])
+    if homepage:
+        lines.extend([f"Homepage: [{homepage}]({homepage})", ""])
+    if package:
+        lines.extend([f"Package: `{package}`", ""])
+    if install:
+        lines.extend([f"Install: `{install}`", ""])
+    if expected_type:
+        lines.extend([f"Expected type: `{expected_type}`", ""])
+    if health_command:
+        lines.extend([f"Health command: `{health_command}`", ""])
+    if owners:
+        lines.extend(["Owners: " + ", ".join(f"`{owner}`" for owner in owners), ""])
+    if agent_surfaces:
+        lines.extend(["Agent surfaces: " + ", ".join(f"`{surface}`" for surface in agent_surfaces), ""])
 
     if not matches:
         lines.extend([
@@ -148,11 +174,11 @@ def write_mcp_skill_page(mcp_name: str, matches: list[dict[str, str]], rule: dic
             "",
         ])
     else:
-        lines.append("| Skill | Reason | Description |")
-        lines.append("| --- | --- | --- |")
+        lines.append("| Skill | Category | Reason | Description |")
+        lines.append("| --- | --- | --- | --- |")
         for item in matches:
             desc = item["description"].replace("|", "\\|")
-            lines.append(f"| `{item['slug']}` | {item['reason']} | {desc} |")
+            lines.append(f"| `{item['slug']}` | `{item['category']}` | {item['reason']} | {desc} |")
         lines.append("")
 
     page_path.write_text("\n".join(lines), encoding="utf-8")
@@ -216,6 +242,12 @@ def main() -> None:
         mapping["mcps"][mcp_name] = {
             "page": str(mcp_page_path(mcp_name)),
             "source_url": str(rule.get("source_url", "")).strip(),
+            "homepage": str(rule.get("homepage", "")).strip(),
+            "package": str(rule.get("package", "")).strip(),
+            "install": str(rule.get("install", "")).strip(),
+            "health_command": str(rule.get("health_command", "")).strip(),
+            "owners": rule.get("owners", []),
+            "agent_surfaces": rule.get("agent_surfaces", []),
             "skills": matches,
         }
         source_url = str(rule.get("source_url", "")).strip()
