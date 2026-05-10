@@ -7,10 +7,10 @@ Hosted MCPs validate URL shape only; this script does not perform network checks
 | --- | --- | --- | --- | ---: | --- |
 | `colony` | yes | no | [link](https://github.com/recodeee/colony) | 5 | `colony --help` |
 | `coolify` | yes | yes | [link](https://github.com/StuMason/coolify-mcp) | 1 | `npx -y coolify-mcp --help` |
-| `gitea` | yes | no | [link](https://github.com/seepine/gitea-mcp) | 2 | `gitea-mcp --help` |
+| `gitea` | yes | yes | [link](https://github.com/seepine/gitea-mcp) | 2 | `gitea-mcp --help` |
 | `Higgsfield` | yes | url ok | [link](https://mcp.higgsfield.ai/mcp) | 4 | hosted URL format only |
 | `hostinger-api` | yes | yes | [link](https://github.com/hostinger/api-mcp-server) | 0 | `npx -y @hostinger/api-mcp-server --help` |
-| `letsfg` | yes | yes | [link](https://github.com/LetsFG/LetsFG) | 1 | `letsfg-mcp --help` |
+| `letsfg` | yes | no | [link](https://github.com/LetsFG/LetsFG) | 1 | `letsfg-mcp --help` |
 | `MedusaDocs` | yes | url ok | [link](https://docs.medusajs.com/mcp) | 7 | hosted URL format only |
 | `omx_code_intel` | yes | yes | [link](https://github.com/NagyVikt/oh-my-codex) | 5 | `node /path/to/oh-my-codex/dist/mcp/code-intel-server.js --help` |
 | `omx_memory` | yes | yes | [link](https://github.com/NagyVikt/oh-my-codex) | 2 | `node /path/to/oh-my-codex/dist/mcp/memory-server.js --help` |
