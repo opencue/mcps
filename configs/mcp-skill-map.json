@@ -397,6 +397,13 @@
         },
         {
           "category": "review",
+          "description": "Batch-validate LLM API keys across 7 providers (OpenAI, Anthropic, Gemini, DeepSeek, SiliconCloud, xAI, OpenRouter) via the local `api-tester` CLI. Use when user says \"test these keys\", \"validate api keys\", \"are these keys still good\", \"audit these tokens\", \"check which keys work\", or pastes a list of candidate keys (sk-, sk-ant-, xai-, AIza, sk-or-) and asks if they're real. NOT for sending an actual chat completion as a one-off (use the relevant provider SDK) or for quality/code review (use code-review / security-review).",
+          "name": "api-tester",
+          "reason": "category",
+          "slug": "api-tester"
+        },
+        {
+          "category": "review",
           "description": "Use when user says 'review this code', 'code review', 'review my changes', 'review the diff', or '/review'. Runs a structured quality and maintainability review with severity-rated feedback. NOT for security audits \u2014 use security-review.",
           "name": "code-review",
           "reason": "explicit",
@@ -687,6 +694,6 @@
       "source_url": ""
     }
   },
-  "skill_count": 103,
+  "skill_count": 104,
   "skills_root": "~/Documents/soul/skills/skills"
 }
