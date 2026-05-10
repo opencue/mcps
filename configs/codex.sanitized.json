@@ -37,7 +37,7 @@
         "serve"
       ],
       "command": "~/.bun/bin/gbrain",
-      "startup_timeout_sec": 20.0
+      "startup_timeout_sec": 60.0
     },
     "hostinger-api": {
       "args": [
