@@ -9,7 +9,7 @@ across sessions.
 ## Source
 
 - Repo: <https://github.com/recodeee/colony>
-- npm package: `@imdeadpool/colony-cli` (published from `apps/cli/`)
+- npm package: `colonyq` (published from `apps/cli/`)
 - Current version on this workstation: run `colony --version` to check
   (the global symlink may lag behind the repo if you've been doing
   local dev — see `colony-rebuild` recipe in `~/Documents/Justfile`).
@@ -21,7 +21,7 @@ documented in the upstream README at <https://github.com/recodeee/colony>.
 
 ```sh
 # 1. CLI — installs the `colony` binary
-npm install -g @imdeadpool/colony-cli
+npm install -g colonyq
 
 # 2. MCP — registers the colony MCP server + lifecycle hooks for one IDE
 colony install --ide codex            # or claude-code, cursor, gemini-cli
@@ -79,9 +79,9 @@ After a `git clean` or `pnpm dlx tsup --clean`, rebuild with:
 
 ```sh
 just colony-rebuild
-# = pnpm install && pnpm --filter @imdeadpool/colony-cli build
+# = pnpm install && pnpm --filter colonyq build
 #   in ~/Documents/recodee/colony/
 ```
 
-The `pnpm --filter @imdeadpool/colony-cli` matches the package.json
+The `pnpm --filter colonyq` matches the package.json
 `name` field in `apps/cli/package.json`.
