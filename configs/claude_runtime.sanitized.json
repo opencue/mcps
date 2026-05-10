@@ -7,10 +7,10 @@
     },
     "colony": {
       "args": [
-        "~/Documents/recodee/colony/apps/cli/dist/index.js",
-        "mcp"
+        "-lc",
+        "exec colony mcp"
       ],
-      "command": "~/.nvm/versions/node/v22.22.0/bin/node",
+      "command": "bash",
       "env": {},
       "type": "stdio"
     },

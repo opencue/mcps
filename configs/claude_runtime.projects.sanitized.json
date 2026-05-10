@@ -26,9 +26,10 @@
     "~/Documents/recodee/agents-hivemind": {
       "colony": {
         "args": [
-          "mcp"
+          "-lc",
+          "exec colony mcp"
         ],
-        "command": "~/.nvm/versions/node/v22.22.0/bin/colony",
+        "command": "bash",
         "env": {},
         "type": "stdio"
       }

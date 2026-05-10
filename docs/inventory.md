@@ -43,7 +43,7 @@ Server key: `mcpServers`
 | Server | Command/type | Args | Env keys |
 | --- | --- | ---: | --- |
 | `Higgsfield` | `http` | 0 | - |
-| `colony` | `~/.nvm/versions/node/v22.22.0/bin/node` | 2 | - |
+| `colony` | `bash` | 2 | - |
 | `coolify` | `bash` | 2 | - |
 | `hostinger-api` | `bash` | 2 | - |
 | `obsidian-vault` | `npx` | 3 | - |
@@ -75,7 +75,7 @@ Source: `~/.claude.json` (`projects[*].mcpServers`)
 
 | Server | Command/type | Args | Env keys |
 | --- | --- | ---: | --- |
-| `colony` | `~/.nvm/versions/node/v22.22.0/bin/colony` | 1 | - |
+| `colony` | `bash` | 2 | - |
 
 ### `~/brain`
 
