@@ -411,31 +411,10 @@
         },
         {
           "category": "review",
-          "description": "Use when user says \"architecture review\", \"review design\", or \"system design critique\" and needs architecture feedback. Covers boundaries, tradeoffs, risks, scalability, and tests.",
-          "name": "architecture-review",
-          "reason": "category",
-          "slug": "architecture-review"
-        },
-        {
-          "category": "review",
           "description": "Use when user says \"review this code\", \"code review\", \"review my changes\", \"review the diff\", or \"/review\". Runs a structured quality and maintainability review with severity-rated findings. NOT for security audits; use security-review.",
           "name": "code-review",
           "reason": "explicit",
           "slug": "code-review"
-        },
-        {
-          "category": "review",
-          "description": "Use when user says \"handle review comments\", \"fix PR feedback\", or \"address code review\" and needs review-response guidance. Covers triage, patches, evidence, and replies.",
-          "name": "code-review-handling",
-          "reason": "category",
-          "slug": "code-review-handling"
-        },
-        {
-          "category": "review",
-          "description": "Use when user says \"request review\", \"ask for code review\", or \"prepare PR review\" and needs review-request guidance. Covers context, scope, risk, checklist, and reviewer notes.",
-          "name": "code-review-requesting",
-          "reason": "category",
-          "slug": "code-review-requesting"
         },
         {
           "category": "github",
@@ -457,27 +436,6 @@
           "name": "security-review",
           "reason": "explicit",
           "slug": "security-review"
-        },
-        {
-          "category": "review",
-          "description": "Use when user says \"debug this\", \"investigate the failure\", \"find root cause\", \"flaky test\", or needs evidence-first diagnosis of a bug, regression, failing command, broken integration, or unclear runtime behavior.",
-          "name": "systematic-debugging",
-          "reason": "category",
-          "slug": "systematic-debugging"
-        },
-        {
-          "category": "review",
-          "description": "Use when user says \"TDD\", \"test first\", or \"write failing test\" and needs test-driven development guidance. Covers regression tests, minimal implementation, refactor, and validation.",
-          "name": "test-driven-development",
-          "reason": "category",
-          "slug": "test-driven-development"
-        },
-        {
-          "category": "review",
-          "description": "Use when user expects final proof, or before saying \"done\", \"complete\", \"fixed\", \"verified\", or after code, config, deployment, data, content, or workflow changes that need evidence before final reporting.",
-          "name": "verification-before-completion",
-          "reason": "category",
-          "slug": "verification-before-completion"
         }
       ],
       "source_url": "https://github.com/NagyVikt/oh-my-codex"
@@ -542,25 +500,11 @@
           "slug": "cancel"
         },
         {
-          "category": "orchestration",
-          "description": "Use when user says \"execute the plan\", \"run the implementation plan\", or \"work through tasks\" and needs plan execution guidance. Covers sequencing, edits, validation, and status reporting.",
-          "name": "executing-development-plans",
-          "reason": "category",
-          "slug": "executing-development-plans"
-        },
-        {
           "category": "meta",
           "description": "[OMX] Use when user says 'show hud', 'omx hud', 'configure statusline', 'change hud preset', 'live hud', or wants ralph/ultrawork/autopilot/team/pipeline mode state. Runs `omx hud [--watch|--json|--preset=minimal|focused|full]`, reads .omx/state/*.json, configures `[tui] status_line` in ~/.codex/config.toml.",
           "name": "hud",
           "reason": "explicit",
           "slug": "hud"
-        },
-        {
-          "category": "orchestration",
-          "description": "Use when user says \"dispatch agents\", \"parallel agents\", or \"split this up\" and needs parallel subtask guidance. Covers ownership, non-overlap, integration, and verification.",
-          "name": "parallel-agent-dispatching",
-          "reason": "category",
-          "slug": "parallel-agent-dispatching"
         },
         {
           "category": "orchestration",
@@ -582,13 +526,6 @@
           "name": "ralplan",
           "reason": "category",
           "slug": "ralplan"
-        },
-        {
-          "category": "orchestration",
-          "description": "Use when user says \"use subagents\", \"delegate work\", or \"subagent development\" and needs bounded native subagent guidance. Covers slicing, prompts, integration, and validation.",
-          "name": "subagent-driven-development",
-          "reason": "category",
-          "slug": "subagent-driven-development"
         },
         {
           "category": "orchestration",
@@ -764,6 +701,6 @@
       "source_url": ""
     }
   },
-  "skill_count": 168,
+  "skill_count": 105,
   "skills_root": "~/Documents/soul/skills/skills"
 }
