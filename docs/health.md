@@ -7,7 +7,7 @@ Hosted MCPs validate URL shape only; this script does not perform network checks
 | --- | --- | --- | --- | ---: | --- |
 | `colony` | yes | yes | [link](https://github.com/recodeee/colony) | 5 | `colony --help` |
 | `coolify` | yes | yes | [link](https://github.com/StuMason/coolify-mcp) | 1 | `npx -y coolify-mcp --help` |
-| `gitea` | yes | yes | [link](https://github.com/seepine/gitea-mcp) | 2 | `gitea-mcp --help` |
+| `gitea` | yes | no | [link](https://github.com/seepine/gitea-mcp) | 2 | `gitea-mcp --help` |
 | `Higgsfield` | yes | url ok | [link](https://mcp.higgsfield.ai/mcp) | 4 | hosted URL format only |
 | `hostinger-api` | yes | yes | [link](https://github.com/hostinger/api-mcp-server) | 0 | `npx -y @hostinger/api-mcp-server --help` |
 | `letsfg` | yes | yes | [link](https://github.com/LetsFG/LetsFG) | 1 | `letsfg-mcp --help` |
