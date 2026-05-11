@@ -47,7 +47,7 @@
         }
       },
       "name": "claude-mem",
-      "version": "13.0.1"
+      "version": "13.1.0"
     },
     "claude-obsidian@claude-obsidian-marketplace": {
       "enabled": true,
