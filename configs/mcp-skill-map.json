@@ -404,10 +404,31 @@
         },
         {
           "category": "review",
+          "description": "Use when reviewing system design, boundaries, scalability, coupling, data flow, failure modes, or technical tradeoffs.",
+          "name": "architecture-review",
+          "reason": "category",
+          "slug": "architecture-review"
+        },
+        {
+          "category": "review",
           "description": "Use when user says 'review this code', 'code review', 'review my changes', 'review the diff', or '/review'. Runs a structured quality and maintainability review with severity-rated feedback. NOT for security audits \u2014 use security-review.",
           "name": "code-review",
           "reason": "explicit",
           "slug": "code-review"
+        },
+        {
+          "category": "review",
+          "description": "Use when responding to reviewer comments, CI findings, PR feedback, requested changes, or conflicting review recommendations.",
+          "name": "code-review-handling",
+          "reason": "category",
+          "slug": "code-review-handling"
+        },
+        {
+          "category": "review",
+          "description": "Use when preparing work for review, asking another agent for review, opening a PR, or producing a review-ready summary.",
+          "name": "code-review-requesting",
+          "reason": "category",
+          "slug": "code-review-requesting"
         },
         {
           "category": "github",
@@ -429,6 +450,27 @@
           "name": "security-review",
           "reason": "explicit",
           "slug": "security-review"
+        },
+        {
+          "category": "review",
+          "description": "Use when diagnosing a bug, regression, flaky behavior, failing command, broken integration, or unclear runtime behavior that needs evidence-first root cause analysis.",
+          "name": "systematic-debugging",
+          "reason": "category",
+          "slug": "systematic-debugging"
+        },
+        {
+          "category": "review",
+          "description": "Use when the user asks for TDD, test-first development, regression-first bug fixing, or behavior changes that should be locked by tests before implementation.",
+          "name": "test-driven-development",
+          "reason": "category",
+          "slug": "test-driven-development"
+        },
+        {
+          "category": "review",
+          "description": "Use before claiming work is done, especially after code, config, deployment, data, content, or workflow changes that need proof.",
+          "name": "verification-before-completion",
+          "reason": "category",
+          "slug": "verification-before-completion"
         }
       ],
       "source_url": "https://github.com/NagyVikt/oh-my-codex"
@@ -493,11 +535,25 @@
           "slug": "cancel"
         },
         {
+          "category": "orchestration",
+          "description": "Use when implementing from an existing plan, PRD, task list, OpenSpec change, or staged execution checklist.",
+          "name": "executing-development-plans",
+          "reason": "category",
+          "slug": "executing-development-plans"
+        },
+        {
           "category": "meta",
           "description": "[OMX] Use when user says 'show hud', 'omx hud', 'configure statusline', 'change hud preset', 'live hud', or wants ralph/ultrawork/autopilot/team/pipeline mode state. Runs `omx hud [--watch|--json|--preset=minimal|focused|full]`, reads .omx/state/*.json, configures `[tui] status_line` in ~/.codex/config.toml.",
           "name": "hud",
           "reason": "explicit",
           "slug": "hud"
+        },
+        {
+          "category": "orchestration",
+          "description": "Use when a task has independent lanes that can run in parallel with bounded ownership and verification.",
+          "name": "parallel-agent-dispatching",
+          "reason": "category",
+          "slug": "parallel-agent-dispatching"
         },
         {
           "category": "orchestration",
@@ -519,6 +575,13 @@
           "name": "ralplan",
           "reason": "category",
           "slug": "ralplan"
+        },
+        {
+          "category": "orchestration",
+          "description": "Use when implementing a plan with bounded subagents, separate review passes, and integration ownership.",
+          "name": "subagent-driven-development",
+          "reason": "category",
+          "slug": "subagent-driven-development"
         },
         {
           "category": "orchestration",
@@ -694,6 +757,6 @@
       "source_url": ""
     }
   },
-  "skill_count": 104,
+  "skill_count": 167,
   "skills_root": "~/Documents/soul/skills/skills"
 }
