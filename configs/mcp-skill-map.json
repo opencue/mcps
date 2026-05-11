@@ -51,21 +51,21 @@
         },
         {
           "category": "medusa",
-          "description": "End-to-end product imagery pipeline for Medusa v2 shops. Generates product shots via Higgsfield (`higgsfield product-photoshoot create`), uploads them to the shop's S3 bucket on a public-read prefix, then patches the matching Medusa products via `POST /admin/products/{id}` to set thumbnail + images. Use when user says \"generate product images\", \"refresh product photos\", \"shop k\u00e9peket gener\u00e1lni\", \"Higgsfield images to Medusa\", or supplies a list of product slugs/IDs and prompts. Reads backend URL + secret + AWS creds from a per-shop config file (or a future recodee bouncer MCP), never hardcodes them. Idempotent \u2014 re-running overwrites the same S3 keys + product fields.",
+          "description": "Use when user says \"Higgsfield to Medusa\", \"generate product photos\", or \"import AI product assets\" and needs the Higgsfield-to-Medusa pipeline. Covers asset generation, product mapping, import, and validation.argument-hint: <shop> [<manifest.json>]",
           "name": "higgsfield-to-medusa-products",
           "reason": "prefix",
           "slug": "higgsfield-to-medusa-products"
         },
         {
           "category": "design",
-          "description": "Use when user asks for mobile app screen mockups, iOS/Android UI concepts, onboarding/auth/dashboard/chat/fintech/health screens, or multi-screen app flows. Generates images only (no code) of app screens framed inside subtle phone mockups with consistent palettes and readable hierarchy. NOT for websites or landing pages \u2014 use imagegen-frontend-web.",
+          "description": "Use when user says \"mobile mockup\", \"generate mobile UI\", or \"imagegen mobile\" and needs mobile frontend visual generation. Covers prompts, constraints, assets, and review.",
           "name": "imagegen-frontend-mobile",
           "reason": "explicit",
           "slug": "imagegen-frontend-mobile"
         },
         {
           "category": "design",
-          "description": "Use when user asks for landing page mockups, marketing site references, hero/section images, or website design comps. Generates one horizontal image per section (8 sections = 8 images, never combined), with varied hero composition, varied CTAs, and a single consistent palette across all images. NOT for mobile apps \u2014 use imagegen-frontend-mobile.",
+          "description": "Use when user says \"web mockup\", \"generate website UI\", or \"imagegen web\" and needs web frontend visual generation. Covers prompts, layout, assets, and visual review.",
           "name": "imagegen-frontend-web",
           "reason": "explicit",
           "slug": "imagegen-frontend-web"
@@ -116,28 +116,28 @@
         },
         {
           "category": "medusa",
-          "description": "Generate database migrations for a Medusa module via `npx medusa db:generate <module-name>`. Use when user says /medusa-dev:db-generate, generate migrations for module X, or modifies a Medusa module data model and needs migration files. Pair with /db-migrate to apply.",
+          "description": "Use when user says \"medusa db:generate\", \"generate migration\", or \"Medusa migration file\" and needs Medusa migration generation guidance. Covers model changes, commands, review, and validation.argument-hint: <module-name>",
           "name": "db-generate",
           "reason": "prefix",
           "slug": "db-generate"
         },
         {
           "category": "medusa",
-          "description": "Apply pending Medusa database migrations via `npx medusa db:migrate`. Use when user says /medusa-dev:db-migrate, run migrations, apply pending migrations, or after running /db-generate to bring the database up to date. Reports applied count plus any errors.",
+          "description": "Use when user says \"medusa db:migrate\", \"run migrations\", or \"apply Medusa migration\" and needs Medusa migration guidance. Covers environment checks, commands, rollback risk, and verification.allowed-tools: Bash(npx medusa db:migrate:*)",
           "name": "db-migrate",
           "reason": "prefix",
           "slug": "db-migrate"
         },
         {
           "category": "medusa",
-          "description": "Create missing GitHub repos and push a parent repo that tracks app repos as Git submodules. Use when user asks to publish locally-initialized repos, push parent + backend/storefront submodules, create org-scoped repos, recover from broken `gh auth` / SSH publickey errors, or fix missing workflow token scope.",
+          "description": "Use when user says \"publish submodule\", \"GitHub submodule\", or \"Medusa submodule publish\" and needs submodule publishing guidance. Covers repo state, commits, push, references, and validation.",
           "name": "gh-submodule-publish",
           "reason": "category",
           "slug": "gh-submodule-publish"
         },
         {
           "category": "medusa",
-          "description": "End-to-end product imagery pipeline for Medusa v2 shops. Generates product shots via Higgsfield (`higgsfield product-photoshoot create`), uploads them to the shop's S3 bucket on a public-read prefix, then patches the matching Medusa products via `POST /admin/products/{id}` to set thumbnail + images. Use when user says \"generate product images\", \"refresh product photos\", \"shop k\u00e9peket gener\u00e1lni\", \"Higgsfield images to Medusa\", or supplies a list of product slugs/IDs and prompts. Reads backend URL + secret + AWS creds from a per-shop config file (or a future recodee bouncer MCP), never hardcodes them. Idempotent \u2014 re-running overwrites the same S3 keys + product fields.",
+          "description": "Use when user says \"Higgsfield to Medusa\", \"generate product photos\", or \"import AI product assets\" and needs the Higgsfield-to-Medusa pipeline. Covers asset generation, product mapping, import, and validation.argument-hint: <shop> [<manifest.json>]",
           "name": "higgsfield-to-medusa-products",
           "reason": "category",
           "slug": "higgsfield-to-medusa-products"
@@ -151,42 +151,42 @@
         },
         {
           "category": "medusa",
-          "description": "Use when creating a new Medusa webshop from medusa-shops/base-template, generating backend/storefront env files from a domain, preparing Coolify backend deployment, configuring Hostinger hosting/DNS, creating the per-shop Postgres schema, or making a domain-to-shop setup checklist. Triggers include \"new webshop\", \"create webshop\", \"base-template env\", \"configure envs for a site\", \"Coolify + Hostinger Medusa shop\", and \"domain address then setup .env\".",
+          "description": "Use when user says \"new Medusa shop\", \"setup Medusa store\", or \"Medusa shop scaffold\" and needs shop setup guidance. Covers base template, backend, storefront, envs, deployment, and checks.",
           "name": "medusa-shop-setup",
           "reason": "category",
           "slug": "medusa-shop-setup"
         },
         {
           "category": "medusa",
-          "description": "Create a Medusa v2 admin user against a running backend over HTTP, no CLI/SSH required. Two flows: (a) invite-accept for ADDITIONAL admins (needs an existing admin's session to mint the invite), (b) CLI fallback for the FIRST admin (no admin exists yet \u2014 Medusa v2 has no public POST /admin/users). Use when user says \"create admin via API\", \"invite admin\", \"new admin on the live site\", or supplies a backend URL + email + password and login is at /app/login. Medusa v2-only.",
+          "description": "Use when user says \"create Medusa admin\", \"new admin via API\", or \"add admin user\" and needs API-based admin creation guidance. Covers auth, request shape, envs, validation, and risk.argument-hint: <backend-url> <email> <password> [<existing-admin-email> <existing-admin-password>]",
           "name": "new-admin-via-api",
           "reason": "category",
           "slug": "new-admin-via-api"
         },
         {
           "category": "medusa",
-          "description": "Create a new Medusa admin user via `npx medusa user -e <email> -p <password>`. Use when user says create admin, new admin user, /medusa-dev:user, or supplies an email + password pair for a Medusa backend. Medusa-only \u2014 NOT for general user creation.",
+          "description": "Use when user says \"new Medusa user\", \"create first admin\", or \"add user\" and needs Medusa user creation guidance. Covers CLI/API options, credentials, validation, and handoff.argument-hint: <email> <password>",
           "name": "new-user",
           "reason": "explicit",
           "slug": "new-user"
         },
         {
           "category": "medusa",
-          "description": "Create and configure an AWS S3 bucket for a Medusa v2 backend in one shot. Sets up: bucket creation in a region, public-read bucket policy scoped to a product-images prefix, CORS for admin uploads, versioning, server-side encryption (SSE-S3), and lifecycle to clean up incomplete multipart uploads. Outputs the env var block ready to paste into `~/.config/woocommerce-medusa-import/env` AND the env vars to set in Coolify so the running Medusa file provider switches off local-storage to S3. Use when user says \"create medusa bucket\", \"provision s3 for medusa\", \"new shop bucket\", or supplies a shop name + AWS region. Requires `aws` CLI configured (or `AWS_ACCESS_KEY_ID`+`AWS_SECRET_ACCESS_KEY` in env).",
+          "description": "Use when user says \"Medusa S3\", \"provision bucket\", or \"file storage bucket\" and needs S3 bucket provisioning for Medusa. Covers envs, provider settings, access, and validation.argument-hint: <bucket-name> [<region=eu-central-1>] [<prefix=medusa/>]",
           "name": "provision-medusa-s3-bucket",
           "reason": "category",
           "slug": "provision-medusa-s3-bucket"
         },
         {
           "category": "medusa",
-          "description": "Use when working on ecommerce storefronts (Next.js, SvelteKit, React, Vue) \u2014 checkout, cart, payment flows, product pages, navigation, homepage, or ANY storefront component. Critical for adding checkout, implementing cart, integrating a Medusa backend, or building ecommerce functionality.",
+          "description": "Use when user says \"storefront best practices\", \"Medusa storefront\", or \"storefront architecture\" and needs storefront guidance. Covers data fetching, UX, caching, errors, and validation.",
           "name": "storefront-best-practices",
           "reason": "explicit",
           "slug": "storefront-best-practices"
         },
         {
           "category": "medusa",
-          "description": "Build or run WooCommerce product importers into Medusa v2 backends. Use when importing WooCommerce products, variations, categories, images, prices, inventory, or metadata into Medusa, especially repos with apps/backend. Includes safe secret handling, dry-run/idempotent import rules, Medusa workflow usage, and verification steps.",
+          "description": "Use when user says \"WooCommerce import\", \"migrate products\", or \"Woo to Medusa\" and needs WooCommerce-to-Medusa import guidance. Covers extraction, mapping, assets, import, and checks.",
           "name": "woocommerce-to-medusa-import",
           "reason": "explicit",
           "slug": "woocommerce-to-medusa-import"
@@ -238,7 +238,7 @@
         },
         {
           "category": "orchestration",
-          "description": "[OMX] Auto-loaded by Codex sessions started as an OMX Team worker (a tmux pane spawned by $team). Defines the worker startup ACK, mailbox poll loop, and task lifecycle. Use when OMX_TEAM_WORKER is set or the worker inbox tells you to load it. NOT user-invocable \u2014 leader-spawned only.",
+          "description": "Use when user says \"worker\", \"team worker\", or \"assigned slice\" and needs worker-lane execution guidance. Covers ownership, scope, blocker reporting, and handoff to the leader.",
           "name": "worker",
           "reason": "explicit",
           "slug": "worker"
@@ -261,21 +261,21 @@
       "skills": [
         {
           "category": "deployment",
-          "description": "Use when user mentions Coolify, asks to deploy/manage apps on Coolify, list servers, manage env vars, trigger deployments, or run Coolify CLI workflows. Drives the local coolify CLI for contexts, servers, apps, databases, services, and GitHub app integrations.",
+          "description": "Use when user says \"Coolify\", \"deploy backend\", or \"check deploy logs\" and needs Coolify deployment guidance. Covers env vars, builds, restarts, logs, health checks, and rollback risk.",
           "name": "coolify",
           "reason": "explicit",
           "slug": "coolify"
         },
         {
           "category": "deployment",
-          "description": "Node.js package manager with strict dependency resolution. Use when running pnpm specific commands, configuring workspaces, or managing dependencies with catalogs, patches, or overrides.",
+          "description": "Use when user says \"pnpm\", \"workspace install\", or \"pnpm build\" and needs Node workspace package guidance. Covers installs, scripts, filters, lockfiles, and verification.",
           "name": "pnpm",
           "reason": "category",
           "slug": "pnpm"
         },
         {
           "category": "deployment",
-          "description": "Use when doing ANY task involving Supabase. Triggers: Supabase products (Database, Auth, Edge Functions, Realtime, Storage, Vectors, Cron, Queues); client libraries and SSR integrations (supabase-js, @supabase/ssr) in Next.js, React, SvelteKit, Astro, Remix; auth issues (login, logout, sessions, JWT, cookies, getSession, getUser, getClaims, RLS); Supabase CLI or MCP server; schema changes, migrations, security audits, Postgres extensions (pg_graphql, pg_cron, pg_vector).",
+          "description": "Use when user says \"Supabase\", \"Supabase DB\", or \"Supabase migration\" and needs Supabase deployment or database guidance. Covers envs, migrations, SQL checks, access, and validation.",
           "name": "supabase",
           "reason": "category",
           "slug": "supabase"
@@ -309,7 +309,7 @@
       "skills": [
         {
           "category": "medusa",
-          "description": "Create missing GitHub repos and push a parent repo that tracks app repos as Git submodules. Use when user asks to publish locally-initialized repos, push parent + backend/storefront submodules, create org-scoped repos, recover from broken `gh auth` / SSH publickey errors, or fix missing workflow token scope.",
+          "description": "Use when user says \"publish submodule\", \"GitHub submodule\", or \"Medusa submodule publish\" and needs submodule publishing guidance. Covers repo state, commits, push, references, and validation.",
           "name": "gh-submodule-publish",
           "reason": "explicit",
           "slug": "gh-submodule-publish"
@@ -355,7 +355,7 @@
       "skills": [
         {
           "category": "research",
-          "description": "Search and book flights across 180+ airlines with zero markup ($20\u201350 cheaper than OTAs). Use when user says find flights, search flights, book a flight, find cheap flights, fly from X to Y, find connections/layovers, or any flight query. NOT for hotels, cars, or non-flight bookings.",
+          "description": "Use when user says \"find flights\", \"flight search\", or \"book travel\" and needs flight research. Covers dates, airports, constraints, comparisons, and current-source checks.metadata: author: LetsFG - github.com/LetsFG version: '1.0.0'",
           "name": "flight-search",
           "reason": "explicit",
           "slug": "flight-search"
@@ -404,14 +404,14 @@
         },
         {
           "category": "review",
-          "description": "Batch-validate LLM API keys across 7 providers (OpenAI, Anthropic, Gemini, DeepSeek, SiliconCloud, xAI, OpenRouter) via the local `api-tester` CLI. Use when user says \"test these keys\", \"validate api keys\", \"are these keys still good\", \"audit these tokens\", \"check which keys work\", or pastes a list of candidate keys (sk-, sk-ant-, xai-, AIza, sk-or-) and asks if they're real. NOT for sending an actual chat completion as a one-off (use the relevant provider SDK) or for quality/code review (use code-review / security-review).",
+          "description": "Use when user says \"test API\", \"API endpoint\", or \"curl this endpoint\" and needs API validation. Covers request setup, auth, assertions, response checks, and failure evidence.",
           "name": "api-tester",
           "reason": "category",
           "slug": "api-tester"
         },
         {
           "category": "review",
-          "description": "Use when reviewing system design, boundaries, scalability, coupling, data flow, failure modes, or technical tradeoffs.",
+          "description": "Use when user says \"architecture review\", \"review design\", or \"system design critique\" and needs architecture feedback. Covers boundaries, tradeoffs, risks, scalability, and tests.",
           "name": "architecture-review",
           "reason": "category",
           "slug": "architecture-review"
@@ -425,14 +425,14 @@
         },
         {
           "category": "review",
-          "description": "Use when responding to reviewer comments, CI findings, PR feedback, requested changes, or conflicting review recommendations.",
+          "description": "Use when user says \"handle review comments\", \"fix PR feedback\", or \"address code review\" and needs review-response guidance. Covers triage, patches, evidence, and replies.",
           "name": "code-review-handling",
           "reason": "category",
           "slug": "code-review-handling"
         },
         {
           "category": "review",
-          "description": "Use when preparing work for review, asking another agent for review, opening a PR, or producing a review-ready summary.",
+          "description": "Use when user says \"request review\", \"ask for code review\", or \"prepare PR review\" and needs review-request guidance. Covers context, scope, risk, checklist, and reviewer notes.",
           "name": "code-review-requesting",
           "reason": "category",
           "slug": "code-review-requesting"
@@ -467,7 +467,7 @@
         },
         {
           "category": "review",
-          "description": "Use when the user asks for TDD, test-first development, regression-first bug fixing, or behavior changes that should be locked by tests before implementation.",
+          "description": "Use when user says \"TDD\", \"test first\", or \"write failing test\" and needs test-driven development guidance. Covers regression tests, minimal implementation, refactor, and validation.",
           "name": "test-driven-development",
           "reason": "category",
           "slug": "test-driven-development"
@@ -498,14 +498,14 @@
       "skills": [
         {
           "category": "meta",
-          "description": "[OMX] Save context to .omx/notepad.md so it survives compaction. Use when user says /note, save this note, remember this for later, /note --priority, or /note --show. Three sections: Priority Context (always loaded), Working Memory (timestamped, auto-pruned), MANUAL (never pruned).",
+          "description": "Use when user says \"note this\", \"save note\", or \"remember this\" and needs a local note workflow. Covers note placement, concise capture, retrieval, and confirmation.",
           "name": "note",
           "reason": "explicit",
           "slug": "note"
         },
         {
           "category": "meta",
-          "description": "[OMX] Persistent project wiki under .omx/wiki with keyword search and lifecycle capture. Use when user says wiki add, wiki query, wiki lint, wiki read, wiki delete, or asks to save architectural decisions / ingest project knowledge into a searchable markdown KB.",
+          "description": "Use when user says \"wiki\", \"document knowledge\", or \"knowledge base\" and needs wiki guidance. Covers structure, linking, maintenance, and retrieval.triggers: [\"wiki add\", \"wiki lint\", \"wiki query\", \"wiki read\", \"wiki delete\"]",
           "name": "wiki",
           "reason": "explicit",
           "slug": "wiki"
@@ -543,7 +543,7 @@
         },
         {
           "category": "orchestration",
-          "description": "Use when implementing from an existing plan, PRD, task list, OpenSpec change, or staged execution checklist.",
+          "description": "Use when user says \"execute the plan\", \"run the implementation plan\", or \"work through tasks\" and needs plan execution guidance. Covers sequencing, edits, validation, and status reporting.",
           "name": "executing-development-plans",
           "reason": "category",
           "slug": "executing-development-plans"
@@ -557,7 +557,7 @@
         },
         {
           "category": "orchestration",
-          "description": "Use when a task has independent lanes that can run in parallel with bounded ownership and verification.",
+          "description": "Use when user says \"dispatch agents\", \"parallel agents\", or \"split this up\" and needs parallel subtask guidance. Covers ownership, non-overlap, integration, and verification.",
           "name": "parallel-agent-dispatching",
           "reason": "category",
           "slug": "parallel-agent-dispatching"
@@ -585,7 +585,7 @@
         },
         {
           "category": "orchestration",
-          "description": "Use when implementing a plan with bounded subagents, separate review passes, and integration ownership.",
+          "description": "Use when user says \"use subagents\", \"delegate work\", or \"subagent development\" and needs bounded native subagent guidance. Covers slicing, prompts, integration, and validation.",
           "name": "subagent-driven-development",
           "reason": "category",
           "slug": "subagent-driven-development"
@@ -613,14 +613,14 @@
         },
         {
           "category": "orchestration",
-          "description": "[OMX] Visual Ralph orchestration for frontend UI from generated references, static references, or live URL targets, using $ralph with $visual-verdict and pixel-diff evidence until the implementation matches and leaves a reproducible design system.",
+          "description": "Use when user says \"visual ralph\", \"iterate visually\", or \"keep fixing UI\" and needs persistent visual iteration. Covers screenshot evidence, visual verdicts, edits, and re-verification.",
           "name": "visual-ralph",
           "reason": "category",
           "slug": "visual-ralph"
         },
         {
           "category": "orchestration",
-          "description": "[OMX] Auto-loaded by Codex sessions started as an OMX Team worker (a tmux pane spawned by $team). Defines the worker startup ACK, mailbox poll loop, and task lifecycle. Use when OMX_TEAM_WORKER is set or the worker inbox tells you to load it. NOT user-invocable \u2014 leader-spawned only.",
+          "description": "Use when user says \"worker\", \"team worker\", or \"assigned slice\" and needs worker-lane execution guidance. Covers ownership, scope, blocker reporting, and handoff to the leader.",
           "name": "worker",
           "reason": "category",
           "slug": "worker"
@@ -682,7 +682,7 @@
       "skills": [
         {
           "category": "meta",
-          "description": "[OMX] Persistent project wiki under .omx/wiki with keyword search and lifecycle capture. Use when user says wiki add, wiki query, wiki lint, wiki read, wiki delete, or asks to save architectural decisions / ingest project knowledge into a searchable markdown KB.",
+          "description": "Use when user says \"wiki\", \"document knowledge\", or \"knowledge base\" and needs wiki guidance. Covers structure, linking, maintenance, and retrieval.triggers: [\"wiki add\", \"wiki lint\", \"wiki query\", \"wiki read\", \"wiki delete\"]",
           "name": "wiki",
           "reason": "explicit",
           "slug": "wiki"
@@ -705,14 +705,14 @@
       "skills": [
         {
           "category": "design",
-          "description": "Use when building React/Next.js UI and the user asks for high-taste frontend, Tailwind components, motion-rich pages, or \"design like a real engineer\". Enforces dependency checks, RSC/client boundaries, Tailwind version rules, no-emoji policy, viewport-stable layouts, and tuned variance/motion/density baselines.",
+          "description": "Use when user says \"improve the UI\", \"make it tasteful\", or \"frontend design pass\" and needs design-taste guidance for frontend work. Covers hierarchy, spacing, polish, and visual validation.",
           "name": "design-taste-frontend",
           "reason": "explicit",
           "slug": "design-taste-frontend"
         },
         {
           "category": "design",
-          "description": "Use when user wants a website built from a design image, asks to \"design then code\", or wants section-by-section landing/marketing/portfolio pages. Generates per-section reference images first, analyzes them, then implements matching frontend. Forces large readable images per section, no card-in-card spam, and clean spacious hero composition.",
+          "description": "Use when user says \"image to code\", \"match this screenshot\", or \"recreate this design\" and needs implementation from visual reference. Covers inspection, layout mapping, and visual validation.",
           "name": "image-to-code",
           "reason": "explicit",
           "slug": "image-to-code"
@@ -726,14 +726,14 @@
         },
         {
           "category": "orchestration",
-          "description": "[OMX] Visual Ralph orchestration for frontend UI from generated references, static references, or live URL targets, using $ralph with $visual-verdict and pixel-diff evidence until the implementation matches and leaves a reproducible design system.",
+          "description": "Use when user says \"visual ralph\", \"iterate visually\", or \"keep fixing UI\" and needs persistent visual iteration. Covers screenshot evidence, visual verdicts, edits, and re-verification.",
           "name": "visual-ralph",
           "reason": "explicit",
           "slug": "visual-ralph"
         },
         {
           "category": "design",
-          "description": "Use when comparing a generated UI screenshot against one or more reference images and you need a deterministic pass/fail signal. Returns strict JSON `{score, verdict, category_match, differences, suggestions, reasoning}` with a 90+ pass threshold to drive the next edit iteration in visual-fidelity loops.",
+          "description": "Use when user says \"visual verdict\", \"review screenshot\", or \"judge the UI\" and needs visual QA. Covers screenshot analysis, layout issues, polish gaps, accessibility, and next edits.",
           "name": "visual-verdict",
           "reason": "explicit",
           "slug": "visual-verdict"

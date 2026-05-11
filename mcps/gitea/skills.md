@@ -20,5 +20,5 @@ Agent surfaces: `vscode`
 
 | Skill | Category | Reason | Description |
 | --- | --- | --- | --- |
-| `gh-submodule-publish` | `medusa` | explicit | Create missing GitHub repos and push a parent repo that tracks app repos as Git submodules. Use when user asks to publish locally-initialized repos, push parent + backend/storefront submodules, create org-scoped repos, recover from broken `gh auth` / SSH publickey errors, or fix missing workflow token scope. |
+| `gh-submodule-publish` | `medusa` | explicit | Use when user says "publish submodule", "GitHub submodule", or "Medusa submodule publish" and needs submodule publishing guidance. Covers repo state, commits, push, references, and validation. |
 | `github` | `github` | explicit | Use when user says "check the PR", "open an issue", "view CI logs", "merge this PR", or needs GitHub operations via gh: issues, PRs, checks, run logs, reviews, comments, and API queries. NOT for unconfigured gh auth or bulk cross-repo scripting. |

@@ -20,4 +20,4 @@ Agent surfaces: `codex`, `claude`
 
 | Skill | Category | Reason | Description |
 | --- | --- | --- | --- |
-| `wiki` | `meta` | explicit | [OMX] Persistent project wiki under .omx/wiki with keyword search and lifecycle capture. Use when user says wiki add, wiki query, wiki lint, wiki read, wiki delete, or asks to save architectural decisions / ingest project knowledge into a searchable markdown KB. |
+| `wiki` | `meta` | explicit | Use when user says "wiki", "document knowledge", or "knowledge base" and needs wiki guidance. Covers structure, linking, maintenance, and retrieval.triggers: ["wiki add", "wiki lint", "wiki query", "wiki read", "wiki delete"] |

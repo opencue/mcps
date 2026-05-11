@@ -20,6 +20,6 @@ Agent surfaces: `codex`
 
 | Skill | Category | Reason | Description |
 | --- | --- | --- | --- |
-| `coolify` | `deployment` | explicit | Use when user mentions Coolify, asks to deploy/manage apps on Coolify, list servers, manage env vars, trigger deployments, or run Coolify CLI workflows. Drives the local coolify CLI for contexts, servers, apps, databases, services, and GitHub app integrations. |
-| `pnpm` | `deployment` | category | Node.js package manager with strict dependency resolution. Use when running pnpm specific commands, configuring workspaces, or managing dependencies with catalogs, patches, or overrides. |
-| `supabase` | `deployment` | category | Use when doing ANY task involving Supabase. Triggers: Supabase products (Database, Auth, Edge Functions, Realtime, Storage, Vectors, Cron, Queues); client libraries and SSR integrations (supabase-js, @supabase/ssr) in Next.js, React, SvelteKit, Astro, Remix; auth issues (login, logout, sessions, JWT, cookies, getSession, getUser, getClaims, RLS); Supabase CLI or MCP server; schema changes, migrations, security audits, Postgres extensions (pg_graphql, pg_cron, pg_vector). |
+| `coolify` | `deployment` | explicit | Use when user says "Coolify", "deploy backend", or "check deploy logs" and needs Coolify deployment guidance. Covers env vars, builds, restarts, logs, health checks, and rollback risk. |
+| `pnpm` | `deployment` | category | Use when user says "pnpm", "workspace install", or "pnpm build" and needs Node workspace package guidance. Covers installs, scripts, filters, lockfiles, and verification. |
+| `supabase` | `deployment` | category | Use when user says "Supabase", "Supabase DB", or "Supabase migration" and needs Supabase deployment or database guidance. Covers envs, migrations, SQL checks, access, and validation. |

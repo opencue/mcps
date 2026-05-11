@@ -20,5 +20,5 @@ Agent surfaces: `codex`, `claude`
 
 | Skill | Category | Reason | Description |
 | --- | --- | --- | --- |
-| `note` | `meta` | explicit | [OMX] Save context to .omx/notepad.md so it survives compaction. Use when user says /note, save this note, remember this for later, /note --priority, or /note --show. Three sections: Priority Context (always loaded), Working Memory (timestamped, auto-pruned), MANUAL (never pruned). |
-| `wiki` | `meta` | explicit | [OMX] Persistent project wiki under .omx/wiki with keyword search and lifecycle capture. Use when user says wiki add, wiki query, wiki lint, wiki read, wiki delete, or asks to save architectural decisions / ingest project knowledge into a searchable markdown KB. |
+| `note` | `meta` | explicit | Use when user says "note this", "save note", or "remember this" and needs a local note workflow. Covers note placement, concise capture, retrieval, and confirmation. |
+| `wiki` | `meta` | explicit | Use when user says "wiki", "document knowledge", or "knowledge base" and needs wiki guidance. Covers structure, linking, maintenance, and retrieval.triggers: ["wiki add", "wiki lint", "wiki query", "wiki read", "wiki delete"] |
