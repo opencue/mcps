@@ -20,5 +20,5 @@ Agent surfaces: `vscode`
 
 | Skill | Category | Reason | Description |
 | --- | --- | --- | --- |
-| `gh-submodule-publish` | `medusa` | explicit | Use when user says "publish submodule", "GitHub submodule", or "Medusa submodule publish" and needs submodule publishing guidance. Covers repo state, commits, push, references, and validation. |
-| `github` | `github` | explicit | Use when user says "check the PR", "open an issue", "view CI logs", "merge this PR", or needs GitHub operations via gh: issues, PRs, checks, run logs, reviews, comments, and API queries. NOT for unconfigured gh auth or bulk cross-repo scripting. |
+| `gh-submodule-publish` | `medusa` | explicit | Use when user says "publish submodule" or "Medusa submodule publish". Repo state, commits, push, references, validation. |
+| `github` | `github` | explicit | Use when user says "check the PR", "open an issue", "view CI logs", or "merge this PR". GitHub ops via gh: issues, PRs, checks, logs, reviews, API. |

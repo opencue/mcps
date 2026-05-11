@@ -20,6 +20,6 @@ Agent surfaces: `codex`, `claude`
 
 | Skill | Category | Reason | Description |
 | --- | --- | --- | --- |
-| `hud` | `meta` | explicit | [OMX] Use when user says 'show hud', 'omx hud', 'configure statusline', 'change hud preset', 'live hud', or wants ralph/ultrawork/autopilot/team/pipeline mode state. Runs `omx hud [--watch\|--json\|--preset=minimal\|focused\|full]`, reads .omx/state/*.json, configures `[tui] status_line` in ~/.codex/config.toml. |
-| `team` | `orchestration` | explicit | [OMX] Use when user says "team", "$team", "omx team", "spawn workers", "parallel workers", or wants real Codex/Claude CLI sessions in tmux panes coordinated by shared state and mailbox. Requires tmux. NOT for native in-session subagents, single persistence loops, or idea-to-PR autonomy. |
-| `trace` | `meta` | explicit | [OMX] Use when user says 'show trace', 'trace timeline', 'omx trace', 'what fired this session', 'why did this skill activate'. Calls trace_timeline + trace_summary MCP tools for chronological hook/keyword/skill/agent/tool flow; surfaces mode transitions, bottlenecks, keyword→skill→agent chains. NOT debugging — use $analyze. |
+| `hud` | `meta` | explicit | [OMX] Use when user says "show hud", "omx hud", "configure statusline", or "live hud". Runs `omx hud`; configures `[tui] status_line` for ralph/ultrawork/autopilot/team state. |
+| `team` | `orchestration` | explicit | [OMX] Use when user says "team", "$team", "spawn workers", or "parallel workers". Real Codex/Claude CLI sessions in tmux panes, shared state + mailbox. Requires tmux. NOT for native subagents. |
+| `trace` | `meta` | explicit | [OMX] Use when user says "show trace", "trace timeline", or "why did this skill activate". Calls trace_timeline + trace_summary; surfaces hook/keyword/skill/agent flow. NOT debugging — use $analyze. |

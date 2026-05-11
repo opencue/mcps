@@ -16,56 +16,56 @@
       "skills": [
         {
           "category": "design",
-          "description": "Use when user says \"brand kit\", \"brand guidelines\", \"logo system\", \"identity deck\", \"visual identity\", \"brand world\", or \"brand board\". Generates brand-guidelines presentation boards as images \u2014 logo concepts, mockups, typography, color, and brand applications across minimalist, editorial, dark-tech, luxury, gaming, and consumer styles.",
+          "description": "Use when user says \"brand kit\", \"brand guidelines\", \"logo system\", \"identity deck\", or \"brand world\". Generates brand-guideline presentation boards: logo, typography, color, mockups across minimalist/editorial/luxury/gaming styles.",
           "name": "brandkit",
           "reason": "explicit",
           "slug": "brandkit"
         },
         {
           "category": "higgsfield",
-          "description": "Use when user says 'generate image/video', 'animate this photo', 'image-to-video', 'remix/stylize this', 'create an ad', or 'UGC video'. Runs Higgsfield models and Marketing Studio. Chain with higgsfield-soul-id for face consistency. NOT for product photoshoots or marketplace cards.",
+          "description": "Use when user says \"generate image/video\", \"animate this photo\", \"image-to-video\", \"remix this\", or \"create an ad\". Higgsfield models + Marketing Studio. NOT for product photoshoots or marketplace cards.",
           "name": "higgsfield-generate",
           "reason": "prefix",
           "slug": "higgsfield-generate"
         },
         {
           "category": "higgsfield",
-          "description": "Use when user asks for 'marketplace listing images', 'product detail cards', 'A+ content', 'Amazon/Shopee/eBay images', or sales-ready listing sets. Generates compliant main image plus secondary and A+ modules. NOT for generic brand photography \u2014 use higgsfield-product-photoshoot.",
+          "description": "Use when user asks for \"marketplace listing images\", \"product detail cards\", \"A+ content\", or \"Amazon/Shopee/eBay images\". Compliant main + secondary + A+ modules. NOT for brand photography.",
           "name": "higgsfield-marketplace-cards",
           "reason": "prefix",
           "slug": "higgsfield-marketplace-cards"
         },
         {
           "category": "higgsfield",
-          "description": "Use when user says 'product photo', 'studio shot', 'lifestyle image', 'hero banner', 'ad creative', 'virtual try-on', or wants brand/paid-social product visuals. Backend-enhanced prompts on GPT Image 2. NOT for marketplace listing cards (use higgsfield-marketplace-cards) or generic image-gen.",
+          "description": "Use when user says \"product photo\", \"studio shot\", \"lifestyle image\", \"hero banner\", or \"virtual try-on\". Backend-enhanced prompts on GPT Image 2. NOT for marketplace cards or generic image-gen.",
           "name": "higgsfield-product-photoshoot",
           "reason": "prefix",
           "slug": "higgsfield-product-photoshoot"
         },
         {
           "category": "higgsfield",
-          "description": "Use when user says 'train my face', 'create my Soul', 'make my digital twin', or 'build my avatar'. One-time training of a Soul Character face model; returns reference_id used by higgsfield-generate. NOT for one-shot face swaps or generating images \u2014 use higgsfield-generate.",
+          "description": "Use when user says \"train my face\", \"create my Soul\", \"digital twin\", or \"build my avatar\". One-time Soul Character training; returns reference_id for higgsfield-generate. NOT for one-shot face swaps.",
           "name": "higgsfield-soul-id",
           "reason": "prefix",
           "slug": "higgsfield-soul-id"
         },
         {
           "category": "medusa",
-          "description": "Use when user says \"Higgsfield to Medusa\", \"generate product photos\", or \"import AI product assets\" and needs the Higgsfield-to-Medusa pipeline. Covers asset generation, product mapping, import, and validation.argument-hint: <shop> [<manifest.json>]",
+          "description": "Use when user says \"Higgsfield to Medusa\", \"generate product photos\", or \"import AI product assets\". Asset generation \u2192 product mapping \u2192 import.",
           "name": "higgsfield-to-medusa-products",
           "reason": "prefix",
           "slug": "higgsfield-to-medusa-products"
         },
         {
           "category": "design",
-          "description": "Use when user says \"mobile mockup\", \"generate mobile UI\", or \"imagegen mobile\" and needs mobile frontend visual generation. Covers prompts, constraints, assets, and review.",
+          "description": "Use when user says \"mobile mockup\", \"generate mobile UI\", or \"imagegen mobile\". Mobile frontend visual generation.",
           "name": "imagegen-frontend-mobile",
           "reason": "explicit",
           "slug": "imagegen-frontend-mobile"
         },
         {
           "category": "design",
-          "description": "Use when user says \"web mockup\", \"generate website UI\", or \"imagegen web\" and needs web frontend visual generation. Covers prompts, layout, assets, and visual review.",
+          "description": "Use when user says \"web mockup\", \"generate website UI\", or \"imagegen web\". Web frontend visual generation.",
           "name": "imagegen-frontend-web",
           "reason": "explicit",
           "slug": "imagegen-frontend-web"
@@ -88,105 +88,105 @@
       "skills": [
         {
           "category": "medusa",
-          "description": "Use when user says \"Medusa admin\", \"admin widget\", \"custom admin page\", \"admin form\", or plans/researches/implements Medusa Admin dashboard UI. Required for widgets, pages, forms, tables, data loading, and navigation.",
+          "description": "Use when user says \"Medusa admin\", \"admin widget\", \"custom admin page\", or \"admin form\". Required for Medusa Admin widgets, pages, forms, tables, data loading.",
           "name": "building-admin-dashboard-customizations",
           "reason": "prefix",
           "slug": "building-admin-dashboard-customizations"
         },
         {
           "category": "medusa",
-          "description": "Use when user says \"Medusa storefront\", \"call Medusa API\", \"SDK integration\", \"React Query\", or plans/researches/implements storefront features. Required for storefront data fetching, mutations, cache handling, and Medusa API calls.",
+          "description": "Use when user says \"Medusa storefront\", \"call Medusa API\", \"SDK integration\", or \"React Query\". Required for storefront fetching, mutations, cache, Medusa API calls.",
           "name": "building-storefronts",
           "reason": "prefix",
           "slug": "building-storefronts"
         },
         {
           "category": "medusa",
-          "description": "Use when user says \"Medusa backend\", \"custom module\", \"API route\", \"workflow\", \"data model\", or plans/researches/implements Medusa backend features. Required for modules, routes, workflows, links, and business logic.",
+          "description": "Use when user says \"Medusa backend\", \"custom module\", \"API route\", \"workflow\", or \"data model\". Required for Medusa modules, routes, workflows, links, business logic.",
           "name": "building-with-medusa",
           "reason": "prefix",
           "slug": "building-with-medusa"
         },
         {
           "category": "medusa",
-          "description": "Use when user says \"Medusa agent\", \"admin AI agent\", \"internal agent\", \"streamText\", or builds an internal admin-facing AI agent in a Medusa project. Covers models, module service, runtime tools, NDJSON routes, and admin UI chat. NOT for buyer-side storefront chatbots.",
+          "description": "Use when user says \"Medusa agent\", \"admin AI agent\", \"internal agent\", or \"streamText\". Internal admin-facing AI: models, module service, runtime tools, NDJSON routes, admin chat UI. NOT for buyer storefront chatbots.",
           "name": "creating-internal-agents",
           "reason": "explicit",
           "slug": "creating-internal-agents"
         },
         {
           "category": "medusa",
-          "description": "Use when user says \"medusa db:generate\", \"generate migration\", or \"Medusa migration file\" and needs Medusa migration generation guidance. Covers model changes, commands, review, and validation.argument-hint: <module-name>",
+          "description": "Use when user says \"medusa db:generate\" or \"generate migration\". Medusa migration generation: model changes, commands, review.",
           "name": "db-generate",
           "reason": "prefix",
           "slug": "db-generate"
         },
         {
           "category": "medusa",
-          "description": "Use when user says \"medusa db:migrate\", \"run migrations\", or \"apply Medusa migration\" and needs Medusa migration guidance. Covers environment checks, commands, rollback risk, and verification.allowed-tools: Bash(npx medusa db:migrate:*)",
+          "description": "Use when user says \"medusa db:migrate\" or \"run migrations\". Medusa migration apply: env checks, commands, rollback risk.",
           "name": "db-migrate",
           "reason": "prefix",
           "slug": "db-migrate"
         },
         {
           "category": "medusa",
-          "description": "Use when user says \"publish submodule\", \"GitHub submodule\", or \"Medusa submodule publish\" and needs submodule publishing guidance. Covers repo state, commits, push, references, and validation.",
+          "description": "Use when user says \"publish submodule\" or \"Medusa submodule publish\". Repo state, commits, push, references, validation.",
           "name": "gh-submodule-publish",
           "reason": "category",
           "slug": "gh-submodule-publish"
         },
         {
           "category": "medusa",
-          "description": "Use when user says \"Higgsfield to Medusa\", \"generate product photos\", or \"import AI product assets\" and needs the Higgsfield-to-Medusa pipeline. Covers asset generation, product mapping, import, and validation.argument-hint: <shop> [<manifest.json>]",
+          "description": "Use when user says \"Higgsfield to Medusa\", \"generate product photos\", or \"import AI product assets\". Asset generation \u2192 product mapping \u2192 import.",
           "name": "higgsfield-to-medusa-products",
           "reason": "category",
           "slug": "higgsfield-to-medusa-products"
         },
         {
           "category": "medusa",
-          "description": "Use when user says \"Medusa workflow\", \"Medusa subscriber\", \"Medusa auth\", \"Medusa query\", or builds/modifies Medusa API routes, data models, jobs, backend logic, storefront integrations, or implementation patterns.",
+          "description": "Use when user says \"Medusa workflow\", \"Medusa subscriber\", \"Medusa auth\", \"Medusa query\", or builds/modifies API routes, models, jobs, backend logic, storefront integrations.",
           "name": "medusa-reference",
           "reason": "explicit",
           "slug": "medusa-reference"
         },
         {
           "category": "medusa",
-          "description": "Use when user says \"new Medusa shop\", \"setup Medusa store\", or \"Medusa shop scaffold\" and needs shop setup guidance. Covers base template, backend, storefront, envs, deployment, and checks.",
+          "description": "Use when user says \"new Medusa shop\", \"setup Medusa store\", or \"Medusa shop scaffold\". Base template, backend, storefront, envs, deployment.",
           "name": "medusa-shop-setup",
           "reason": "category",
           "slug": "medusa-shop-setup"
         },
         {
           "category": "medusa",
-          "description": "Use when user says \"create Medusa admin\", \"new admin via API\", or \"add admin user\" and needs API-based admin creation guidance. Covers auth, request shape, envs, validation, and risk.argument-hint: <backend-url> <email> <password> [<existing-admin-email> <existing-admin-password>]",
+          "description": "Use when user says \"create Medusa admin\", \"new admin via API\", or \"add admin user\". API-based admin creation: auth, request, envs.",
           "name": "new-admin-via-api",
           "reason": "category",
           "slug": "new-admin-via-api"
         },
         {
           "category": "medusa",
-          "description": "Use when user says \"new Medusa user\", \"create first admin\", or \"add user\" and needs Medusa user creation guidance. Covers CLI/API options, credentials, validation, and handoff.argument-hint: <email> <password>",
+          "description": "Use when user says \"new Medusa user\", \"create first admin\", or \"add user\". CLI/API user creation, credentials.",
           "name": "new-user",
           "reason": "explicit",
           "slug": "new-user"
         },
         {
           "category": "medusa",
-          "description": "Use when user says \"Medusa S3\", \"provision bucket\", or \"file storage bucket\" and needs S3 bucket provisioning for Medusa. Covers envs, provider settings, access, and validation.argument-hint: <bucket-name> [<region=eu-central-1>] [<prefix=medusa/>]",
+          "description": "Use when user says \"Medusa S3\", \"provision bucket\", or \"file storage bucket\". S3 provisioning: envs, provider, access.",
           "name": "provision-medusa-s3-bucket",
           "reason": "category",
           "slug": "provision-medusa-s3-bucket"
         },
         {
           "category": "medusa",
-          "description": "Use when user says \"storefront best practices\", \"Medusa storefront\", or \"storefront architecture\" and needs storefront guidance. Covers data fetching, UX, caching, errors, and validation.",
+          "description": "Use when user says \"storefront best practices\" or \"storefront architecture\". Data fetching, UX, caching, errors.",
           "name": "storefront-best-practices",
           "reason": "explicit",
           "slug": "storefront-best-practices"
         },
         {
           "category": "medusa",
-          "description": "Use when user says \"WooCommerce import\", \"migrate products\", or \"Woo to Medusa\" and needs WooCommerce-to-Medusa import guidance. Covers extraction, mapping, assets, import, and checks.",
+          "description": "Use when user says \"WooCommerce import\", \"migrate products\", or \"Woo to Medusa\". Extraction, mapping, assets, import.",
           "name": "woocommerce-to-medusa-import",
           "reason": "explicit",
           "slug": "woocommerce-to-medusa-import"
@@ -210,35 +210,35 @@
       "skills": [
         {
           "category": "github",
-          "description": "Use when user says \"repo safety is broken\", \"gx doctor\", \"dirty worktree\", or \"finish the agent branch\" and needs gitguardex guardrails for branch, worktree, lock, PR, or cleanup state. Runs gx status, gx doctor, and strict verification. NOT for code-quality review; use code-review.",
+          "description": "Use when user says \"gx doctor\", \"dirty worktree\", or \"finish the agent branch\". gitguardex guardrails for branch/worktree/lock/PR state. NOT for code-quality review (use code-review).",
           "name": "gitguardex",
           "reason": "explicit",
           "slug": "gitguardex"
         },
         {
           "category": "github",
-          "description": "Use when user says \"merge skill updates\", \"skills to dev\", \"promote SKILL.md changes\", \"agent branch skills\", or needs SKILL.md updates merged from agent branches/worktrees into the local base branch with the multiagent-safety flow.",
+          "description": "Use when user says \"merge skill updates\", \"promote SKILL.md changes\", or \"agent branch skills\". Merges SKILL.md updates from agent branches into base with multiagent-safety flow.",
           "name": "guardex-merge-skills-to-dev",
           "reason": "explicit",
           "slug": "guardex-merge-skills-to-dev"
         },
         {
           "category": "orchestration",
-          "description": "[OMX] Use when user says \"team\", \"$team\", \"omx team\", \"spawn workers\", \"parallel workers\", or wants real Codex/Claude CLI sessions in tmux panes coordinated by shared state and mailbox. Requires tmux. NOT for native in-session subagents, single persistence loops, or idea-to-PR autonomy.",
+          "description": "[OMX] Use when user says \"team\", \"$team\", \"spawn workers\", or \"parallel workers\". Real Codex/Claude CLI sessions in tmux panes, shared state + mailbox. Requires tmux. NOT for native subagents.",
           "name": "team",
           "reason": "explicit",
           "slug": "team"
         },
         {
           "category": "meta",
-          "description": "[OMX] Use when user says 'show trace', 'trace timeline', 'omx trace', 'what fired this session', 'why did this skill activate'. Calls trace_timeline + trace_summary MCP tools for chronological hook/keyword/skill/agent/tool flow; surfaces mode transitions, bottlenecks, keyword\u2192skill\u2192agent chains. NOT debugging \u2014 use $analyze.",
+          "description": "[OMX] Use when user says \"show trace\", \"trace timeline\", or \"why did this skill activate\". Calls trace_timeline + trace_summary; surfaces hook/keyword/skill/agent flow. NOT debugging \u2014 use $analyze.",
           "name": "trace",
           "reason": "explicit",
           "slug": "trace"
         },
         {
           "category": "orchestration",
-          "description": "Use when user says \"worker\", \"team worker\", or \"assigned slice\" and needs worker-lane execution guidance. Covers ownership, scope, blocker reporting, and handoff to the leader.",
+          "description": "Use when user says \"worker\", \"team worker\", or \"assigned slice\". Worker-lane execution: ownership, scope, blocker reporting, handoff.",
           "name": "worker",
           "reason": "explicit",
           "slug": "worker"
@@ -261,21 +261,21 @@
       "skills": [
         {
           "category": "deployment",
-          "description": "Use when user says \"Coolify\", \"deploy backend\", or \"check deploy logs\" and needs Coolify deployment guidance. Covers env vars, builds, restarts, logs, health checks, and rollback risk.",
+          "description": "Use when user says \"Coolify\", \"deploy backend\", or \"check deploy logs\". Env vars, builds, restarts, logs, rollback.",
           "name": "coolify",
           "reason": "explicit",
           "slug": "coolify"
         },
         {
           "category": "deployment",
-          "description": "Use when user says \"pnpm\", \"workspace install\", or \"pnpm build\" and needs Node workspace package guidance. Covers installs, scripts, filters, lockfiles, and verification.",
+          "description": "Use when user says \"pnpm\", \"workspace install\", or \"pnpm build\". Installs, scripts, filters, lockfiles.",
           "name": "pnpm",
           "reason": "category",
           "slug": "pnpm"
         },
         {
           "category": "deployment",
-          "description": "Use when user says \"Supabase\", \"Supabase DB\", or \"Supabase migration\" and needs Supabase deployment or database guidance. Covers envs, migrations, SQL checks, access, and validation.",
+          "description": "Use when user says \"Supabase\", \"Supabase DB\", or \"Supabase migration\". Envs, migrations, SQL checks, access.",
           "name": "supabase",
           "reason": "category",
           "slug": "supabase"
@@ -309,14 +309,14 @@
       "skills": [
         {
           "category": "medusa",
-          "description": "Use when user says \"publish submodule\", \"GitHub submodule\", or \"Medusa submodule publish\" and needs submodule publishing guidance. Covers repo state, commits, push, references, and validation.",
+          "description": "Use when user says \"publish submodule\" or \"Medusa submodule publish\". Repo state, commits, push, references, validation.",
           "name": "gh-submodule-publish",
           "reason": "explicit",
           "slug": "gh-submodule-publish"
         },
         {
           "category": "github",
-          "description": "Use when user says \"check the PR\", \"open an issue\", \"view CI logs\", \"merge this PR\", or needs GitHub operations via gh: issues, PRs, checks, run logs, reviews, comments, and API queries. NOT for unconfigured gh auth or bulk cross-repo scripting.",
+          "description": "Use when user says \"check the PR\", \"open an issue\", \"view CI logs\", or \"merge this PR\". GitHub ops via gh: issues, PRs, checks, logs, reviews, API.",
           "name": "github",
           "reason": "explicit",
           "slug": "github"
@@ -355,7 +355,7 @@
       "skills": [
         {
           "category": "research",
-          "description": "Use when user says \"find flights\", \"flight search\", or \"book travel\" and needs flight research. Covers dates, airports, constraints, comparisons, and current-source checks.metadata: author: LetsFG - github.com/LetsFG version: '1.0.0'",
+          "description": "Use when user says \"find flights\", \"flight search\", or \"book travel\". Dates, airports, constraints, current-source checks.",
           "name": "flight-search",
           "reason": "explicit",
           "slug": "flight-search"
@@ -390,49 +390,49 @@
       "skills": [
         {
           "category": "review",
-          "description": "Use when user says 'cleanup AI slop', 'deslop', 'refactor this AI code', 'remove dead code', 'simplify bloated code', or asks to clean up AI-generated output. Tests-first, smell-by-smell cleanup that preserves behavior. NOT for security or general code review.",
+          "description": "Use when user says \"cleanup AI slop\", \"deslop\", \"refactor this AI code\", or \"simplify bloated code\". Tests-first, smell-by-smell cleanup preserving behavior. NOT for security or general code review.",
           "name": "ai-slop-cleaner",
           "reason": "explicit",
           "slug": "ai-slop-cleaner"
         },
         {
           "category": "meta",
-          "description": "[OMX] Use when user says 'analyze', 'investigate', 'why does X', 'what's causing', 'how is X wired'. Read-only cross-file repo analysis: ranked explanations, confidence, file:line evidence, evidence-vs-inference boundaries. NOT for edits/fixes \u2014 use $ralph or $plan.",
+          "description": "[OMX] Use when user says \"analyze\", \"investigate\", \"why does X\", or \"how is X wired\". Read-only cross-file analysis: ranked explanations, evidence, file:line. NOT for edits \u2014 use $ralph or $plan.",
           "name": "analyze",
           "reason": "explicit",
           "slug": "analyze"
         },
         {
           "category": "review",
-          "description": "Use when user says \"test API\", \"API endpoint\", or \"curl this endpoint\" and needs API validation. Covers request setup, auth, assertions, response checks, and failure evidence.",
+          "description": "Use when user says \"test API\", \"API endpoint\", or \"curl this endpoint\". Request setup, auth, assertions, response checks.",
           "name": "api-tester",
           "reason": "category",
           "slug": "api-tester"
         },
         {
           "category": "review",
-          "description": "Use when user says \"review this code\", \"code review\", \"review my changes\", \"review the diff\", or \"/review\". Runs a structured quality and maintainability review with severity-rated findings. NOT for security audits; use security-review.",
+          "description": "Use when user says \"review this code\", \"code review\", \"review my changes\", or \"/review\". Structured quality/maintainability review with severity-rated findings. NOT for security audits \u2014 use security-review.",
           "name": "code-review",
           "reason": "explicit",
           "slug": "code-review"
         },
         {
           "category": "github",
-          "description": "Use when user says \"fix CI\", \"GitHub checks failed\", \"debug PR checks\", \"view Actions logs\", or needs failing GitHub Actions inspected with gh. Summarize failure context, draft a fix plan, and implement only after explicit approval. External providers are out of scope.",
+          "description": "Use when user says \"fix CI\", \"GitHub checks failed\", or \"debug PR checks\". Inspects failing Actions via gh; fix plan needs approval before implementation.",
           "name": "gh-fix-ci",
           "reason": "explicit",
           "slug": "gh-fix-ci"
         },
         {
           "category": "review",
-          "description": "Use when user asks 'security best practices', 'secure coding for python/typescript/go', 'how to harden this', or wants language/framework-specific secure-by-default guidance. Loads language-specific security references. NOT for auditing existing code \u2014 use security-review.",
+          "description": "Use when user asks \"security best practices\", \"secure coding for python/typescript/go\", or \"how to harden this\". Language/framework-specific secure-by-default guidance. NOT for auditing existing code \u2014 use security-review.",
           "name": "security-best-practices",
           "reason": "category",
           "slug": "security-best-practices"
         },
         {
           "category": "review",
-          "description": "Use when user says 'security review', 'security audit', 'check for vulnerabilities', 'OWASP review', 'find security issues', or '/security-review'. Audits code for OWASP Top 10, hardcoded secrets, injection, auth flaws, unsafe patterns. NOT for general code quality \u2014 use code-review.",
+          "description": "Use when user says \"security review\", \"security audit\", \"check for vulnerabilities\", \"OWASP review\", or \"/security-review\". Audits for OWASP Top 10, secrets, injection, auth flaws. NOT for general code quality \u2014 use code-review.",
           "name": "security-review",
           "reason": "explicit",
           "slug": "security-review"
@@ -456,14 +456,14 @@
       "skills": [
         {
           "category": "meta",
-          "description": "Use when user says \"note this\", \"save note\", or \"remember this\" and needs a local note workflow. Covers note placement, concise capture, retrieval, and confirmation.",
+          "description": "Use when user says \"note this\", \"save note\", or \"remember this\". Local note workflow: placement, concise capture, retrieval.",
           "name": "note",
           "reason": "explicit",
           "slug": "note"
         },
         {
           "category": "meta",
-          "description": "Use when user says \"wiki\", \"document knowledge\", or \"knowledge base\" and needs wiki guidance. Covers structure, linking, maintenance, and retrieval.triggers: [\"wiki add\", \"wiki lint\", \"wiki query\", \"wiki read\", \"wiki delete\"]",
+          "description": "Use when user says \"wiki\", \"document knowledge\", or \"knowledge base\". Wiki structure, linking, maintenance, retrieval. Triggers: wiki add/lint/query/read/delete.",
           "name": "wiki",
           "reason": "explicit",
           "slug": "wiki"
@@ -487,77 +487,77 @@
       "skills": [
         {
           "category": "orchestration",
-          "description": "[OMX] Use when user says 'autopilot', '$autopilot', 'autonomous', 'full auto', 'handle it all', 'build me', 'create me', or 'make me X' from an idea/issue/PRD. Runs the strict ralplan -> ralph -> code-review loop, returning to ralplan automatically when review is not clean. NOT for: single focused edits (use $ralph), planning only (use $ralplan), or review only (use $code-review).",
+          "description": "[OMX] Use when user says \"autopilot\", \"$autopilot\", \"autonomous\", \"full auto\", \"build me\", or \"make me X\" from idea/PRD. Strict ralplan \u2192 ralph \u2192 code-review loop. NOT for single edits ($ralph), planning only ($ralplan).",
           "name": "autopilot",
           "reason": "explicit",
           "slug": "autopilot"
         },
         {
           "category": "orchestration",
-          "description": "[OMX] Use when user says 'cancel', '/cancel', 'stop', 'abort', 'cancelomc', 'stopomc', or '--force'. Detects the active OMX mode (autopilot, ralph, ultrawork, ultraqa, swarm, ultrapilot, pipeline, team) and terminalizes its state cleanly, including tmux team shutdown and linked-mode cleanup. Preserves autopilot for resume; clears others.",
+          "description": "[OMX] Use when user says \"cancel\", \"/cancel\", \"stop\", \"abort\", or \"--force\". Terminates active OMX mode (autopilot/ralph/ultrawork/ultraqa/swarm/pipeline/team); tmux team shutdown.",
           "name": "cancel",
           "reason": "explicit",
           "slug": "cancel"
         },
         {
           "category": "meta",
-          "description": "[OMX] Use when user says 'show hud', 'omx hud', 'configure statusline', 'change hud preset', 'live hud', or wants ralph/ultrawork/autopilot/team/pipeline mode state. Runs `omx hud [--watch|--json|--preset=minimal|focused|full]`, reads .omx/state/*.json, configures `[tui] status_line` in ~/.codex/config.toml.",
+          "description": "[OMX] Use when user says \"show hud\", \"omx hud\", \"configure statusline\", or \"live hud\". Runs `omx hud`; configures `[tui] status_line` for ralph/ultrawork/autopilot/team state.",
           "name": "hud",
           "reason": "explicit",
           "slug": "hud"
         },
         {
           "category": "orchestration",
-          "description": "[OMX] Use when user says '$pipeline', 'run the pipeline', or wants explicit configurable stage sequencing (custom stage list, custom worker count, custom iteration ceilings). Runs ralplan -> team-exec -> ralph-verify by default through the PipelineStage interface with persisted resume. NOT for: standard hands-off delivery (use $autopilot).",
+          "description": "[OMX] Use when user says \"$pipeline\" or \"run the pipeline\" with custom stages/workers/iterations. ralplan \u2192 team-exec \u2192 ralph-verify via PipelineStage with persisted resume. NOT for hands-off delivery \u2014 use $autopilot.",
           "name": "pipeline",
           "reason": "explicit",
           "slug": "pipeline"
         },
         {
           "category": "orchestration",
-          "description": "[OMX] Use when user says \"ralph\", \"$ralph\", \"do not stop\", \"must complete\", \"finish this\", or \"keep going until done\" on one concrete task. Persistence loop with delegation, architect verification, cleanup pass, and regression re-verify. NOT for planning; use ralplan.",
+          "description": "[OMX] Use when user says \"ralph\", \"$ralph\", \"do not stop\", \"finish this\", or \"keep going\" on one task. Persistence loop with delegation, architect verification, regression check. NOT for planning \u2014 use ralplan.",
           "name": "ralph",
           "reason": "explicit",
           "slug": "ralph"
         },
         {
           "category": "orchestration",
-          "description": "[OMX] Use when user says \"ralplan\", \"$ralplan\", \"plan this\", \"plan with consensus\", \"PRD for\", or gives a vague execution request. Runs Planner, Architect, and Critic consensus with RALPLAN-DR, ADR, pre-mortem, and test spec. NOT for implementing code.",
+          "description": "[OMX] Use when user says \"ralplan\", \"$ralplan\", \"plan this\", or \"PRD for\". Planner/Architect/Critic consensus with RALPLAN-DR, ADR, pre-mortem, test spec. NOT for implementing code.",
           "name": "ralplan",
           "reason": "category",
           "slug": "ralplan"
         },
         {
           "category": "orchestration",
-          "description": "[OMX] Use when user says \"team\", \"$team\", \"omx team\", \"spawn workers\", \"parallel workers\", or wants real Codex/Claude CLI sessions in tmux panes coordinated by shared state and mailbox. Requires tmux. NOT for native in-session subagents, single persistence loops, or idea-to-PR autonomy.",
+          "description": "[OMX] Use when user says \"team\", \"$team\", \"spawn workers\", or \"parallel workers\". Real Codex/Claude CLI sessions in tmux panes, shared state + mailbox. Requires tmux. NOT for native subagents.",
           "name": "team",
           "reason": "explicit",
           "slug": "team"
         },
         {
           "category": "orchestration",
-          "description": "[OMX] Use when user says 'ultraqa', '/ultraqa', '--tests', '--build', '--lint', '--typecheck', or 'fix until tests/build/lint/types pass'. Runs the qa-tester -> architect diagnosis -> executor fix cycle (max 5) until the chosen verification goal is met or the same failure repeats. NOT for: implementing new features (use $ralph) or full delivery (use $autopilot).",
+          "description": "[OMX] Use when user says \"ultraqa\", \"/ultraqa\", \"--tests\", \"--build\", \"--lint\", or \"fix until tests pass\". qa-tester \u2192 architect \u2192 executor cycle until verification met. NOT for new features \u2014 use $ralph.",
           "name": "ultraqa",
           "reason": "explicit",
           "slug": "ultraqa"
         },
         {
           "category": "orchestration",
-          "description": "[OMX] Use when user says \"ulw\", \"ultrawork\", \"parallel execution\", \"multiple independent tasks\", or wants concurrent work without persistence. Provides parallelism, context discipline, and delegation guidance. NOT for guaranteed completion, idea-to-PR autonomy, or one sequential task.",
+          "description": "[OMX] Use when user says \"ulw\", \"ultrawork\", \"parallel execution\", or \"multiple independent tasks\". Concurrent work, context discipline, delegation. NOT for sequential tasks or idea-to-PR autonomy.",
           "name": "ultrawork",
           "reason": "explicit",
           "slug": "ultrawork"
         },
         {
           "category": "orchestration",
-          "description": "Use when user says \"visual ralph\", \"iterate visually\", or \"keep fixing UI\" and needs persistent visual iteration. Covers screenshot evidence, visual verdicts, edits, and re-verification.",
+          "description": "Use when user says \"visual ralph\", \"iterate visually\", or \"keep fixing UI\". Persistent visual iteration: screenshot, verdict, edit, re-verify.",
           "name": "visual-ralph",
           "reason": "category",
           "slug": "visual-ralph"
         },
         {
           "category": "orchestration",
-          "description": "Use when user says \"worker\", \"team worker\", or \"assigned slice\" and needs worker-lane execution guidance. Covers ownership, scope, blocker reporting, and handoff to the leader.",
+          "description": "Use when user says \"worker\", \"team worker\", or \"assigned slice\". Worker-lane execution: ownership, scope, blocker reporting, handoff.",
           "name": "worker",
           "reason": "category",
           "slug": "worker"
@@ -581,21 +581,21 @@
       "skills": [
         {
           "category": "meta",
-          "description": "[OMX] Use when user says 'show hud', 'omx hud', 'configure statusline', 'change hud preset', 'live hud', or wants ralph/ultrawork/autopilot/team/pipeline mode state. Runs `omx hud [--watch|--json|--preset=minimal|focused|full]`, reads .omx/state/*.json, configures `[tui] status_line` in ~/.codex/config.toml.",
+          "description": "[OMX] Use when user says \"show hud\", \"omx hud\", \"configure statusline\", or \"live hud\". Runs `omx hud`; configures `[tui] status_line` for ralph/ultrawork/autopilot/team state.",
           "name": "hud",
           "reason": "explicit",
           "slug": "hud"
         },
         {
           "category": "orchestration",
-          "description": "[OMX] Use when user says \"team\", \"$team\", \"omx team\", \"spawn workers\", \"parallel workers\", or wants real Codex/Claude CLI sessions in tmux panes coordinated by shared state and mailbox. Requires tmux. NOT for native in-session subagents, single persistence loops, or idea-to-PR autonomy.",
+          "description": "[OMX] Use when user says \"team\", \"$team\", \"spawn workers\", or \"parallel workers\". Real Codex/Claude CLI sessions in tmux panes, shared state + mailbox. Requires tmux. NOT for native subagents.",
           "name": "team",
           "reason": "explicit",
           "slug": "team"
         },
         {
           "category": "meta",
-          "description": "[OMX] Use when user says 'show trace', 'trace timeline', 'omx trace', 'what fired this session', 'why did this skill activate'. Calls trace_timeline + trace_summary MCP tools for chronological hook/keyword/skill/agent/tool flow; surfaces mode transitions, bottlenecks, keyword\u2192skill\u2192agent chains. NOT debugging \u2014 use $analyze.",
+          "description": "[OMX] Use when user says \"show trace\", \"trace timeline\", or \"why did this skill activate\". Calls trace_timeline + trace_summary; surfaces hook/keyword/skill/agent flow. NOT debugging \u2014 use $analyze.",
           "name": "trace",
           "reason": "explicit",
           "slug": "trace"
@@ -619,7 +619,7 @@
       "skills": [
         {
           "category": "meta",
-          "description": "Use when user says \"wiki\", \"document knowledge\", or \"knowledge base\" and needs wiki guidance. Covers structure, linking, maintenance, and retrieval.triggers: [\"wiki add\", \"wiki lint\", \"wiki query\", \"wiki read\", \"wiki delete\"]",
+          "description": "Use when user says \"wiki\", \"document knowledge\", or \"knowledge base\". Wiki structure, linking, maintenance, retrieval. Triggers: wiki add/lint/query/read/delete.",
           "name": "wiki",
           "reason": "explicit",
           "slug": "wiki"
@@ -642,35 +642,35 @@
       "skills": [
         {
           "category": "design",
-          "description": "Use when user says \"improve the UI\", \"make it tasteful\", or \"frontend design pass\" and needs design-taste guidance for frontend work. Covers hierarchy, spacing, polish, and visual validation.",
+          "description": "Use when user says \"improve the UI\", \"make it tasteful\", or \"design pass\". Hierarchy, spacing, polish, visual validation.",
           "name": "design-taste-frontend",
           "reason": "explicit",
           "slug": "design-taste-frontend"
         },
         {
           "category": "design",
-          "description": "Use when user says \"image to code\", \"match this screenshot\", or \"recreate this design\" and needs implementation from visual reference. Covers inspection, layout mapping, and visual validation.",
+          "description": "Use when user says \"image to code\", \"match this screenshot\", or \"recreate this design\". Visual inspection, layout mapping, validation.",
           "name": "image-to-code",
           "reason": "explicit",
           "slug": "image-to-code"
         },
         {
           "category": "design",
-          "description": "Use when user says \"redesign\", \"upgrade this site\", \"make this look better\", \"fix the design\", or \"audit my UI\". Scans an existing project, diagnoses generic AI design patterns (default fonts, weak hierarchy, boring layouts), and applies targeted typography/spacing/color/motion fixes in place. Works with Tailwind, vanilla CSS, styled-components.",
+          "description": "Use when user says \"redesign\", \"upgrade this site\", \"make this look better\", or \"audit my UI\". Diagnoses generic AI patterns; applies in-place typography/spacing/color/motion fixes for Tailwind/CSS/styled-components.",
           "name": "redesign-existing-projects",
           "reason": "explicit",
           "slug": "redesign-existing-projects"
         },
         {
           "category": "orchestration",
-          "description": "Use when user says \"visual ralph\", \"iterate visually\", or \"keep fixing UI\" and needs persistent visual iteration. Covers screenshot evidence, visual verdicts, edits, and re-verification.",
+          "description": "Use when user says \"visual ralph\", \"iterate visually\", or \"keep fixing UI\". Persistent visual iteration: screenshot, verdict, edit, re-verify.",
           "name": "visual-ralph",
           "reason": "explicit",
           "slug": "visual-ralph"
         },
         {
           "category": "design",
-          "description": "Use when user says \"visual verdict\", \"review screenshot\", or \"judge the UI\" and needs visual QA. Covers screenshot analysis, layout issues, polish gaps, accessibility, and next edits.",
+          "description": "Use when user says \"visual verdict\", \"review screenshot\", or \"judge the UI\". Screenshot QA: layout, polish, a11y, next edits.",
           "name": "visual-verdict",
           "reason": "explicit",
           "slug": "visual-verdict"

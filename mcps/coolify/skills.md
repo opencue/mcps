@@ -20,6 +20,6 @@ Agent surfaces: `codex`
 
 | Skill | Category | Reason | Description |
 | --- | --- | --- | --- |
-| `coolify` | `deployment` | explicit | Use when user says "Coolify", "deploy backend", or "check deploy logs" and needs Coolify deployment guidance. Covers env vars, builds, restarts, logs, health checks, and rollback risk. |
-| `pnpm` | `deployment` | category | Use when user says "pnpm", "workspace install", or "pnpm build" and needs Node workspace package guidance. Covers installs, scripts, filters, lockfiles, and verification. |
-| `supabase` | `deployment` | category | Use when user says "Supabase", "Supabase DB", or "Supabase migration" and needs Supabase deployment or database guidance. Covers envs, migrations, SQL checks, access, and validation. |
+| `coolify` | `deployment` | explicit | Use when user says "Coolify", "deploy backend", or "check deploy logs". Env vars, builds, restarts, logs, rollback. |
+| `pnpm` | `deployment` | category | Use when user says "pnpm", "workspace install", or "pnpm build". Installs, scripts, filters, lockfiles. |
+| `supabase` | `deployment` | category | Use when user says "Supabase", "Supabase DB", or "Supabase migration". Envs, migrations, SQL checks, access. |

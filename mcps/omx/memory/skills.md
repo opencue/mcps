@@ -20,5 +20,5 @@ Agent surfaces: `codex`, `claude`
 
 | Skill | Category | Reason | Description |
 | --- | --- | --- | --- |
-| `note` | `meta` | explicit | Use when user says "note this", "save note", or "remember this" and needs a local note workflow. Covers note placement, concise capture, retrieval, and confirmation. |
-| `wiki` | `meta` | explicit | Use when user says "wiki", "document knowledge", or "knowledge base" and needs wiki guidance. Covers structure, linking, maintenance, and retrieval.triggers: ["wiki add", "wiki lint", "wiki query", "wiki read", "wiki delete"] |
+| `note` | `meta` | explicit | Use when user says "note this", "save note", or "remember this". Local note workflow: placement, concise capture, retrieval. |
+| `wiki` | `meta` | explicit | Use when user says "wiki", "document knowledge", or "knowledge base". Wiki structure, linking, maintenance, retrieval. Triggers: wiki add/lint/query/read/delete. |

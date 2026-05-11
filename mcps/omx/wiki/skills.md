@@ -20,4 +20,4 @@ Agent surfaces: `codex`, `claude`
 
 | Skill | Category | Reason | Description |
 | --- | --- | --- | --- |
-| `wiki` | `meta` | explicit | Use when user says "wiki", "document knowledge", or "knowledge base" and needs wiki guidance. Covers structure, linking, maintenance, and retrieval.triggers: ["wiki add", "wiki lint", "wiki query", "wiki read", "wiki delete"] |
+| `wiki` | `meta` | explicit | Use when user says "wiki", "document knowledge", or "knowledge base". Wiki structure, linking, maintenance, retrieval. Triggers: wiki add/lint/query/read/delete. |

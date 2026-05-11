@@ -20,8 +20,8 @@ Agent surfaces: `codex`, `claude`
 
 | Skill | Category | Reason | Description |
 | --- | --- | --- | --- |
-| `gitguardex` | `github` | explicit | Use when user says "repo safety is broken", "gx doctor", "dirty worktree", or "finish the agent branch" and needs gitguardex guardrails for branch, worktree, lock, PR, or cleanup state. Runs gx status, gx doctor, and strict verification. NOT for code-quality review; use code-review. |
-| `guardex-merge-skills-to-dev` | `github` | explicit | Use when user says "merge skill updates", "skills to dev", "promote SKILL.md changes", "agent branch skills", or needs SKILL.md updates merged from agent branches/worktrees into the local base branch with the multiagent-safety flow. |
-| `team` | `orchestration` | explicit | [OMX] Use when user says "team", "$team", "omx team", "spawn workers", "parallel workers", or wants real Codex/Claude CLI sessions in tmux panes coordinated by shared state and mailbox. Requires tmux. NOT for native in-session subagents, single persistence loops, or idea-to-PR autonomy. |
-| `trace` | `meta` | explicit | [OMX] Use when user says 'show trace', 'trace timeline', 'omx trace', 'what fired this session', 'why did this skill activate'. Calls trace_timeline + trace_summary MCP tools for chronological hook/keyword/skill/agent/tool flow; surfaces mode transitions, bottlenecks, keyword→skill→agent chains. NOT debugging — use $analyze. |
-| `worker` | `orchestration` | explicit | Use when user says "worker", "team worker", or "assigned slice" and needs worker-lane execution guidance. Covers ownership, scope, blocker reporting, and handoff to the leader. |
+| `gitguardex` | `github` | explicit | Use when user says "gx doctor", "dirty worktree", or "finish the agent branch". gitguardex guardrails for branch/worktree/lock/PR state. NOT for code-quality review (use code-review). |
+| `guardex-merge-skills-to-dev` | `github` | explicit | Use when user says "merge skill updates", "promote SKILL.md changes", or "agent branch skills". Merges SKILL.md updates from agent branches into base with multiagent-safety flow. |
+| `team` | `orchestration` | explicit | [OMX] Use when user says "team", "$team", "spawn workers", or "parallel workers". Real Codex/Claude CLI sessions in tmux panes, shared state + mailbox. Requires tmux. NOT for native subagents. |
+| `trace` | `meta` | explicit | [OMX] Use when user says "show trace", "trace timeline", or "why did this skill activate". Calls trace_timeline + trace_summary; surfaces hook/keyword/skill/agent flow. NOT debugging — use $analyze. |
+| `worker` | `orchestration` | explicit | Use when user says "worker", "team worker", or "assigned slice". Worker-lane execution: ownership, scope, blocker reporting, handoff. |
