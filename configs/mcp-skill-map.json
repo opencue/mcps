@@ -88,29 +88,29 @@
       "skills": [
         {
           "category": "medusa",
-          "description": "Load automatically when planning, researching, or implementing Medusa Admin dashboard UI (widgets, custom pages, forms, tables, data loading, navigation). REQUIRED for all admin UI work in ALL modes (planning, implementation, exploration). Contains design patterns, component usage, and data loading patterns that MCP servers don't provide.",
+          "description": "Use when user says \"Medusa admin\", \"admin widget\", \"custom admin page\", \"admin form\", or plans/researches/implements Medusa Admin dashboard UI. Required for widgets, pages, forms, tables, data loading, and navigation.",
           "name": "building-admin-dashboard-customizations",
           "reason": "prefix",
           "slug": "building-admin-dashboard-customizations"
         },
         {
           "category": "medusa",
-          "description": "Load automatically when planning, researching, or implementing Medusa storefront features (calling custom API routes, SDK integration, React Query patterns, data fetching). REQUIRED for all storefront development in ALL modes (planning, implementation, exploration). Contains SDK usage patterns, frontend integration, and critical rules for calling Medusa APIs.",
+          "description": "Use when user says \"Medusa storefront\", \"call Medusa API\", \"SDK integration\", \"React Query\", or plans/researches/implements storefront features. Required for storefront data fetching, mutations, cache handling, and Medusa API calls.",
           "name": "building-storefronts",
           "reason": "prefix",
           "slug": "building-storefronts"
         },
         {
           "category": "medusa",
-          "description": "Load automatically when planning, researching, or implementing ANY Medusa backend features (custom modules, API routes, workflows, data models, module links, business logic). REQUIRED for all Medusa backend work in ALL modes (planning, implementation, exploration). Contains architectural patterns, best practices, and critical rules that MCP servers don't provide.",
+          "description": "Use when user says \"Medusa backend\", \"custom module\", \"API route\", \"workflow\", \"data model\", or plans/researches/implements Medusa backend features. Required for modules, routes, workflows, links, and business logic.",
           "name": "building-with-medusa",
           "reason": "prefix",
           "slug": "building-with-medusa"
         },
         {
           "category": "medusa",
-          "description": "Use when building an internal admin-facing AI agent in a Medusa project \u2014 operated by merchants/operators, NOT customers. Covers data models, module service, agent runtime (tools, system prompt, streamText), streaming NDJSON API routes, and admin UI chat extensions. NOT for storefront / buyer-side chatbots.",
-          "name": "creating-agents-in-medusa",
+          "description": "Use when user says \"Medusa agent\", \"admin AI agent\", \"internal agent\", \"streamText\", or builds an internal admin-facing AI agent in a Medusa project. Covers models, module service, runtime tools, NDJSON routes, and admin UI chat. NOT for buyer-side storefront chatbots.",
+          "name": "creating-internal-agents",
           "reason": "explicit",
           "slug": "creating-internal-agents"
         },
@@ -144,10 +144,17 @@
         },
         {
           "category": "medusa",
-          "description": "Medusa implementation guidance for backend and storefront work. Use when building or modifying Medusa workflows, subscribers, API routes, auth, data models, query logic, jobs, or storefront integrations.",
+          "description": "Use when user says \"Medusa workflow\", \"Medusa subscriber\", \"Medusa auth\", \"Medusa query\", or builds/modifies Medusa API routes, data models, jobs, backend logic, storefront integrations, or implementation patterns.",
           "name": "medusa-reference",
           "reason": "explicit",
           "slug": "medusa-reference"
+        },
+        {
+          "category": "medusa",
+          "description": "Use when creating a new Medusa webshop from medusa-shops/base-template, generating backend/storefront env files from a domain, preparing Coolify backend deployment, configuring Hostinger hosting/DNS, creating the per-shop Postgres schema, or making a domain-to-shop setup checklist. Triggers include \"new webshop\", \"create webshop\", \"base-template env\", \"configure envs for a site\", \"Coolify + Hostinger Medusa shop\", and \"domain address then setup .env\".",
+          "name": "medusa-shop-setup",
+          "reason": "category",
+          "slug": "medusa-shop-setup"
         },
         {
           "category": "medusa",
@@ -203,21 +210,21 @@
       "skills": [
         {
           "category": "github",
-          "description": "Use when repo safety might be broken (failing CI, dirty working tree, dropped submodules, weird branch state). Runs the gx (gitguardex) guardrail flow \u2014 gx status to assess, gx doctor to repair, gx status --strict to verify. Bootstrap via gx setup. NOT for code-quality review \u2014 use code-review.",
+          "description": "Use when user says \"repo safety is broken\", \"gx doctor\", \"dirty worktree\", or \"finish the agent branch\" and needs gitguardex guardrails for branch, worktree, lock, PR, or cleanup state. Runs gx status, gx doctor, and strict verification. NOT for code-quality review; use code-review.",
           "name": "gitguardex",
           "reason": "explicit",
           "slug": "gitguardex"
         },
         {
           "category": "github",
-          "description": "Use when you need to merge SKILL.md updates from agent branches/worktrees into the local base branch (default: dev) with the multiagent-safety flow.",
+          "description": "Use when user says \"merge skill updates\", \"skills to dev\", \"promote SKILL.md changes\", \"agent branch skills\", or needs SKILL.md updates merged from agent branches/worktrees into the local base branch with the multiagent-safety flow.",
           "name": "guardex-merge-skills-to-dev",
           "reason": "explicit",
           "slug": "guardex-merge-skills-to-dev"
         },
         {
           "category": "orchestration",
-          "description": "[OMX] Use when user says 'team', '$team', 'omx team', 'spawn workers', 'parallel workers', or wants N real Codex/Claude CLI sessions running in tmux panes coordinated by shared task state and mailbox. Requires being inside tmux. NOT for: in-process parallel calls (use $ultrawork), single persistence loop (use $ralph), or autonomous idea-to-PR (use $autopilot).",
+          "description": "[OMX] Use when user says \"team\", \"$team\", \"omx team\", \"spawn workers\", \"parallel workers\", or wants real Codex/Claude CLI sessions in tmux panes coordinated by shared state and mailbox. Requires tmux. NOT for native in-session subagents, single persistence loops, or idea-to-PR autonomy.",
           "name": "team",
           "reason": "explicit",
           "slug": "team"
@@ -309,7 +316,7 @@
         },
         {
           "category": "github",
-          "description": "GitHub operations via the `gh` CLI \u2014 issues, PRs, CI runs, code review, API queries. Use when checking PR status or CI, creating/commenting on issues, listing/filtering PRs or issues, or viewing run logs. NOT for bulk cross-repo work (script with `gh api`) or unconfigured `gh auth`.",
+          "description": "Use when user says \"check the PR\", \"open an issue\", \"view CI logs\", \"merge this PR\", or needs GitHub operations via gh: issues, PRs, checks, run logs, reviews, comments, and API queries. NOT for unconfigured gh auth or bulk cross-repo scripting.",
           "name": "github",
           "reason": "explicit",
           "slug": "github"
@@ -411,7 +418,7 @@
         },
         {
           "category": "review",
-          "description": "Use when user says 'review this code', 'code review', 'review my changes', 'review the diff', or '/review'. Runs a structured quality and maintainability review with severity-rated feedback. NOT for security audits \u2014 use security-review.",
+          "description": "Use when user says \"review this code\", \"code review\", \"review my changes\", \"review the diff\", or \"/review\". Runs a structured quality and maintainability review with severity-rated findings. NOT for security audits; use security-review.",
           "name": "code-review",
           "reason": "explicit",
           "slug": "code-review"
@@ -432,7 +439,7 @@
         },
         {
           "category": "github",
-          "description": "Use when a user asks to debug or fix failing GitHub PR checks that run in GitHub Actions; use `gh` to inspect checks and logs, summarize failure context, draft a fix plan, and implement only after explicit approval. Treat external providers (for example Buildkite) as out of scope and report only the details URL.",
+          "description": "Use when user says \"fix CI\", \"GitHub checks failed\", \"debug PR checks\", \"view Actions logs\", or needs failing GitHub Actions inspected with gh. Summarize failure context, draft a fix plan, and implement only after explicit approval. External providers are out of scope.",
           "name": "gh-fix-ci",
           "reason": "explicit",
           "slug": "gh-fix-ci"
@@ -453,7 +460,7 @@
         },
         {
           "category": "review",
-          "description": "Use when diagnosing a bug, regression, flaky behavior, failing command, broken integration, or unclear runtime behavior that needs evidence-first root cause analysis.",
+          "description": "Use when user says \"debug this\", \"investigate the failure\", \"find root cause\", \"flaky test\", or needs evidence-first diagnosis of a bug, regression, failing command, broken integration, or unclear runtime behavior.",
           "name": "systematic-debugging",
           "reason": "category",
           "slug": "systematic-debugging"
@@ -467,7 +474,7 @@
         },
         {
           "category": "review",
-          "description": "Use before claiming work is done, especially after code, config, deployment, data, content, or workflow changes that need proof.",
+          "description": "Use when user expects final proof, or before saying \"done\", \"complete\", \"fixed\", \"verified\", or after code, config, deployment, data, content, or workflow changes that need evidence before final reporting.",
           "name": "verification-before-completion",
           "reason": "category",
           "slug": "verification-before-completion"
@@ -564,14 +571,14 @@
         },
         {
           "category": "orchestration",
-          "description": "[OMX] Use when user says ralph, $ralph, do not stop, must complete, finish this, or keep going until done on a single concrete task. Persistence loop with parallel delegation, architect verification, deslop pass, regression re-verify. NOT for idea\u2192PR autonomy (use $autopilot) or planning (use $ralplan).",
+          "description": "[OMX] Use when user says \"ralph\", \"$ralph\", \"do not stop\", \"must complete\", \"finish this\", or \"keep going until done\" on one concrete task. Persistence loop with delegation, architect verification, cleanup pass, and regression re-verify. NOT for planning; use ralplan.",
           "name": "ralph",
           "reason": "explicit",
           "slug": "ralph"
         },
         {
           "category": "orchestration",
-          "description": "[OMX] Use when user says 'ralplan', '$ralplan', 'plan this', 'plan with consensus', 'PRD for', or when an execution request is too vague (e.g. 'ralph fix this', 'autopilot build the app'). Runs the Planner -> Architect -> Critic consensus loop with RALPLAN-DR deliberation, ADR, pre-mortem, and test spec; outputs an approved plan. NOT for: implementing code (use $ralph or $team).",
+          "description": "[OMX] Use when user says \"ralplan\", \"$ralplan\", \"plan this\", \"plan with consensus\", \"PRD for\", or gives a vague execution request. Runs Planner, Architect, and Critic consensus with RALPLAN-DR, ADR, pre-mortem, and test spec. NOT for implementing code.",
           "name": "ralplan",
           "reason": "category",
           "slug": "ralplan"
@@ -585,7 +592,7 @@
         },
         {
           "category": "orchestration",
-          "description": "[OMX] Use when user says 'team', '$team', 'omx team', 'spawn workers', 'parallel workers', or wants N real Codex/Claude CLI sessions running in tmux panes coordinated by shared task state and mailbox. Requires being inside tmux. NOT for: in-process parallel calls (use $ultrawork), single persistence loop (use $ralph), or autonomous idea-to-PR (use $autopilot).",
+          "description": "[OMX] Use when user says \"team\", \"$team\", \"omx team\", \"spawn workers\", \"parallel workers\", or wants real Codex/Claude CLI sessions in tmux panes coordinated by shared state and mailbox. Requires tmux. NOT for native in-session subagents, single persistence loops, or idea-to-PR autonomy.",
           "name": "team",
           "reason": "explicit",
           "slug": "team"
@@ -599,7 +606,7 @@
         },
         {
           "category": "orchestration",
-          "description": "[OMX] Use when user says ulw, ultrawork, or wants parallel execution of multiple independent tasks. Provides parallelism, context discipline, and smart delegation guidance \u2014 but no persistence. NOT for guaranteed completion (use $ralph), full idea\u2192PR pipeline (use $autopilot), or a single sequential task (just execute).",
+          "description": "[OMX] Use when user says \"ulw\", \"ultrawork\", \"parallel execution\", \"multiple independent tasks\", or wants concurrent work without persistence. Provides parallelism, context discipline, and delegation guidance. NOT for guaranteed completion, idea-to-PR autonomy, or one sequential task.",
           "name": "ultrawork",
           "reason": "explicit",
           "slug": "ultrawork"
@@ -644,7 +651,7 @@
         },
         {
           "category": "orchestration",
-          "description": "[OMX] Use when user says 'team', '$team', 'omx team', 'spawn workers', 'parallel workers', or wants N real Codex/Claude CLI sessions running in tmux panes coordinated by shared task state and mailbox. Requires being inside tmux. NOT for: in-process parallel calls (use $ultrawork), single persistence loop (use $ralph), or autonomous idea-to-PR (use $autopilot).",
+          "description": "[OMX] Use when user says \"team\", \"$team\", \"omx team\", \"spawn workers\", \"parallel workers\", or wants real Codex/Claude CLI sessions in tmux panes coordinated by shared state and mailbox. Requires tmux. NOT for native in-session subagents, single persistence loops, or idea-to-PR autonomy.",
           "name": "team",
           "reason": "explicit",
           "slug": "team"
@@ -757,6 +764,6 @@
       "source_url": ""
     }
   },
-  "skill_count": 167,
+  "skill_count": 168,
   "skills_root": "~/Documents/soul/skills/skills"
 }

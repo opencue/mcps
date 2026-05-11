@@ -13,7 +13,7 @@ Skills root: `~/Documents/soul/skills/skills`
 | `Higgsfield` | [link](https://mcp.higgsfield.ai/mcp) | 8 | `mcps/higgsfield/skills.md` |
 | `hostinger-api` | [link](https://github.com/hostinger/api-mcp-server) | 0 | `mcps/hostinger-api/skills.md` |
 | `letsfg` | [link](https://github.com/LetsFG/LetsFG) | 1 | `mcps/letsfg/skills.md` |
-| `MedusaDocs` | [link](https://docs.medusajs.com/mcp) | 14 | `mcps/medusadocs/skills.md` |
+| `MedusaDocs` | [link](https://docs.medusajs.com/mcp) | 15 | `mcps/medusadocs/skills.md` |
 | `obsidian-vault` | - | 0 | `mcps/obsidian-vault/skills.md` |
 | `omx_code_intel` | [link](https://github.com/NagyVikt/oh-my-codex) | 13 | `mcps/omx/code-intel/skills.md` |
 | `omx_memory` | [link](https://github.com/NagyVikt/oh-my-codex) | 2 | `mcps/omx/memory/skills.md` |
