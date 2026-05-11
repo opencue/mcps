@@ -35,7 +35,7 @@
     "gbrain": {
       "args": [
         "-lc",
-        "export GBRAIN_HOME=/tmp/gbrain-codex; cfg=\"$GBRAIN_HOME/.gbrain/config.json\"; db=\"$GBRAIN_HOME/.gbrain/brain.pglite\"; lock=\"$db/.gbrain-lock\"; if [ -d \"$lock\" ]; then pid=\"\"; if [ -f \"$lock/lock\" ]; then pid=\"$(sed -n 's/.*\"pid\":\\([0-9][0-9]*\\).*/\\1/p' \"$lock/lock\" | head -1)\"; fi; if [ -z \"$pid\" ] || ! ps -p \"$pid\" >/dev/null 2>&1 || ! ps -p \"$pid\" -o args= | grep -q '[g]brain'; then rm -rf \"$lock\"; fi; fi; if [ ! -f \"$cfg\" ]; then /home/deadpool/.bun/bin/gbrain init --pglite >/tmp/gbrain-mcp-init.log 2>&1; fi; exec /home/deadpool/.bun/bin/gbrain serve 2>/tmp/gbrain-mcp.stderr"
+        "export GBRAIN_HOME=/tmp/gbrain-codex; cfg=\"$GBRAIN_HOME/.gbrain/config.json\"; db=\"$GBRAIN_HOME/.gbrain/brain.pglite\"; rm -rf \"$db/.gbrain-lock\"; if [ ! -f \"$cfg\" ]; then /home/deadpool/.bun/bin/gbrain init --pglite >/tmp/gbrain-mcp-init.log 2>&1; fi; exec /home/deadpool/.bun/bin/gbrain serve 2>/tmp/gbrain-mcp.stderr"
       ],
       "command": "bash",
       "startup_timeout_sec": 60.0
