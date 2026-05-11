@@ -5,7 +5,7 @@ Hosted MCPs validate URL shape only; this script does not perform network checks
 
 | MCP | Configured | Binary exists | Source link | Related skills | Notes |
 | --- | --- | --- | --- | ---: | --- |
-| `colony` | yes | no | [link](https://github.com/recodeee/colony) | 5 | `colony --help` |
+| `colony` | yes | yes | [link](https://github.com/recodeee/colony) | 5 | `colony --help` |
 | `coolify` | yes | yes | [link](https://github.com/StuMason/coolify-mcp) | 1 | `npx -y coolify-mcp --help` |
 | `gitea` | yes | no | [link](https://github.com/seepine/gitea-mcp) | 2 | `gitea-mcp --help` |
 | `Higgsfield` | yes | url ok | [link](https://mcp.higgsfield.ai/mcp) | 4 | hosted URL format only |
