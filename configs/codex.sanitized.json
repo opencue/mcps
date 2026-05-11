@@ -60,7 +60,48 @@
         "@bitbonsai/mcpvault@latest",
         "~/Documents/claude-obsidian"
       ],
-      "command": "npx"
+      "command": "npx",
+      "startup_timeout_sec": 15
+    },
+    "omx_code_intel": {
+      "args": [
+        "~/Documents/recodee/oh-my-codex/dist/mcp/code-intel-server.js"
+      ],
+      "command": "~/.nvm/versions/node/v22.22.0/bin/node",
+      "enabled": true,
+      "startup_timeout_sec": 10
+    },
+    "omx_memory": {
+      "args": [
+        "~/Documents/recodee/oh-my-codex/dist/mcp/memory-server.js"
+      ],
+      "command": "~/.nvm/versions/node/v22.22.0/bin/node",
+      "enabled": true,
+      "startup_timeout_sec": 5
+    },
+    "omx_state": {
+      "args": [
+        "~/Documents/recodee/oh-my-codex/dist/mcp/state-server.js"
+      ],
+      "command": "~/.nvm/versions/node/v22.22.0/bin/node",
+      "enabled": true,
+      "startup_timeout_sec": 5
+    },
+    "omx_trace": {
+      "args": [
+        "~/Documents/recodee/oh-my-codex/dist/mcp/trace-server.js"
+      ],
+      "command": "~/.nvm/versions/node/v22.22.0/bin/node",
+      "enabled": true,
+      "startup_timeout_sec": 5
+    },
+    "omx_wiki": {
+      "args": [
+        "~/Documents/recodee/oh-my-codex/dist/mcp/wiki-server.js"
+      ],
+      "command": "~/.nvm/versions/node/v22.22.0/bin/node",
+      "enabled": true,
+      "startup_timeout_sec": 5
     },
     "recodee": {
       "command": "~/Documents/recodee/.venv/bin/recodee-mcp",
