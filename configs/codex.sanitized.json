@@ -37,6 +37,9 @@
         "serve"
       ],
       "command": "~/.bun/bin/gbrain",
+      "env": {
+        "GBRAIN_HOME": "<redacted>"
+      },
       "startup_timeout_sec": 60.0
     },
     "hostinger-api": {

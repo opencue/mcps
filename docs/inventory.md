@@ -13,7 +13,7 @@ Server key: `mcp_servers`
 | `MedusaDocs` | `https://docs.medusajs.com/mcp` | 0 | - |
 | `colony` | `~/.nvm/versions/node/v22.22.0/bin/colony` | 1 | `COLONY_HOME` |
 | `coolify` | `bash` | 2 | - |
-| `gbrain` | `~/.bun/bin/gbrain` | 1 | - |
+| `gbrain` | `~/.bun/bin/gbrain` | 1 | `GBRAIN_HOME` |
 | `hostinger-api` | `bash` | 2 | - |
 | `letsfg` | `~/.nvm/versions/node/v22.22.0/bin/letsfg-mcp` | 0 | `LETSFG_PYTHON` |
 | `obsidian-vault` | `npx` | 3 | - |
