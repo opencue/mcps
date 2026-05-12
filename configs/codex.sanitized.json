@@ -58,7 +58,7 @@
       "args": [
         "~/Documents/ai-tools/claude-obsidian"
       ],
-      "command": "~/.npm/_npx/30e03b97069def49/node_modules/.bin/mcpvault"
+      "command": "~/.codex/bin/mcpvault-stdio-keepalive.mjs"
     },
     "recodee": {
       "command": "~/Documents/recodee/.venv/bin/recodee-mcp",
