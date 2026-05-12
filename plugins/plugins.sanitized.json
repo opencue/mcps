@@ -18,6 +18,12 @@
         "url": "https://github.com/Yeachan-Heo/oh-my-claudecode.git"
       }
     },
+    "openai-codex": {
+      "source": {
+        "repo": "openai/codex-plugin-cc",
+        "source": "github"
+      }
+    },
     "thedotmack": {
       "source": {
         "repo": "thedotmack/claude-mem",
