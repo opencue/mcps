@@ -20,6 +20,6 @@ Agent surfaces: `codex`, `claude`
 
 | Skill | Category | Reason | Description |
 | --- | --- | --- | --- |
-| `hud` | `meta` | explicit | [OMX] Use when user says "show hud", "omx hud", "configure statusline", or "live hud". Runs `omx hud`; configures `[tui] status_line` for ralph/ultrawork/autopilot/team state. |
-| `team` | `orchestration` | explicit | [OMX] Use when user says "team", "$team", "spawn workers", or "parallel workers". Real Codex/Claude CLI sessions in tmux panes, shared state + mailbox. Requires tmux. NOT for native subagents. |
+| `hud` | `meta` | explicit | [OMX] Show or configure the OMX HUD (two-layer statusline) |
+| `team` | `orchestration` | explicit | [OMX] N coordinated agents on shared task list using tmux-based orchestration |
 | `trace` | `meta` | explicit | [OMX] Use when user says "show trace", "trace timeline", or "why did this skill activate". Calls trace_timeline + trace_summary; surfaces hook/keyword/skill/agent flow. NOT debugging — use $analyze. |

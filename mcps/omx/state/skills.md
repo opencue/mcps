@@ -20,14 +20,14 @@ Agent surfaces: `codex`, `claude`
 
 | Skill | Category | Reason | Description |
 | --- | --- | --- | --- |
-| `autopilot` | `orchestration` | explicit | [OMX] Use when user says "autopilot", "$autopilot", "autonomous", "full auto", "build me", or "make me X" from idea/PRD. Strict ralplan → ralph → code-review loop. NOT for single edits ($ralph), planning only ($ralplan). |
-| `cancel` | `orchestration` | explicit | [OMX] Use when user says "cancel", "/cancel", "stop", "abort", or "--force". Terminates active OMX mode (autopilot/ralph/ultrawork/ultraqa/swarm/pipeline/team); tmux team shutdown. |
-| `hud` | `meta` | explicit | [OMX] Use when user says "show hud", "omx hud", "configure statusline", or "live hud". Runs `omx hud`; configures `[tui] status_line` for ralph/ultrawork/autopilot/team state. |
-| `pipeline` | `orchestration` | explicit | [OMX] Use when user says "$pipeline" or "run the pipeline" with custom stages/workers/iterations. ralplan → team-exec → ralph-verify via PipelineStage with persisted resume. NOT for hands-off delivery — use $autopilot. |
-| `ralph` | `orchestration` | explicit | [OMX] Use when user says "ralph", "$ralph", "do not stop", "finish this", or "keep going" on one task. Persistence loop with delegation, architect verification, regression check. NOT for planning — use ralplan. |
-| `ralplan` | `orchestration` | category | [OMX] Use when user says "ralplan", "$ralplan", "plan this", or "PRD for". Planner/Architect/Critic consensus with RALPLAN-DR, ADR, pre-mortem, test spec. NOT for implementing code. |
-| `team` | `orchestration` | explicit | [OMX] Use when user says "team", "$team", "spawn workers", or "parallel workers". Real Codex/Claude CLI sessions in tmux panes, shared state + mailbox. Requires tmux. NOT for native subagents. |
-| `ultraqa` | `orchestration` | explicit | [OMX] Use when user says "ultraqa", "/ultraqa", "--tests", "--build", "--lint", or "fix until tests pass". qa-tester → architect → executor cycle until verification met. NOT for new features — use $ralph. |
-| `ultrawork` | `orchestration` | explicit | [OMX] Use when user says "ulw", "ultrawork", "parallel execution", or "multiple independent tasks". Concurrent work, context discipline, delegation. NOT for sequential tasks or idea-to-PR autonomy. |
-| `visual-ralph` | `orchestration` | category | Use when user says "visual ralph", "iterate visually", or "keep fixing UI". Persistent visual iteration: screenshot, verdict, edit, re-verify. |
-| `worker` | `orchestration` | category | Use when user says "worker", "team worker", or "assigned slice". Worker-lane execution: ownership, scope, blocker reporting, handoff. |
+| `autopilot` | `orchestration` | explicit | [OMX] Strict autonomous loop: $ralplan -> $ralph -> $code-review |
+| `cancel` | `orchestration` | explicit | [OMX] Cancel any active OMX mode (autopilot, ralph, ultrawork, ecomode, ultraqa, swarm, ultrapilot, pipeline, team) |
+| `hud` | `meta` | explicit | [OMX] Show or configure the OMX HUD (two-layer statusline) |
+| `pipeline` | `orchestration` | explicit | [OMX] Configurable pipeline orchestrator for sequencing stages |
+| `ralph` | `orchestration` | explicit | [OMX] Self-referential loop until task completion with architect verification |
+| `ralplan` | `orchestration` | category | [OMX] Alias for $plan --consensus |
+| `team` | `orchestration` | explicit | [OMX] N coordinated agents on shared task list using tmux-based orchestration |
+| `ultraqa` | `orchestration` | explicit | [OMX] QA cycling workflow - test, verify, fix, repeat until goal met |
+| `ultrawork` | `orchestration` | explicit | [OMX] Parallel execution engine for high-throughput task completion |
+| `visual-ralph` | `orchestration` | category | [OMX] Visual Ralph orchestration for frontend UI from generated references, static references, or live URL targets, using $ralph with built-in visual verdict and pixel-diff evidence until the implementation matches and leaves a reproducible design system. |
+| `worker` | `orchestration` | category | [OMX] Team worker protocol (ACK, mailbox, task lifecycle) for tmux-based OMX teams |

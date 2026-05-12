@@ -20,4 +20,4 @@ Agent surfaces: `codex`, `claude`
 
 | Skill | Category | Reason | Description |
 | --- | --- | --- | --- |
-| `wiki` | `meta` | explicit | Use when user says "wiki", "document knowledge", or "knowledge base". Wiki structure, linking, maintenance, retrieval. Triggers: wiki add/lint/query/read/delete. |
+| `wiki` | `meta` | explicit | [OMX] Persistent markdown project wiki stored under repository omx_wiki with keyword search and lifecycle capture |

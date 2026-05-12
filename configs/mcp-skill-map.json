@@ -224,7 +224,7 @@
         },
         {
           "category": "orchestration",
-          "description": "[OMX] Use when user says \"team\", \"$team\", \"spawn workers\", or \"parallel workers\". Real Codex/Claude CLI sessions in tmux panes, shared state + mailbox. Requires tmux. NOT for native subagents.",
+          "description": "[OMX] N coordinated agents on shared task list using tmux-based orchestration",
           "name": "team",
           "reason": "explicit",
           "slug": "team"
@@ -238,7 +238,7 @@
         },
         {
           "category": "orchestration",
-          "description": "Use when user says \"worker\", \"team worker\", or \"assigned slice\". Worker-lane execution: ownership, scope, blocker reporting, handoff.",
+          "description": "[OMX] Team worker protocol (ACK, mailbox, task lifecycle) for tmux-based OMX teams",
           "name": "worker",
           "reason": "explicit",
           "slug": "worker"
@@ -390,14 +390,14 @@
       "skills": [
         {
           "category": "review",
-          "description": "Use when user says \"cleanup AI slop\", \"deslop\", \"refactor this AI code\", or \"simplify bloated code\". Tests-first, smell-by-smell cleanup preserving behavior. NOT for security or general code review.",
+          "description": "[OMX] Run an anti-slop cleanup/refactor/deslop workflow",
           "name": "ai-slop-cleaner",
           "reason": "explicit",
           "slug": "ai-slop-cleaner"
         },
         {
           "category": "meta",
-          "description": "[OMX] Use when user says \"analyze\", \"investigate\", \"why does X\", or \"how is X wired\". Read-only cross-file analysis: ranked explanations, evidence, file:line. NOT for edits \u2014 use $ralph or $plan.",
+          "description": "[OMX] Run read-only deep repository analysis and return a ranked synthesis with explicit confidence, concrete file references, and clear evidence-vs-inference boundaries. Use when a user says 'analyze', 'investigate', 'why does', 'what's causing', or needs grounded cross-file explanation before any changes are proposed.",
           "name": "analyze",
           "reason": "explicit",
           "slug": "analyze"
@@ -411,7 +411,7 @@
         },
         {
           "category": "review",
-          "description": "Use when user says \"review this code\", \"code review\", \"review my changes\", or \"/review\". Structured quality/maintainability review with severity-rated findings. NOT for security audits \u2014 use security-review.",
+          "description": "[OMX] Run a comprehensive code review",
           "name": "code-review",
           "reason": "explicit",
           "slug": "code-review"
@@ -463,7 +463,7 @@
         },
         {
           "category": "meta",
-          "description": "Use when user says \"wiki\", \"document knowledge\", or \"knowledge base\". Wiki structure, linking, maintenance, retrieval. Triggers: wiki add/lint/query/read/delete.",
+          "description": "[OMX] Persistent markdown project wiki stored under repository omx_wiki with keyword search and lifecycle capture",
           "name": "wiki",
           "reason": "explicit",
           "slug": "wiki"
@@ -487,77 +487,77 @@
       "skills": [
         {
           "category": "orchestration",
-          "description": "[OMX] Use when user says \"autopilot\", \"$autopilot\", \"autonomous\", \"full auto\", \"build me\", or \"make me X\" from idea/PRD. Strict ralplan \u2192 ralph \u2192 code-review loop. NOT for single edits ($ralph), planning only ($ralplan).",
+          "description": "[OMX] Strict autonomous loop: $ralplan -> $ralph -> $code-review",
           "name": "autopilot",
           "reason": "explicit",
           "slug": "autopilot"
         },
         {
           "category": "orchestration",
-          "description": "[OMX] Use when user says \"cancel\", \"/cancel\", \"stop\", \"abort\", or \"--force\". Terminates active OMX mode (autopilot/ralph/ultrawork/ultraqa/swarm/pipeline/team); tmux team shutdown.",
+          "description": "[OMX] Cancel any active OMX mode (autopilot, ralph, ultrawork, ecomode, ultraqa, swarm, ultrapilot, pipeline, team)",
           "name": "cancel",
           "reason": "explicit",
           "slug": "cancel"
         },
         {
           "category": "meta",
-          "description": "[OMX] Use when user says \"show hud\", \"omx hud\", \"configure statusline\", or \"live hud\". Runs `omx hud`; configures `[tui] status_line` for ralph/ultrawork/autopilot/team state.",
+          "description": "[OMX] Show or configure the OMX HUD (two-layer statusline)",
           "name": "hud",
           "reason": "explicit",
           "slug": "hud"
         },
         {
           "category": "orchestration",
-          "description": "[OMX] Use when user says \"$pipeline\" or \"run the pipeline\" with custom stages/workers/iterations. ralplan \u2192 team-exec \u2192 ralph-verify via PipelineStage with persisted resume. NOT for hands-off delivery \u2014 use $autopilot.",
+          "description": "[OMX] Configurable pipeline orchestrator for sequencing stages",
           "name": "pipeline",
           "reason": "explicit",
           "slug": "pipeline"
         },
         {
           "category": "orchestration",
-          "description": "[OMX] Use when user says \"ralph\", \"$ralph\", \"do not stop\", \"finish this\", or \"keep going\" on one task. Persistence loop with delegation, architect verification, regression check. NOT for planning \u2014 use ralplan.",
+          "description": "[OMX] Self-referential loop until task completion with architect verification",
           "name": "ralph",
           "reason": "explicit",
           "slug": "ralph"
         },
         {
           "category": "orchestration",
-          "description": "[OMX] Use when user says \"ralplan\", \"$ralplan\", \"plan this\", or \"PRD for\". Planner/Architect/Critic consensus with RALPLAN-DR, ADR, pre-mortem, test spec. NOT for implementing code.",
+          "description": "[OMX] Alias for $plan --consensus",
           "name": "ralplan",
           "reason": "category",
           "slug": "ralplan"
         },
         {
           "category": "orchestration",
-          "description": "[OMX] Use when user says \"team\", \"$team\", \"spawn workers\", or \"parallel workers\". Real Codex/Claude CLI sessions in tmux panes, shared state + mailbox. Requires tmux. NOT for native subagents.",
+          "description": "[OMX] N coordinated agents on shared task list using tmux-based orchestration",
           "name": "team",
           "reason": "explicit",
           "slug": "team"
         },
         {
           "category": "orchestration",
-          "description": "[OMX] Use when user says \"ultraqa\", \"/ultraqa\", \"--tests\", \"--build\", \"--lint\", or \"fix until tests pass\". qa-tester \u2192 architect \u2192 executor cycle until verification met. NOT for new features \u2014 use $ralph.",
+          "description": "[OMX] QA cycling workflow - test, verify, fix, repeat until goal met",
           "name": "ultraqa",
           "reason": "explicit",
           "slug": "ultraqa"
         },
         {
           "category": "orchestration",
-          "description": "[OMX] Use when user says \"ulw\", \"ultrawork\", \"parallel execution\", or \"multiple independent tasks\". Concurrent work, context discipline, delegation. NOT for sequential tasks or idea-to-PR autonomy.",
+          "description": "[OMX] Parallel execution engine for high-throughput task completion",
           "name": "ultrawork",
           "reason": "explicit",
           "slug": "ultrawork"
         },
         {
           "category": "orchestration",
-          "description": "Use when user says \"visual ralph\", \"iterate visually\", or \"keep fixing UI\". Persistent visual iteration: screenshot, verdict, edit, re-verify.",
+          "description": "[OMX] Visual Ralph orchestration for frontend UI from generated references, static references, or live URL targets, using $ralph with built-in visual verdict and pixel-diff evidence until the implementation matches and leaves a reproducible design system.",
           "name": "visual-ralph",
           "reason": "category",
           "slug": "visual-ralph"
         },
         {
           "category": "orchestration",
-          "description": "Use when user says \"worker\", \"team worker\", or \"assigned slice\". Worker-lane execution: ownership, scope, blocker reporting, handoff.",
+          "description": "[OMX] Team worker protocol (ACK, mailbox, task lifecycle) for tmux-based OMX teams",
           "name": "worker",
           "reason": "category",
           "slug": "worker"
@@ -581,14 +581,14 @@
       "skills": [
         {
           "category": "meta",
-          "description": "[OMX] Use when user says \"show hud\", \"omx hud\", \"configure statusline\", or \"live hud\". Runs `omx hud`; configures `[tui] status_line` for ralph/ultrawork/autopilot/team state.",
+          "description": "[OMX] Show or configure the OMX HUD (two-layer statusline)",
           "name": "hud",
           "reason": "explicit",
           "slug": "hud"
         },
         {
           "category": "orchestration",
-          "description": "[OMX] Use when user says \"team\", \"$team\", \"spawn workers\", or \"parallel workers\". Real Codex/Claude CLI sessions in tmux panes, shared state + mailbox. Requires tmux. NOT for native subagents.",
+          "description": "[OMX] N coordinated agents on shared task list using tmux-based orchestration",
           "name": "team",
           "reason": "explicit",
           "slug": "team"
@@ -619,7 +619,7 @@
       "skills": [
         {
           "category": "meta",
-          "description": "Use when user says \"wiki\", \"document knowledge\", or \"knowledge base\". Wiki structure, linking, maintenance, retrieval. Triggers: wiki add/lint/query/read/delete.",
+          "description": "[OMX] Persistent markdown project wiki stored under repository omx_wiki with keyword search and lifecycle capture",
           "name": "wiki",
           "reason": "explicit",
           "slug": "wiki"
@@ -663,7 +663,7 @@
         },
         {
           "category": "orchestration",
-          "description": "Use when user says \"visual ralph\", \"iterate visually\", or \"keep fixing UI\". Persistent visual iteration: screenshot, verdict, edit, re-verify.",
+          "description": "[OMX] Visual Ralph orchestration for frontend UI from generated references, static references, or live URL targets, using $ralph with built-in visual verdict and pixel-diff evidence until the implementation matches and leaves a reproducible design system.",
           "name": "visual-ralph",
           "reason": "explicit",
           "slug": "visual-ralph"
