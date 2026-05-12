@@ -34,7 +34,7 @@
       "version": "4.0.0"
     },
     "claude-mem@thedotmack": {
-      "enabled": true,
+      "enabled": false,
       "marketplace": "thedotmack",
       "mcpServers": {
         "mcp-search": {
