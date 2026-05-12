@@ -30,15 +30,7 @@ Server key: `mcp_servers`
 Source: `~/.claude/settings.json`
 Server key: `mcpServers`
 
-| Server | Command/type | Args | Env keys |
-| --- | --- | ---: | --- |
-| `colony` | `/nix/store/cyx69kzikha3hb33sz97mapcjlnqs8c7-nodejs-slim-22.22.0/bin/node` | 2 | - |
-| `letsfg` | `~/.nvm/versions/node/v22.22.0/bin/letsfg-mcp` | 0 | `LETSFG_PYTHON` |
-| `omx_code_intel` | `node` | 1 | - |
-| `omx_memory` | `node` | 1 | - |
-| `omx_state` | `node` | 1 | - |
-| `omx_trace` | `node` | 1 | - |
-| `omx_wiki` | `node` | 1 | - |
+No MCP servers found.
 
 ## claude_runtime
 
@@ -51,7 +43,13 @@ Server key: `mcpServers`
 | `colony` | `bash` | 2 | - |
 | `coolify` | `bash` | 2 | - |
 | `hostinger-api` | `bash` | 2 | - |
+| `letsfg` | `~/.nvm/versions/node/v22.22.0/bin/letsfg-mcp` | 0 | `LETSFG_PYTHON` |
 | `obsidian-vault` | `npx` | 3 | - |
+| `omx_code_intel` | `node` | 1 | - |
+| `omx_memory` | `node` | 1 | - |
+| `omx_state` | `node` | 1 | - |
+| `omx_trace` | `node` | 1 | - |
+| `omx_wiki` | `node` | 1 | - |
 | `recodee` | `~/Documents/recodee/.venv/bin/recodee-mcp` | 0 | `RECODEE_BASE_URL` |
 | `soul-skills` | `~/.local/bin/uv` | 4 | - |
 
