@@ -95,5 +95,5 @@ Sources: `~/.claude/settings.json` (enabled set + marketplaces) + `~/.claude/plu
 | `ck` | `cavekit-marketplace` | `4.0.0` | ✓ | - |
 | `claude-mem` | `thedotmack` | `13.1.0` | ✓ | `mcp-search` |
 | `claude-obsidian` | `claude-obsidian-marketplace` | `1.6.0` | ✓ | - |
-| `oh-my-claudecode` | `omc` | `4.12.1` | ✓ | `t` |
+| `oh-my-claudecode` | `omc` | `4.13.7` | ✓ | `t` |
 | `rust-analyzer-lsp` | `claude-plugins-official` | `1.0.0` | ✓ | - |

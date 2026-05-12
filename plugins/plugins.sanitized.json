@@ -68,7 +68,7 @@
         }
       },
       "name": "oh-my-claudecode",
-      "version": "4.12.1"
+      "version": "4.13.7"
     },
     "rust-analyzer-lsp@claude-plugins-official": {
       "enabled": true,
