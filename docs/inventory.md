@@ -16,7 +16,7 @@ Server key: `mcp_servers`
 | `gbrain` | `bash` | 2 | - |
 | `hostinger-api` | `bash` | 2 | - |
 | `letsfg` | `~/.nvm/versions/node/v22.22.0/bin/letsfg-mcp` | 0 | `LETSFG_PYTHON` |
-| `obsidian-vault` | `npx` | 3 | - |
+| `obsidian-vault` | `~/.npm/_npx/30e03b97069def49/node_modules/.bin/mcpvault` | 1 | - |
 | `recodee` | `~/Documents/recodee/.venv/bin/recodee-mcp` | 0 | `RECODEE_BASE_URL` |
 | `soul-skills` | `~/.local/bin/uv` | 4 | - |
 

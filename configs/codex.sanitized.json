@@ -56,12 +56,9 @@
     },
     "obsidian-vault": {
       "args": [
-        "-y",
-        "@bitbonsai/mcpvault@latest",
-        "~/Documents/claude-obsidian"
+        "~/Documents/ai-tools/claude-obsidian"
       ],
-      "command": "npx",
-      "startup_timeout_sec": 15
+      "command": "~/.npm/_npx/30e03b97069def49/node_modules/.bin/mcpvault"
     },
     "recodee": {
       "command": "~/Documents/recodee/.venv/bin/recodee-mcp",
