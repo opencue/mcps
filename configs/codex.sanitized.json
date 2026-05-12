@@ -65,41 +65,46 @@
     },
     "omx_code_intel": {
       "args": [
-        "~/Documents/recodee/oh-my-codex/dist/mcp/code-intel-server.js"
+        "mcp-serve",
+        "code-intel"
       ],
-      "command": "~/.nvm/versions/node/v22.22.0/bin/node",
+      "command": "~/.nvm/versions/node/v22.22.0/bin/omx",
       "enabled": true,
       "startup_timeout_sec": 10
     },
     "omx_memory": {
       "args": [
-        "~/Documents/recodee/oh-my-codex/dist/mcp/memory-server.js"
+        "mcp-serve",
+        "memory"
       ],
-      "command": "~/.nvm/versions/node/v22.22.0/bin/node",
+      "command": "~/.nvm/versions/node/v22.22.0/bin/omx",
       "enabled": true,
       "startup_timeout_sec": 5
     },
     "omx_state": {
       "args": [
-        "~/Documents/recodee/oh-my-codex/dist/mcp/state-server.js"
+        "mcp-serve",
+        "state"
       ],
-      "command": "~/.nvm/versions/node/v22.22.0/bin/node",
+      "command": "~/.nvm/versions/node/v22.22.0/bin/omx",
       "enabled": true,
       "startup_timeout_sec": 5
     },
     "omx_trace": {
       "args": [
-        "~/Documents/recodee/oh-my-codex/dist/mcp/trace-server.js"
+        "mcp-serve",
+        "trace"
       ],
-      "command": "~/.nvm/versions/node/v22.22.0/bin/node",
+      "command": "~/.nvm/versions/node/v22.22.0/bin/omx",
       "enabled": true,
       "startup_timeout_sec": 5
     },
     "omx_wiki": {
       "args": [
-        "~/Documents/recodee/oh-my-codex/dist/mcp/wiki-server.js"
+        "mcp-serve",
+        "wiki"
       ],
-      "command": "~/.nvm/versions/node/v22.22.0/bin/node",
+      "command": "~/.nvm/versions/node/v22.22.0/bin/omx",
       "enabled": true,
       "startup_timeout_sec": 5
     },

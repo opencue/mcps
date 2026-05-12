@@ -17,11 +17,11 @@ Server key: `mcp_servers`
 | `hostinger-api` | `bash` | 2 | - |
 | `letsfg` | `~/.nvm/versions/node/v22.22.0/bin/letsfg-mcp` | 0 | `LETSFG_PYTHON` |
 | `obsidian-vault` | `npx` | 3 | - |
-| `omx_code_intel` | `~/.nvm/versions/node/v22.22.0/bin/node` | 1 | - |
-| `omx_memory` | `~/.nvm/versions/node/v22.22.0/bin/node` | 1 | - |
-| `omx_state` | `~/.nvm/versions/node/v22.22.0/bin/node` | 1 | - |
-| `omx_trace` | `~/.nvm/versions/node/v22.22.0/bin/node` | 1 | - |
-| `omx_wiki` | `~/.nvm/versions/node/v22.22.0/bin/node` | 1 | - |
+| `omx_code_intel` | `~/.nvm/versions/node/v22.22.0/bin/omx` | 2 | - |
+| `omx_memory` | `~/.nvm/versions/node/v22.22.0/bin/omx` | 2 | - |
+| `omx_state` | `~/.nvm/versions/node/v22.22.0/bin/omx` | 2 | - |
+| `omx_trace` | `~/.nvm/versions/node/v22.22.0/bin/omx` | 2 | - |
+| `omx_wiki` | `~/.nvm/versions/node/v22.22.0/bin/omx` | 2 | - |
 | `recodee` | `~/Documents/recodee/.venv/bin/recodee-mcp` | 0 | `RECODEE_BASE_URL` |
 | `soul-skills` | `~/.local/bin/uv` | 4 | - |
 
