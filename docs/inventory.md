@@ -92,3 +92,4 @@ Sources: `~/.claude/settings.json` (enabled set + marketplaces) + `~/.claude/plu
 | `claude-obsidian` | `claude-obsidian-marketplace` | `1.6.0` | ✓ | - |
 | `oh-my-claudecode` | `omc` | `4.13.7` | ✓ | `t` |
 | `rust-analyzer-lsp` | `claude-plugins-official` | `1.0.0` | ✓ | - |
+| `stripe` | `claude-plugins-official` | `0.1.0` | ✓ | `stripe` |

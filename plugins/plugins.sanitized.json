@@ -75,6 +75,18 @@
       "marketplace": "claude-plugins-official",
       "name": "rust-analyzer-lsp",
       "version": "1.0.0"
+    },
+    "stripe@claude-plugins-official": {
+      "enabled": true,
+      "marketplace": "claude-plugins-official",
+      "mcpServers": {
+        "stripe": {
+          "type": "http",
+          "url": "https://mcp.stripe.com"
+        }
+      },
+      "name": "stripe",
+      "version": "0.1.0"
     }
   },
   "source": "claude_plugins",
