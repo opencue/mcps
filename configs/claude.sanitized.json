@@ -1,44 +1,6 @@
 {
   "server_key": "mcpServers",
-  "servers": {
-    "colony": {
-      "args": [
-        "~/Documents/recodee/colony/apps/cli/dist/index.js",
-        "mcp"
-      ],
-      "command": "~/.nvm/versions/node/v22.22.0/bin/node"
-    },
-    "omx_code_intel": {
-      "args": [
-        "~/.nvm/versions/node/v22.22.0/lib/node_modules/oh-my-codex/dist/mcp/code-intel-server.js"
-      ],
-      "command": "~/.nvm/versions/node/v22.22.0/bin/node"
-    },
-    "omx_memory": {
-      "args": [
-        "~/.nvm/versions/node/v22.22.0/lib/node_modules/oh-my-codex/dist/mcp/memory-server.js"
-      ],
-      "command": "~/.nvm/versions/node/v22.22.0/bin/node"
-    },
-    "omx_state": {
-      "args": [
-        "~/.nvm/versions/node/v22.22.0/lib/node_modules/oh-my-codex/dist/mcp/state-server.js"
-      ],
-      "command": "~/.nvm/versions/node/v22.22.0/bin/node"
-    },
-    "omx_trace": {
-      "args": [
-        "~/.nvm/versions/node/v22.22.0/lib/node_modules/oh-my-codex/dist/mcp/trace-server.js"
-      ],
-      "command": "~/.nvm/versions/node/v22.22.0/bin/node"
-    },
-    "omx_wiki": {
-      "args": [
-        "~/.nvm/versions/node/v22.22.0/lib/node_modules/oh-my-codex/dist/mcp/wiki-server.js"
-      ],
-      "command": "~/.nvm/versions/node/v22.22.0/bin/node"
-    }
-  },
+  "servers": {},
   "source": "claude",
   "source_path": "~/.claude/settings.json"
 }

@@ -1,5 +1,5 @@
 {
-  "mcp_count": 15,
+  "mcp_count": 12,
   "mcps": {
     "Higgsfield": {
       "agent_surfaces": [
@@ -72,6 +72,127 @@
         }
       ],
       "source_url": "https://mcp.higgsfield.ai/mcp"
+    },
+    "MedusaDocs": {
+      "agent_surfaces": [
+        "codex"
+      ],
+      "health_command": "url:https://docs.medusajs.com/mcp",
+      "homepage": "https://docs.medusajs.com",
+      "install": "hosted endpoint; no local install",
+      "owners": [
+        "Medusa"
+      ],
+      "package": "",
+      "page": "mcps/medusadocs/skills.md",
+      "skills": [
+        {
+          "category": "medusa",
+          "description": "Use when user says \"Medusa admin\", \"admin widget\", \"custom admin page\", or \"admin form\". Required for Medusa Admin widgets, pages, forms, tables, data loading.",
+          "name": "building-admin-dashboard-customizations",
+          "reason": "prefix",
+          "slug": "building-admin-dashboard-customizations"
+        },
+        {
+          "category": "medusa",
+          "description": "Use when user says \"Medusa storefront\", \"call Medusa API\", \"SDK integration\", or \"React Query\". Required for storefront fetching, mutations, cache, Medusa API calls.",
+          "name": "building-storefronts",
+          "reason": "prefix",
+          "slug": "building-storefronts"
+        },
+        {
+          "category": "medusa",
+          "description": "Use when user says \"Medusa backend\", \"custom module\", \"API route\", \"workflow\", or \"data model\". Required for Medusa modules, routes, workflows, links, business logic.",
+          "name": "building-with-medusa",
+          "reason": "prefix",
+          "slug": "building-with-medusa"
+        },
+        {
+          "category": "medusa",
+          "description": "Use when user says \"Medusa agent\", \"admin AI agent\", \"internal agent\", or \"streamText\". Internal admin-facing AI: models, module service, runtime tools, NDJSON routes, admin chat UI. NOT for buyer storefront chatbots.",
+          "name": "creating-internal-agents",
+          "reason": "explicit",
+          "slug": "creating-internal-agents"
+        },
+        {
+          "category": "medusa",
+          "description": "Use when user says \"medusa db:generate\" or \"generate migration\". Medusa migration generation: model changes, commands, review.",
+          "name": "db-generate",
+          "reason": "prefix",
+          "slug": "db-generate"
+        },
+        {
+          "category": "medusa",
+          "description": "Use when user says \"medusa db:migrate\" or \"run migrations\". Medusa migration apply: env checks, commands, rollback risk.",
+          "name": "db-migrate",
+          "reason": "prefix",
+          "slug": "db-migrate"
+        },
+        {
+          "category": "medusa",
+          "description": "Use when user says \"publish submodule\" or \"Medusa submodule publish\". Repo state, commits, push, references, validation.",
+          "name": "gh-submodule-publish",
+          "reason": "category",
+          "slug": "gh-submodule-publish"
+        },
+        {
+          "category": "medusa",
+          "description": "Use when user says \"Higgsfield to Medusa\", \"generate product photos\", or \"import AI product assets\". Asset generation \u2192 product mapping \u2192 import.",
+          "name": "higgsfield-to-medusa-products",
+          "reason": "category",
+          "slug": "higgsfield-to-medusa-products"
+        },
+        {
+          "category": "medusa",
+          "description": "Use when user says \"Medusa workflow\", \"Medusa subscriber\", \"Medusa auth\", \"Medusa query\", or builds/modifies API routes, models, jobs, backend logic, storefront integrations.",
+          "name": "medusa-reference",
+          "reason": "explicit",
+          "slug": "medusa-reference"
+        },
+        {
+          "category": "medusa",
+          "description": "Use when user says \"new Medusa shop\", \"setup Medusa store\", or \"Medusa shop scaffold\". Base template, backend, storefront, envs, deployment.",
+          "name": "medusa-shop-setup",
+          "reason": "category",
+          "slug": "medusa-shop-setup"
+        },
+        {
+          "category": "medusa",
+          "description": "Use when user says \"create Medusa admin\", \"new admin via API\", or \"add admin user\". API-based admin creation: auth, request, envs.",
+          "name": "new-admin-via-api",
+          "reason": "category",
+          "slug": "new-admin-via-api"
+        },
+        {
+          "category": "medusa",
+          "description": "Use when user says \"new Medusa user\", \"create first admin\", or \"add user\". CLI/API user creation, credentials.",
+          "name": "new-user",
+          "reason": "explicit",
+          "slug": "new-user"
+        },
+        {
+          "category": "medusa",
+          "description": "Use when user says \"Medusa S3\", \"provision bucket\", or \"file storage bucket\". S3 provisioning: envs, provider, access.",
+          "name": "provision-medusa-s3-bucket",
+          "reason": "category",
+          "slug": "provision-medusa-s3-bucket"
+        },
+        {
+          "category": "medusa",
+          "description": "Use when user says \"storefront best practices\" or \"storefront architecture\". Data fetching, UX, caching, errors.",
+          "name": "storefront-best-practices",
+          "reason": "explicit",
+          "slug": "storefront-best-practices"
+        },
+        {
+          "category": "medusa",
+          "description": "Use when user says \"WooCommerce import\", \"migrate products\", or \"Woo to Medusa\". Extraction, mapping, assets, import.",
+          "name": "woocommerce-to-medusa-import",
+          "reason": "explicit",
+          "slug": "woocommerce-to-medusa-import"
+        }
+      ],
+      "source_url": "https://docs.medusajs.com/mcp"
     },
     "colony": {
       "agent_surfaces": [
@@ -162,6 +283,17 @@
       ],
       "source_url": "https://github.com/StuMason/coolify-mcp"
     },
+    "gbrain": {
+      "agent_surfaces": [],
+      "health_command": "",
+      "homepage": "",
+      "install": "",
+      "owners": [],
+      "package": "",
+      "page": "mcps/gbrain/skills.md",
+      "skills": [],
+      "source_url": ""
+    },
     "gitea": {
       "agent_surfaces": [
         "vscode"
@@ -241,259 +373,6 @@
       "page": "mcps/obsidian-vault/skills.md",
       "skills": [],
       "source_url": ""
-    },
-    "omx_code_intel": {
-      "agent_surfaces": [
-        "codex",
-        "claude"
-      ],
-      "health_command": "node /path/to/oh-my-codex/dist/mcp/code-intel-server.js --help",
-      "homepage": "https://github.com/NagyVikt/oh-my-codex",
-      "install": "npm install && npm run build",
-      "owners": [
-        "NagyVikt"
-      ],
-      "package": "oh-my-codex",
-      "page": "mcps/omx/code-intel/skills.md",
-      "skills": [
-        {
-          "category": "review",
-          "description": "[OMX] Run an anti-slop cleanup/refactor/deslop workflow",
-          "name": "ai-slop-cleaner",
-          "reason": "explicit",
-          "slug": "ai-slop-cleaner"
-        },
-        {
-          "category": "meta",
-          "description": "[OMX] Run read-only deep repository analysis and return a ranked synthesis with explicit confidence, concrete file references, and clear evidence-vs-inference boundaries. Use when a user says 'analyze', 'investigate', 'why does', 'what's causing', or needs grounded cross-file explanation before any changes are proposed.",
-          "name": "analyze",
-          "reason": "explicit",
-          "slug": "analyze"
-        },
-        {
-          "category": "review",
-          "description": "Use when user says \"test API\", \"API endpoint\", or \"curl this endpoint\". Request setup, auth, assertions, response checks.",
-          "name": "api-tester",
-          "reason": "category",
-          "slug": "api-tester"
-        },
-        {
-          "category": "review",
-          "description": "[OMX] Run a comprehensive code review",
-          "name": "code-review",
-          "reason": "explicit",
-          "slug": "code-review"
-        },
-        {
-          "category": "github",
-          "description": "Use when user says \"fix CI\", \"GitHub checks failed\", or \"debug PR checks\". Inspects failing Actions via gh; fix plan needs approval before implementation.",
-          "name": "gh-fix-ci",
-          "reason": "explicit",
-          "slug": "gh-fix-ci"
-        },
-        {
-          "category": "review",
-          "description": "Use when user asks \"security best practices\", \"secure coding for python/typescript/go\", or \"how to harden this\". Language/framework-specific secure-by-default guidance. NOT for auditing existing code \u2014 use security-review.",
-          "name": "security-best-practices",
-          "reason": "category",
-          "slug": "security-best-practices"
-        },
-        {
-          "category": "review",
-          "description": "Use when user says \"security review\", \"security audit\", \"check for vulnerabilities\", \"OWASP review\", or \"/security-review\". Audits for OWASP Top 10, secrets, injection, auth flaws. NOT for general code quality \u2014 use code-review.",
-          "name": "security-review",
-          "reason": "explicit",
-          "slug": "security-review"
-        }
-      ],
-      "source_url": "https://github.com/NagyVikt/oh-my-codex"
-    },
-    "omx_memory": {
-      "agent_surfaces": [
-        "codex",
-        "claude"
-      ],
-      "health_command": "node /path/to/oh-my-codex/dist/mcp/memory-server.js --help",
-      "homepage": "https://github.com/NagyVikt/oh-my-codex",
-      "install": "npm install && npm run build",
-      "owners": [
-        "NagyVikt"
-      ],
-      "package": "oh-my-codex",
-      "page": "mcps/omx/memory/skills.md",
-      "skills": [
-        {
-          "category": "meta",
-          "description": "Use when user says \"note this\", \"save note\", or \"remember this\". Local note workflow: placement, concise capture, retrieval.",
-          "name": "note",
-          "reason": "explicit",
-          "slug": "note"
-        },
-        {
-          "category": "meta",
-          "description": "[OMX] Persistent markdown project wiki stored under repository omx_wiki with keyword search and lifecycle capture",
-          "name": "wiki",
-          "reason": "explicit",
-          "slug": "wiki"
-        }
-      ],
-      "source_url": "https://github.com/NagyVikt/oh-my-codex"
-    },
-    "omx_state": {
-      "agent_surfaces": [
-        "codex",
-        "claude"
-      ],
-      "health_command": "node /path/to/oh-my-codex/dist/mcp/state-server.js --help",
-      "homepage": "https://github.com/NagyVikt/oh-my-codex",
-      "install": "npm install && npm run build",
-      "owners": [
-        "NagyVikt"
-      ],
-      "package": "oh-my-codex",
-      "page": "mcps/omx/state/skills.md",
-      "skills": [
-        {
-          "category": "orchestration",
-          "description": "[OMX] Strict autonomous loop: $ralplan -> $ralph -> $code-review",
-          "name": "autopilot",
-          "reason": "explicit",
-          "slug": "autopilot"
-        },
-        {
-          "category": "orchestration",
-          "description": "[OMX] Cancel any active OMX mode (autopilot, ralph, ultrawork, ecomode, ultraqa, swarm, ultrapilot, pipeline, team)",
-          "name": "cancel",
-          "reason": "explicit",
-          "slug": "cancel"
-        },
-        {
-          "category": "meta",
-          "description": "[OMX] Show or configure the OMX HUD (two-layer statusline)",
-          "name": "hud",
-          "reason": "explicit",
-          "slug": "hud"
-        },
-        {
-          "category": "orchestration",
-          "description": "[OMX] Configurable pipeline orchestrator for sequencing stages",
-          "name": "pipeline",
-          "reason": "explicit",
-          "slug": "pipeline"
-        },
-        {
-          "category": "orchestration",
-          "description": "[OMX] Self-referential loop until task completion with architect verification",
-          "name": "ralph",
-          "reason": "explicit",
-          "slug": "ralph"
-        },
-        {
-          "category": "orchestration",
-          "description": "[OMX] Alias for $plan --consensus",
-          "name": "ralplan",
-          "reason": "category",
-          "slug": "ralplan"
-        },
-        {
-          "category": "orchestration",
-          "description": "[OMX] N coordinated agents on shared task list using tmux-based orchestration",
-          "name": "team",
-          "reason": "explicit",
-          "slug": "team"
-        },
-        {
-          "category": "orchestration",
-          "description": "[OMX] QA cycling workflow - test, verify, fix, repeat until goal met",
-          "name": "ultraqa",
-          "reason": "explicit",
-          "slug": "ultraqa"
-        },
-        {
-          "category": "orchestration",
-          "description": "[OMX] Parallel execution engine for high-throughput task completion",
-          "name": "ultrawork",
-          "reason": "explicit",
-          "slug": "ultrawork"
-        },
-        {
-          "category": "orchestration",
-          "description": "[OMX] Visual Ralph orchestration for frontend UI from generated references, static references, or live URL targets, using $ralph with built-in visual verdict and pixel-diff evidence until the implementation matches and leaves a reproducible design system.",
-          "name": "visual-ralph",
-          "reason": "category",
-          "slug": "visual-ralph"
-        },
-        {
-          "category": "orchestration",
-          "description": "[OMX] Team worker protocol (ACK, mailbox, task lifecycle) for tmux-based OMX teams",
-          "name": "worker",
-          "reason": "category",
-          "slug": "worker"
-        }
-      ],
-      "source_url": "https://github.com/NagyVikt/oh-my-codex"
-    },
-    "omx_trace": {
-      "agent_surfaces": [
-        "codex",
-        "claude"
-      ],
-      "health_command": "node /path/to/oh-my-codex/dist/mcp/trace-server.js --help",
-      "homepage": "https://github.com/NagyVikt/oh-my-codex",
-      "install": "npm install && npm run build",
-      "owners": [
-        "NagyVikt"
-      ],
-      "package": "oh-my-codex",
-      "page": "mcps/omx/trace/skills.md",
-      "skills": [
-        {
-          "category": "meta",
-          "description": "[OMX] Show or configure the OMX HUD (two-layer statusline)",
-          "name": "hud",
-          "reason": "explicit",
-          "slug": "hud"
-        },
-        {
-          "category": "orchestration",
-          "description": "[OMX] N coordinated agents on shared task list using tmux-based orchestration",
-          "name": "team",
-          "reason": "explicit",
-          "slug": "team"
-        },
-        {
-          "category": "meta",
-          "description": "[OMX] Use when user says \"show trace\", \"trace timeline\", or \"why did this skill activate\". Calls trace_timeline + trace_summary; surfaces hook/keyword/skill/agent flow. NOT debugging \u2014 use $analyze.",
-          "name": "trace",
-          "reason": "explicit",
-          "slug": "trace"
-        }
-      ],
-      "source_url": "https://github.com/NagyVikt/oh-my-codex"
-    },
-    "omx_wiki": {
-      "agent_surfaces": [
-        "codex",
-        "claude"
-      ],
-      "health_command": "node /path/to/oh-my-codex/dist/mcp/wiki-server.js --help",
-      "homepage": "https://github.com/NagyVikt/oh-my-codex",
-      "install": "npm install && npm run build",
-      "owners": [
-        "NagyVikt"
-      ],
-      "package": "oh-my-codex",
-      "page": "mcps/omx/wiki/skills.md",
-      "skills": [
-        {
-          "category": "meta",
-          "description": "[OMX] Persistent markdown project wiki stored under repository omx_wiki with keyword search and lifecycle capture",
-          "name": "wiki",
-          "reason": "explicit",
-          "slug": "wiki"
-        }
-      ],
-      "source_url": "https://github.com/NagyVikt/oh-my-codex"
     },
     "react-grab-mcp": {
       "agent_surfaces": [
