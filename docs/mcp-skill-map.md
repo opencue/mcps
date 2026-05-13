@@ -8,12 +8,10 @@ Skills root: `~/Documents/soul/skills/skills`
 | --- | --- | ---: | --- |
 | `colony` | [link](https://github.com/recodeee/colony) | 5 | `mcps/colony/skills.md` |
 | `coolify` | [link](https://github.com/StuMason/coolify-mcp) | 3 | `mcps/coolify/skills.md` |
-| `gbrain` | - | 0 | `mcps/gbrain/skills.md` |
 | `gitea` | [link](https://github.com/seepine/gitea-mcp) | 2 | `mcps/gitea/skills.md` |
 | `Higgsfield` | [link](https://mcp.higgsfield.ai/mcp) | 8 | `mcps/higgsfield/skills.md` |
 | `hostinger-api` | [link](https://github.com/hostinger/api-mcp-server) | 0 | `mcps/hostinger-api/skills.md` |
 | `letsfg` | [link](https://github.com/LetsFG/LetsFG) | 1 | `mcps/letsfg/skills.md` |
-| `MedusaDocs` | [link](https://docs.medusajs.com/mcp) | 15 | `mcps/medusadocs/skills.md` |
 | `obsidian-vault` | - | 0 | `mcps/obsidian-vault/skills.md` |
 | `omx_code_intel` | [link](https://github.com/NagyVikt/oh-my-codex) | 7 | `mcps/omx/code-intel/skills.md` |
 | `omx_memory` | [link](https://github.com/NagyVikt/oh-my-codex) | 2 | `mcps/omx/memory/skills.md` |
