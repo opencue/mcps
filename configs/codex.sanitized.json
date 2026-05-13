@@ -12,7 +12,7 @@
         "mcp"
       ],
       "command": "~/.nvm/versions/node/v22.22.0/bin/colony",
-      "enabled": true,
+      "enabled": false,
       "env": {
         "COLONY_HOME": "<redacted>",
         "COLONY_MCP_METRICS_MAX": "<redacted>",
@@ -27,7 +27,7 @@
         "<redacted secret-loading argument>"
       ],
       "command": "bash",
-      "enabled": true,
+      "enabled": false,
       "startup_timeout_sec": 20.0
     },
     "gbrain": {
@@ -45,7 +45,7 @@
         "<redacted secret-loading argument>"
       ],
       "command": "bash",
-      "enabled": true,
+      "enabled": false,
       "startup_timeout_sec": 20.0
     },
     "letsfg": {
@@ -78,7 +78,7 @@
         "~/Documents/soul/mcps/mcps/soul-skills/server.py"
       ],
       "command": "~/.local/bin/uv",
-      "enabled": true,
+      "enabled": false,
       "startup_timeout_sec": 30.0
     }
   },
