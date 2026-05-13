@@ -27,7 +27,7 @@
         "<redacted secret-loading argument>"
       ],
       "command": "bash",
-      "enabled": false,
+      "enabled": true,
       "startup_timeout_sec": 20.0
     },
     "gbrain": {
@@ -45,7 +45,7 @@
         "<redacted secret-loading argument>"
       ],
       "command": "bash",
-      "enabled": false,
+      "enabled": true,
       "startup_timeout_sec": 20.0
     },
     "letsfg": {
@@ -78,7 +78,7 @@
         "~/Documents/soul/mcps/mcps/soul-skills/server.py"
       ],
       "command": "~/.local/bin/uv",
-      "enabled": false,
+      "enabled": true,
       "startup_timeout_sec": 30.0
     }
   },
