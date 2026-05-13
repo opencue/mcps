@@ -25,7 +25,14 @@ Server key: `mcp_servers`
 Source: `~/.claude/settings.json`
 Server key: `mcpServers`
 
-No MCP servers found.
+| Server | Command/type | Args | Env keys |
+| --- | --- | ---: | --- |
+| `colony` | `~/.nvm/versions/node/v22.22.0/bin/node` | 2 | - |
+| `omx_code_intel` | `~/.nvm/versions/node/v22.22.0/bin/node` | 1 | - |
+| `omx_memory` | `~/.nvm/versions/node/v22.22.0/bin/node` | 1 | - |
+| `omx_state` | `~/.nvm/versions/node/v22.22.0/bin/node` | 1 | - |
+| `omx_trace` | `~/.nvm/versions/node/v22.22.0/bin/node` | 1 | - |
+| `omx_wiki` | `~/.nvm/versions/node/v22.22.0/bin/node` | 1 | - |
 
 ## claude_runtime
 
