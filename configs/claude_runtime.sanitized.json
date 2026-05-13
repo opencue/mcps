@@ -5,10 +5,34 @@
       "type": "http",
       "url": "https://mcp.higgsfield.ai/mcp"
     },
+    "MedusaDocs": {
+      "type": "http",
+      "url": "https://docs.medusajs.com/mcp"
+    },
+    "colony": {
+      "args": [
+        "mcp"
+      ],
+      "command": "~/.nvm/versions/node/v22.22.0/bin/colony",
+      "env": {
+        "COLONY_HOME": "<redacted>",
+        "COLONY_MCP_METRICS_MAX": "<redacted>",
+        "COLONY_OBSERVATIONS_TTL_DAYS": "<redacted>",
+        "COLONY_SESSION_TTL_DAYS": "<redacted>",
+        "NODE_OPTIONS": "<redacted>"
+      }
+    },
     "coolify": {
       "args": [
         "-lc",
         "<redacted secret-loading argument>"
+      ],
+      "command": "bash"
+    },
+    "gbrain": {
+      "args": [
+        "-lc",
+        "export GBRAIN_HOME=/tmp/gbrain-claude; cfg=\"$GBRAIN_HOME/.gbrain/config.json\"; db=\"$GBRAIN_HOME/.gbrain/brain.pglite\"; rm -rf \"$db/.gbrain-lock\"; if [ ! -f \"$cfg\" ]; then /home/deadpool/.bun/bin/gbrain init --pglite >/tmp/gbrain-mcp-init.log 2>&1; fi; exec /home/deadpool/.bun/bin/gbrain serve 2>/tmp/gbrain-mcp.stderr"
       ],
       "command": "bash"
     },
@@ -24,6 +48,12 @@
       "env": {
         "LETSFG_PYTHON": "<redacted>"
       }
+    },
+    "obsidian-vault": {
+      "args": [
+        "~/Documents/ai-tools/claude-obsidian"
+      ],
+      "command": "~/.codex/bin/mcpvault-stdio-keepalive.mjs"
     },
     "recodee": {
       "command": "~/Documents/recodee/.venv/bin/recodee-mcp",

@@ -35,9 +35,13 @@ Server key: `mcpServers`
 | Server | Command/type | Args | Env keys |
 | --- | --- | ---: | --- |
 | `Higgsfield` | `http` | 0 | - |
+| `MedusaDocs` | `http` | 0 | - |
+| `colony` | `~/.nvm/versions/node/v22.22.0/bin/colony` | 1 | `COLONY_HOME`, `COLONY_MCP_METRICS_MAX`, `COLONY_OBSERVATIONS_TTL_DAYS`, `COLONY_SESSION_TTL_DAYS`, `NODE_OPTIONS` |
 | `coolify` | `bash` | 2 | - |
+| `gbrain` | `bash` | 2 | - |
 | `hostinger-api` | `bash` | 2 | - |
 | `letsfg` | `~/.nvm/versions/node/v22.22.0/bin/letsfg-mcp` | 0 | `LETSFG_PYTHON` |
+| `obsidian-vault` | `~/.codex/bin/mcpvault-stdio-keepalive.mjs` | 1 | - |
 | `recodee` | `~/Documents/recodee/.venv/bin/recodee-mcp` | 0 | `RECODEE_BASE_URL` |
 | `soul-skills` | `~/.local/bin/uv` | 4 | - |
 
