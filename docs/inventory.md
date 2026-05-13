@@ -11,7 +11,7 @@ Server key: `mcp_servers`
 | --- | --- | ---: | --- |
 | `Higgsfield` | `https://mcp.higgsfield.ai/mcp` | 0 | - |
 | `MedusaDocs` | `https://docs.medusajs.com/mcp` | 0 | - |
-| `colony` | `~/.nvm/versions/node/v22.22.0/bin/colony` | 1 | `COLONY_HOME` |
+| `colony` | `~/.nvm/versions/node/v22.22.0/bin/colony` | 1 | `COLONY_HOME`, `COLONY_MCP_METRICS_MAX`, `COLONY_OBSERVATIONS_TTL_DAYS`, `COLONY_SESSION_TTL_DAYS` |
 | `coolify` | `bash` | 2 | - |
 | `gbrain` | `bash` | 2 | - |
 | `hostinger-api` | `bash` | 2 | - |

@@ -12,11 +12,14 @@
         "mcp"
       ],
       "command": "~/.nvm/versions/node/v22.22.0/bin/colony",
-      "enabled": false,
+      "enabled": true,
       "env": {
-        "COLONY_HOME": "<redacted>"
+        "COLONY_HOME": "<redacted>",
+        "COLONY_MCP_METRICS_MAX": "<redacted>",
+        "COLONY_OBSERVATIONS_TTL_DAYS": "<redacted>",
+        "COLONY_SESSION_TTL_DAYS": "<redacted>"
       },
-      "startup_timeout_sec": 60.0
+      "startup_timeout_sec": 120.0
     },
     "coolify": {
       "args": [
@@ -24,7 +27,7 @@
         "<redacted secret-loading argument>"
       ],
       "command": "bash",
-      "enabled": false,
+      "enabled": true,
       "startup_timeout_sec": 20.0
     },
     "gbrain": {
@@ -42,7 +45,7 @@
         "<redacted secret-loading argument>"
       ],
       "command": "bash",
-      "enabled": false,
+      "enabled": true,
       "startup_timeout_sec": 20.0
     },
     "letsfg": {
@@ -57,7 +60,7 @@
         "~/Documents/ai-tools/claude-obsidian"
       ],
       "command": "~/.codex/bin/mcpvault-stdio-keepalive.mjs",
-      "enabled": false,
+      "enabled": true,
       "startup_timeout_sec": 30.0
     },
     "recodee": {
@@ -75,7 +78,7 @@
         "~/Documents/soul/mcps/mcps/soul-skills/server.py"
       ],
       "command": "~/.local/bin/uv",
-      "enabled": false,
+      "enabled": true,
       "startup_timeout_sec": 30.0
     }
   },
