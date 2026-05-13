@@ -60,7 +60,7 @@
         "~/Documents/ai-tools/claude-obsidian"
       ],
       "command": "~/.codex/bin/mcpvault-stdio-keepalive.mjs",
-      "enabled": true,
+      "enabled": false,
       "startup_timeout_sec": 30.0
     },
     "recodee": {
