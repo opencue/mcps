@@ -1,6 +1,46 @@
 {
   "server_key": "mcpServers",
-  "servers": {},
+  "servers": {
+    "Higgsfield": {
+      "type": "http",
+      "url": "https://mcp.higgsfield.ai/mcp"
+    },
+    "coolify": {
+      "args": [
+        "-lc",
+        "<redacted secret-loading argument>"
+      ],
+      "command": "bash"
+    },
+    "hostinger-api": {
+      "args": [
+        "-lc",
+        "<redacted secret-loading argument>"
+      ],
+      "command": "bash"
+    },
+    "letsfg": {
+      "command": "~/.nvm/versions/node/v22.22.0/bin/letsfg-mcp",
+      "env": {
+        "LETSFG_PYTHON": "<redacted>"
+      }
+    },
+    "recodee": {
+      "command": "~/Documents/recodee/.venv/bin/recodee-mcp",
+      "env": {
+        "RECODEE_BASE_URL": "<redacted>"
+      }
+    },
+    "soul-skills": {
+      "args": [
+        "run",
+        "--quiet",
+        "--script",
+        "~/Documents/soul/mcps/mcps/soul-skills/server.py"
+      ],
+      "command": "~/.local/bin/uv"
+    }
+  },
   "source": "claude_runtime",
   "source_path": "~/.claude.json"
 }

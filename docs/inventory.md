@@ -32,7 +32,14 @@ No MCP servers found.
 Source: `~/.claude.json`
 Server key: `mcpServers`
 
-No MCP servers found.
+| Server | Command/type | Args | Env keys |
+| --- | --- | ---: | --- |
+| `Higgsfield` | `http` | 0 | - |
+| `coolify` | `bash` | 2 | - |
+| `hostinger-api` | `bash` | 2 | - |
+| `letsfg` | `~/.nvm/versions/node/v22.22.0/bin/letsfg-mcp` | 0 | `LETSFG_PYTHON` |
+| `recodee` | `~/Documents/recodee/.venv/bin/recodee-mcp` | 0 | `RECODEE_BASE_URL` |
+| `soul-skills` | `~/.local/bin/uv` | 4 | - |
 
 ## vscode
 
