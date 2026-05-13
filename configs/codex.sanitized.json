@@ -5,6 +5,7 @@
       "url": "https://mcp.higgsfield.ai/mcp"
     },
     "MedusaDocs": {
+      "enabled": false,
       "url": "https://docs.medusajs.com/mcp"
     },
     "colony": {
