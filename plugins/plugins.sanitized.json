@@ -1,5 +1,11 @@
 {
   "marketplaces": {
+    "claude-code-skills": {
+      "source": {
+        "repo": "alirezarezvani/claude-skills",
+        "source": "github"
+      }
+    },
     "thedotmack": {
       "source": {
         "repo": "thedotmack/claude-mem",
@@ -23,6 +29,46 @@
       },
       "name": "claude-mem",
       "version": "12.5.1"
+    },
+    "engineering-advanced-skills@claude-code-skills": {
+      "enabled": true,
+      "marketplace": "claude-code-skills",
+      "mcpServers": {},
+      "name": "engineering-advanced-skills",
+      "version": "2.4.4"
+    },
+    "engineering-skills@claude-code-skills": {
+      "enabled": true,
+      "marketplace": "claude-code-skills",
+      "mcpServers": {},
+      "name": "engineering-skills",
+      "version": "2.2.3"
+    },
+    "marketing-skills@claude-code-skills": {
+      "enabled": true,
+      "marketplace": "claude-code-skills",
+      "mcpServers": {},
+      "name": "marketing-skills",
+      "version": "2.2.3"
+    },
+    "pm-skills@claude-code-skills": {
+      "enabled": true,
+      "marketplace": "claude-code-skills",
+      "mcpServers": {
+        "atlassian": {
+          "type": "sse",
+          "url": "https://mcp.atlassian.com/v1/sse"
+        }
+      },
+      "name": "pm-skills",
+      "version": "2.2.3"
+    },
+    "product-skills@claude-code-skills": {
+      "enabled": true,
+      "marketplace": "claude-code-skills",
+      "mcpServers": {},
+      "name": "product-skills",
+      "version": "2.3.3"
     },
     "superpowers@claude-plugins-official": {
       "enabled": true,

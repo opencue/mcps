@@ -63,4 +63,9 @@ Sources: `~/.claude/settings.json` (enabled set + marketplaces) + `~/.claude/plu
 | Plugin | Marketplace | Version | Enabled | MCP servers |
 | --- | --- | --- | :---: | --- |
 | `claude-mem` | `thedotmack` | `12.5.1` | ✓ | `mcp-search` |
+| `engineering-advanced-skills` | `claude-code-skills` | `2.4.4` | ✓ | - |
+| `engineering-skills` | `claude-code-skills` | `2.2.3` | ✓ | - |
+| `marketing-skills` | `claude-code-skills` | `2.2.3` | ✓ | - |
+| `pm-skills` | `claude-code-skills` | `2.2.3` | ✓ | `atlassian` |
+| `product-skills` | `claude-code-skills` | `2.3.3` | ✓ | - |
 | `superpowers` | `claude-plugins-official` | `5.1.0` | ✓ | - |
