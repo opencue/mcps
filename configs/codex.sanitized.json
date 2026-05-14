@@ -2,6 +2,7 @@
   "server_key": "mcp_servers",
   "servers": {
     "Higgsfield": {
+      "enabled": false,
       "url": "https://mcp.higgsfield.ai/mcp"
     },
     "MedusaDocs": {
@@ -13,7 +14,7 @@
         "mcp"
       ],
       "command": "~/.nvm/versions/node/v22.22.0/bin/colony",
-      "enabled": false,
+      "enabled": true,
       "env": {
         "COLONY_HOME": "<redacted>",
         "COLONY_MCP_METRICS_MAX": "<redacted>",
@@ -29,15 +30,8 @@
         "<redacted secret-loading argument>"
       ],
       "command": "bash",
-      "enabled": true,
+      "enabled": false,
       "startup_timeout_sec": 20.0
-    },
-    "drawio": {
-      "args": [
-        "-y",
-        "@drawio/mcp"
-      ],
-      "command": "npx"
     },
     "gbrain": {
       "args": [
@@ -45,7 +39,7 @@
         "export GBRAIN_HOME=/tmp/gbrain-codex; cfg=\"$GBRAIN_HOME/.gbrain/config.json\"; db=\"$GBRAIN_HOME/.gbrain/brain.pglite\"; rm -rf \"$db/.gbrain-lock\"; if [ ! -f \"$cfg\" ]; then /home/deadpool/.bun/bin/gbrain init --pglite >/tmp/gbrain-mcp-init.log 2>&1; fi; exec /home/deadpool/.bun/bin/gbrain serve 2>/tmp/gbrain-mcp.stderr"
       ],
       "command": "bash",
-      "enabled": false,
+      "enabled": true,
       "startup_timeout_sec": 60.0
     },
     "hostinger-api": {
@@ -54,11 +48,12 @@
         "<redacted secret-loading argument>"
       ],
       "command": "bash",
-      "enabled": true,
+      "enabled": false,
       "startup_timeout_sec": 20.0
     },
     "letsfg": {
       "command": "~/.nvm/versions/node/v22.22.0/bin/letsfg-mcp",
+      "enabled": false,
       "env": {
         "LETSFG_PYTHON": "<redacted>"
       },
@@ -69,11 +64,12 @@
         "~/Documents/ai-tools/claude-obsidian"
       ],
       "command": "~/.codex/bin/mcpvault-stdio-keepalive.mjs",
-      "enabled": false,
+      "enabled": true,
       "startup_timeout_sec": 30.0
     },
     "recodee": {
       "command": "~/Documents/recodee/.venv/bin/recodee-mcp",
+      "enabled": true,
       "env": {
         "RECODEE_BASE_URL": "<redacted>"
       },
