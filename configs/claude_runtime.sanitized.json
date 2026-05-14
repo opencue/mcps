@@ -29,6 +29,15 @@
       ],
       "command": "bash"
     },
+    "drawio": {
+      "args": [
+        "-y",
+        "@drawio/mcp"
+      ],
+      "command": "npx",
+      "env": {},
+      "type": "stdio"
+    },
     "gbrain": {
       "args": [
         "-lc",

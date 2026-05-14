@@ -8,6 +8,7 @@ Skills root: `~/Documents/soul/skills/skills`
 | --- | --- | ---: | --- |
 | `colony` | [link](https://github.com/recodeee/colony) | 5 | `mcps/colony/skills.md` |
 | `coolify` | [link](https://github.com/StuMason/coolify-mcp) | 3 | `mcps/coolify/skills.md` |
+| `drawio` | - | 0 | `mcps/drawio/skills.md` |
 | `gbrain` | - | 0 | `mcps/gbrain/skills.md` |
 | `gitea` | [link](https://github.com/seepine/gitea-mcp) | 2 | `mcps/gitea/skills.md` |
 | `Higgsfield` | [link](https://mcp.higgsfield.ai/mcp) | 8 | `mcps/higgsfield/skills.md` |
