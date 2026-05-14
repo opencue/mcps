@@ -61,3 +61,5 @@ Sources: `~/.claude/settings.json` (enabled set + marketplaces) + `~/.claude/plu
 
 | Plugin | Marketplace | Version | Enabled | MCP servers |
 | --- | --- | --- | :---: | --- |
+| `claude-mem` | `thedotmack` | `12.5.1` | ✓ | `mcp-search` |
+| `superpowers` | `claude-plugins-official` | `5.1.0` | ✓ | - |
