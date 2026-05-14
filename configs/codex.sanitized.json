@@ -1,14 +1,6 @@
 {
   "server_key": "mcp_servers",
   "servers": {
-    "Higgsfield": {
-      "enabled": false,
-      "url": "https://mcp.higgsfield.ai/mcp"
-    },
-    "MedusaDocs": {
-      "enabled": false,
-      "url": "https://docs.medusajs.com/mcp"
-    },
     "colony": {
       "args": [
         "mcp"
@@ -22,69 +14,7 @@
         "COLONY_SESSION_TTL_DAYS": "<redacted>",
         "NODE_OPTIONS": "<redacted>"
       },
-      "startup_timeout_sec": 120.0
-    },
-    "coolify": {
-      "args": [
-        "-lc",
-        "<redacted secret-loading argument>"
-      ],
-      "command": "bash",
-      "enabled": false,
-      "startup_timeout_sec": 20.0
-    },
-    "gbrain": {
-      "args": [
-        "-lc",
-        "export GBRAIN_HOME=/tmp/gbrain-codex; cfg=\"$GBRAIN_HOME/.gbrain/config.json\"; db=\"$GBRAIN_HOME/.gbrain/brain.pglite\"; rm -rf \"$db/.gbrain-lock\"; if [ ! -f \"$cfg\" ]; then /home/deadpool/.bun/bin/gbrain init --pglite >/tmp/gbrain-mcp-init.log 2>&1; fi; exec /home/deadpool/.bun/bin/gbrain serve 2>/tmp/gbrain-mcp.stderr"
-      ],
-      "command": "bash",
-      "enabled": true,
-      "startup_timeout_sec": 60.0
-    },
-    "hostinger-api": {
-      "args": [
-        "-lc",
-        "<redacted secret-loading argument>"
-      ],
-      "command": "bash",
-      "enabled": false,
-      "startup_timeout_sec": 20.0
-    },
-    "letsfg": {
-      "command": "~/.nvm/versions/node/v22.22.0/bin/letsfg-mcp",
-      "enabled": false,
-      "env": {
-        "LETSFG_PYTHON": "<redacted>"
-      },
-      "startup_timeout_sec": 20.0
-    },
-    "obsidian-vault": {
-      "args": [
-        "~/Documents/ai-tools/claude-obsidian"
-      ],
-      "command": "~/.codex/bin/mcpvault-stdio-keepalive.mjs",
-      "enabled": true,
-      "startup_timeout_sec": 30.0
-    },
-    "recodee": {
-      "command": "~/Documents/recodee/.venv/bin/recodee-mcp",
-      "enabled": true,
-      "env": {
-        "RECODEE_BASE_URL": "<redacted>"
-      },
-      "startup_timeout_sec": 20.0
-    },
-    "soul-skills": {
-      "args": [
-        "run",
-        "--quiet",
-        "--script",
-        "~/Documents/soul/mcps/mcps/soul-skills/server.py"
-      ],
-      "command": "~/.local/bin/uv",
-      "enabled": true,
-      "startup_timeout_sec": 30.0
+      "startup_timeout_sec": 60
     }
   },
   "source": "codex",
