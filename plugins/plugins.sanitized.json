@@ -31,28 +31,28 @@
       "version": "12.5.1"
     },
     "engineering-advanced-skills@claude-code-skills": {
-      "enabled": true,
+      "enabled": false,
       "marketplace": "claude-code-skills",
       "mcpServers": {},
       "name": "engineering-advanced-skills",
       "version": "2.4.4"
     },
     "engineering-skills@claude-code-skills": {
-      "enabled": true,
+      "enabled": false,
       "marketplace": "claude-code-skills",
       "mcpServers": {},
       "name": "engineering-skills",
       "version": "2.2.3"
     },
     "marketing-skills@claude-code-skills": {
-      "enabled": true,
+      "enabled": false,
       "marketplace": "claude-code-skills",
       "mcpServers": {},
       "name": "marketing-skills",
       "version": "2.2.3"
     },
     "pm-skills@claude-code-skills": {
-      "enabled": true,
+      "enabled": false,
       "marketplace": "claude-code-skills",
       "mcpServers": {
         "atlassian": {
@@ -64,7 +64,7 @@
       "version": "2.2.3"
     },
     "product-skills@claude-code-skills": {
-      "enabled": true,
+      "enabled": false,
       "marketplace": "claude-code-skills",
       "mcpServers": {},
       "name": "product-skills",
