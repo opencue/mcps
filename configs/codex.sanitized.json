@@ -18,7 +18,8 @@
         "COLONY_HOME": "<redacted>",
         "COLONY_MCP_METRICS_MAX": "<redacted>",
         "COLONY_OBSERVATIONS_TTL_DAYS": "<redacted>",
-        "COLONY_SESSION_TTL_DAYS": "<redacted>"
+        "COLONY_SESSION_TTL_DAYS": "<redacted>",
+        "NODE_OPTIONS": "<redacted>"
       },
       "startup_timeout_sec": 120.0
     },
@@ -30,6 +31,13 @@
       "command": "bash",
       "enabled": true,
       "startup_timeout_sec": 20.0
+    },
+    "drawio": {
+      "args": [
+        "-y",
+        "@drawio/mcp"
+      ],
+      "command": "npx"
     },
     "gbrain": {
       "args": [
