@@ -68,4 +68,5 @@ Sources: `~/.claude/settings.json` (enabled set + marketplaces) + `~/.claude/plu
 | `marketing-skills` | `claude-code-skills` | `2.2.3` | ✓ | - |
 | `pm-skills` | `claude-code-skills` | `2.2.3` | ✓ | `atlassian` |
 | `product-skills` | `claude-code-skills` | `2.3.3` | ✓ | - |
+| `rust-analyzer-lsp` | `claude-plugins-official` | `1.0.0` | ✓ | - |
 | `superpowers` | `claude-plugins-official` | `5.1.0` | ✓ | - |
