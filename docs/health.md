@@ -6,15 +6,15 @@ Hosted MCPs validate URL shape only; this script does not perform network checks
 | MCP | Configured | Binary exists | Source link | Related skills | Notes |
 | --- | --- | --- | --- | ---: | --- |
 | `colony` | yes | no | [link](https://github.com/recodeee/colony) | 5 | `colony --help` |
-| `coolify` | yes | yes | [link](https://github.com/StuMason/coolify-mcp) | 1 | `npx -y coolify-mcp --help` |
-| `gitea` | yes | yes | [link](https://github.com/seepine/gitea-mcp) | 2 | `gitea-mcp --help` |
+| `coolify` | yes | no | [link](https://github.com/StuMason/coolify-mcp) | 1 | `npx -y coolify-mcp --help` |
+| `gitea` | yes | no | [link](https://github.com/seepine/gitea-mcp) | 2 | `gitea-mcp --help` |
 | `Higgsfield` | yes | url ok | [link](https://mcp.higgsfield.ai/mcp) | 4 | hosted URL format only |
-| `hostinger-api` | yes | yes | [link](https://github.com/hostinger/api-mcp-server) | 0 | `npx -y @hostinger/api-mcp-server --help` |
+| `hostinger-api` | yes | no | [link](https://github.com/hostinger/api-mcp-server) | 0 | `npx -y @hostinger/api-mcp-server --help` |
 | `letsfg` | yes | no | [link](https://github.com/LetsFG/LetsFG) | 1 | `letsfg-mcp --help` |
 | `MedusaDocs` | yes | url ok | [link](https://docs.medusajs.com/mcp) | 7 | hosted URL format only |
-| `omx_code_intel` | no | yes | [link](https://github.com/NagyVikt/oh-my-codex) | 5 | `node /path/to/oh-my-codex/dist/mcp/code-intel-server.js --help` |
-| `omx_memory` | no | yes | [link](https://github.com/NagyVikt/oh-my-codex) | 2 | `node /path/to/oh-my-codex/dist/mcp/memory-server.js --help` |
-| `omx_state` | no | yes | [link](https://github.com/NagyVikt/oh-my-codex) | 8 | `node /path/to/oh-my-codex/dist/mcp/state-server.js --help` |
-| `omx_trace` | no | yes | [link](https://github.com/NagyVikt/oh-my-codex) | 3 | `node /path/to/oh-my-codex/dist/mcp/trace-server.js --help` |
-| `omx_wiki` | no | yes | [link](https://github.com/NagyVikt/oh-my-codex) | 1 | `node /path/to/oh-my-codex/dist/mcp/wiki-server.js --help` |
-| `react-grab-mcp` | yes | yes | [link](https://www.npmjs.com/package/@react-grab/mcp) | 5 | `npx -y @react-grab/mcp --help` |
+| `omx_code_intel` | no | no | [link](https://github.com/NagyVikt/oh-my-codex) | 5 | `node /path/to/oh-my-codex/dist/mcp/code-intel-server.js --help` |
+| `omx_memory` | no | no | [link](https://github.com/NagyVikt/oh-my-codex) | 2 | `node /path/to/oh-my-codex/dist/mcp/memory-server.js --help` |
+| `omx_state` | no | no | [link](https://github.com/NagyVikt/oh-my-codex) | 8 | `node /path/to/oh-my-codex/dist/mcp/state-server.js --help` |
+| `omx_trace` | no | no | [link](https://github.com/NagyVikt/oh-my-codex) | 3 | `node /path/to/oh-my-codex/dist/mcp/trace-server.js --help` |
+| `omx_wiki` | no | no | [link](https://github.com/NagyVikt/oh-my-codex) | 1 | `node /path/to/oh-my-codex/dist/mcp/wiki-server.js --help` |
+| `react-grab-mcp` | yes | no | [link](https://www.npmjs.com/package/@react-grab/mcp) | 5 | `npx -y @react-grab/mcp --help` |
