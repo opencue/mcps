@@ -44,6 +44,13 @@
       "name": "engineering-skills",
       "version": "2.2.3"
     },
+    "frontend-design@claude-plugins-official": {
+      "enabled": true,
+      "marketplace": "claude-plugins-official",
+      "mcpServers": {},
+      "name": "frontend-design",
+      "version": "unknown"
+    },
     "marketing-skills@claude-code-skills": {
       "enabled": false,
       "marketplace": "claude-code-skills",

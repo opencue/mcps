@@ -55,6 +55,7 @@ Sources: `~/.claude/settings.json` (enabled set + marketplaces) + `~/.claude/plu
 | `claude-mem` | `thedotmack` | `13.2.0` | ✓ | `mcp-search` |
 | `engineering-advanced-skills` | `claude-code-skills` | `2.4.4` | · | - |
 | `engineering-skills` | `claude-code-skills` | `2.2.3` | · | - |
+| `frontend-design` | `claude-plugins-official` | `unknown` | ✓ | - |
 | `marketing-skills` | `claude-code-skills` | `2.2.3` | · | - |
 | `pm-skills` | `claude-code-skills` | `2.2.3` | · | `atlassian` |
 | `product-skills` | `claude-code-skills` | `2.3.3` | · | - |
