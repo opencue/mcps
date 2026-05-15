@@ -71,7 +71,7 @@
       "version": "2.3.3"
     },
     "rust-analyzer-lsp@claude-plugins-official": {
-      "enabled": true,
+      "enabled": false,
       "marketplace": "claude-plugins-official",
       "name": "rust-analyzer-lsp",
       "version": "1.0.0"
