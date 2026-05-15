@@ -5,10 +5,6 @@
       "type": "http",
       "url": "https://mcp.higgsfield.ai/mcp"
     },
-    "MedusaDocs": {
-      "type": "http",
-      "url": "https://docs.medusajs.com/mcp"
-    },
     "colony": {
       "args": [
         "mcp"
@@ -39,11 +35,7 @@
       "type": "stdio"
     },
     "gbrain": {
-      "args": [
-        "-lc",
-        "export GBRAIN_HOME=/tmp/gbrain-claude; cfg=\"$GBRAIN_HOME/.gbrain/config.json\"; db=\"$GBRAIN_HOME/.gbrain/brain.pglite\"; rm -rf \"$db/.gbrain-lock\"; if [ ! -f \"$cfg\" ]; then /home/deadpool/.bun/bin/gbrain init --pglite >/tmp/gbrain-mcp-init.log 2>&1; fi; exec /home/deadpool/.bun/bin/gbrain serve 2>/tmp/gbrain-mcp.stderr"
-      ],
-      "command": "bash"
+      "command": "~/.local/bin/gbrain-mcp-wrapper.sh"
     },
     "hostinger-api": {
       "args": [

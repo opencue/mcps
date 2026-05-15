@@ -11,7 +11,7 @@ Hosted MCPs validate URL shape only; this script does not perform network checks
 | `Higgsfield` | yes | url ok | [link](https://mcp.higgsfield.ai/mcp) | 4 | hosted URL format only |
 | `hostinger-api` | yes | yes | [link](https://github.com/hostinger/api-mcp-server) | 0 | `npx -y @hostinger/api-mcp-server --help` |
 | `letsfg` | yes | no | [link](https://github.com/LetsFG/LetsFG) | 1 | `letsfg-mcp --help` |
-| `MedusaDocs` | yes | url ok | [link](https://docs.medusajs.com/mcp) | 7 | hosted URL format only |
+| `MedusaDocs` | no | url ok | [link](https://docs.medusajs.com/mcp) | 7 | hosted URL format only |
 | `omx_code_intel` | no | yes | [link](https://github.com/NagyVikt/oh-my-codex) | 5 | `node /path/to/oh-my-codex/dist/mcp/code-intel-server.js --help` |
 | `omx_memory` | no | yes | [link](https://github.com/NagyVikt/oh-my-codex) | 2 | `node /path/to/oh-my-codex/dist/mcp/memory-server.js --help` |
 | `omx_state` | no | yes | [link](https://github.com/NagyVikt/oh-my-codex) | 8 | `node /path/to/oh-my-codex/dist/mcp/state-server.js --help` |
