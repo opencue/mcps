@@ -28,7 +28,7 @@
         }
       },
       "name": "claude-mem",
-      "version": "12.5.1"
+      "version": "13.2.0"
     },
     "engineering-advanced-skills@claude-code-skills": {
       "enabled": false,

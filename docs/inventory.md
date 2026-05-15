@@ -52,7 +52,7 @@ Sources: `~/.claude/settings.json` (enabled set + marketplaces) + `~/.claude/plu
 
 | Plugin | Marketplace | Version | Enabled | MCP servers |
 | --- | --- | --- | :---: | --- |
-| `claude-mem` | `thedotmack` | `12.5.1` | ✓ | `mcp-search` |
+| `claude-mem` | `thedotmack` | `13.2.0` | ✓ | `mcp-search` |
 | `engineering-advanced-skills` | `claude-code-skills` | `2.4.4` | · | - |
 | `engineering-skills` | `claude-code-skills` | `2.2.3` | · | - |
 | `marketing-skills` | `claude-code-skills` | `2.2.3` | · | - |
