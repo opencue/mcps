@@ -6,7 +6,7 @@ Skills root: `~/Documents/soul/skills/skills`
 
 | MCP | Source | Related skills | Page |
 | --- | --- | ---: | --- |
-| `colony` | [link](https://github.com/recodeee/colony) | 5 | `mcps/colony/skills.md` |
+| `colony` | [link](https://github.com/recodeee/colony) | 3 | `mcps/colony/skills.md` |
 | `coolify` | [link](https://github.com/StuMason/coolify-mcp) | 3 | `mcps/coolify/skills.md` |
 | `drawio` | - | 0 | `mcps/drawio/skills.md` |
 | `gbrain` | - | 0 | `mcps/gbrain/skills.md` |
@@ -15,6 +15,6 @@ Skills root: `~/Documents/soul/skills/skills`
 | `hostinger-api` | [link](https://github.com/hostinger/api-mcp-server) | 0 | `mcps/hostinger-api/skills.md` |
 | `letsfg` | [link](https://github.com/LetsFG/LetsFG) | 1 | `mcps/letsfg/skills.md` |
 | `obsidian-vault` | - | 0 | `mcps/obsidian-vault/skills.md` |
-| `react-grab-mcp` | [link](https://www.npmjs.com/package/@react-grab/mcp) | 5 | `mcps/react-grab-mcp/skills.md` |
+| `react-grab-mcp` | [link](https://www.npmjs.com/package/@react-grab/mcp) | 4 | `mcps/react-grab-mcp/skills.md` |
 | `recodee` | - | 0 | `mcps/recodee/skills.md` |
 | `soul-skills` | - | 0 | `mcps/soul-skills/skills.md` |

@@ -103,20 +103,6 @@
         },
         {
           "category": "orchestration",
-          "description": "[OMX] N coordinated agents on shared task list using tmux-based orchestration",
-          "name": "team",
-          "reason": "explicit",
-          "slug": "team"
-        },
-        {
-          "category": "meta",
-          "description": "[OMX] Use when user says \"show trace\", \"trace timeline\", or \"why did this skill activate\". Calls trace_timeline + trace_summary; surfaces hook/keyword/skill/agent flow. NOT debugging \u2014 use $analyze.",
-          "name": "trace",
-          "reason": "explicit",
-          "slug": "trace"
-        },
-        {
-          "category": "orchestration",
           "description": "[OMX] Team worker protocol (ACK, mailbox, task lifecycle) for tmux-based OMX teams",
           "name": "worker",
           "reason": "explicit",
@@ -304,13 +290,6 @@
           "name": "visual-ralph",
           "reason": "explicit",
           "slug": "visual-ralph"
-        },
-        {
-          "category": "design",
-          "description": "Use when user says \"visual verdict\", \"review screenshot\", or \"judge the UI\". Screenshot QA: layout, polish, a11y, next edits.",
-          "name": "visual-verdict",
-          "reason": "explicit",
-          "slug": "visual-verdict"
         }
       ],
       "source_url": "https://www.npmjs.com/package/@react-grab/mcp"
@@ -338,6 +317,6 @@
       "source_url": ""
     }
   },
-  "skill_count": 111,
+  "skill_count": 94,
   "skills_root": "~/Documents/soul/skills/skills"
 }
