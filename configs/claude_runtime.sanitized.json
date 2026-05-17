@@ -56,6 +56,15 @@
       ],
       "command": "~/.codex/bin/mcpvault-stdio-keepalive.mjs"
     },
+    "polymarket-live": {
+      "args": [
+        "run",
+        "--quiet",
+        "--script",
+        "~/Documents/soul/mcps/mcps/polymarket-live/server.py"
+      ],
+      "command": "~/.local/bin/uv"
+    },
     "recodee": {
       "command": "~/Documents/recodee/.venv/bin/recodee-mcp",
       "env": {

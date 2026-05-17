@@ -1,5 +1,5 @@
 {
-  "mcp_count": 12,
+  "mcp_count": 13,
   "mcps": {
     "Higgsfield": {
       "agent_surfaces": [
@@ -250,6 +250,17 @@
       "skills": [],
       "source_url": ""
     },
+    "polymarket-live": {
+      "agent_surfaces": [],
+      "health_command": "",
+      "homepage": "",
+      "install": "",
+      "owners": [],
+      "package": "",
+      "page": "mcps/polymarket-live/skills.md",
+      "skills": [],
+      "source_url": ""
+    },
     "react-grab-mcp": {
       "agent_surfaces": [
         "codex"
@@ -317,6 +328,6 @@
       "source_url": ""
     }
   },
-  "skill_count": 95,
+  "skill_count": 97,
   "skills_root": "~/Documents/soul/skills/skills"
 }

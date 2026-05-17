@@ -33,6 +33,7 @@ Server key: `mcpServers`
 | `hostinger-api` | `bash` | 2 | - |
 | `letsfg` | `~/.nvm/versions/node/v22.22.0/bin/letsfg-mcp` | 0 | `LETSFG_PYTHON` |
 | `obsidian-vault` | `~/.codex/bin/mcpvault-stdio-keepalive.mjs` | 1 | - |
+| `polymarket-live` | `~/.local/bin/uv` | 4 | - |
 | `recodee` | `~/Documents/recodee/.venv/bin/recodee-mcp` | 0 | `RECODEE_BASE_URL` |
 | `soul-skills` | `~/.local/bin/uv` | 4 | - |
 

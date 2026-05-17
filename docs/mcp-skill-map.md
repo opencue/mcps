@@ -15,6 +15,7 @@ Skills root: `~/Documents/soul/skills/skills`
 | `hostinger-api` | [link](https://github.com/hostinger/api-mcp-server) | 0 | `mcps/hostinger-api/skills.md` |
 | `letsfg` | [link](https://github.com/LetsFG/LetsFG) | 1 | `mcps/letsfg/skills.md` |
 | `obsidian-vault` | - | 0 | `mcps/obsidian-vault/skills.md` |
+| `polymarket-live` | - | 0 | `mcps/polymarket-live/skills.md` |
 | `react-grab-mcp` | [link](https://www.npmjs.com/package/@react-grab/mcp) | 4 | `mcps/react-grab-mcp/skills.md` |
 | `recodee` | - | 0 | `mcps/recodee/skills.md` |
 | `soul-skills` | - | 0 | `mcps/soul-skills/skills.md` |
