@@ -14,6 +14,7 @@ Skills root: `~/Documents/soul/skills/skills`
 | `Higgsfield` | [link](https://mcp.higgsfield.ai/mcp) | 8 | `mcps/higgsfield/skills.md` |
 | `hostinger-api` | [link](https://github.com/hostinger/api-mcp-server) | 0 | `mcps/hostinger-api/skills.md` |
 | `letsfg` | [link](https://github.com/LetsFG/LetsFG) | 1 | `mcps/letsfg/skills.md` |
+| `marva-blog` | - | 0 | `mcps/marva-blog/skills.md` |
 | `obsidian-vault` | - | 0 | `mcps/obsidian-vault/skills.md` |
 | `polymarket-live` | - | 0 | `mcps/polymarket-live/skills.md` |
 | `react-grab-mcp` | [link](https://www.npmjs.com/package/@react-grab/mcp) | 4 | `mcps/react-grab-mcp/skills.md` |

@@ -1,5 +1,5 @@
 {
-  "mcp_count": 13,
+  "mcp_count": 14,
   "mcps": {
     "Higgsfield": {
       "agent_surfaces": [
@@ -239,6 +239,17 @@
       ],
       "source_url": "https://github.com/LetsFG/LetsFG"
     },
+    "marva-blog": {
+      "agent_surfaces": [],
+      "health_command": "",
+      "homepage": "",
+      "install": "",
+      "owners": [],
+      "package": "",
+      "page": "mcps/marva-blog/skills.md",
+      "skills": [],
+      "source_url": ""
+    },
     "obsidian-vault": {
       "agent_surfaces": [],
       "health_command": "",
@@ -328,6 +339,6 @@
       "source_url": ""
     }
   },
-  "skill_count": 97,
+  "skill_count": 98,
   "skills_root": "~/Documents/soul/skills/skills"
 }

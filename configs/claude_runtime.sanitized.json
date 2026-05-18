@@ -50,6 +50,15 @@
         "LETSFG_PYTHON": "<redacted>"
       }
     },
+    "marva-blog": {
+      "args": [
+        "run",
+        "--quiet",
+        "--script",
+        "~/Documents/soul/mcps/mcps/marva-blog/server.py"
+      ],
+      "command": "~/.local/bin/uv"
+    },
     "obsidian-vault": {
       "args": [
         "~/Documents/ai-tools/claude-obsidian"
