@@ -577,5 +577,264 @@ async def marva_blog_validate_sections(sections: list[dict]) -> dict:
     }
 
 
+# ---------------------------------------------------------------------------
+# Content Plan — helpers + tools
+# ---------------------------------------------------------------------------
+
+_PLAN_TONES: set[str] = {"explainer", "how-to", "listicle", "product"}
+_PLAN_STATUSES: set[str] = {
+    "queued",
+    "drafting",
+    "draft_ready",
+    "published",
+    "skipped",
+}
+_PLAN_DIFFICULTY: set[str] = {"low", "med", "high"}
+_PLAN_DATE_RE = re.compile(r"^\d{4}-\d{2}-\d{2}$")
+
+
+def _validate_iso_date(value: str, field: str = "planned_date") -> str:
+    """Ensure `value` is a YYYY-MM-DD calendar date the backend will accept."""
+    if not isinstance(value, str) or not _PLAN_DATE_RE.match(value):
+        raise BlogError(f"{field} must be ISO 'YYYY-MM-DD'; got {value!r}")
+    # Reject obvious month/day overflow (e.g. 2026-13-40).
+    try:
+        from datetime import date as _date
+
+        y, m, d = (int(p) for p in value.split("-"))
+        _date(y, m, d)
+    except ValueError as e:
+        raise BlogError(f"{field} is not a real date: {value} ({e})") from e
+    return value
+
+
+def _validate_tone(tone: str) -> str:
+    if tone not in _PLAN_TONES:
+        raise BlogError(
+            f"tone must be one of {sorted(_PLAN_TONES)}; got {tone!r}"
+        )
+    return tone
+
+
+def _validate_status(status: str) -> str:
+    if status not in _PLAN_STATUSES:
+        raise BlogError(
+            f"status must be one of {sorted(_PLAN_STATUSES)}; got {status!r}"
+        )
+    return status
+
+
+def _validate_difficulty(value: str) -> str:
+    if value not in _PLAN_DIFFICULTY:
+        raise BlogError(
+            f"difficulty must be one of {sorted(_PLAN_DIFFICULTY)}; got {value!r}"
+        )
+    return value
+
+
+@mcp.tool()
+@_safe
+async def marva_plan_list(
+    date_from: str | None = None,
+    date_to: str | None = None,
+    status: str | None = None,
+    tone: str | None = None,
+) -> list[dict]:
+    """List Content Plan articles in a date range, optionally filtered by status/tone.
+
+    Use to inspect the editorial calendar before drafting. All filters are optional;
+    omit them to fetch everything the backend returns.
+    """
+    params: list[str] = []
+    if date_from is not None:
+        params.append(f"from={_validate_iso_date(date_from, 'date_from')}")
+    if date_to is not None:
+        params.append(f"to={_validate_iso_date(date_to, 'date_to')}")
+    if status is not None:
+        params.append(f"status={_validate_status(status)}")
+    if tone is not None:
+        params.append(f"tone={_validate_tone(tone)}")
+
+    qs = ("?" + "&".join(params)) if params else ""
+    payload = await _admin_request("GET", f"/admin/content-plan/articles{qs}")
+    if isinstance(payload, dict):
+        articles = payload.get("articles")
+        if isinstance(articles, list):
+            return [a for a in articles if isinstance(a, dict)]
+    return []
+
+
+@mcp.tool()
+@_safe
+async def marva_plan_get(id: str) -> dict:
+    """Fetch one Content Plan article by id.
+
+    Use after `marva_plan_list` to inspect a specific slot before promoting/editing.
+    """
+    if not id:
+        raise BlogError("id is required")
+    payload = await _admin_request("GET", f"/admin/content-plan/articles?id={id}")
+    if isinstance(payload, dict):
+        articles = payload.get("articles")
+        if isinstance(articles, list):
+            for a in articles:
+                if isinstance(a, dict) and a.get("id") == id:
+                    return a
+    raise BlogError(f"no planned article with id '{id}'")
+
+
+@mcp.tool()
+@_safe
+async def marva_plan_create(
+    planned_date: str,
+    title: str,
+    tone: str,
+    brief: str | None = None,
+    volume: int | None = None,
+    difficulty: str | None = None,
+) -> dict:
+    """Create a new Content Plan slot for a future article.
+
+    Use when scheduling a new article on the editorial calendar before drafting.
+    `planned_date` is ISO `YYYY-MM-DD`; `tone` must match the plan vocabulary.
+    """
+    if not title:
+        raise BlogError("title is required")
+    body: dict[str, Any] = {
+        "action": "create",
+        "planned_date": _validate_iso_date(planned_date),
+        "title": title,
+        "tone": _validate_tone(tone),
+    }
+    if brief is not None:
+        body["brief"] = brief
+    if volume is not None:
+        body["volume"] = int(volume)
+    if difficulty is not None:
+        body["difficulty"] = _validate_difficulty(difficulty)
+    return await _admin_request(
+        "POST", "/admin/content-plan/articles", json_body=body
+    )
+
+
+@mcp.tool()
+@_safe
+async def marva_plan_update(id: str, patch: dict) -> dict:
+    """Update a Content Plan slot with a partial patch (title/tone/brief/status/etc).
+
+    Use to retitle, reschedule, change tone, or move a slot through its status
+    lifecycle. Validates `tone`, `status`, `difficulty`, and `planned_date` shape.
+    """
+    if not id:
+        raise BlogError("id is required")
+    if not isinstance(patch, dict) or not patch:
+        raise BlogError("patch must be a non-empty object")
+
+    body: dict[str, Any] = {"action": "update", "id": id}
+    for key, value in patch.items():
+        if value is None:
+            body[key] = None
+            continue
+        if key == "tone":
+            body[key] = _validate_tone(value)
+        elif key == "status":
+            body[key] = _validate_status(value)
+        elif key == "difficulty":
+            body[key] = _validate_difficulty(value)
+        elif key == "planned_date":
+            body[key] = _validate_iso_date(value)
+        elif key == "volume":
+            body[key] = int(value)
+        else:
+            body[key] = value
+    return await _admin_request(
+        "POST", "/admin/content-plan/articles", json_body=body
+    )
+
+
+@mcp.tool()
+@_safe
+async def marva_plan_delete(id: str) -> dict:
+    """Delete a Content Plan slot (does NOT delete any promoted BlogPost draft).
+
+    Use to cancel a calendar entry that won't be written. To remove a published
+    article instead, use `marva_blog_delete` on the resulting post.
+    """
+    if not id:
+        raise BlogError("id is required")
+    return await _admin_request(
+        "POST",
+        "/admin/content-plan/articles",
+        json_body={"action": "delete", "id": id},
+    )
+
+
+@mcp.tool()
+@_safe
+async def marva_plan_promote(
+    id: str,
+    sections: list[dict] | None = None,
+    thumbnail_url: str | None = None,
+    publish: bool = False,
+) -> dict:
+    """Promote a plan slot to a real BlogPost draft (optionally publishing it).
+
+    Use at the end of drafting: the backend creates a BlogPost from the plan and
+    links it back. With `publish=True`, also publishes the resulting post and
+    revalidates the storefront cache.
+    """
+    if not id:
+        raise BlogError("id is required")
+    body: dict[str, Any] = {}
+    if sections is not None:
+        body["sections"] = list(sections)
+    if thumbnail_url is not None:
+        body["thumbnail_url"] = thumbnail_url
+    # Let the backend decide whether to publish itself if it supports the flag,
+    # but we still do the storefront-side publish + revalidate below for safety.
+    if publish:
+        body["publish"] = True
+
+    promote_result = await _admin_request(
+        "POST",
+        f"/admin/content-plan/articles/{id}/promote",
+        json_body=body or None,
+    )
+
+    post = (
+        promote_result.get("post") if isinstance(promote_result, dict) else None
+    )
+    plan = (
+        promote_result.get("plan") if isinstance(promote_result, dict) else None
+    )
+
+    publish_result: dict | None = None
+    revalidate_result: dict | None = None
+    if publish and isinstance(post, dict):
+        slug_or_id = post.get("slug") or post.get("id")
+        post_status = (post.get("status") or "").lower()
+        if post_status != "published" and slug_or_id:
+            pub_body = _id_or_slug_body(str(slug_or_id), action="publish")
+            publish_result = await _admin_request(
+                "POST", "/admin/blog/posts", json_body=pub_body
+            )
+            pub_post = (
+                publish_result.get("post")
+                if isinstance(publish_result, dict)
+                else None
+            )
+            if isinstance(pub_post, dict):
+                post = pub_post
+        slug = _resolve_slug(str(slug_or_id or ""), post)
+        revalidate_result = await _revalidate([slug] if slug else [])
+
+    return {
+        "plan": plan,
+        "post": post,
+        "publish": publish_result,
+        "revalidate": revalidate_result,
+    }
+
+
 if __name__ == "__main__":
     mcp.run()

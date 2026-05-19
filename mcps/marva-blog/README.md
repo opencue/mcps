@@ -53,6 +53,26 @@ marva-blog-author
 | `marva_blog_revalidate` | Manual cache bust for one or more slugs. |
 | `marva_blog_validate_sections` | Local linter for the sections array shape. |
 
+### Content Plan tools
+
+These wrap the admin Content Plan REST API
+(`/admin/content-plan/articles`) so Claude Code can read the editorial
+calendar, schedule slots, and promote a plan to a real blog draft in one
+shot.
+
+| Tool | Purpose |
+| --- | --- |
+| `marva_plan_list` | List plan slots in a date range, filterable by `status` / `tone`. |
+| `marva_plan_get` | Fetch one plan slot by id. |
+| `marva_plan_create` | Schedule a new slot (`planned_date`, `title`, `tone`, optional `brief` / `volume` / `difficulty`). |
+| `marva_plan_update` | Patch a slot (retitle, reschedule, change tone/status). |
+| `marva_plan_delete` | Cancel a slot (does not delete any promoted post). |
+| `marva_plan_promote` | Promote a slot to a `BlogPost` draft; optional `sections`, `thumbnail_url`, `publish=True` triggers publish + revalidate. |
+
+Tone vocabulary: `explainer`, `how-to`, `listicle`, `product`.
+Status lifecycle: `queued` → `drafting` → `draft_ready` → `published` (or `skipped`).
+Difficulty: `low` / `med` / `high`.
+
 ## Quick start
 
 ```text
