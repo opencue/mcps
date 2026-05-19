@@ -1,45 +1,13 @@
 {
   "projects": {
-    "~/Documents/recodee": {
-      "n8n-mcp": {
-        "args": [
-          "n8n-mcp"
-        ],
-        "command": "npx",
-        "env": {
-          "DISABLE_CONSOLE_OUTPUT": "<redacted>",
-          "LOG_LEVEL": "<redacted>",
-          "MCP_MODE": "<redacted>"
-        },
-        "type": "stdio"
-      },
+    "~": {
       "ruflo": {
         "args": [
-          "-y",
-          "@claude-flow/cli@latest"
+          "ruflo@latest",
+          "mcp",
+          "start"
         ],
         "command": "npx",
-        "env": {},
-        "type": "stdio"
-      }
-    },
-    "~/Documents/recodee/agents-hivemind": {
-      "colony": {
-        "args": [
-          "-lc",
-          "exec colony mcp"
-        ],
-        "command": "bash",
-        "env": {},
-        "type": "stdio"
-      }
-    },
-    "~/brain": {
-      "gbrain": {
-        "args": [
-          "serve"
-        ],
-        "command": "gbrain",
         "env": {},
         "type": "stdio"
       }

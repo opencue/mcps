@@ -48,6 +48,16 @@ Server key: `servers`
 | `gitea` | `~/.local/bin/gitea-mcp` | 4 | `GITEA_ACCESS_TOKEN` |
 | `react-grab-mcp` | `npx` | 3 | - |
 
+## claude_runtime per-project
+
+Source: `~/.claude.json` (`projects[*].mcpServers`)
+
+### `~`
+
+| Server | Command/type | Args | Env keys |
+| --- | --- | ---: | --- |
+| `ruflo` | `npx` | 3 | - |
+
 ## plugins
 
 Sources: `~/.claude/settings.json` (enabled set + marketplaces) + `~/.claude/plugins/cache` (latest cached version's manifest)
