@@ -700,20 +700,21 @@ async def marva_plan_create(
     """
     if not title:
         raise BlogError("title is required")
-    body: dict[str, Any] = {
-        "action": "create",
+    article: dict[str, Any] = {
         "planned_date": _validate_iso_date(planned_date),
         "title": title,
         "tone": _validate_tone(tone),
     }
     if brief is not None:
-        body["brief"] = brief
+        article["brief"] = brief
     if volume is not None:
-        body["volume"] = int(volume)
+        article["volume"] = int(volume)
     if difficulty is not None:
-        body["difficulty"] = _validate_difficulty(difficulty)
+        article["difficulty"] = _validate_difficulty(difficulty)
     return await _admin_request(
-        "POST", "/admin/content-plan/articles", json_body=body
+        "POST",
+        "/admin/content-plan/articles",
+        json_body={"action": "create", "article": article},
     )
 
 
@@ -730,25 +731,27 @@ async def marva_plan_update(id: str, patch: dict) -> dict:
     if not isinstance(patch, dict) or not patch:
         raise BlogError("patch must be a non-empty object")
 
-    body: dict[str, Any] = {"action": "update", "id": id}
+    normalized: dict[str, Any] = {}
     for key, value in patch.items():
         if value is None:
-            body[key] = None
+            normalized[key] = None
             continue
         if key == "tone":
-            body[key] = _validate_tone(value)
+            normalized[key] = _validate_tone(value)
         elif key == "status":
-            body[key] = _validate_status(value)
+            normalized[key] = _validate_status(value)
         elif key == "difficulty":
-            body[key] = _validate_difficulty(value)
+            normalized[key] = _validate_difficulty(value)
         elif key == "planned_date":
-            body[key] = _validate_iso_date(value)
+            normalized[key] = _validate_iso_date(value)
         elif key == "volume":
-            body[key] = int(value)
+            normalized[key] = int(value)
         else:
-            body[key] = value
+            normalized[key] = value
     return await _admin_request(
-        "POST", "/admin/content-plan/articles", json_body=body
+        "POST",
+        "/admin/content-plan/articles",
+        json_body={"action": "update", "id": id, "patch": normalized},
     )
 
 

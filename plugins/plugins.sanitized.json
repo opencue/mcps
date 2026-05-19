@@ -89,6 +89,19 @@
       "mcpServers": {},
       "name": "superpowers",
       "version": "5.1.0"
+    },
+    "vercel@claude-plugins-official": {
+      "enabled": true,
+      "marketplace": "claude-plugins-official",
+      "mcpServers": {
+        "vercel": {
+          "note": "Official Vercel MCP server. Uses OAuth \u2014 on first connection the agent will be prompted to authorize via Vercel. Read-only in initial release: search docs, list projects/deployments, inspect logs.",
+          "type": "http",
+          "url": "https://mcp.vercel.com"
+        }
+      },
+      "name": "vercel",
+      "version": "0.42.1"
     }
   },
   "source": "claude_plugins",

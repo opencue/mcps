@@ -63,3 +63,4 @@ Sources: `~/.claude/settings.json` (enabled set + marketplaces) + `~/.claude/plu
 | `product-skills` | `claude-code-skills` | `2.3.3` | · | - |
 | `rust-analyzer-lsp` | `claude-plugins-official` | `1.0.0` | · | - |
 | `superpowers` | `claude-plugins-official` | `5.1.0` | ✓ | - |
+| `vercel` | `claude-plugins-official` | `0.42.1` | ✓ | `vercel` |
