@@ -9,7 +9,7 @@
         "mcp"
       ],
       "command": "~/.nvm/versions/node/v22.22.0/bin/colony",
-      "enabled": false,
+      "enabled": true,
       "env": {
         "COLONY_HOME": "<redacted>",
         "COLONY_MCP_METRICS_MAX": "<redacted>",
