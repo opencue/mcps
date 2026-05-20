@@ -1,5 +1,5 @@
 {
-  "mcp_count": 15,
+  "mcp_count": 17,
   "mcps": {
     "Higgsfield": {
       "agent_surfaces": [
@@ -159,6 +159,17 @@
       "skills": [],
       "source_url": ""
     },
+    "envoult": {
+      "agent_surfaces": [],
+      "health_command": "",
+      "homepage": "",
+      "install": "",
+      "owners": [],
+      "package": "",
+      "page": "mcps/envoult/skills.md",
+      "skills": [],
+      "source_url": ""
+    },
     "gbrain": {
       "agent_surfaces": [],
       "health_command": "",
@@ -258,6 +269,17 @@
       "owners": [],
       "package": "",
       "page": "mcps/obsidian-vault/skills.md",
+      "skills": [],
+      "source_url": ""
+    },
+    "playwright": {
+      "agent_surfaces": [],
+      "health_command": "",
+      "homepage": "",
+      "install": "",
+      "owners": [],
+      "package": "",
+      "page": "mcps/playwright/skills.md",
       "skills": [],
       "source_url": ""
     },

@@ -9,6 +9,7 @@ Skills root: `~/Documents/soul/skills/skills`
 | `colony` | [link](https://github.com/recodeee/colony) | 3 | `mcps/colony/skills.md` |
 | `coolify` | [link](https://github.com/StuMason/coolify-mcp) | 3 | `mcps/coolify/skills.md` |
 | `drawio` | - | 0 | `mcps/drawio/skills.md` |
+| `envoult` | - | 0 | `mcps/envoult/skills.md` |
 | `gbrain` | - | 0 | `mcps/gbrain/skills.md` |
 | `gitea` | [link](https://github.com/seepine/gitea-mcp) | 2 | `mcps/gitea/skills.md` |
 | `Higgsfield` | [link](https://mcp.higgsfield.ai/mcp) | 8 | `mcps/higgsfield/skills.md` |
@@ -16,6 +17,7 @@ Skills root: `~/Documents/soul/skills/skills`
 | `letsfg` | [link](https://github.com/LetsFG/LetsFG) | 1 | `mcps/letsfg/skills.md` |
 | `marva-blog` | - | 0 | `mcps/marva-blog/skills.md` |
 | `obsidian-vault` | - | 0 | `mcps/obsidian-vault/skills.md` |
+| `playwright` | - | 0 | `mcps/playwright/skills.md` |
 | `polymarket-live` | - | 0 | `mcps/polymarket-live/skills.md` |
 | `react-grab-mcp` | [link](https://www.npmjs.com/package/@react-grab/mcp) | 4 | `mcps/react-grab-mcp/skills.md` |
 | `recodee` | - | 0 | `mcps/recodee/skills.md` |

@@ -34,6 +34,11 @@
       "env": {},
       "type": "stdio"
     },
+    "envoult": {
+      "args": [],
+      "command": "~/Documents/soul/bin/envoultd",
+      "env": {}
+    },
     "gbrain": {
       "command": "~/.local/bin/gbrain-mcp-wrapper.sh"
     },
@@ -64,6 +69,15 @@
         "~/Documents/ai-tools/claude-obsidian"
       ],
       "command": "~/.codex/bin/mcpvault-stdio-keepalive.mjs"
+    },
+    "playwright": {
+      "args": [
+        "-y",
+        "@playwright/mcp@latest",
+        "--headless"
+      ],
+      "command": "npx",
+      "env": {}
     },
     "polymarket-live": {
       "args": [
