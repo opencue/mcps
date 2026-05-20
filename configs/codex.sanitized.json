@@ -1,6 +1,9 @@
 {
   "server_key": "mcp_servers",
   "servers": {
+    "Higgsfield": {
+      "url": "https://mcp.higgsfield.ai/mcp"
+    },
     "colony": {
       "args": [
         "mcp"
@@ -15,6 +18,57 @@
         "NODE_OPTIONS": "<redacted>"
       },
       "startup_timeout_sec": 60
+    },
+    "coolify": {
+      "args": [
+        "-lc",
+        "<redacted secret-loading argument>"
+      ],
+      "command": "bash"
+    },
+    "gbrain": {
+      "command": "~/.local/bin/gbrain-mcp-wrapper.sh"
+    },
+    "marva-blog": {
+      "args": [
+        "run",
+        "--quiet",
+        "--script",
+        "~/Documents/soul/mcps/mcps/marva-blog/server.py"
+      ],
+      "command": "~/.local/bin/uv"
+    },
+    "obsidian-vault": {
+      "args": [
+        "~/Documents/ai-tools/claude-obsidian"
+      ],
+      "command": "~/.codex/bin/mcpvault-stdio-keepalive.mjs"
+    },
+    "polymarket-live": {
+      "args": [
+        "run",
+        "--quiet",
+        "--script",
+        "~/Documents/soul/mcps/mcps/polymarket-live/server.py"
+      ],
+      "command": "~/.local/bin/uv"
+    },
+    "ruflo": {
+      "args": [
+        "ruflo@latest",
+        "mcp",
+        "start"
+      ],
+      "command": "npx"
+    },
+    "soul-skills": {
+      "args": [
+        "run",
+        "--quiet",
+        "--script",
+        "~/Documents/soul/mcps/mcps/soul-skills/server.py"
+      ],
+      "command": "~/.local/bin/uv"
     }
   },
   "source": "codex",

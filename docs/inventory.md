@@ -9,7 +9,15 @@ Server key: `mcp_servers`
 
 | Server | Command/type | Args | Env keys |
 | --- | --- | ---: | --- |
+| `Higgsfield` | `https://mcp.higgsfield.ai/mcp` | 0 | - |
 | `colony` | `~/.nvm/versions/node/v22.22.0/bin/colony` | 1 | `COLONY_HOME`, `COLONY_MCP_METRICS_MAX`, `COLONY_OBSERVATIONS_TTL_DAYS`, `COLONY_SESSION_TTL_DAYS`, `NODE_OPTIONS` |
+| `coolify` | `bash` | 2 | - |
+| `gbrain` | `~/.local/bin/gbrain-mcp-wrapper.sh` | 0 | - |
+| `marva-blog` | `~/.local/bin/uv` | 4 | - |
+| `obsidian-vault` | `~/.codex/bin/mcpvault-stdio-keepalive.mjs` | 1 | - |
+| `polymarket-live` | `~/.local/bin/uv` | 4 | - |
+| `ruflo` | `npx` | 3 | - |
+| `soul-skills` | `~/.local/bin/uv` | 4 | - |
 
 ## claude
 

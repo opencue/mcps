@@ -19,4 +19,5 @@ Skills root: `~/Documents/soul/skills/skills`
 | `polymarket-live` | - | 0 | `mcps/polymarket-live/skills.md` |
 | `react-grab-mcp` | [link](https://www.npmjs.com/package/@react-grab/mcp) | 4 | `mcps/react-grab-mcp/skills.md` |
 | `recodee` | - | 0 | `mcps/recodee/skills.md` |
+| `ruflo` | - | 0 | `mcps/ruflo/skills.md` |
 | `soul-skills` | - | 0 | `mcps/soul-skills/skills.md` |
