@@ -9,7 +9,7 @@
         "mcp"
       ],
       "command": "~/.nvm/versions/node/v22.22.0/bin/colony",
-      "enabled": true,
+      "enabled": false,
       "env": {
         "COLONY_HOME": "<redacted>",
         "COLONY_MCP_METRICS_MAX": "<redacted>",
@@ -27,7 +27,8 @@
       "command": "bash"
     },
     "gbrain": {
-      "command": "~/.local/bin/gbrain-mcp-wrapper.sh"
+      "command": "~/.local/bin/gbrain-mcp-wrapper.sh",
+      "enabled": false
     },
     "marva-blog": {
       "args": [
@@ -36,13 +37,15 @@
         "--script",
         "~/Documents/soul/mcps/mcps/marva-blog/server.py"
       ],
-      "command": "~/.local/bin/uv"
+      "command": "~/.local/bin/uv",
+      "enabled": false
     },
     "obsidian-vault": {
       "args": [
         "~/Documents/ai-tools/claude-obsidian"
       ],
-      "command": "~/.codex/bin/mcpvault-stdio-keepalive.mjs"
+      "command": "~/.codex/bin/mcpvault-stdio-keepalive.mjs",
+      "enabled": false
     },
     "polymarket-live": {
       "args": [
@@ -51,7 +54,8 @@
         "--script",
         "~/Documents/soul/mcps/mcps/polymarket-live/server.py"
       ],
-      "command": "~/.local/bin/uv"
+      "command": "~/.local/bin/uv",
+      "enabled": false
     },
     "ruflo": {
       "args": [
@@ -59,7 +63,8 @@
         "mcp",
         "start"
       ],
-      "command": "npx"
+      "command": "npx",
+      "enabled": false
     },
     "soul-skills": {
       "args": [
@@ -68,7 +73,8 @@
         "--script",
         "~/Documents/soul/mcps/mcps/soul-skills/server.py"
       ],
-      "command": "~/.local/bin/uv"
+      "command": "~/.local/bin/uv",
+      "enabled": false
     }
   },
   "source": "codex",
