@@ -1,6 +1,17 @@
 {
   "server_key": "mcpServers",
-  "servers": {},
+  "servers": {
+    "kroschuorder": {
+      "args": [
+        "tsx",
+        "~/Documents/Kroschuorder/mcp/server.ts"
+      ],
+      "command": "npx",
+      "env": {
+        "KROSCHUORDER_API_URL": "<redacted>"
+      }
+    }
+  },
   "source": "claude",
   "source_path": "~/.claude/settings.json"
 }

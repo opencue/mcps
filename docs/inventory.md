@@ -24,7 +24,9 @@ Server key: `mcp_servers`
 Source: `~/.claude/settings.json`
 Server key: `mcpServers`
 
-No MCP servers found.
+| Server | Command/type | Args | Env keys |
+| --- | --- | ---: | --- |
+| `kroschuorder` | `npx` | 2 | `KROSCHUORDER_API_URL` |
 
 ## claude_runtime
 
