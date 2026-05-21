@@ -9,6 +9,7 @@ Server key: `mcp_servers`
 
 | Server | Command/type | Args | Env keys |
 | --- | --- | ---: | --- |
+| `codegraph` | `codegraph` | 2 | - |
 | `colony` | `~/.nvm/versions/node/v22.22.0/bin/colony` | 1 | `COLONY_HOME`, `COLONY_MCP_METRICS_MAX`, `COLONY_OBSERVATIONS_TTL_DAYS`, `COLONY_SESSION_TTL_DAYS`, `NODE_OPTIONS` |
 | `coolify` | `bash` | 2 | - |
 | `gbrain` | `~/.local/bin/gbrain-mcp-wrapper.sh` | 0 | - |
@@ -35,6 +36,7 @@ Server key: `mcpServers`
 | Server | Command/type | Args | Env keys |
 | --- | --- | ---: | --- |
 | `Higgsfield` | `http` | 0 | - |
+| `codegraph` | `codegraph` | 2 | - |
 | `colony` | `~/.nvm/versions/node/v22.22.0/bin/colony` | 1 | `COLONY_HOME`, `COLONY_MCP_METRICS_MAX`, `COLONY_OBSERVATIONS_TTL_DAYS`, `COLONY_SESSION_TTL_DAYS`, `NODE_OPTIONS` |
 | `coolify` | `bash` | 2 | - |
 | `drawio` | `npx` | 2 | - |

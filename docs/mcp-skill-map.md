@@ -6,6 +6,7 @@ Skills root: `~/Documents/soul/skills/skills`
 
 | MCP | Source | Related skills | Page |
 | --- | --- | ---: | --- |
+| `codegraph` | - | 0 | `mcps/codegraph/skills.md` |
 | `colony` | [link](https://github.com/recodeee/colony) | 3 | `mcps/colony/skills.md` |
 | `coolify` | [link](https://github.com/StuMason/coolify-mcp) | 3 | `mcps/coolify/skills.md` |
 | `drawio` | - | 0 | `mcps/drawio/skills.md` |

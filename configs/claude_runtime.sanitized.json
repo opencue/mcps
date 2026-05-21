@@ -5,6 +5,14 @@
       "type": "http",
       "url": "https://mcp.higgsfield.ai/mcp"
     },
+    "codegraph": {
+      "args": [
+        "serve",
+        "--mcp"
+      ],
+      "command": "codegraph",
+      "type": "stdio"
+    },
     "colony": {
       "args": [
         "mcp"

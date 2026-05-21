@@ -1,5 +1,5 @@
 {
-  "mcp_count": 18,
+  "mcp_count": 19,
   "mcps": {
     "Higgsfield": {
       "agent_surfaces": [
@@ -72,6 +72,17 @@
         }
       ],
       "source_url": "https://mcp.higgsfield.ai/mcp"
+    },
+    "codegraph": {
+      "agent_surfaces": [],
+      "health_command": "",
+      "homepage": "",
+      "install": "",
+      "owners": [],
+      "package": "",
+      "page": "mcps/codegraph/skills.md",
+      "skills": [],
+      "source_url": ""
     },
     "colony": {
       "agent_surfaces": [

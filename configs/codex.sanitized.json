@@ -1,6 +1,13 @@
 {
   "server_key": "mcp_servers",
   "servers": {
+    "codegraph": {
+      "args": [
+        "serve",
+        "--mcp"
+      ],
+      "command": "codegraph"
+    },
     "colony": {
       "args": [
         "mcp"
