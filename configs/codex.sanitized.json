@@ -1,9 +1,6 @@
 {
   "server_key": "mcp_servers",
   "servers": {
-    "Higgsfield": {
-      "url": "https://mcp.higgsfield.ai/mcp"
-    },
     "colony": {
       "args": [
         "mcp"

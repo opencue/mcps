@@ -15,7 +15,7 @@
   },
   "plugins": {
     "claude-mem@thedotmack": {
-      "enabled": true,
+      "enabled": false,
       "marketplace": "thedotmack",
       "mcpServers": {
         "mcp-search": {

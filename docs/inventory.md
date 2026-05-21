@@ -9,7 +9,6 @@ Server key: `mcp_servers`
 
 | Server | Command/type | Args | Env keys |
 | --- | --- | ---: | --- |
-| `Higgsfield` | `https://mcp.higgsfield.ai/mcp` | 0 | - |
 | `colony` | `~/.nvm/versions/node/v22.22.0/bin/colony` | 1 | `COLONY_HOME`, `COLONY_MCP_METRICS_MAX`, `COLONY_OBSERVATIONS_TTL_DAYS`, `COLONY_SESSION_TTL_DAYS`, `NODE_OPTIONS` |
 | `coolify` | `bash` | 2 | - |
 | `gbrain` | `~/.local/bin/gbrain-mcp-wrapper.sh` | 0 | - |
@@ -76,7 +75,7 @@ Sources: `~/.claude/settings.json` (enabled set + marketplaces) + `~/.claude/plu
 
 | Plugin | Marketplace | Version | Enabled | MCP servers |
 | --- | --- | --- | :---: | --- |
-| `claude-mem` | `thedotmack` | `13.2.0` | ✓ | `mcp-search` |
+| `claude-mem` | `thedotmack` | `13.2.0` | · | `mcp-search` |
 | `engineering-advanced-skills` | `claude-code-skills` | `2.4.4` | · | - |
 | `engineering-skills` | `claude-code-skills` | `2.2.3` | · | - |
 | `frontend-design` | `claude-plugins-official` | `unknown` | ✓ | - |
