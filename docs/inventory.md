@@ -71,6 +71,12 @@ Source: `~/.claude.json` (`projects[*].mcpServers`)
 | --- | --- | ---: | --- |
 | `ruflo` | `npx` | 3 | - |
 
+### `~/Documents/medusa-shops/szaloniroda/marva`
+
+| Server | Command/type | Args | Env keys |
+| --- | --- | ---: | --- |
+| `resend` | `npx` | 2 | `RESEND_API_KEY` |
+
 ## plugins
 
 Sources: `~/.claude/settings.json` (enabled set + marketplaces) + `~/.claude/plugins/cache` (latest cached version's manifest)

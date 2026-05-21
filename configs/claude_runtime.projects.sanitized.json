@@ -11,6 +11,19 @@
         "env": {},
         "type": "stdio"
       }
+    },
+    "~/Documents/medusa-shops/szaloniroda/marva": {
+      "resend": {
+        "args": [
+          "-y",
+          "resend-mcp"
+        ],
+        "command": "npx",
+        "env": {
+          "RESEND_API_KEY": "<redacted>"
+        },
+        "type": "stdio"
+      }
     }
   },
   "server_key": "projects[*].mcpServers",
