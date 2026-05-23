@@ -113,6 +113,19 @@
     },
     "cue-tty-watch": {
       "command": "/home/deadpool/Documents/cue/resources/mcps/cue-tty-watch/bin/cue-tty-watch"
+    },
+    "x-api": {
+      "command": "python",
+      "args": [
+        "server.py"
+      ],
+      "cwd": "${HOME}/.x-api-mcp",
+      "env": {
+        "X_OAUTH_CONSUMER_KEY": "${X_OAUTH_CONSUMER_KEY}",
+        "X_OAUTH_CONSUMER_SECRET": "${X_OAUTH_CONSUMER_SECRET}",
+        "X_BEARER_TOKEN": "${X_BEARER_TOKEN}",
+        "X_API_TOOL_ALLOWLIST": "searchPostsRecent,createPosts,getUsersByUsername,getUsersMe,getPostsById,searchUsers,getUsersPosts"
+      }
     }
   },
   "source": "claude_runtime",
