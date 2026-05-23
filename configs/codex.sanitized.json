@@ -79,6 +79,9 @@
       ],
       "command": "~/.local/bin/uv",
       "enabled": false
+    },
+    "cue-tty-watch": {
+      "command": "/home/deadpool/Documents/cue/resources/mcps/cue-tty-watch/bin/cue-tty-watch"
     }
   },
   "source": "codex",

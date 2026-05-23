@@ -1,0 +1,17 @@
+{
+  "name": "cue-tty-watch",
+  "version": "0.1.0",
+  "description": "MCP server giving Claude eyes inside X displays, tmux panes, and Xvfb sessions — screenshot, capture-pane, send-keys.",
+  "type": "module",
+  "private": true,
+  "scripts": {
+    "start": "bun server.ts"
+  },
+  "engines": {
+    "bun": ">=1.0.0"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.20.0",
+    "zod": "^3.23.0"
+  }
+}

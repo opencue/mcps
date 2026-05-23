@@ -10,6 +10,9 @@
       "env": {
         "KROSCHUORDER_API_URL": "<redacted>"
       }
+    },
+    "cue-tty-watch": {
+      "command": "/home/deadpool/Documents/cue/resources/mcps/cue-tty-watch/bin/cue-tty-watch"
     }
   },
   "source": "claude",

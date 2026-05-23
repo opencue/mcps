@@ -110,6 +110,9 @@
         "~/Documents/soul/mcps/mcps/soul-skills/server.py"
       ],
       "command": "~/.local/bin/uv"
+    },
+    "cue-tty-watch": {
+      "command": "/home/deadpool/Documents/cue/resources/mcps/cue-tty-watch/bin/cue-tty-watch"
     }
   },
   "source": "claude_runtime",
