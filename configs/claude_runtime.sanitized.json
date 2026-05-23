@@ -127,6 +127,20 @@
         "X_ACCESS_TOKEN": "${X_ACCESS_TOKEN}",
         "X_ACCESS_TOKEN_SECRET": "${X_ACCESS_TOKEN_SECRET}"
       }
+    },
+    "reddit": {
+      "command": "npx",
+      "args": [
+        "reddit-mcp-server"
+      ],
+      "env": {
+        "REDDIT_CLIENT_ID": "${REDDIT_CLIENT_ID}",
+        "REDDIT_CLIENT_SECRET": "${REDDIT_CLIENT_SECRET}",
+        "REDDIT_USERNAME": "${REDDIT_USERNAME}",
+        "REDDIT_PASSWORD": "${REDDIT_PASSWORD}",
+        "REDDIT_SAFE_MODE": "standard",
+        "REDDIT_AUTH_MODE": "auto"
+      }
     }
   },
   "source": "claude_runtime",
