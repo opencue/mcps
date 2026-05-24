@@ -155,6 +155,17 @@
         "GOOGLE_PROJECT_ID": "${GOOGLE_PROJECT_ID}",
         "GOOGLE_ADS_DEVELOPER_TOKEN": "${GOOGLE_ADS_DEVELOPER_TOKEN}"
       }
+    },
+    "meta-ads": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "meta-ads-mcp@latest"
+      ],
+      "env": {
+        "META_ACCESS_TOKEN": "${META_ACCESS_TOKEN}",
+        "META_AD_ACCOUNT_ID": "${META_AD_ACCOUNT_ID}"
+      }
     }
   },
   "source": "claude_runtime",
