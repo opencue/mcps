@@ -1,6 +1,6 @@
 # cue/mcps — MCP Server Registry
 
-> The MCP server configurations used by [cue](https://github.com/recodeee/cue). Each profile references servers from this registry by ID.
+> The MCP server configurations used by [cue](https://github.com/opencue/cue). Each profile references servers from this registry by ID.
 
 ## What's here
 
@@ -52,5 +52,5 @@ Configs are **sanitized** — no API keys, tokens, or secrets. Environment varia
 
 ## Related
 
-- [cue](https://github.com/recodeee/cue) — the profile manager that consumes this registry
+- [cue](https://github.com/opencue/cue) — the profile manager that consumes this registry
 - [resources/skills](../skills/) — the skill library
