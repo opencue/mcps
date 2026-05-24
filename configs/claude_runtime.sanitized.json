@@ -166,6 +166,14 @@
         "META_ACCESS_TOKEN": "${META_ACCESS_TOKEN}",
         "META_AD_ACCOUNT_ID": "${META_AD_ACCOUNT_ID}"
       }
+    },
+    "mapi-devdocs": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "mcp-remote",
+        "https://merchantapi.googleapis.com/devdocs/mcp"
+      ]
     }
   },
   "source": "claude_runtime",
