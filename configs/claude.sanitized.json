@@ -14,6 +14,9 @@
     "cue-tty-watch": {
       "command": "/home/deadpool/Documents/cue/resources/mcps/cue-tty-watch/bin/cue-tty-watch"
     },
+    "agentshield": {
+      "command": "/home/deadpool/Documents/cue/resources/mcps/agentshield/bin/agentshield"
+    },
     "x-api": {
       "command": "npm",
       "args": [
@@ -36,6 +39,35 @@
         "trendradar-mcp"
       ],
       "env": {}
+    },
+    "mapi-devdocs": {
+      "type": "http",
+      "url": "https://merchantapi.googleapis.com/devdocs/mcp/"
+    },
+    "mitre-attack": {
+      "command": "/home/deadpool/.local/bin/mitre-attack-mcp",
+      "args": [],
+      "env": {}
+    },
+    "cve-search": {
+      "command": "uv",
+      "args": [
+        "--directory",
+        "/home/deadpool/.config/cue/cache/cve-search_mcp",
+        "run",
+        "main.py"
+      ],
+      "env": {}
+    },
+    "shodan": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "@burtthecoder/mcp-shodan"
+      ],
+      "env": {
+        "SHODAN_API_KEY": "${SHODAN_API_KEY}"
+      }
     }
   },
   "source": "claude",

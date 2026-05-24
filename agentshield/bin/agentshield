@@ -1,0 +1,15 @@
+#!/usr/bin/env bash
+# agentshield-mcp — launcher shim. Resolves bun at runtime.
+set -e
+
+if [ -x "$HOME/.bun/bin/bun" ]; then
+    BUN="$HOME/.bun/bin/bun"
+elif command -v bun >/dev/null 2>&1; then
+    BUN="$(command -v bun)"
+else
+    echo "agentshield-mcp: bun not found — install from https://bun.sh" >&2
+    exit 1
+fi
+
+DIR="$(dirname "$(readlink -f "$0")")/.."
+exec "$BUN" run "$DIR/server.ts"

@@ -1,0 +1,17 @@
+{
+  "name": "agentshield-mcp",
+  "version": "0.1.0",
+  "description": "MCP wrapper around ecc-agentshield — scan Claude Code / agent configs for vulnerabilities",
+  "type": "module",
+  "private": true,
+  "scripts": {
+    "start": "bun server.ts"
+  },
+  "engines": {
+    "bun": ">=1.0.0"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.20.0",
+    "zod": "^3.23.0"
+  }
+}
