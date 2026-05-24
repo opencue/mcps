@@ -27,6 +27,15 @@
         "X_ACCESS_TOKEN": "${X_ACCESS_TOKEN}",
         "X_ACCESS_TOKEN_SECRET": "${X_ACCESS_TOKEN_SECRET}"
       }
+    },
+    "trendradar": {
+      "command": "uvx",
+      "args": [
+        "--from",
+        "git+https://github.com/sansan0/TrendRadar.git",
+        "trendradar-mcp"
+      ],
+      "env": {}
     }
   },
   "source": "claude",
