@@ -13,6 +13,20 @@
     },
     "cue-tty-watch": {
       "command": "/home/deadpool/Documents/cue/resources/mcps/cue-tty-watch/bin/cue-tty-watch"
+    },
+    "x-api": {
+      "command": "npm",
+      "args": [
+        "start"
+      ],
+      "cwd": "${HOME}/.x-api-mcp",
+      "env": {
+        "X_API_KEY": "${X_API_KEY}",
+        "X_API_SECRET": "${X_API_SECRET}",
+        "X_BEARER_TOKEN": "${X_BEARER_TOKEN}",
+        "X_ACCESS_TOKEN": "${X_ACCESS_TOKEN}",
+        "X_ACCESS_TOKEN_SECRET": "${X_ACCESS_TOKEN_SECRET}"
+      }
     }
   },
   "source": "claude",
