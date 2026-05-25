@@ -68,6 +68,10 @@
       "env": {
         "SHODAN_API_KEY": "${SHODAN_API_KEY}"
       }
+    },
+    "postiz": {
+      "type": "http",
+      "url": "http://localhost:4007/api/mcp/${POSTIZ_API_KEY}"
     }
   },
   "source": "claude",
