@@ -1,6 +1,31 @@
 {
   "server_key": "mcpServers",
   "servers": {
+    "postgres-pro": {
+      "command": "uvx",
+      "args": ["postgres-mcp", "--access-mode=restricted"],
+      "env": {
+        "DATABASE_URI": "${DATABASE_URI}"
+      }
+    },
+    "supabase": {
+      "command": "npx",
+      "args": ["-y", "@supabase/mcp-server-supabase@latest", "--read-only"],
+      "env": {
+        "SUPABASE_ACCESS_TOKEN": "${SUPABASE_ACCESS_TOKEN}"
+      }
+    },
+    "github": {
+      "command": "docker",
+      "args": ["run", "-i", "--rm", "-e", "GITHUB_PERSONAL_ACCESS_TOKEN", "ghcr.io/github/github-mcp-server"],
+      "env": {
+        "GITHUB_PERSONAL_ACCESS_TOKEN": "${GITHUB_PERSONAL_ACCESS_TOKEN}"
+      }
+    },
+    "playwright": {
+      "command": "npx",
+      "args": ["-y", "@playwright/mcp@latest"]
+    },
     "kroschuorder": {
       "args": [
         "tsx",
@@ -16,6 +41,22 @@
     },
     "agentshield": {
       "command": "/home/deadpool/Documents/cue/resources/mcps/agentshield/bin/agentshield"
+    },
+    "lightpanda": {
+      "command": "/home/deadpool/lightpanda",
+      "args": [
+        "mcp"
+      ]
+    },
+    "gbrain": {
+      "command": "/home/deadpool/.local/bin/gbrain-mcp-wrapper.sh"
+    },
+    "secret-mcp": {
+      "command": "bash",
+      "args": [
+        "-lc",
+        "cd /home/deadpool/Documents/recodee/tools/secret-mcp && export INFISICAL_API_URL=\"${INFISICAL_API_URL:-http://127.0.0.1:8089}\" INFISICAL_WORKSPACE_ID=\"${INFISICAL_WORKSPACE_ID:-}\" INFISICAL_ENVIRONMENT=\"${INFISICAL_ENVIRONMENT:-dev}\" INFISICAL_TOKEN_FILE=\"${INFISICAL_TOKEN_FILE:-$HOME/.config/recodee/infisical-token}\" INFISICAL_SECRET_REFRESH_SECONDS=\"${INFISICAL_SECRET_REFRESH_SECONDS:-300}\" SECRET_MCP_AGENT_IDENTITY=\"${SECRET_MCP_AGENT_IDENTITY:-${USER:-unknown}@${HOSTNAME:-localhost}}\"; exec /home/deadpool/Documents/recodee/.venv/bin/python -m secret_mcp"
+      ]
     },
     "x-api": {
       "command": "npm",
@@ -56,6 +97,15 @@
         "/home/deadpool/.config/cue/cache/cve-search_mcp",
         "run",
         "main.py"
+      ],
+      "env": {}
+    },
+    "hexstrike-ai": {
+      "command": "/home/deadpool/.config/cue/cache/hexstrike-ai/hexstrike-env/bin/python3",
+      "args": [
+        "/home/deadpool/.config/cue/cache/hexstrike-ai/hexstrike_mcp.py",
+        "--server",
+        "http://localhost:8888"
       ],
       "env": {}
     },
@@ -101,9 +151,53 @@
         "GOOGLE_PROJECT_ID": "${GOOGLE_PROJECT_ID}"
       }
     },
+    "google-drive-mcp": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "@piotr-agier/google-drive-mcp"
+      ],
+      "env": {
+        "GOOGLE_DRIVE_OAUTH_CREDENTIALS": "${GOOGLE_DRIVE_OAUTH_CREDENTIALS}"
+      }
+    },
     "Higgsfield": {
       "type": "http",
       "url": "https://mcp.higgsfield.ai/mcp"
+    },
+    "postgres": {
+      "command": "bash",
+      "args": [
+        "-lc",
+        "exec npx -y @modelcontextprotocol/server-postgres \"${DATABASE_URL}\""
+      ]
+    },
+    "slack": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "@modelcontextprotocol/server-slack"
+      ],
+      "env": {
+        "SLACK_BOT_TOKEN": "${SLACK_BOT_TOKEN}",
+        "SLACK_TEAM_ID": "${SLACK_TEAM_ID}"
+      }
+    },
+    "linear": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "@jerhadf/linear-mcp-server"
+      ],
+      "env": {
+        "LINEAR_API_KEY": "${LINEAR_API_KEY}"
+      }
+    },
+    "aws-docs": {
+      "command": "uvx",
+      "args": [
+        "awslabs.aws-documentation-mcp-server@latest"
+      ]
     }
   },
   "source": "claude",
