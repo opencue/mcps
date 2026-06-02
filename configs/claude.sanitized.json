@@ -1,6 +1,17 @@
 {
   "server_key": "mcpServers",
   "servers": {
+    "strapi-docs": {
+      "type": "http",
+      "url": "https://strapi-docs.mcp.kapa.ai"
+    },
+    "strapi-mcp": {
+      "type": "http",
+      "url": "${STRAPI_URL}/mcp",
+      "headers": {
+        "Authorization": "Bearer ${STRAPI_ADMIN_TOKEN}"
+      }
+    },
     "financial-datasets": {
       "command": "/home/deadpool/.local/bin/uv",
       "args": ["--directory", "/home/deadpool/.config/cue/mcp-servers/financial-datasets", "run", "server.py"],
