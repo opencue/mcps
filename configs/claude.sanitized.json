@@ -1,6 +1,13 @@
 {
   "server_key": "mcpServers",
   "servers": {
+    "financial-datasets": {
+      "command": "/home/deadpool/.local/bin/uv",
+      "args": ["--directory", "/home/deadpool/.config/cue/mcp-servers/financial-datasets", "run", "server.py"],
+      "env": {
+        "FINANCIAL_DATASETS_API_KEY": "${FINANCIAL_DATASETS_API_KEY}"
+      }
+    },
     "postgres-pro": {
       "command": "uvx",
       "args": ["postgres-mcp", "--access-mode=restricted"],
