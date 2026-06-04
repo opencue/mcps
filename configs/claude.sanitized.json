@@ -76,6 +76,17 @@
     "gbrain": {
       "command": "/home/deadpool/.local/bin/gbrain-mcp-wrapper.sh"
     },
+    "figma": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "figma-developer-mcp",
+        "--stdio"
+      ],
+      "env": {
+        "FIGMA_API_KEY": "${FIGMA_API_KEY}"
+      }
+    },
     "secret-mcp": {
       "command": "bash",
       "args": [
