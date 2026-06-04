@@ -27,6 +27,7 @@ Server key: `mcpServers`
 | Server | Command/type | Args | Env keys |
 | --- | --- | ---: | --- |
 | `kroschuorder` | `npx` | 2 | `KROSCHUORDER_API_URL` |
+| `postiz` | `http` | 0 | - |
 
 ## claude_runtime
 
@@ -39,17 +40,18 @@ Server key: `mcpServers`
 | `codegraph` | `codegraph` | 2 | - |
 | `colony` | `~/.nvm/versions/node/v22.22.0/bin/colony` | 1 | `COLONY_HOME`, `COLONY_MCP_METRICS_MAX`, `COLONY_OBSERVATIONS_TTL_DAYS`, `COLONY_SESSION_TTL_DAYS`, `NODE_OPTIONS` |
 | `coolify` | `bash` | 2 | - |
+| `cue` | `bun` | 2 | - |
 | `drawio` | `npx` | 2 | - |
 | `envoult` | `~/Documents/soul/bin/envoultd` | 0 | - |
 | `gbrain` | `~/.local/bin/gbrain-mcp-wrapper.sh` | 0 | - |
 | `hostinger-api` | `bash` | 2 | - |
 | `letsfg` | `~/.nvm/versions/node/v22.22.0/bin/letsfg-mcp` | 0 | `LETSFG_PYTHON` |
-| `marva-blog` | `~/.local/bin/uv` | 4 | - |
 | `obsidian-vault` | `~/.codex/bin/mcpvault-stdio-keepalive.mjs` | 1 | - |
 | `playwright` | `npx` | 3 | - |
 | `polymarket-live` | `~/.local/bin/uv` | 4 | - |
 | `recodee` | `~/Documents/recodee/.venv/bin/recodee-mcp` | 0 | `RECODEE_BASE_URL` |
 | `soul-skills` | `~/.local/bin/uv` | 4 | - |
+| `x-api` | `~/.local/bin/x-api-mcp-wrapper` | 0 | - |
 
 ## vscode
 
@@ -77,6 +79,12 @@ Source: `~/.claude.json` (`projects[*].mcpServers`)
 | --- | --- | ---: | --- |
 | `resend` | `npx` | 2 | `RESEND_API_KEY` |
 
+### `~/Documents/medusa-shops/teherguminet`
+
+| Server | Command/type | Args | Env keys |
+| --- | --- | ---: | --- |
+| `medusa` | `http` | 0 | - |
+
 ## plugins
 
 Sources: `~/.claude/settings.json` (enabled set + marketplaces) + `~/.claude/plugins/cache` (latest cached version's manifest)
@@ -87,9 +95,10 @@ Sources: `~/.claude/settings.json` (enabled set + marketplaces) + `~/.claude/plu
 | `engineering-advanced-skills` | `claude-code-skills` | `2.4.4` | · | - |
 | `engineering-skills` | `claude-code-skills` | `2.2.3` | · | - |
 | `frontend-design` | `claude-plugins-official` | `unknown` | ✓ | - |
-| `marketing-skills` | `claude-code-skills` | `2.2.3` | · | - |
+| `marketing-skills` | `claude-code-skills` | `2.2.3` | ✓ | - |
 | `pm-skills` | `claude-code-skills` | `2.2.3` | · | `atlassian` |
 | `product-skills` | `claude-code-skills` | `2.3.3` | · | - |
+| `resend` | `claude-plugins-official` | `78469829399b` | ✓ | `resend` |
 | `rust-analyzer-lsp` | `claude-plugins-official` | `1.0.0` | · | - |
 | `superpowers` | `claude-plugins-official` | `5.1.0` | ✓ | - |
-| `vercel` | `claude-plugins-official` | `0.42.1` | ✓ | `vercel` |
+| `vercel` | `claude-plugins-official` | `0.43.0` | ✓ | `vercel` |

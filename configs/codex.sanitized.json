@@ -23,6 +23,13 @@
       },
       "startup_timeout_sec": 60
     },
+    "context7": {
+      "args": [
+        "-y",
+        "@upstash/context7-mcp"
+      ],
+      "command": "npx"
+    },
     "coolify": {
       "args": [
         "-lc",

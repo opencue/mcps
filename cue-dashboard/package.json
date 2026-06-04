@@ -1,0 +1,17 @@
+{
+  "name": "cue-dashboard",
+  "version": "0.1.0",
+  "description": "MCP server wrapping the running cue studio dashboard API — query live profiles/skills/MCPs/gaps and run dashboard mutations as tool calls.",
+  "type": "module",
+  "private": true,
+  "scripts": {
+    "start": "bun server.ts"
+  },
+  "engines": {
+    "bun": ">=1.0.0"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.20.0",
+    "zod": "^3.23.0"
+  }
+}

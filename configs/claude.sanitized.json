@@ -44,6 +44,10 @@
       "command": "npx",
       "args": ["-y", "@playwright/mcp@latest"]
     },
+    "context7": {
+      "command": "npx",
+      "args": ["-y", "@upstash/context7-mcp"]
+    },
     "kroschuorder": {
       "args": [
         "tsx",
@@ -56,6 +60,9 @@
     },
     "cue-tty-watch": {
       "command": "/home/deadpool/Documents/cue/resources/mcps/cue-tty-watch/bin/cue-tty-watch"
+    },
+    "cue-dashboard": {
+      "command": "/home/deadpool/Documents/cue/resources/mcps/cue-dashboard/bin/cue-dashboard"
     },
     "agentshield": {
       "command": "/home/deadpool/Documents/cue/resources/mcps/agentshield/bin/agentshield"

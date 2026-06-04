@@ -52,7 +52,7 @@
       "version": "unknown"
     },
     "marketing-skills@claude-code-skills": {
-      "enabled": false,
+      "enabled": true,
       "marketplace": "claude-code-skills",
       "mcpServers": {},
       "name": "marketing-skills",
@@ -76,6 +76,24 @@
       "mcpServers": {},
       "name": "product-skills",
       "version": "2.3.3"
+    },
+    "resend@claude-plugins-official": {
+      "enabled": true,
+      "marketplace": "claude-plugins-official",
+      "mcpServers": {
+        "resend": {
+          "args": [
+            "-y",
+            "resend-mcp"
+          ],
+          "command": "npx",
+          "env": {
+            "RESEND_API_KEY": "<redacted>"
+          }
+        }
+      },
+      "name": "resend",
+      "version": "78469829399b"
     },
     "rust-analyzer-lsp@claude-plugins-official": {
       "enabled": false,
@@ -101,7 +119,7 @@
         }
       },
       "name": "vercel",
-      "version": "0.42.1"
+      "version": "0.43.0"
     }
   },
   "source": "claude_plugins",
