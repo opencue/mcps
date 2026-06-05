@@ -1,6 +1,19 @@
 {
   "server_key": "mcpServers",
   "servers": {
+    "ted-eu": {
+      "type": "http",
+      "url": "https://gateway.pipeworx.io/ted-eu/mcp"
+    },
+    "apify-ted-eu": {
+      "command": "npx",
+      "args": [
+        "mcp-remote",
+        "https://mcp.apify.com/?tools=jeeves_is_my_copilot/ted-eu-tenders-api",
+        "--header",
+        "Authorization: Bearer ${APIFY_API_TOKEN}"
+      ]
+    },
     "strapi-docs": {
       "type": "http",
       "url": "https://strapi-docs.mcp.kapa.ai"
@@ -47,6 +60,10 @@
     "context7": {
       "command": "npx",
       "args": ["-y", "@upstash/context7-mcp"]
+    },
+    "codegraph": {
+      "command": "codegraph",
+      "args": ["serve", "--mcp"]
     },
     "kroschuorder": {
       "args": [
