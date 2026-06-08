@@ -1,6 +1,13 @@
 {
   "server_key": "mcpServers",
   "servers": {
+    "buywhere": {
+      "command": "npx",
+      "args": ["-y", "@buywhere/mcp-server"],
+      "env": {
+        "BUYWHERE_API_KEY": "${BUYWHERE_API_KEY}"
+      }
+    },
     "strapi-docs": {
       "type": "http",
       "url": "https://strapi-docs.mcp.kapa.ai"
