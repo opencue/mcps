@@ -1,10 +1,6 @@
 {
   "server_key": "mcpServers",
   "servers": {
-    "Higgsfield": {
-      "type": "http",
-      "url": "https://mcp.higgsfield.ai/mcp"
-    },
     "codegraph": {
       "args": [
         "serve",
@@ -26,13 +22,6 @@
         "NODE_OPTIONS": "<redacted>"
       }
     },
-    "coolify": {
-      "args": [
-        "-lc",
-        "<redacted secret-loading argument>"
-      ],
-      "command": "bash"
-    },
     "drawio": {
       "args": [
         "-y",
@@ -42,20 +31,8 @@
       "env": {},
       "type": "stdio"
     },
-    "envoult": {
-      "args": [],
-      "command": "~/Documents/soul/bin/envoultd",
-      "env": {}
-    },
     "gbrain": {
       "command": "~/.local/bin/gbrain-mcp-wrapper.sh"
-    },
-    "hostinger-api": {
-      "args": [
-        "-lc",
-        "<redacted secret-loading argument>"
-      ],
-      "command": "bash"
     },
     "letsfg": {
       "command": "~/.nvm/versions/node/v22.22.0/bin/letsfg-mcp",
@@ -87,29 +64,11 @@
       "command": "npx",
       "env": {}
     },
-    "polymarket-live": {
-      "args": [
-        "run",
-        "--quiet",
-        "--script",
-        "~/Documents/soul/mcps/mcps/polymarket-live/server.py"
-      ],
-      "command": "~/.local/bin/uv"
-    },
     "recodee": {
       "command": "~/Documents/recodee/.venv/bin/recodee-mcp",
       "env": {
         "RECODEE_BASE_URL": "<redacted>"
       }
-    },
-    "soul-skills": {
-      "args": [
-        "run",
-        "--quiet",
-        "--script",
-        "~/Documents/soul/mcps/mcps/soul-skills/server.py"
-      ],
-      "command": "~/.local/bin/uv"
     },
     "cue-tty-watch": {
       "command": "/home/deadpool/Documents/cue/resources/mcps/cue-tty-watch/bin/cue-tty-watch"
