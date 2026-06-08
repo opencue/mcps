@@ -30,6 +30,13 @@
       ],
       "command": "npx"
     },
+    "xbot": {
+      "args": [
+        "${HOME}/Documents/x-growth-bot/run-mcp.sh"
+      ],
+      "command": "bash",
+      "enabled": false
+    },
     "coolify": {
       "args": [
         "-lc",

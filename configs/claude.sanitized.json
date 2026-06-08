@@ -108,6 +108,12 @@
         "X_ACCESS_TOKEN_SECRET": "${X_ACCESS_TOKEN_SECRET}"
       }
     },
+    "xbot": {
+      "command": "bash",
+      "args": [
+        "${HOME}/Documents/x-growth-bot/run-mcp.sh"
+      ]
+    },
     "trendradar": {
       "command": "uvx",
       "args": [
