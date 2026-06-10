@@ -3,7 +3,10 @@
   "servers": {
     "buywhere": {
       "command": "npx",
-      "args": ["-y", "@buywhere/mcp-server"],
+      "args": [
+        "-y",
+        "@buywhere/mcp-server"
+      ],
       "env": {
         "BUYWHERE_API_KEY": "${BUYWHERE_API_KEY}"
       }
@@ -21,39 +24,64 @@
     },
     "financial-datasets": {
       "command": "/home/deadpool/.local/bin/uv",
-      "args": ["--directory", "/home/deadpool/.config/cue/mcp-servers/financial-datasets", "run", "server.py"],
+      "args": [
+        "--directory",
+        "/home/deadpool/.config/cue/mcp-servers/financial-datasets",
+        "run",
+        "server.py"
+      ],
       "env": {
         "FINANCIAL_DATASETS_API_KEY": "${FINANCIAL_DATASETS_API_KEY}"
       }
     },
     "postgres-pro": {
       "command": "uvx",
-      "args": ["postgres-mcp", "--access-mode=restricted"],
+      "args": [
+        "postgres-mcp",
+        "--access-mode=restricted"
+      ],
       "env": {
         "DATABASE_URI": "${DATABASE_URI}"
       }
     },
     "supabase": {
       "command": "npx",
-      "args": ["-y", "@supabase/mcp-server-supabase@latest", "--read-only"],
+      "args": [
+        "-y",
+        "@supabase/mcp-server-supabase@latest",
+        "--read-only"
+      ],
       "env": {
         "SUPABASE_ACCESS_TOKEN": "${SUPABASE_ACCESS_TOKEN}"
       }
     },
     "github": {
       "command": "docker",
-      "args": ["run", "-i", "--rm", "-e", "GITHUB_PERSONAL_ACCESS_TOKEN", "ghcr.io/github/github-mcp-server"],
+      "args": [
+        "run",
+        "-i",
+        "--rm",
+        "-e",
+        "GITHUB_PERSONAL_ACCESS_TOKEN",
+        "ghcr.io/github/github-mcp-server"
+      ],
       "env": {
         "GITHUB_PERSONAL_ACCESS_TOKEN": "${GITHUB_PERSONAL_ACCESS_TOKEN}"
       }
     },
     "playwright": {
       "command": "npx",
-      "args": ["-y", "@playwright/mcp@latest"]
+      "args": [
+        "-y",
+        "@playwright/mcp@latest"
+      ]
     },
     "context7": {
       "command": "npx",
-      "args": ["-y", "@upstash/context7-mcp"]
+      "args": [
+        "-y",
+        "@upstash/context7-mcp"
+      ]
     },
     "kroschuorder": {
       "args": [
@@ -247,6 +275,17 @@
       "args": [
         "awslabs.aws-documentation-mcp-server@latest"
       ]
+    },
+    "nanobanana-mcp": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "@ycse/nanobanana-mcp"
+      ],
+      "env": {
+        "GOOGLE_AI_API_KEY": "${GOOGLE_AI_API_KEY}",
+        "NANOBANANA_MODEL": "gemini-3.1-flash-image-preview"
+      }
     }
   },
   "source": "claude",
