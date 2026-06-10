@@ -191,6 +191,28 @@
         "GOOGLE_AI_API_KEY": "${GOOGLE_AI_API_KEY}",
         "NANOBANANA_MODEL": "gemini-3.1-flash-image-preview"
       }
+    },
+    "fetch": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "@modelcontextprotocol/server-fetch"
+      ]
+    },
+    "memory": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "@modelcontextprotocol/server-memory"
+      ]
+    },
+    "filesystem": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "@modelcontextprotocol/server-filesystem",
+        "${HOME}"
+      ]
     }
   },
   "source": "claude_runtime",
