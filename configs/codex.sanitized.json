@@ -146,6 +146,13 @@
         "@modelcontextprotocol/server-filesystem",
         "${HOME}"
       ]
+    },
+    "headroom": {
+      "command": "headroom",
+      "args": [
+        "mcp",
+        "serve"
+      ]
     }
   },
   "source": "codex",
