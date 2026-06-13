@@ -1,0 +1,1 @@
+Context-compression layer for AI agents — compresses tool outputs, logs, files, and RAG chunks before they reach the model (60–95% fewer tokens, same answers). Exposes `headroom_compress`, `headroom_retrieve`, and `headroom_stats` as MCP tools; compression is reversible (originals cached, retrievable on demand). Local-first, Apache 2.0.
