@@ -1,6 +1,19 @@
 {
   "server_key": "mcpServers",
   "servers": {
+    "dataforseo": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "dataforseo-mcp-server@2.8.10"
+      ],
+      "env": {
+        "DATAFORSEO_USERNAME": "${DATAFORSEO_USERNAME}",
+        "DATAFORSEO_PASSWORD": "${DATAFORSEO_PASSWORD}",
+        "ENABLED_MODULES": "AI_OPTIMIZATION,BUSINESS_DATA,SERP",
+        "FIELD_CONFIG_PATH": "/home/deadpool/.config/cue/dataforseo-field-config.json"
+      }
+    },
     "buywhere": {
       "command": "npx",
       "args": [
@@ -215,6 +228,11 @@
         "GOOGLE_ADS_LOGIN_CUSTOMER_ID": "${GOOGLE_ADS_LOGIN_CUSTOMER_ID}"
       }
     },
+    "facebook-ads-mcp": {
+      "command": "/home/deadpool/Documents/cue/resources/ads-cli/facebook-ads-mcp-run.sh",
+      "args": [],
+      "env": {}
+    },
     "google-analytics-mcp": {
       "command": "pipx",
       "args": [
@@ -314,6 +332,13 @@
       "args": [
         "mcp",
         "serve"
+      ]
+    },
+    "ros-mcp": {
+      "command": "uvx",
+      "args": [
+        "ros-mcp",
+        "--transport=stdio"
       ]
     }
   },

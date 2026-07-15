@@ -1,0 +1,1 @@
+robotmcp/ros-mcp-server — native MCP tools for ROS/ROS2 over rosbridge (WebSocket). Run via `uvx ros-mcp --transport=stdio`; connects out to rosbridge (default port 9090) on the robot. Tools appear as `mcp__ros-mcp__*`. https://github.com/robotmcp/ros-mcp-server
