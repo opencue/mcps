@@ -112,6 +112,11 @@
         "GOOGLE_ADS_LOGIN_CUSTOMER_ID": "${GOOGLE_ADS_LOGIN_CUSTOMER_ID}"
       }
     },
+    "facebook-ads-mcp": {
+      "command": "/home/deadpool/Documents/cue/resources/ads-cli/facebook-ads-mcp-run.sh",
+      "args": [],
+      "env": {}
+    },
     "google-analytics-mcp": {
       "command": "pipx",
       "args": [
