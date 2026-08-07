@@ -1,6 +1,18 @@
 {
   "server_key": "mcpServers",
   "servers": {
+    "ted-eu": {
+      "type": "http",
+      "url": "https://gateway.pipeworx.io/ted-eu/mcp"
+    },
+    "apify-ted-eu": {
+      "command": "npx",
+      "args": [
+        "mcp-remote",
+        "https://mcp.apify.com/?tools=jeeves_is_my_copilot/ted-eu-tenders-api",
+        "--header",
+        "Authorization: Bearer ${APIFY_API_TOKEN}"
+      ]
     "dataforseo": {
       "command": "npx",
       "args": [
@@ -93,6 +105,10 @@
       "command": "/home/deadpool/.nvm/versions/node/v22.22.0/bin/context7-mcp",
       "args": [],
       "type": "stdio"
+    },
+    "codegraph": {
+      "command": "codegraph",
+      "args": ["serve", "--mcp"]
     },
     "kroschuorder": {
       "args": [
