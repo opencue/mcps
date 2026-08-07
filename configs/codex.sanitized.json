@@ -30,6 +30,13 @@
       ],
       "command": "npx"
     },
+    "xbot": {
+      "args": [
+        "${HOME}/Documents/x-growth-bot/run-mcp.sh"
+      ],
+      "command": "bash",
+      "enabled": false
+    },
     "coolify": {
       "args": [
         "-lc",
@@ -105,6 +112,11 @@
         "GOOGLE_ADS_LOGIN_CUSTOMER_ID": "${GOOGLE_ADS_LOGIN_CUSTOMER_ID}"
       }
     },
+    "facebook-ads-mcp": {
+      "command": "/home/deadpool/Documents/cue/resources/ads-cli/facebook-ads-mcp-run.sh",
+      "args": [],
+      "env": {}
+    },
     "google-analytics-mcp": {
       "command": "pipx",
       "args": [
@@ -117,6 +129,35 @@
         "GOOGLE_APPLICATION_CREDENTIALS": "${GOOGLE_APPLICATION_CREDENTIALS}",
         "GOOGLE_PROJECT_ID": "${GOOGLE_PROJECT_ID}"
       }
+    },
+    "fetch": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "@modelcontextprotocol/server-fetch"
+      ]
+    },
+    "memory": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "@modelcontextprotocol/server-memory"
+      ]
+    },
+    "filesystem": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "@modelcontextprotocol/server-filesystem",
+        "${HOME}"
+      ]
+    },
+    "headroom": {
+      "command": "headroom",
+      "args": [
+        "mcp",
+        "serve"
+      ]
     }
   },
   "source": "codex",

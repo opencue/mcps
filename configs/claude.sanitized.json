@@ -13,6 +13,28 @@
         "--header",
         "Authorization: Bearer ${APIFY_API_TOKEN}"
       ]
+    "dataforseo": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "dataforseo-mcp-server@2.8.10"
+      ],
+      "env": {
+        "DATAFORSEO_USERNAME": "${DATAFORSEO_USERNAME}",
+        "DATAFORSEO_PASSWORD": "${DATAFORSEO_PASSWORD}",
+        "ENABLED_MODULES": "AI_OPTIMIZATION,BUSINESS_DATA,SERP",
+        "FIELD_CONFIG_PATH": "/home/deadpool/.config/cue/dataforseo-field-config.json"
+      }
+    },
+    "buywhere": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "@buywhere/mcp-server"
+      ],
+      "env": {
+        "BUYWHERE_API_KEY": "${BUYWHERE_API_KEY}"
+      }
     },
     "strapi-docs": {
       "type": "http",
@@ -27,39 +49,62 @@
     },
     "financial-datasets": {
       "command": "/home/deadpool/.local/bin/uv",
-      "args": ["--directory", "/home/deadpool/.config/cue/mcp-servers/financial-datasets", "run", "server.py"],
+      "args": [
+        "--directory",
+        "/home/deadpool/.config/cue/mcp-servers/financial-datasets",
+        "run",
+        "server.py"
+      ],
       "env": {
         "FINANCIAL_DATASETS_API_KEY": "${FINANCIAL_DATASETS_API_KEY}"
       }
     },
     "postgres-pro": {
       "command": "uvx",
-      "args": ["postgres-mcp", "--access-mode=restricted"],
+      "args": [
+        "postgres-mcp",
+        "--access-mode=restricted"
+      ],
       "env": {
         "DATABASE_URI": "${DATABASE_URI}"
       }
     },
     "supabase": {
       "command": "npx",
-      "args": ["-y", "@supabase/mcp-server-supabase@latest", "--read-only"],
+      "args": [
+        "-y",
+        "@supabase/mcp-server-supabase@latest",
+        "--read-only"
+      ],
       "env": {
         "SUPABASE_ACCESS_TOKEN": "${SUPABASE_ACCESS_TOKEN}"
       }
     },
     "github": {
       "command": "docker",
-      "args": ["run", "-i", "--rm", "-e", "GITHUB_PERSONAL_ACCESS_TOKEN", "ghcr.io/github/github-mcp-server"],
+      "args": [
+        "run",
+        "-i",
+        "--rm",
+        "-e",
+        "GITHUB_PERSONAL_ACCESS_TOKEN",
+        "ghcr.io/github/github-mcp-server"
+      ],
       "env": {
         "GITHUB_PERSONAL_ACCESS_TOKEN": "${GITHUB_PERSONAL_ACCESS_TOKEN}"
       }
     },
     "playwright": {
       "command": "npx",
-      "args": ["-y", "@playwright/mcp@latest"]
+      "args": [
+        "-y",
+        "@playwright/mcp@latest"
+      ]
     },
     "context7": {
-      "command": "npx",
-      "args": ["-y", "@upstash/context7-mcp"]
+      "command": "/home/deadpool/.nvm/versions/node/v22.22.0/bin/context7-mcp",
+      "args": [],
+      "type": "stdio"
     },
     "codegraph": {
       "command": "codegraph",
@@ -93,6 +138,17 @@
     "gbrain": {
       "command": "/home/deadpool/.local/bin/gbrain-mcp-wrapper.sh"
     },
+    "figma": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "figma-developer-mcp",
+        "--stdio"
+      ],
+      "env": {
+        "FIGMA_API_KEY": "${FIGMA_API_KEY}"
+      }
+    },
     "secret-mcp": {
       "command": "bash",
       "args": [
@@ -113,6 +169,12 @@
         "X_ACCESS_TOKEN": "${X_ACCESS_TOKEN}",
         "X_ACCESS_TOKEN_SECRET": "${X_ACCESS_TOKEN_SECRET}"
       }
+    },
+    "xbot": {
+      "command": "bash",
+      "args": [
+        "${HOME}/Documents/x-growth-bot/run-mcp.sh"
+      ]
     },
     "trendradar": {
       "command": "uvx",
@@ -180,6 +242,11 @@
         "GOOGLE_ADS_LOGIN_CUSTOMER_ID": "${GOOGLE_ADS_LOGIN_CUSTOMER_ID}"
       }
     },
+    "facebook-ads-mcp": {
+      "command": "/home/deadpool/Documents/cue/resources/ads-cli/facebook-ads-mcp-run.sh",
+      "args": [],
+      "env": {}
+    },
     "google-analytics-mcp": {
       "command": "pipx",
       "args": [
@@ -240,6 +307,64 @@
       "args": [
         "awslabs.aws-documentation-mcp-server@latest"
       ]
+    },
+    "nanobanana-mcp": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "@ycse/nanobanana-mcp"
+      ],
+      "env": {
+        "GOOGLE_AI_API_KEY": "${GOOGLE_AI_API_KEY}",
+        "NANOBANANA_MODEL": "gemini-3.1-flash-image-preview"
+      }
+    },
+    "fetch": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "@modelcontextprotocol/server-fetch"
+      ]
+    },
+    "memory": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "@modelcontextprotocol/server-memory"
+      ]
+    },
+    "filesystem": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "@modelcontextprotocol/server-filesystem",
+        "${HOME}"
+      ]
+    },
+    "headroom": {
+      "command": "headroom",
+      "args": [
+        "mcp",
+        "serve"
+      ]
+    },
+    "ros-mcp": {
+      "command": "uvx",
+      "args": [
+        "ros-mcp",
+        "--transport=stdio"
+      ]
+    },
+    "codegraph": {
+      "command": "codegraph",
+      "args": [
+        "serve",
+        "--mcp"
+      ],
+      "type": "stdio",
+      "env": {
+        "NODE_OPTIONS": "--max-old-space-size=768"
+      }
     }
   },
   "source": "claude",

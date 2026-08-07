@@ -87,6 +87,12 @@
         "X_ACCESS_TOKEN_SECRET": "${X_ACCESS_TOKEN_SECRET}"
       }
     },
+    "xbot": {
+      "command": "bash",
+      "args": [
+        "${HOME}/Documents/x-growth-bot/run-mcp.sh"
+      ]
+    },
     "reddit": {
       "command": "npx",
       "args": [
@@ -132,6 +138,39 @@
         "-y",
         "mcp-remote",
         "https://merchantapi.googleapis.com/devdocs/mcp"
+      ]
+    },
+    "nanobanana-mcp": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "@ycse/nanobanana-mcp"
+      ],
+      "env": {
+        "GOOGLE_AI_API_KEY": "${GOOGLE_AI_API_KEY}",
+        "NANOBANANA_MODEL": "gemini-3.1-flash-image-preview"
+      }
+    },
+    "fetch": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "@modelcontextprotocol/server-fetch"
+      ]
+    },
+    "memory": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "@modelcontextprotocol/server-memory"
+      ]
+    },
+    "filesystem": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "@modelcontextprotocol/server-filesystem",
+        "${HOME}"
       ]
     }
   },
