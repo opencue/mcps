@@ -90,11 +90,9 @@
       ]
     },
     "context7": {
-      "command": "npx",
-      "args": [
-        "-y",
-        "@upstash/context7-mcp"
-      ]
+      "command": "/home/deadpool/.nvm/versions/node/v22.22.0/bin/context7-mcp",
+      "args": [],
+      "type": "stdio"
     },
     "kroschuorder": {
       "args": [
@@ -340,6 +338,17 @@
         "ros-mcp",
         "--transport=stdio"
       ]
+    },
+    "codegraph": {
+      "command": "codegraph",
+      "args": [
+        "serve",
+        "--mcp"
+      ],
+      "type": "stdio",
+      "env": {
+        "NODE_OPTIONS": "--max-old-space-size=768"
+      }
     }
   },
   "source": "claude",
