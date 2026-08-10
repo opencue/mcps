@@ -13,6 +13,14 @@
         "--header",
         "Authorization: Bearer ${APIFY_API_TOKEN}"
       ]
+    },
+    "agv-mcp": {
+      "command": "bash",
+      "args": [
+        "-lc",
+        "export AGVC_BIN=\"${AGVC_BIN:-${HOME}/.local/bin/agvc}\"; exec uv run --project \"${HOME}/Documents/AGV3/AGV-cuda/tools/agv_mcp\" agv-mcp"
+      ]
+    },
     "dataforseo": {
       "command": "npx",
       "args": [
