@@ -42,11 +42,7 @@
       "enabled": false
     },
     "coolify": {
-      "args": [
-        "-lc",
-        "<redacted secret-loading argument>"
-      ],
-      "command": "bash"
+      "command": "/home/deadpool/.local/bin/coolify-mcp-wrapper"
     },
     "gbrain": {
       "command": "~/.local/bin/gbrain-mcp-wrapper.sh",
