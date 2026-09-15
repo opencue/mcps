@@ -9,11 +9,6 @@
       "command": "codegraph",
       "type": "stdio"
     },
-    "ego-browser": {
-      "args": [],
-      "command": "/home/deadpool/.local/bin/ego-browser-mcp",
-      "type": "stdio"
-    },
     "colony": {
       "args": [
         "mcp"

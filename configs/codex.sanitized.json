@@ -34,10 +34,6 @@
       "args": [],
       "command": "/home/deadpool/.nvm/versions/node/v22.22.0/bin/context7-mcp"
     },
-    "ego-browser": {
-      "args": [],
-      "command": "/home/deadpool/.local/bin/ego-browser-mcp"
-    },
     "xbot": {
       "args": [
         "${HOME}/Documents/x-growth-bot/run-mcp.sh"
