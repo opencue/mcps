@@ -114,10 +114,6 @@
       "args": [],
       "type": "stdio"
     },
-    "codegraph": {
-      "command": "codegraph",
-      "args": ["serve", "--mcp"]
-    },
     "kroschuorder": {
       "args": [
         "tsx",
