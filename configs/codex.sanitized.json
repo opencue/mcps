@@ -103,6 +103,10 @@
         "serve"
       ]
     },
+    "ego-browser": {
+      "args": [],
+      "command": "/home/deadpool/.local/bin/ego-browser-mcp"
+    },
     "google-ads-mcp": {
       "command": "/home/deadpool/Documents/ADS/scripts/google-ads-mcp",
       "args": []
