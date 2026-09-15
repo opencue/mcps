@@ -114,6 +114,11 @@
       "args": [],
       "type": "stdio"
     },
+    "ego-browser": {
+      "command": "/home/deadpool/.local/bin/ego-browser-mcp",
+      "args": [],
+      "type": "stdio"
+    },
     "codegraph": {
       "command": "codegraph",
       "args": ["serve", "--mcp"]
