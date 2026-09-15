@@ -312,6 +312,11 @@
         "awslabs.aws-documentation-mcp-server@latest"
       ]
     },
+    "ego-browser": {
+      "args": [],
+      "command": "/home/deadpool/.local/bin/ego-browser-mcp",
+      "type": "stdio"
+    },
     "nanobanana-mcp": {
       "command": "npx",
       "args": [
