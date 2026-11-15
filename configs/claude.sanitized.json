@@ -370,6 +370,14 @@
       "env": {
         "NODE_OPTIONS": "--max-old-space-size=768"
       }
+    },
+    "hostinger-api": {
+      "command": "bash",
+      "args": [
+        "-lc",
+        "token=\"${HOSTINGER_API_TOKEN:-}\"; if [ -z \"$token\" ]; then token=\"${HOSTINGER_TOKEN:-}\"; fi; if [ -z \"$token\" ] && [ -f /home/deadpool/.config/hostinger/api-token ]; then token=\"$(tr -d '\\r\\n' < /home/deadpool/.config/hostinger/api-token)\"; fi; export API_TOKEN=\"$token\"; exec /home/deadpool/.local/bin/hostinger-api-mcp"
+      ],
+      "type": "stdio"
     }
   },
   "source": "claude",
