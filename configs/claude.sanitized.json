@@ -371,6 +371,14 @@
         "NODE_OPTIONS": "--max-old-space-size=768"
       }
     },
+    "envoult": {
+      "command": "bash",
+      "args": [
+        "-lc",
+        "exec envoultd"
+      ],
+      "type": "stdio"
+    },
     "hostinger-api": {
       "command": "bash",
       "args": [
