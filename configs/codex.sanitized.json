@@ -37,7 +37,7 @@
     "solidcraft": {
       "args": [
         "-lc",
-        "exec solidcraft-cli mcp"
+        "d=\"${SOLIDCRAFT_DESIGNS:-$HOME/Documents/solidcraft}\"; mkdir -p \"$d\" && exec solidcraft-cli mcp --allow-path \"$d\""
       ],
       "command": "bash"
     },
