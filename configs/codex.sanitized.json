@@ -34,6 +34,13 @@
       "args": [],
       "command": "/home/deadpool/.nvm/versions/node/v22.22.0/bin/context7-mcp"
     },
+    "solidcraft": {
+      "args": [
+        "-lc",
+        "d=\"${SOLIDCRAFT_DESIGNS:-$HOME/Documents/solidcraft}\"; mkdir -p \"$d\" && exec solidcraft-cli mcp --allow-path \"$d\""
+      ],
+      "command": "bash"
+    },
     "xbot": {
       "args": [
         "${HOME}/Documents/x-growth-bot/run-mcp.sh"

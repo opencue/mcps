@@ -1,6 +1,14 @@
 {
   "server_key": "mcpServers",
   "servers": {
+    "solidcraft": {
+      "command": "bash",
+      "args": [
+        "-lc",
+        "d=\"${SOLIDCRAFT_DESIGNS:-$HOME/Documents/solidcraft}\"; mkdir -p \"$d\" && exec solidcraft-cli mcp --allow-path \"$d\""
+      ],
+      "type": "stdio"
+    },
     "ted-eu": {
       "type": "http",
       "url": "https://gateway.pipeworx.io/ted-eu/mcp"
