@@ -1,6 +1,14 @@
 {
   "server_key": "mcpServers",
   "servers": {
+    "solidcraft": {
+      "command": "bash",
+      "args": [
+        "-lc",
+        "exec solidcraft-cli mcp"
+      ],
+      "type": "stdio"
+    },
     "ted-eu": {
       "type": "http",
       "url": "https://gateway.pipeworx.io/ted-eu/mcp"
